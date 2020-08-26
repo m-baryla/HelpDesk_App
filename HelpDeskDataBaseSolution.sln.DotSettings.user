@@ -1,0 +1,6 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/RunConfigs/Config/=F5DD19A9FADFD3459188F14C119B30B7/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/RunConfigs/Config/=F5DD19A9FADFD3459188F14C119B30B7/Type/@EntryValue">project</s:String>
+	<s:String x:Key="/Default/RunConfigs/Config/=F5DD19A9FADFD3459188F14C119B30B7/Name/@EntryValue">DataBaseConnectionWebService</s:String>
+	<s:String x:Key="/Default/RunConfigs/Config/=F5DD19A9FADFD3459188F14C119B30B7/ProjectGuid/@EntryValue">F11475981FDF5341B53456AC68480033</s:String>
+	</wpf:ResourceDictionary>

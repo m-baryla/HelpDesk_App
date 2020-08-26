@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="InsertComputer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_computerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_operatingSystem" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_companyFixedAsset" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_tagService" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_location" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_office" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_cpu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ram" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_hardDrive" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="warrantyDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComputerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComputerResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertNotebooks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_notebooksName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_operatingSystem" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_companyFixedAsset" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_tagService" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_location" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_office" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_cpu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ram" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_hardDrive" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="warrantyDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertNotebooksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertNotebooksResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMonitors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_companyFixedAsset" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_tagService" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_location" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="warrantyDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMonitorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertMonitorsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxCPU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxCPUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxCPUResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxHardDrive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxHardDriveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxHardDriveResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxLocationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxMicrosoftOffice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxMicrosoftOfficeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxMicrosoftOfficeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxModelComputer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxModelComputerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxModelComputerResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxModelMonitor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxModelMonitorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxModelMonitorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxModelNotebook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxModelNotebookResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxModelNotebookResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxOperatingSystem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxOperatingSystemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxOperatingSystemResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxRAM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxRAMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxRAMResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_job" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboBoxUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboBoxUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

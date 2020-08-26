@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FillComboBoxDataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxLocation" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxOffice" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxOperatingSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxOperatingSystem" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxOperatingSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxOperatingSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxCPU_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxCPU" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxCPU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxCPUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxHardDrive_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxHardDrive" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxHardDrive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxHardDriveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxRAM_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxRAM" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxRAM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxRAMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxModelComputer_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxModelComputer" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxModelComputer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxModelComputerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxModelMonitors_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxModelMonitors" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxModelMonitors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxModelMonitorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxModelNotebooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxModelNotebooks" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxModelNotebooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxModelNotebooksResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFillComboBoxDataService">
+    <wsdl:operation name="FillComboBoxLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxLocation" message="tns:IFillComboBoxDataService_FillComboBoxLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxLocationResponse" message="tns:IFillComboBoxDataService_FillComboBoxLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxOffice" message="tns:IFillComboBoxDataService_FillComboBoxOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxOfficeResponse" message="tns:IFillComboBoxDataService_FillComboBoxOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxOperatingSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxOperatingSystem" message="tns:IFillComboBoxDataService_FillComboBoxOperatingSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxOperatingSystemResponse" message="tns:IFillComboBoxDataService_FillComboBoxOperatingSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxCPU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxCPU" message="tns:IFillComboBoxDataService_FillComboBoxCPU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxCPUResponse" message="tns:IFillComboBoxDataService_FillComboBoxCPU_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxHardDrive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxHardDrive" message="tns:IFillComboBoxDataService_FillComboBoxHardDrive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxHardDriveResponse" message="tns:IFillComboBoxDataService_FillComboBoxHardDrive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxRAM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxRAM" message="tns:IFillComboBoxDataService_FillComboBoxRAM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxRAMResponse" message="tns:IFillComboBoxDataService_FillComboBoxRAM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxModelComputer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelComputer" message="tns:IFillComboBoxDataService_FillComboBoxModelComputer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelComputerResponse" message="tns:IFillComboBoxDataService_FillComboBoxModelComputer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxModelMonitors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelMonitors" message="tns:IFillComboBoxDataService_FillComboBoxModelMonitors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelMonitorsResponse" message="tns:IFillComboBoxDataService_FillComboBoxModelMonitors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxModelNotebooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelNotebooks" message="tns:IFillComboBoxDataService_FillComboBoxModelNotebooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelNotebooksResponse" message="tns:IFillComboBoxDataService_FillComboBoxModelNotebooks_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFillComboBoxDataService" type="tns:IFillComboBoxDataService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FillComboBoxLocation">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxOffice">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxOperatingSystem">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxOperatingSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxCPU">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxCPU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxHardDrive">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxHardDrive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxRAM">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxRAM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxModelComputer">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelComputer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxModelMonitors">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelMonitors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxModelNotebooks">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelNotebooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FillComboBoxDataService">
+    <wsdl:port name="BasicHttpBinding_IFillComboBoxDataService" binding="tns:BasicHttpBinding_IFillComboBoxDataService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WebServiceHost.FillComboBox/FillComboBoxDataService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

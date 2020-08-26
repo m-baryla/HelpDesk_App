@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE2CA8BD-CF9A-40F2-9EF3-B658D6D3F373}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.1.24722.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DG.AdvancedDataGridView.1.1.24722.8\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildForm.cs" />
+    <Compile Include="Forms\AboutForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForms.Designer.cs">
+      <DependentUpon>AboutForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddComputerForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddComputerForms.Designer.cs">
+      <DependentUpon>AddComputerForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddMonitorForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMonitorForms.Designer.cs">
+      <DependentUpon>AddMonitorForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddNotebooksForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddNotebooksForms.Designer.cs">
+      <DependentUpon>AddNotebooksForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataGrindViewForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataGrindViewForms.Designer.cs">
+      <DependentUpon>DataGrindViewForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateComputersForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateComputersForms.Designer.cs">
+      <DependentUpon>UpdateComputersForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateMonitorsForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateMonitorsForms.Designer.cs">
+      <DependentUpon>UpdateMonitorsForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateNotebooksForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateNotebooksForms.Designer.cs">
+      <DependentUpon>UpdateNotebooksForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpDeskDB_TESTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpDeskDB_TESTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InfoMessageBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ShowSubMenu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutForms.resx">
+      <DependentUpon>AboutForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddComputerForms.resx">
+      <DependentUpon>AddComputerForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddMonitorForms.resx">
+      <DependentUpon>AddMonitorForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddNotebooksForms.resx">
+      <DependentUpon>AddNotebooksForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataGrindViewForms.resx">
+      <DependentUpon>DataGrindViewForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateComputersForms.resx">
+      <DependentUpon>UpdateComputersForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateMonitorsForms.resx">
+      <DependentUpon>UpdateMonitorsForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateNotebooksForms.resx">
+      <DependentUpon>UpdateNotebooksForms.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{125B30ED-F903-4FDF-A8B9-FD8F85801A49}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicApp\LogicApp.csproj">
+      <Project>{9EB1011C-026E-48FE-979F-E3CAFB6A27C3}</Project>
+      <Name>LogicApp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="HelpDeskDB_TESTDataSet.xsc">
+      <DependentUpon>HelpDeskDB_TESTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HelpDeskDB_TESTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HelpDeskDB_TESTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HelpDeskDB_TESTDataSet.xss">
+      <DependentUpon>HelpDeskDB_TESTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

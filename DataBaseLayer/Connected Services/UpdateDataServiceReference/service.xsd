@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="UpdateComputer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+        <xs:element minOccurs="0" name="_computerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_operatingSystem" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_companyFixedAsset" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_tagService" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_location" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_office" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_cpu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ram" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_hardDrive" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="warrantyDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateComputerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateComputerResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotebooks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_notebooksName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_operatingSystem" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_companyFixedAsset" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_tagService" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_location" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_office" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_cpu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ram" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_hardDrive" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="warrantyDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotebooksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNotebooksResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMonitors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" type="xs:int" />
+        <xs:element minOccurs="0" name="_companyFixedAsset" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_tagService" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_location" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="warrantyDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMonitorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateMonitorsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

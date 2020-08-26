@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UpdateDataService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUpdateDataService_UpdateComputer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateComputer" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateDataService_UpdateComputer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateComputerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateDataService_UpdateNotebooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotebooks" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateDataService_UpdateNotebooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotebooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateDataService_UpdateMonitors_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMonitors" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateDataService_UpdateMonitors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMonitorsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUpdateDataService">
+    <wsdl:operation name="UpdateComputer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUpdateDataService/UpdateComputer" message="tns:IUpdateDataService_UpdateComputer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUpdateDataService/UpdateComputerResponse" message="tns:IUpdateDataService_UpdateComputer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNotebooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUpdateDataService/UpdateNotebooks" message="tns:IUpdateDataService_UpdateNotebooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUpdateDataService/UpdateNotebooksResponse" message="tns:IUpdateDataService_UpdateNotebooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMonitors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUpdateDataService/UpdateMonitors" message="tns:IUpdateDataService_UpdateMonitors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUpdateDataService/UpdateMonitorsResponse" message="tns:IUpdateDataService_UpdateMonitors_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUpdateDataService" type="tns:IUpdateDataService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateComputer">
+      <soap:operation soapAction="http://tempuri.org/IUpdateDataService/UpdateComputer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNotebooks">
+      <soap:operation soapAction="http://tempuri.org/IUpdateDataService/UpdateNotebooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMonitors">
+      <soap:operation soapAction="http://tempuri.org/IUpdateDataService/UpdateMonitors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateDataService">
+    <wsdl:port name="BasicHttpBinding_IUpdateDataService" binding="tns:BasicHttpBinding_IUpdateDataService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WebServiceHost.Update/UpdateDataService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

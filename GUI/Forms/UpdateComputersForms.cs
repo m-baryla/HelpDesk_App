@@ -1,0 +1,139 @@
+﻿using System;
+using System.Linq;
+using System.Windows.Forms;
+using Interfaces;
+using Zuby.ADGV;
+
+namespace GUI.Forms
+{
+    public partial class UpdateComputersForms : Form
+    {
+        private readonly IComputersLogic _computersLogic;
+        public UpdateComputersForms(IComputersLogic computersLogic)
+        {
+            this._computersLogic = computersLogic;
+            InitializeComponent();
+            UploadData();
+        }
+
+        private void UploadData()
+        {
+            comboBoxLocationComputer.DataSource = _computersLogic.FillComboBoxLocation().ToList();
+            comboBoxModelComputer.DataSource = _computersLogic.FillComboBoxModelComputer().ToList();
+            comboBoxCPUComputer.DataSource = _computersLogic.FillComboBoxCPU().ToList();
+            comboBoxRAMComputer.DataSource = _computersLogic.FillComboBoxRAM().ToList();
+            comboBoxHardDriveComputer.DataSource = _computersLogic.FillComboBoxHardDrive().ToList();
+            comboBoxOfficeComputer.DataSource = _computersLogic.FillComboBoxOffice().ToList();
+            comboBoxOperatigSystemComputer.DataSource = _computersLogic.FillComboBoxOperatingSystem().ToList();
+        }
+
+        #region COMBOBOX DATA
+        public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
+        {
+            var barcode = "qwe";
+
+            var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            try
+            {
+                switch (dialogResult)
+                {
+                    case DialogResult.Yes:
+                    {
+                        DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
+
+                        // [UpdateComputersDataViev] must be like the view as [vwAll_Computers]
+                        textBoxIDComputer.Text = dgViewRow.Cells[0].Value.ToString();
+                        textBoxNameComputer.Text = dgViewRow.Cells[1].Value.ToString();
+                        textBoxTagServiceComputer.Text = dgViewRow.Cells[2].Value.ToString();
+                        textBoxIPComputer.Text = dgViewRow.Cells[3].Value.ToString();
+                        dateTimePickerPurchaseDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
+                        dateTimePickerWarrantyDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
+                        barcode = dgViewRow.Cells[6].Value.ToString();
+                        richTextBoxComentsComputer.Text = dgViewRow.Cells[7].Value.ToString();
+                        textBoxCompanyFixedAssetComputer.Text = dgViewRow.Cells[8].Value.ToString();
+                        textBoxFirstNameUserComputer.Text = dgViewRow.Cells[9].Value.ToString();
+                        comboBoxCPUComputer.Text = dgViewRow.Cells[10].Value.ToString();
+                        comboBoxHardDriveComputer.Text = dgViewRow.Cells[11].Value.ToString();
+                        comboBoxLocationComputer.Text = dgViewRow.Cells[12].Value.ToString();
+                        comboBoxOfficeComputer.Text = dgViewRow.Cells[13].Value.ToString();
+                        comboBoxModelComputer.Text = dgViewRow.Cells[14].Value.ToString();
+                        comboBoxOperatigSystemComputer.Text = dgViewRow.Cells[15].Value.ToString();
+                        comboBoxRAMComputer.Text = dgViewRow.Cells[16].Value.ToString();
+                        break;
+                    }
+                    case DialogResult.No:
+                    {
+                        break;
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
+        #region BUTTON
+        private void buttonUpdateDataComputer_Click(object sender, EventArgs e)
+        {
+            _computersLogic.Update(Convert.ToInt32(textBoxIDComputer.Text), textBoxNameComputer.Text,comboBoxOperatigSystemComputer.Text,
+                    textBoxCompanyFixedAssetComputer.Text, textBoxTagServiceComputer.Text,comboBoxLocationComputer.Text,
+                    textBoxFirstNameUserComputer.Text, comboBoxOfficeComputer.Text,textBoxIPComputer.Text, comboBoxModelComputer.Text,
+                    comboBoxCPUComputer.Text, comboBoxRAMComputer.Text,comboBoxHardDriveComputer.Text,richTextBoxComentsComputer.Text,
+                    dateTimePickerPurchaseDateComputer.Value, dateTimePickerWarrantyDateComputer.Value);
+        }
+        #endregion
+
+        #region LABEL LINK ADD NEW --VALUES
+
+        private void linkLabelAddNewModel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _computersLogic.InsertComboBoxModelComputer(comboBoxModelComputer.Text);
+            UploadData();
+        }
+
+        private void linkLabelAddNewCPU_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _computersLogic.InsertComboBoxCPU(comboBoxCPUComputer.Text);
+            UploadData();
+        }
+
+        private void linkLabelAddNewRAM_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _computersLogic.InsertComboBoxRAM(comboBoxRAMComputer.Text);
+            UploadData();
+        }
+
+        private void linkLabelAddNewHardDrive_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _computersLogic.InsertComboBoxHardDrive(comboBoxHardDriveComputer.Text);
+            UploadData();
+        }
+
+        private void linkLabelAddNewOperatingSystem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _computersLogic.InsertComboBoxOperatingSystem(comboBoxOperatigSystemComputer.Text);
+            UploadData();
+        }
+
+        private void linkLabelAddNewLocation_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _computersLogic.InsertComboBoxLocation(comboBoxLocationComputer.Text);
+            UploadData();
+        }
+
+        private void linkLabelAddNewMicrosoftOffice_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _computersLogic.InsertComboBoxMicrosoftOffice(comboBoxOfficeComputer.Text);
+            UploadData();
+        }
+
+        private void linkLabelAddNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ////
+        }
+        #endregion
+
+    }
+}
