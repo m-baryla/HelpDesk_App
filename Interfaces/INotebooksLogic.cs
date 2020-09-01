@@ -8,11 +8,11 @@ namespace Interfaces
     public interface INotebooksLogic
     {
         void Insert(string _notebooksName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate);
 
         void Update(int _id, string _notebooksName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate);
 
         void DeleteNotebooks(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView);
@@ -23,6 +23,7 @@ namespace Interfaces
         void InsertComboBoxLocation(string _value);
         void InsertComboBoxMicrosoftOffice(string _value);
         void InsertComboBoxCPU(string _value);
+        void InsertComboBoxUser(string _firstName, string _lastName, string _job);
         List<string> FillComboBoxLocation();
         List<string> FillComboBoxOffice();
         List<string> FillComboBoxOperatingSystem();
@@ -30,5 +31,7 @@ namespace Interfaces
         List<string> FillComboBoxHardDrive();
         List<string> FillComboBoxRAM();
         List<string> FillComboBoxModelNotebooks();
+        List<string> FillComboBoxUsers();
+
     }
 }

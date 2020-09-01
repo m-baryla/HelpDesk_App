@@ -23,7 +23,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _companyFixedAsset, 
                     string _tagService, 
                     string _location, 
-                    string _firstName, 
+                    string _user, 
                     string _office, 
                     string _ip, 
                     string _model, 
@@ -42,7 +42,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _companyFixedAsset, 
                     string _tagService, 
                     string _location, 
-                    string _firstName, 
+                    string _user, 
                     string _office, 
                     string _ip, 
                     string _model, 
@@ -61,7 +61,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _companyFixedAsset, 
                     string _tagService, 
                     string _location, 
-                    string _firstName, 
+                    string _user, 
                     string _office, 
                     string _ip, 
                     string _model, 
@@ -80,7 +80,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _companyFixedAsset, 
                     string _tagService, 
                     string _location, 
-                    string _firstName, 
+                    string _user, 
                     string _office, 
                     string _ip, 
                     string _model, 
@@ -92,10 +92,10 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     System.DateTime warrantyDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateDataService/UpdateMonitors", ReplyAction="http://tempuri.org/IUpdateDataService/UpdateMonitorsResponse")]
-        string UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location, string _firstName, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate);
+        string UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateDataService/UpdateMonitors", ReplyAction="http://tempuri.org/IUpdateDataService/UpdateMonitorsResponse")]
-        System.Threading.Tasks.Task<string> UpdateMonitorsAsync(int _id, string _companyFixedAsset, string _tagService, string _location, string _firstName, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate);
+        System.Threading.Tasks.Task<string> UpdateMonitorsAsync(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -132,7 +132,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _companyFixedAsset, 
                     string _tagService, 
                     string _location, 
-                    string _firstName, 
+                    string _user, 
                     string _office, 
                     string _ip, 
                     string _model, 
@@ -142,7 +142,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _coments, 
                     System.DateTime purchaseDate, 
                     System.DateTime warrantyDate) {
-            return base.Channel.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _firstName, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
+            return base.Channel.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
         }
         
         public System.Threading.Tasks.Task<string> UpdateComputerAsync(
@@ -152,7 +152,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _companyFixedAsset, 
                     string _tagService, 
                     string _location, 
-                    string _firstName, 
+                    string _user, 
                     string _office, 
                     string _ip, 
                     string _model, 
@@ -162,7 +162,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _coments, 
                     System.DateTime purchaseDate, 
                     System.DateTime warrantyDate) {
-            return base.Channel.UpdateComputerAsync(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _firstName, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
+            return base.Channel.UpdateComputerAsync(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
         }
         
         public string UpdateNotebooks(
@@ -172,7 +172,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _companyFixedAsset, 
                     string _tagService, 
                     string _location, 
-                    string _firstName, 
+                    string _user, 
                     string _office, 
                     string _ip, 
                     string _model, 
@@ -182,7 +182,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _coments, 
                     System.DateTime purchaseDate, 
                     System.DateTime warrantyDate) {
-            return base.Channel.UpdateNotebooks(id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _firstName, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
+            return base.Channel.UpdateNotebooks(id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
         }
         
         public System.Threading.Tasks.Task<string> UpdateNotebooksAsync(
@@ -192,7 +192,7 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _companyFixedAsset, 
                     string _tagService, 
                     string _location, 
-                    string _firstName, 
+                    string _user, 
                     string _office, 
                     string _ip, 
                     string _model, 
@@ -202,15 +202,15 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _coments, 
                     System.DateTime purchaseDate, 
                     System.DateTime warrantyDate) {
-            return base.Channel.UpdateNotebooksAsync(id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _firstName, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
+            return base.Channel.UpdateNotebooksAsync(id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
         }
         
-        public string UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location, string _firstName, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate) {
-            return base.Channel.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location, _firstName, _model, _coments, purchaseDate, warrantyDate);
+        public string UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate) {
+            return base.Channel.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location, _user, _model, _coments, purchaseDate, warrantyDate);
         }
         
-        public System.Threading.Tasks.Task<string> UpdateMonitorsAsync(int _id, string _companyFixedAsset, string _tagService, string _location, string _firstName, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate) {
-            return base.Channel.UpdateMonitorsAsync(_id, _companyFixedAsset, _tagService, _location, _firstName, _model, _coments, purchaseDate, warrantyDate);
+        public System.Threading.Tasks.Task<string> UpdateMonitorsAsync(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate) {
+            return base.Channel.UpdateMonitorsAsync(_id, _companyFixedAsset, _tagService, _location, _user, _model, _coments, purchaseDate, warrantyDate);
         }
     }
 }

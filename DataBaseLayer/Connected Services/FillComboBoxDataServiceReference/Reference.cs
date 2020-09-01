@@ -68,6 +68,12 @@ namespace DataBaseLayer.FillComboBoxDataServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelNotebooks", ReplyAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelNotebooksResponse")]
         System.Threading.Tasks.Task<string[]> FillComboBoxModelNotebooksAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsers", ReplyAction="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsersResponse")]
+        string[] vwFillComboBoxUsers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsers", ReplyAction="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsersResponse")]
+        System.Threading.Tasks.Task<string[]> vwFillComboBoxUsersAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -167,6 +173,14 @@ namespace DataBaseLayer.FillComboBoxDataServiceReference {
         
         public System.Threading.Tasks.Task<string[]> FillComboBoxModelNotebooksAsync() {
             return base.Channel.FillComboBoxModelNotebooksAsync();
+        }
+        
+        public string[] vwFillComboBoxUsers() {
+            return base.Channel.vwFillComboBoxUsers();
+        }
+        
+        public System.Threading.Tasks.Task<string[]> vwFillComboBoxUsersAsync() {
+            return base.Channel.vwFillComboBoxUsersAsync();
         }
     }
 }

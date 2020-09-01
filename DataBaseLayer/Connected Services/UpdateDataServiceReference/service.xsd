@@ -9,7 +9,7 @@
         <xs:element minOccurs="0" name="_companyFixedAsset" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_tagService" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_location" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_user" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_office" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_ip" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
@@ -38,7 +38,7 @@
         <xs:element minOccurs="0" name="_companyFixedAsset" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_tagService" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_location" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_user" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_office" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_ip" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
@@ -65,7 +65,7 @@
         <xs:element minOccurs="0" name="_companyFixedAsset" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_tagService" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_location" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="_firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_user" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />

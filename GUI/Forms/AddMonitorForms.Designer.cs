@@ -31,6 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMonitorForms));
             this.comboBoxModelMonitors = new System.Windows.Forms.ComboBox();
             this.tabPageInserForm = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBoxUsers = new System.Windows.Forms.ComboBox();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.linkLabelAddNewUser = new System.Windows.Forms.LinkLabel();
+            this.textBoxJob = new System.Windows.Forms.TextBox();
+            this.labelFirstName = new System.Windows.Forms.Label();
+            this.labelJob = new System.Windows.Forms.Label();
+            this.labelLastName = new System.Windows.Forms.Label();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.labelUserMonitor = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerWarrantyDateMonitors = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerPurchaseDateMonitors = new System.Windows.Forms.DateTimePicker();
@@ -39,14 +49,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelCompanyFixedAssetMonitor = new System.Windows.Forms.Label();
             this.linkLabelAddNewModel = new System.Windows.Forms.LinkLabel();
-            this.linkLabelAddNewUser = new System.Windows.Forms.LinkLabel();
             this.labelLocationMonitor = new System.Windows.Forms.Label();
             this.labelModelMonitor = new System.Windows.Forms.Label();
             this.linkLabelAddNewLocation = new System.Windows.Forms.LinkLabel();
             this.labelTagServiceMonitor = new System.Windows.Forms.Label();
             this.comboBoxLocationMonitors = new System.Windows.Forms.ComboBox();
-            this.labelUserMonitor = new System.Windows.Forms.Label();
-            this.textBoxUserMonitors = new System.Windows.Forms.TextBox();
             this.textBoxCompanyFixedAssetMonitors = new System.Windows.Forms.TextBox();
             this.textBoxTagServiceMonitors = new System.Windows.Forms.TextBox();
             this.richTextBoxComentsMonitors = new System.Windows.Forms.RichTextBox();
@@ -61,6 +68,7 @@
             this.labelComentsMonitor = new System.Windows.Forms.Label();
             this.tabPageBarcodeMonitor = new System.Windows.Forms.TabPage();
             this.tabPageInserForm.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,7 +83,7 @@
             // 
             this.comboBoxModelMonitors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxModelMonitors.FormattingEnabled = true;
-            this.comboBoxModelMonitors.Location = new System.Drawing.Point(170, 210);
+            this.comboBoxModelMonitors.Location = new System.Drawing.Point(169, 149);
             this.comboBoxModelMonitors.Name = "comboBoxModelMonitors";
             this.comboBoxModelMonitors.Size = new System.Drawing.Size(177, 21);
             this.comboBoxModelMonitors.TabIndex = 10;
@@ -83,6 +91,7 @@
             // tabPageInserForm
             // 
             this.tabPageInserForm.BackColor = System.Drawing.Color.Black;
+            this.tabPageInserForm.Controls.Add(this.groupBox4);
             this.tabPageInserForm.Controls.Add(this.groupBox2);
             this.tabPageInserForm.Controls.Add(this.groupBox1);
             this.tabPageInserForm.Location = new System.Drawing.Point(4, 22);
@@ -92,6 +101,114 @@
             this.tabPageInserForm.TabIndex = 0;
             this.tabPageInserForm.Text = "Insert Form";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox4.Controls.Add(this.comboBoxUsers);
+            this.groupBox4.Controls.Add(this.textBoxFirstName);
+            this.groupBox4.Controls.Add(this.linkLabelAddNewUser);
+            this.groupBox4.Controls.Add(this.textBoxJob);
+            this.groupBox4.Controls.Add(this.labelFirstName);
+            this.groupBox4.Controls.Add(this.labelJob);
+            this.groupBox4.Controls.Add(this.labelLastName);
+            this.groupBox4.Controls.Add(this.textBoxLastName);
+            this.groupBox4.Controls.Add(this.labelUserMonitor);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Location = new System.Drawing.Point(409, 21);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(302, 202);
+            this.groupBox4.TabIndex = 34;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "User";
+            // 
+            // comboBoxUsers
+            // 
+            this.comboBoxUsers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxUsers.FormattingEnabled = true;
+            this.comboBoxUsers.Location = new System.Drawing.Point(98, 33);
+            this.comboBoxUsers.Name = "comboBoxUsers";
+            this.comboBoxUsers.Size = new System.Drawing.Size(177, 21);
+            this.comboBoxUsers.TabIndex = 32;
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxFirstName.Location = new System.Drawing.Point(112, 65);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(163, 20);
+            this.textBoxFirstName.TabIndex = 34;
+            // 
+            // linkLabelAddNewUser
+            // 
+            this.linkLabelAddNewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkLabelAddNewUser.AutoSize = true;
+            this.linkLabelAddNewUser.LinkColor = System.Drawing.Color.Red;
+            this.linkLabelAddNewUser.Location = new System.Drawing.Point(109, 163);
+            this.linkLabelAddNewUser.Name = "linkLabelAddNewUser";
+            this.linkLabelAddNewUser.Size = new System.Drawing.Size(76, 13);
+            this.linkLabelAddNewUser.TabIndex = 31;
+            this.linkLabelAddNewUser.TabStop = true;
+            this.linkLabelAddNewUser.Text = "Add New User";
+            this.linkLabelAddNewUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAddNewUser_LinkClicked);
+            // 
+            // textBoxJob
+            // 
+            this.textBoxJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxJob.Location = new System.Drawing.Point(112, 127);
+            this.textBoxJob.Name = "textBoxJob";
+            this.textBoxJob.Size = new System.Drawing.Size(163, 20);
+            this.textBoxJob.TabIndex = 37;
+            // 
+            // labelFirstName
+            // 
+            this.labelFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelFirstName.AutoSize = true;
+            this.labelFirstName.Location = new System.Drawing.Point(39, 68);
+            this.labelFirstName.Name = "labelFirstName";
+            this.labelFirstName.Size = new System.Drawing.Size(66, 13);
+            this.labelFirstName.TabIndex = 32;
+            this.labelFirstName.Text = "First Name : ";
+            // 
+            // labelJob
+            // 
+            this.labelJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelJob.AutoSize = true;
+            this.labelJob.Location = new System.Drawing.Point(39, 130);
+            this.labelJob.Name = "labelJob";
+            this.labelJob.Size = new System.Drawing.Size(33, 13);
+            this.labelJob.TabIndex = 36;
+            this.labelJob.Text = "Job : ";
+            // 
+            // labelLastName
+            // 
+            this.labelLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Location = new System.Drawing.Point(39, 99);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(67, 13);
+            this.labelLastName.TabIndex = 33;
+            this.labelLastName.Text = "Last Name : ";
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxLastName.Location = new System.Drawing.Point(112, 96);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(163, 20);
+            this.textBoxLastName.TabIndex = 35;
+            // 
+            // labelUserMonitor
+            // 
+            this.labelUserMonitor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelUserMonitor.AutoSize = true;
+            this.labelUserMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelUserMonitor.ForeColor = System.Drawing.Color.White;
+            this.labelUserMonitor.Location = new System.Drawing.Point(15, 34);
+            this.labelUserMonitor.Name = "labelUserMonitor";
+            this.labelUserMonitor.Size = new System.Drawing.Size(46, 16);
+            this.labelUserMonitor.TabIndex = 18;
+            this.labelUserMonitor.Text = "User : ";
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -100,9 +217,9 @@
             this.groupBox2.Controls.Add(this.labelDateOfPurchaseMonitor);
             this.groupBox2.Controls.Add(this.labelWarrantyDateMonitor);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(411, 13);
+            this.groupBox2.Location = new System.Drawing.Point(19, 249);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(294, 159);
+            this.groupBox2.Size = new System.Drawing.Size(363, 159);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Date";
@@ -112,9 +229,9 @@
             this.dateTimePickerWarrantyDateMonitors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerWarrantyDateMonitors.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerWarrantyDateMonitors.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerWarrantyDateMonitors.Location = new System.Drawing.Point(157, 42);
+            this.dateTimePickerWarrantyDateMonitors.Location = new System.Drawing.Point(191, 42);
             this.dateTimePickerWarrantyDateMonitors.Name = "dateTimePickerWarrantyDateMonitors";
-            this.dateTimePickerWarrantyDateMonitors.Size = new System.Drawing.Size(120, 20);
+            this.dateTimePickerWarrantyDateMonitors.Size = new System.Drawing.Size(140, 20);
             this.dateTimePickerWarrantyDateMonitors.TabIndex = 15;
             // 
             // dateTimePickerPurchaseDateMonitors
@@ -122,9 +239,9 @@
             this.dateTimePickerPurchaseDateMonitors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerPurchaseDateMonitors.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerPurchaseDateMonitors.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerPurchaseDateMonitors.Location = new System.Drawing.Point(157, 93);
+            this.dateTimePickerPurchaseDateMonitors.Location = new System.Drawing.Point(191, 93);
             this.dateTimePickerPurchaseDateMonitors.Name = "dateTimePickerPurchaseDateMonitors";
-            this.dateTimePickerPurchaseDateMonitors.Size = new System.Drawing.Size(120, 20);
+            this.dateTimePickerPurchaseDateMonitors.Size = new System.Drawing.Size(140, 20);
             this.dateTimePickerPurchaseDateMonitors.TabIndex = 16;
             // 
             // labelDateOfPurchaseMonitor
@@ -133,7 +250,7 @@
             this.labelDateOfPurchaseMonitor.AutoSize = true;
             this.labelDateOfPurchaseMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelDateOfPurchaseMonitor.ForeColor = System.Drawing.Color.White;
-            this.labelDateOfPurchaseMonitor.Location = new System.Drawing.Point(14, 97);
+            this.labelDateOfPurchaseMonitor.Location = new System.Drawing.Point(45, 97);
             this.labelDateOfPurchaseMonitor.Name = "labelDateOfPurchaseMonitor";
             this.labelDateOfPurchaseMonitor.Size = new System.Drawing.Size(106, 16);
             this.labelDateOfPurchaseMonitor.TabIndex = 14;
@@ -145,7 +262,7 @@
             this.labelWarrantyDateMonitor.AutoSize = true;
             this.labelWarrantyDateMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelWarrantyDateMonitor.ForeColor = System.Drawing.Color.White;
-            this.labelWarrantyDateMonitor.Location = new System.Drawing.Point(14, 42);
+            this.labelWarrantyDateMonitor.Location = new System.Drawing.Point(48, 46);
             this.labelWarrantyDateMonitor.Name = "labelWarrantyDateMonitor";
             this.labelWarrantyDateMonitor.Size = new System.Drawing.Size(103, 16);
             this.labelWarrantyDateMonitor.TabIndex = 13;
@@ -156,21 +273,18 @@
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.labelCompanyFixedAssetMonitor);
             this.groupBox1.Controls.Add(this.linkLabelAddNewModel);
-            this.groupBox1.Controls.Add(this.linkLabelAddNewUser);
             this.groupBox1.Controls.Add(this.comboBoxModelMonitors);
             this.groupBox1.Controls.Add(this.labelLocationMonitor);
             this.groupBox1.Controls.Add(this.labelModelMonitor);
             this.groupBox1.Controls.Add(this.linkLabelAddNewLocation);
             this.groupBox1.Controls.Add(this.labelTagServiceMonitor);
             this.groupBox1.Controls.Add(this.comboBoxLocationMonitors);
-            this.groupBox1.Controls.Add(this.labelUserMonitor);
-            this.groupBox1.Controls.Add(this.textBoxUserMonitors);
             this.groupBox1.Controls.Add(this.textBoxCompanyFixedAssetMonitors);
             this.groupBox1.Controls.Add(this.textBoxTagServiceMonitors);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(20, 13);
+            this.groupBox1.Location = new System.Drawing.Point(19, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 260);
+            this.groupBox1.Size = new System.Drawing.Size(363, 202);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hardware Info";
@@ -181,7 +295,7 @@
             this.labelCompanyFixedAssetMonitor.AutoSize = true;
             this.labelCompanyFixedAssetMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelCompanyFixedAssetMonitor.ForeColor = System.Drawing.Color.White;
-            this.labelCompanyFixedAssetMonitor.Location = new System.Drawing.Point(16, 41);
+            this.labelCompanyFixedAssetMonitor.Location = new System.Drawing.Point(15, 23);
             this.labelCompanyFixedAssetMonitor.Name = "labelCompanyFixedAssetMonitor";
             this.labelCompanyFixedAssetMonitor.Size = new System.Drawing.Size(148, 16);
             this.labelCompanyFixedAssetMonitor.TabIndex = 10;
@@ -192,7 +306,7 @@
             this.linkLabelAddNewModel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelAddNewModel.AutoSize = true;
             this.linkLabelAddNewModel.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewModel.Location = new System.Drawing.Point(217, 232);
+            this.linkLabelAddNewModel.Location = new System.Drawing.Point(216, 173);
             this.linkLabelAddNewModel.Name = "linkLabelAddNewModel";
             this.linkLabelAddNewModel.Size = new System.Drawing.Size(83, 13);
             this.linkLabelAddNewModel.TabIndex = 16;
@@ -201,26 +315,13 @@
             this.linkLabelAddNewModel.VisitedLinkColor = System.Drawing.Color.Yellow;
             this.linkLabelAddNewModel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAddNewModel_LinkClicked);
             // 
-            // linkLabelAddNewUser
-            // 
-            this.linkLabelAddNewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabelAddNewUser.AutoSize = true;
-            this.linkLabelAddNewUser.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewUser.Location = new System.Drawing.Point(220, 185);
-            this.linkLabelAddNewUser.Name = "linkLabelAddNewUser";
-            this.linkLabelAddNewUser.Size = new System.Drawing.Size(76, 13);
-            this.linkLabelAddNewUser.TabIndex = 31;
-            this.linkLabelAddNewUser.TabStop = true;
-            this.linkLabelAddNewUser.Text = "Add New User";
-            this.linkLabelAddNewUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAddNewUser_LinkClicked);
-            // 
             // labelLocationMonitor
             // 
             this.labelLocationMonitor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLocationMonitor.AutoSize = true;
             this.labelLocationMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelLocationMonitor.ForeColor = System.Drawing.Color.White;
-            this.labelLocationMonitor.Location = new System.Drawing.Point(16, 125);
+            this.labelLocationMonitor.Location = new System.Drawing.Point(15, 107);
             this.labelLocationMonitor.Name = "labelLocationMonitor";
             this.labelLocationMonitor.Size = new System.Drawing.Size(68, 16);
             this.labelLocationMonitor.TabIndex = 1;
@@ -233,7 +334,7 @@
             this.labelModelMonitor.BackColor = System.Drawing.Color.Black;
             this.labelModelMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelModelMonitor.ForeColor = System.Drawing.Color.White;
-            this.labelModelMonitor.Location = new System.Drawing.Point(16, 215);
+            this.labelModelMonitor.Location = new System.Drawing.Point(15, 156);
             this.labelModelMonitor.Name = "labelModelMonitor";
             this.labelModelMonitor.Size = new System.Drawing.Size(55, 16);
             this.labelModelMonitor.TabIndex = 9;
@@ -244,7 +345,7 @@
             this.linkLabelAddNewLocation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelAddNewLocation.AutoSize = true;
             this.linkLabelAddNewLocation.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewLocation.Location = new System.Drawing.Point(211, 142);
+            this.linkLabelAddNewLocation.Location = new System.Drawing.Point(210, 124);
             this.linkLabelAddNewLocation.Name = "linkLabelAddNewLocation";
             this.linkLabelAddNewLocation.Size = new System.Drawing.Size(95, 13);
             this.linkLabelAddNewLocation.TabIndex = 30;
@@ -258,7 +359,7 @@
             this.labelTagServiceMonitor.AutoSize = true;
             this.labelTagServiceMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelTagServiceMonitor.ForeColor = System.Drawing.Color.White;
-            this.labelTagServiceMonitor.Location = new System.Drawing.Point(16, 81);
+            this.labelTagServiceMonitor.Location = new System.Drawing.Point(15, 63);
             this.labelTagServiceMonitor.Name = "labelTagServiceMonitor";
             this.labelTagServiceMonitor.Size = new System.Drawing.Size(91, 16);
             this.labelTagServiceMonitor.TabIndex = 8;
@@ -268,35 +369,15 @@
             // 
             this.comboBoxLocationMonitors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxLocationMonitors.FormattingEnabled = true;
-            this.comboBoxLocationMonitors.Location = new System.Drawing.Point(170, 120);
+            this.comboBoxLocationMonitors.Location = new System.Drawing.Point(169, 102);
             this.comboBoxLocationMonitors.Name = "comboBoxLocationMonitors";
             this.comboBoxLocationMonitors.Size = new System.Drawing.Size(177, 21);
             this.comboBoxLocationMonitors.TabIndex = 20;
             // 
-            // labelUserMonitor
-            // 
-            this.labelUserMonitor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelUserMonitor.AutoSize = true;
-            this.labelUserMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelUserMonitor.ForeColor = System.Drawing.Color.White;
-            this.labelUserMonitor.Location = new System.Drawing.Point(16, 168);
-            this.labelUserMonitor.Name = "labelUserMonitor";
-            this.labelUserMonitor.Size = new System.Drawing.Size(46, 16);
-            this.labelUserMonitor.TabIndex = 18;
-            this.labelUserMonitor.Text = "User : ";
-            // 
-            // textBoxUserMonitors
-            // 
-            this.textBoxUserMonitors.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxUserMonitors.Location = new System.Drawing.Point(170, 164);
-            this.textBoxUserMonitors.Name = "textBoxUserMonitors";
-            this.textBoxUserMonitors.Size = new System.Drawing.Size(177, 20);
-            this.textBoxUserMonitors.TabIndex = 25;
-            // 
             // textBoxCompanyFixedAssetMonitors
             // 
             this.textBoxCompanyFixedAssetMonitors.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxCompanyFixedAssetMonitors.Location = new System.Drawing.Point(170, 37);
+            this.textBoxCompanyFixedAssetMonitors.Location = new System.Drawing.Point(169, 19);
             this.textBoxCompanyFixedAssetMonitors.Name = "textBoxCompanyFixedAssetMonitors";
             this.textBoxCompanyFixedAssetMonitors.Size = new System.Drawing.Size(177, 20);
             this.textBoxCompanyFixedAssetMonitors.TabIndex = 23;
@@ -304,7 +385,7 @@
             // textBoxTagServiceMonitors
             // 
             this.textBoxTagServiceMonitors.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxTagServiceMonitors.Location = new System.Drawing.Point(170, 80);
+            this.textBoxTagServiceMonitors.Location = new System.Drawing.Point(169, 62);
             this.textBoxTagServiceMonitors.Name = "textBoxTagServiceMonitors";
             this.textBoxTagServiceMonitors.Size = new System.Drawing.Size(177, 20);
             this.textBoxTagServiceMonitors.TabIndex = 24;
@@ -455,6 +536,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddMonitorForms";
             this.tabPageInserForm.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -475,7 +558,6 @@
         private System.Windows.Forms.ComboBox comboBoxModelMonitors;
         private System.Windows.Forms.TabPage tabPageInserForm;
         private System.Windows.Forms.Label labelModelMonitor;
-        private System.Windows.Forms.TextBox textBoxUserMonitors;
         private System.Windows.Forms.TextBox textBoxTagServiceMonitors;
         private System.Windows.Forms.TextBox textBoxCompanyFixedAssetMonitors;
         private System.Windows.Forms.ComboBox comboBoxLocationMonitors;
@@ -503,5 +585,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBoxUsers;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.TextBox textBoxJob;
+        private System.Windows.Forms.Label labelFirstName;
+        private System.Windows.Forms.Label labelJob;
+        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.TextBox textBoxLastName;
     }
 }

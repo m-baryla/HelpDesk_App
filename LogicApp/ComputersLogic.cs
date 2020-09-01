@@ -21,19 +21,19 @@ namespace LogicApp
         #region Inset / Update / Delete / UpdateView
 
         public void Insert(string _computerName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate)
         {
             _data.InsertComputer(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location,
-                _firstName, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate);
+                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate);
         }
         public void Update(int _id, string _computerName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate)
         {
 
             _data.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location,
-                                _firstName,_office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate);
+                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate);
         }
         public void DeleteComputer(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
@@ -91,6 +91,10 @@ namespace LogicApp
         {
             _data.InsertComboBoxCPU(_value);
         }
+        public void InsertComboBoxUser(string _firstName, string _lastName, string _job)
+        {
+            _data.InsertComboBoxUser(_firstName, _lastName, _job);
+        }
         #endregion
 
         #region GetFillComboBox
@@ -128,6 +132,11 @@ namespace LogicApp
         public List<string> FillComboBoxModelComputer()
         {
             return _data.FillComboBoxModelComputer();
+        }
+
+        public List<string> FillComboBoxUsers()
+        {
+            return _data.FillComboBoxUsers();
         }
         #endregion
 

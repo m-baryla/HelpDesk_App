@@ -32,6 +32,17 @@
             this.comboBoxModelComputer = new System.Windows.Forms.ComboBox();
             this.textBoxIPComputer = new System.Windows.Forms.TextBox();
             this.tabPageUpdateForms = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBoxUser = new System.Windows.Forms.ComboBox();
+            this.labelFullName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxJob = new System.Windows.Forms.TextBox();
+            this.labelFirstName = new System.Windows.Forms.Label();
+            this.linkLabelAddNewUser = new System.Windows.Forms.LinkLabel();
+            this.labelJob = new System.Windows.Forms.Label();
+            this.labelLastName = new System.Windows.Forms.Label();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerPurchaseDateComputer = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerWarrantyDateComputer = new System.Windows.Forms.DateTimePicker();
@@ -41,14 +52,11 @@
             this.textBoxNameComputer = new System.Windows.Forms.TextBox();
             this.linkLabelAddNewMicrosoftOffice = new System.Windows.Forms.LinkLabel();
             this.labelCompanyFixedAssetComputer = new System.Windows.Forms.Label();
-            this.linkLabelAddNewUser = new System.Windows.Forms.LinkLabel();
             this.labelLocationComputer = new System.Windows.Forms.Label();
             this.linkLabelAddNewLocation = new System.Windows.Forms.LinkLabel();
             this.labelIPComputer = new System.Windows.Forms.Label();
             this.linkLabelAddNewOperatingSystem = new System.Windows.Forms.LinkLabel();
             this.labelTagServiceComputer = new System.Windows.Forms.Label();
-            this.labelFirstNameUserComputer = new System.Windows.Forms.Label();
-            this.textBoxFirstNameUserComputer = new System.Windows.Forms.TextBox();
             this.labelOfficeComputer = new System.Windows.Forms.Label();
             this.textBoxTagServiceComputer = new System.Windows.Forms.TextBox();
             this.labelOperatingSystemComputer = new System.Windows.Forms.Label();
@@ -81,6 +89,7 @@
             this.labelComentsComputer = new System.Windows.Forms.Label();
             this.tabPageBarcodeComputer = new System.Windows.Forms.TabPage();
             this.tabPageUpdateForms.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -101,7 +110,7 @@
             // 
             // textBoxIPComputer
             // 
-            this.textBoxIPComputer.Location = new System.Drawing.Point(175, 360);
+            this.textBoxIPComputer.Location = new System.Drawing.Point(175, 241);
             this.textBoxIPComputer.Name = "textBoxIPComputer";
             this.textBoxIPComputer.Size = new System.Drawing.Size(177, 20);
             this.textBoxIPComputer.TabIndex = 26;
@@ -109,6 +118,7 @@
             // tabPageUpdateForms
             // 
             this.tabPageUpdateForms.BackColor = System.Drawing.Color.Black;
+            this.tabPageUpdateForms.Controls.Add(this.groupBox4);
             this.tabPageUpdateForms.Controls.Add(this.groupBox3);
             this.tabPageUpdateForms.Controls.Add(this.groupBox2);
             this.tabPageUpdateForms.Controls.Add(this.groupBox1);
@@ -119,6 +129,122 @@
             this.tabPageUpdateForms.TabIndex = 0;
             this.tabPageUpdateForms.Text = "Update Form";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox4.Controls.Add(this.comboBoxUser);
+            this.groupBox4.Controls.Add(this.labelFullName);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.textBoxFirstName);
+            this.groupBox4.Controls.Add(this.textBoxJob);
+            this.groupBox4.Controls.Add(this.labelFirstName);
+            this.groupBox4.Controls.Add(this.linkLabelAddNewUser);
+            this.groupBox4.Controls.Add(this.labelJob);
+            this.groupBox4.Controls.Add(this.labelLastName);
+            this.groupBox4.Controls.Add(this.textBoxLastName);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Location = new System.Drawing.Point(413, 251);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(298, 175);
+            this.groupBox4.TabIndex = 37;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "User";
+            // 
+            // comboBoxUser
+            // 
+            this.comboBoxUser.FormattingEnabled = true;
+            this.comboBoxUser.Location = new System.Drawing.Point(110, 20);
+            this.comboBoxUser.Name = "comboBoxUser";
+            this.comboBoxUser.Size = new System.Drawing.Size(163, 21);
+            this.comboBoxUser.TabIndex = 42;
+            // 
+            // labelFullName
+            // 
+            this.labelFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.labelFullName.Location = new System.Drawing.Point(152, 27);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(0, 16);
+            this.labelFullName.TabIndex = 41;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label1.Location = new System.Drawing.Point(26, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Full Name : ";
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxFirstName.Location = new System.Drawing.Point(110, 56);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(163, 20);
+            this.textBoxFirstName.TabIndex = 34;
+            // 
+            // textBoxJob
+            // 
+            this.textBoxJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxJob.Location = new System.Drawing.Point(110, 118);
+            this.textBoxJob.Name = "textBoxJob";
+            this.textBoxJob.Size = new System.Drawing.Size(163, 20);
+            this.textBoxJob.TabIndex = 37;
+            // 
+            // labelFirstName
+            // 
+            this.labelFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelFirstName.AutoSize = true;
+            this.labelFirstName.Location = new System.Drawing.Point(38, 59);
+            this.labelFirstName.Name = "labelFirstName";
+            this.labelFirstName.Size = new System.Drawing.Size(66, 13);
+            this.labelFirstName.TabIndex = 32;
+            this.labelFirstName.Text = "First Name : ";
+            // 
+            // linkLabelAddNewUser
+            // 
+            this.linkLabelAddNewUser.AutoSize = true;
+            this.linkLabelAddNewUser.LinkColor = System.Drawing.Color.Red;
+            this.linkLabelAddNewUser.Location = new System.Drawing.Point(118, 151);
+            this.linkLabelAddNewUser.Name = "linkLabelAddNewUser";
+            this.linkLabelAddNewUser.Size = new System.Drawing.Size(76, 13);
+            this.linkLabelAddNewUser.TabIndex = 33;
+            this.linkLabelAddNewUser.TabStop = true;
+            this.linkLabelAddNewUser.Text = "Add New User";
+            this.linkLabelAddNewUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAddNewUser_LinkClicked);
+            // 
+            // labelJob
+            // 
+            this.labelJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelJob.AutoSize = true;
+            this.labelJob.Location = new System.Drawing.Point(38, 121);
+            this.labelJob.Name = "labelJob";
+            this.labelJob.Size = new System.Drawing.Size(33, 13);
+            this.labelJob.TabIndex = 36;
+            this.labelJob.Text = "Job : ";
+            // 
+            // labelLastName
+            // 
+            this.labelLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Location = new System.Drawing.Point(38, 90);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(67, 13);
+            this.labelLastName.TabIndex = 33;
+            this.labelLastName.Text = "Last Name : ";
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxLastName.Location = new System.Drawing.Point(110, 87);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(163, 20);
+            this.textBoxLastName.TabIndex = 35;
+            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -127,9 +253,9 @@
             this.groupBox3.Controls.Add(this.labelDateOfPurchaseComputer);
             this.groupBox3.Controls.Add(this.labelWarrantyDateComputer);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(427, 256);
+            this.groupBox3.Location = new System.Drawing.Point(22, 300);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(284, 165);
+            this.groupBox3.Size = new System.Drawing.Size(365, 124);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Date";
@@ -138,7 +264,7 @@
             // 
             this.dateTimePickerPurchaseDateComputer.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerPurchaseDateComputer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerPurchaseDateComputer.Location = new System.Drawing.Point(147, 99);
+            this.dateTimePickerPurchaseDateComputer.Location = new System.Drawing.Point(177, 72);
             this.dateTimePickerPurchaseDateComputer.Name = "dateTimePickerPurchaseDateComputer";
             this.dateTimePickerPurchaseDateComputer.Size = new System.Drawing.Size(120, 20);
             this.dateTimePickerPurchaseDateComputer.TabIndex = 16;
@@ -147,7 +273,7 @@
             // 
             this.dateTimePickerWarrantyDateComputer.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerWarrantyDateComputer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerWarrantyDateComputer.Location = new System.Drawing.Point(147, 45);
+            this.dateTimePickerWarrantyDateComputer.Location = new System.Drawing.Point(177, 30);
             this.dateTimePickerWarrantyDateComputer.Name = "dateTimePickerWarrantyDateComputer";
             this.dateTimePickerWarrantyDateComputer.Size = new System.Drawing.Size(120, 20);
             this.dateTimePickerWarrantyDateComputer.TabIndex = 15;
@@ -157,7 +283,7 @@
             this.labelDateOfPurchaseComputer.AutoSize = true;
             this.labelDateOfPurchaseComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelDateOfPurchaseComputer.ForeColor = System.Drawing.Color.White;
-            this.labelDateOfPurchaseComputer.Location = new System.Drawing.Point(21, 102);
+            this.labelDateOfPurchaseComputer.Location = new System.Drawing.Point(51, 75);
             this.labelDateOfPurchaseComputer.Name = "labelDateOfPurchaseComputer";
             this.labelDateOfPurchaseComputer.Size = new System.Drawing.Size(106, 16);
             this.labelDateOfPurchaseComputer.TabIndex = 14;
@@ -168,7 +294,7 @@
             this.labelWarrantyDateComputer.AutoSize = true;
             this.labelWarrantyDateComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelWarrantyDateComputer.ForeColor = System.Drawing.Color.White;
-            this.labelWarrantyDateComputer.Location = new System.Drawing.Point(21, 49);
+            this.labelWarrantyDateComputer.Location = new System.Drawing.Point(51, 34);
             this.labelWarrantyDateComputer.Name = "labelWarrantyDateComputer";
             this.labelWarrantyDateComputer.Size = new System.Drawing.Size(103, 16);
             this.labelWarrantyDateComputer.TabIndex = 13;
@@ -176,19 +302,15 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.textBoxNameComputer);
             this.groupBox2.Controls.Add(this.linkLabelAddNewMicrosoftOffice);
             this.groupBox2.Controls.Add(this.labelCompanyFixedAssetComputer);
-            this.groupBox2.Controls.Add(this.linkLabelAddNewUser);
             this.groupBox2.Controls.Add(this.labelLocationComputer);
             this.groupBox2.Controls.Add(this.linkLabelAddNewLocation);
             this.groupBox2.Controls.Add(this.labelIPComputer);
             this.groupBox2.Controls.Add(this.linkLabelAddNewOperatingSystem);
             this.groupBox2.Controls.Add(this.labelTagServiceComputer);
             this.groupBox2.Controls.Add(this.textBoxIPComputer);
-            this.groupBox2.Controls.Add(this.labelFirstNameUserComputer);
-            this.groupBox2.Controls.Add(this.textBoxFirstNameUserComputer);
             this.groupBox2.Controls.Add(this.labelOfficeComputer);
             this.groupBox2.Controls.Add(this.textBoxTagServiceComputer);
             this.groupBox2.Controls.Add(this.labelOperatingSystemComputer);
@@ -198,16 +320,16 @@
             this.groupBox2.Controls.Add(this.comboBoxOfficeComputer);
             this.groupBox2.Controls.Add(this.comboBoxLocationComputer);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(20, 13);
+            this.groupBox2.Location = new System.Drawing.Point(23, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(388, 408);
+            this.groupBox2.Size = new System.Drawing.Size(365, 281);
             this.groupBox2.TabIndex = 35;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hardware Info";
             // 
             // textBoxNameComputer
             // 
-            this.textBoxNameComputer.Location = new System.Drawing.Point(175, 35);
+            this.textBoxNameComputer.Location = new System.Drawing.Point(175, 18);
             this.textBoxNameComputer.Name = "textBoxNameComputer";
             this.textBoxNameComputer.Size = new System.Drawing.Size(177, 20);
             this.textBoxNameComputer.TabIndex = 22;
@@ -216,7 +338,7 @@
             // 
             this.linkLabelAddNewMicrosoftOffice.AutoSize = true;
             this.linkLabelAddNewMicrosoftOffice.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewMicrosoftOffice.Location = new System.Drawing.Point(220, 333);
+            this.linkLabelAddNewMicrosoftOffice.Location = new System.Drawing.Point(220, 220);
             this.linkLabelAddNewMicrosoftOffice.Name = "linkLabelAddNewMicrosoftOffice";
             this.linkLabelAddNewMicrosoftOffice.Size = new System.Drawing.Size(82, 13);
             this.linkLabelAddNewMicrosoftOffice.TabIndex = 34;
@@ -229,30 +351,18 @@
             this.labelCompanyFixedAssetComputer.AutoSize = true;
             this.labelCompanyFixedAssetComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelCompanyFixedAssetComputer.ForeColor = System.Drawing.Color.White;
-            this.labelCompanyFixedAssetComputer.Location = new System.Drawing.Point(25, 132);
+            this.labelCompanyFixedAssetComputer.Location = new System.Drawing.Point(25, 94);
             this.labelCompanyFixedAssetComputer.Name = "labelCompanyFixedAssetComputer";
             this.labelCompanyFixedAssetComputer.Size = new System.Drawing.Size(148, 16);
             this.labelCompanyFixedAssetComputer.TabIndex = 10;
             this.labelCompanyFixedAssetComputer.Text = "Company Fixed Asset : ";
-            // 
-            // linkLabelAddNewUser
-            // 
-            this.linkLabelAddNewUser.AutoSize = true;
-            this.linkLabelAddNewUser.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewUser.Location = new System.Drawing.Point(223, 282);
-            this.linkLabelAddNewUser.Name = "linkLabelAddNewUser";
-            this.linkLabelAddNewUser.Size = new System.Drawing.Size(76, 13);
-            this.linkLabelAddNewUser.TabIndex = 33;
-            this.linkLabelAddNewUser.TabStop = true;
-            this.linkLabelAddNewUser.Text = "Add New User";
-            this.linkLabelAddNewUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelAddNewUser_LinkClicked);
             // 
             // labelLocationComputer
             // 
             this.labelLocationComputer.AutoSize = true;
             this.labelLocationComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelLocationComputer.ForeColor = System.Drawing.Color.White;
-            this.labelLocationComputer.Location = new System.Drawing.Point(25, 214);
+            this.labelLocationComputer.Location = new System.Drawing.Point(25, 163);
             this.labelLocationComputer.Name = "labelLocationComputer";
             this.labelLocationComputer.Size = new System.Drawing.Size(68, 16);
             this.labelLocationComputer.TabIndex = 1;
@@ -262,7 +372,7 @@
             // 
             this.linkLabelAddNewLocation.AutoSize = true;
             this.linkLabelAddNewLocation.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewLocation.Location = new System.Drawing.Point(214, 231);
+            this.linkLabelAddNewLocation.Location = new System.Drawing.Point(214, 177);
             this.linkLabelAddNewLocation.Name = "linkLabelAddNewLocation";
             this.linkLabelAddNewLocation.Size = new System.Drawing.Size(95, 13);
             this.linkLabelAddNewLocation.TabIndex = 32;
@@ -275,7 +385,7 @@
             this.labelIPComputer.AutoSize = true;
             this.labelIPComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelIPComputer.ForeColor = System.Drawing.Color.White;
-            this.labelIPComputer.Location = new System.Drawing.Point(25, 364);
+            this.labelIPComputer.Location = new System.Drawing.Point(25, 244);
             this.labelIPComputer.Name = "labelIPComputer";
             this.labelIPComputer.Size = new System.Drawing.Size(29, 16);
             this.labelIPComputer.TabIndex = 16;
@@ -285,7 +395,7 @@
             // 
             this.linkLabelAddNewOperatingSystem.AutoSize = true;
             this.linkLabelAddNewOperatingSystem.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewOperatingSystem.Location = new System.Drawing.Point(193, 99);
+            this.linkLabelAddNewOperatingSystem.Location = new System.Drawing.Point(193, 70);
             this.linkLabelAddNewOperatingSystem.Name = "linkLabelAddNewOperatingSystem";
             this.linkLabelAddNewOperatingSystem.Size = new System.Drawing.Size(137, 13);
             this.linkLabelAddNewOperatingSystem.TabIndex = 31;
@@ -298,36 +408,18 @@
             this.labelTagServiceComputer.AutoSize = true;
             this.labelTagServiceComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelTagServiceComputer.ForeColor = System.Drawing.Color.White;
-            this.labelTagServiceComputer.Location = new System.Drawing.Point(25, 173);
+            this.labelTagServiceComputer.Location = new System.Drawing.Point(25, 129);
             this.labelTagServiceComputer.Name = "labelTagServiceComputer";
             this.labelTagServiceComputer.Size = new System.Drawing.Size(91, 16);
             this.labelTagServiceComputer.TabIndex = 8;
             this.labelTagServiceComputer.Text = "Tag Service : ";
-            // 
-            // labelFirstNameUserComputer
-            // 
-            this.labelFirstNameUserComputer.AutoSize = true;
-            this.labelFirstNameUserComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelFirstNameUserComputer.ForeColor = System.Drawing.Color.White;
-            this.labelFirstNameUserComputer.Location = new System.Drawing.Point(25, 265);
-            this.labelFirstNameUserComputer.Name = "labelFirstNameUserComputer";
-            this.labelFirstNameUserComputer.Size = new System.Drawing.Size(114, 16);
-            this.labelFirstNameUserComputer.TabIndex = 18;
-            this.labelFirstNameUserComputer.Text = "First Name User : ";
-            // 
-            // textBoxFirstNameUserComputer
-            // 
-            this.textBoxFirstNameUserComputer.Location = new System.Drawing.Point(175, 261);
-            this.textBoxFirstNameUserComputer.Name = "textBoxFirstNameUserComputer";
-            this.textBoxFirstNameUserComputer.Size = new System.Drawing.Size(177, 20);
-            this.textBoxFirstNameUserComputer.TabIndex = 25;
             // 
             // labelOfficeComputer
             // 
             this.labelOfficeComputer.AutoSize = true;
             this.labelOfficeComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelOfficeComputer.ForeColor = System.Drawing.Color.White;
-            this.labelOfficeComputer.Location = new System.Drawing.Point(25, 317);
+            this.labelOfficeComputer.Location = new System.Drawing.Point(25, 205);
             this.labelOfficeComputer.Name = "labelOfficeComputer";
             this.labelOfficeComputer.Size = new System.Drawing.Size(51, 16);
             this.labelOfficeComputer.TabIndex = 4;
@@ -335,7 +427,7 @@
             // 
             // textBoxTagServiceComputer
             // 
-            this.textBoxTagServiceComputer.Location = new System.Drawing.Point(175, 169);
+            this.textBoxTagServiceComputer.Location = new System.Drawing.Point(175, 124);
             this.textBoxTagServiceComputer.Name = "textBoxTagServiceComputer";
             this.textBoxTagServiceComputer.Size = new System.Drawing.Size(177, 20);
             this.textBoxTagServiceComputer.TabIndex = 24;
@@ -345,7 +437,7 @@
             this.labelOperatingSystemComputer.AutoSize = true;
             this.labelOperatingSystemComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelOperatingSystemComputer.ForeColor = System.Drawing.Color.White;
-            this.labelOperatingSystemComputer.Location = new System.Drawing.Point(25, 83);
+            this.labelOperatingSystemComputer.Location = new System.Drawing.Point(25, 55);
             this.labelOperatingSystemComputer.Name = "labelOperatingSystemComputer";
             this.labelOperatingSystemComputer.Size = new System.Drawing.Size(124, 16);
             this.labelOperatingSystemComputer.TabIndex = 11;
@@ -353,7 +445,7 @@
             // 
             // textBoxCompanyFixedAssetComputer
             // 
-            this.textBoxCompanyFixedAssetComputer.Location = new System.Drawing.Point(175, 128);
+            this.textBoxCompanyFixedAssetComputer.Location = new System.Drawing.Point(175, 93);
             this.textBoxCompanyFixedAssetComputer.Name = "textBoxCompanyFixedAssetComputer";
             this.textBoxCompanyFixedAssetComputer.Size = new System.Drawing.Size(177, 20);
             this.textBoxCompanyFixedAssetComputer.TabIndex = 23;
@@ -363,7 +455,7 @@
             this.labelComputerName.AutoSize = true;
             this.labelComputerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelComputerName.ForeColor = System.Drawing.Color.White;
-            this.labelComputerName.Location = new System.Drawing.Point(25, 39);
+            this.labelComputerName.Location = new System.Drawing.Point(25, 22);
             this.labelComputerName.Name = "labelComputerName";
             this.labelComputerName.Size = new System.Drawing.Size(115, 16);
             this.labelComputerName.TabIndex = 0;
@@ -372,7 +464,7 @@
             // comboBoxOperatigSystemComputer
             // 
             this.comboBoxOperatigSystemComputer.FormattingEnabled = true;
-            this.comboBoxOperatigSystemComputer.Location = new System.Drawing.Point(175, 78);
+            this.comboBoxOperatigSystemComputer.Location = new System.Drawing.Point(175, 49);
             this.comboBoxOperatigSystemComputer.Name = "comboBoxOperatigSystemComputer";
             this.comboBoxOperatigSystemComputer.Size = new System.Drawing.Size(177, 21);
             this.comboBoxOperatigSystemComputer.TabIndex = 19;
@@ -380,7 +472,7 @@
             // comboBoxOfficeComputer
             // 
             this.comboBoxOfficeComputer.FormattingEnabled = true;
-            this.comboBoxOfficeComputer.Location = new System.Drawing.Point(175, 312);
+            this.comboBoxOfficeComputer.Location = new System.Drawing.Point(175, 199);
             this.comboBoxOfficeComputer.Name = "comboBoxOfficeComputer";
             this.comboBoxOfficeComputer.Size = new System.Drawing.Size(177, 21);
             this.comboBoxOfficeComputer.TabIndex = 21;
@@ -388,7 +480,7 @@
             // comboBoxLocationComputer
             // 
             this.comboBoxLocationComputer.FormattingEnabled = true;
-            this.comboBoxLocationComputer.Location = new System.Drawing.Point(175, 209);
+            this.comboBoxLocationComputer.Location = new System.Drawing.Point(175, 155);
             this.comboBoxLocationComputer.Name = "comboBoxLocationComputer";
             this.comboBoxLocationComputer.Size = new System.Drawing.Size(177, 21);
             this.comboBoxLocationComputer.TabIndex = 20;
@@ -411,9 +503,9 @@
             this.groupBox1.Controls.Add(this.labelIDComputer);
             this.groupBox1.Controls.Add(this.comboBoxCPUComputer);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(427, 13);
+            this.groupBox1.Location = new System.Drawing.Point(413, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 229);
+            this.groupBox1.Size = new System.Drawing.Size(298, 229);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Equipment";
@@ -683,6 +775,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateComputersForms";
             this.tabPageUpdateForms.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -710,7 +804,6 @@
         private System.Windows.Forms.Label labelCPUComputer;
         private System.Windows.Forms.Label labelRAMComputer;
         private System.Windows.Forms.Label labelHardDriveComputer;
-        private System.Windows.Forms.TextBox textBoxFirstNameUserComputer;
         private System.Windows.Forms.TextBox textBoxTagServiceComputer;
         private System.Windows.Forms.TextBox textBoxCompanyFixedAssetComputer;
         private System.Windows.Forms.TextBox textBoxNameComputer;
@@ -728,7 +821,6 @@
         private System.Windows.Forms.Label labelComputerName;
         private System.Windows.Forms.Label labelOperatingSystemComputer;
         private System.Windows.Forms.Label labelOfficeComputer;
-        private System.Windows.Forms.Label labelFirstNameUserComputer;
         private System.Windows.Forms.Label labelTagServiceComputer;
         private System.Windows.Forms.Label labelIPComputer;
         private System.Windows.Forms.Label labelLocationComputer;
@@ -746,11 +838,21 @@
         private System.Windows.Forms.LinkLabel linkLabelAddNewCPU;
         private System.Windows.Forms.LinkLabel linkLabelAddNewModel;
         private System.Windows.Forms.LinkLabel linkLabelAddNewMicrosoftOffice;
-        private System.Windows.Forms.LinkLabel linkLabelAddNewUser;
         private System.Windows.Forms.LinkLabel linkLabelAddNewLocation;
         private System.Windows.Forms.LinkLabel linkLabelAddNewOperatingSystem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox comboBoxUser;
+        private System.Windows.Forms.Label labelFullName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.TextBox textBoxJob;
+        private System.Windows.Forms.Label labelFirstName;
+        private System.Windows.Forms.LinkLabel linkLabelAddNewUser;
+        private System.Windows.Forms.Label labelJob;
+        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.TextBox textBoxLastName;
     }
 }

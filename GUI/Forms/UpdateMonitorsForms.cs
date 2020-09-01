@@ -21,13 +21,14 @@ namespace GUI.Forms
         {
             comboBoxLocationMonitors.DataSource = _monitorsLogic.FillComboBoxLocation().ToList();
             comboBoxModelMonitors.DataSource = _monitorsLogic.FillComboBoxModelMonitors().ToList();
+            comboBoxUsers.DataSource = _monitorsLogic.FillComboBoxUsers().ToList();
         }
 
         #region COMBOBOX DATA
         public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
 
-            var barcode = "wq";
+            var barcode = "q";
 
             var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             try
@@ -46,9 +47,11 @@ namespace GUI.Forms
                         barcode = dgViewRow.Cells[4].Value.ToString();
                         richTextBoxComentsMonitors.Text = dgViewRow.Cells[5].Value.ToString();
                         textBoxCompanyFixedAssetMonitors.Text = dgViewRow.Cells[6].Value.ToString();
-                        textBoxFirstNameUserMonitors.Text = dgViewRow.Cells[7].Value.ToString();
-                        comboBoxLocationMonitors.Text = dgViewRow.Cells[8].Value.ToString();
-                        comboBoxModelMonitors.Text = dgViewRow.Cells[9].Value.ToString();
+                        textBoxFirstName.Text = dgViewRow.Cells[7].Value.ToString();
+                        textBoxLastName.Text = dgViewRow.Cells[8].Value.ToString();
+                        textBoxJob.Text = dgViewRow.Cells[9].Value.ToString();
+                        comboBoxLocationMonitors.Text = dgViewRow.Cells[10].Value.ToString();
+                        comboBoxModelMonitors.Text = dgViewRow.Cells[11].Value.ToString();
                         break;
                     }
                     case DialogResult.No:
@@ -68,7 +71,7 @@ namespace GUI.Forms
         private void buttonUpdateDataMonitor_Click(object sender, EventArgs e)
         {
             _monitorsLogic.Update(Convert.ToInt32(textBoxIDMonitor.Text), textBoxCompanyFixedAssetMonitors.Text,textBoxTagServiceMonitors.Text,
-                comboBoxLocationMonitors.Text, textBoxFirstNameUserMonitors.Text, comboBoxModelMonitors.Text,richTextBoxComentsMonitors.Text,
+                comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text,richTextBoxComentsMonitors.Text,
                 dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value);
         }
         #endregion
@@ -88,7 +91,9 @@ namespace GUI.Forms
 
         private void linkLabelAddNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ///
+            _monitorsLogic.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text);
+            comboBoxUsers.DataSource = _monitorsLogic.FillComboBoxUsers().ToList();
+            comboBoxUsers.Text = textBoxFirstName.Text + " " + textBoxLastName.Text;
         }
         #endregion
     }

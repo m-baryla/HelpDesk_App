@@ -20,16 +20,16 @@ namespace LogicApp
 
         #region Inset / Update / Delete / UpdateView
 
-        public void Insert(string _companyFixedAsset,string _tagService, string _location, string _firstName, 
+        public void Insert(string _companyFixedAsset,string _tagService, string _location, string _user, 
             string _model, string _coments, DateTime _purchaseDate, DateTime _warrantyDate)
         {
-            _data.InsertMonitors(_companyFixedAsset,_tagService,_location,_firstName,_model,_coments,_purchaseDate,_warrantyDate);
+            _data.InsertMonitors(_companyFixedAsset,_tagService,_location, _user, _model,_coments,_purchaseDate,_warrantyDate);
         }
 
-        public void Update(int _id, string _companyFixedAsset, string _tagService, string _location, string _firstName,
+        public void Update(int _id, string _companyFixedAsset, string _tagService, string _location, string _user,
             string _model, string _coments, DateTime _purchaseDate, DateTime _warrantyDate)
         {
-            _data.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location, _firstName, _model, _coments,
+            _data.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location, _user, _model, _coments,
                 _purchaseDate, _warrantyDate);
         }
         public void DeleteMonitors(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
@@ -68,6 +68,10 @@ namespace LogicApp
         {
             _data.InsertComboBoxLocation(_value);
         }
+        public void InsertComboBoxUser(string _firstName, string _lastName, string _job)
+        {
+            _data.InsertComboBoxUser(_firstName, _lastName, _job);
+        }
         #endregion
 
         #region GetFillComboBox
@@ -78,6 +82,10 @@ namespace LogicApp
         public List<string> FillComboBoxModelMonitors()
         {
             return _data.FillComboBoxModelMonitors();
+        }
+        public List<string> FillComboBoxUsers()
+        {
+            return _data.FillComboBoxUsers();
         }
         #endregion
 

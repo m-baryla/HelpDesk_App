@@ -10,15 +10,15 @@ namespace Interfaces
         void GetAllMonitors();
 
         void InsertComputer(string _computerName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive,string _coments, DateTime purchaseDate, DateTime warrantyDate);
 
         void InsertNotebooks(string _notebooksName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate);
 
         void InsertMonitors(string _companyFixedAsset, string _tagService, string _location,
-            string _firstName, string _model,string _coments,DateTime purchaseDate,DateTime warrantyDate);
+            string _user, string _model,string _coments,DateTime purchaseDate,DateTime warrantyDate);
 
         void InsertComboBoxCPU(string _value);
         void InsertComboBoxHardDrive(string _value);
@@ -32,15 +32,15 @@ namespace Interfaces
         void InsertComboBoxUser(string _firstName, string _lastName, string _job);
 
         void UpdateComputer(int _id, string _computerName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate);
 
         void UpdateNotebooks(int _id, string _notebooksName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate);
 
         void UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location,
-            string _firstName, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate);
+            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate);
 
         void DeleteComputer(int _id);
         void DeleteNotebook(int _id);
@@ -54,5 +54,7 @@ namespace Interfaces
         List<string> FillComboBoxModelComputer();
         List<string> FillComboBoxModelMonitors();
         List<string> FillComboBoxModelNotebooks();
+        List<string> FillComboBoxUsers();
+
     }
 }

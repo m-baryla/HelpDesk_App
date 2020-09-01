@@ -1,1 +1,10 @@
+*.dgml
 *.txt
+.vs/
+bin/
+obj/
+*.suo
+*.cache
+*.sln
+packages/
+

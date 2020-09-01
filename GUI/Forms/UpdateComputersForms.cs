@@ -25,12 +25,13 @@ namespace GUI.Forms
             comboBoxHardDriveComputer.DataSource = _computersLogic.FillComboBoxHardDrive().ToList();
             comboBoxOfficeComputer.DataSource = _computersLogic.FillComboBoxOffice().ToList();
             comboBoxOperatigSystemComputer.DataSource = _computersLogic.FillComboBoxOperatingSystem().ToList();
+            comboBoxUser.DataSource = _computersLogic.FillComboBoxUsers().ToList();
         }
 
         #region COMBOBOX DATA
         public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
-            var barcode = "qwe";
+            var barcode = "q";
 
             var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             try
@@ -41,25 +42,27 @@ namespace GUI.Forms
                     {
                         DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
 
-                        // [UpdateComputersDataViev] must be like the view as [vwAll_Computers]
-                        textBoxIDComputer.Text = dgViewRow.Cells[0].Value.ToString();
-                        textBoxNameComputer.Text = dgViewRow.Cells[1].Value.ToString();
-                        textBoxTagServiceComputer.Text = dgViewRow.Cells[2].Value.ToString();
-                        textBoxIPComputer.Text = dgViewRow.Cells[3].Value.ToString();
-                        dateTimePickerPurchaseDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
-                        dateTimePickerWarrantyDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
-                        barcode = dgViewRow.Cells[6].Value.ToString();
-                        richTextBoxComentsComputer.Text = dgViewRow.Cells[7].Value.ToString();
-                        textBoxCompanyFixedAssetComputer.Text = dgViewRow.Cells[8].Value.ToString();
-                        textBoxFirstNameUserComputer.Text = dgViewRow.Cells[9].Value.ToString();
-                        comboBoxCPUComputer.Text = dgViewRow.Cells[10].Value.ToString();
-                        comboBoxHardDriveComputer.Text = dgViewRow.Cells[11].Value.ToString();
-                        comboBoxLocationComputer.Text = dgViewRow.Cells[12].Value.ToString();
-                        comboBoxOfficeComputer.Text = dgViewRow.Cells[13].Value.ToString();
-                        comboBoxModelComputer.Text = dgViewRow.Cells[14].Value.ToString();
-                        comboBoxOperatigSystemComputer.Text = dgViewRow.Cells[15].Value.ToString();
-                        comboBoxRAMComputer.Text = dgViewRow.Cells[16].Value.ToString();
-                        break;
+                            // [UpdateComputersDataViev] must be like the view as [vwAll_Computers]
+                            textBoxIDComputer.Text = dgViewRow.Cells[0].Value.ToString();
+                            textBoxNameComputer.Text = dgViewRow.Cells[1].Value.ToString();
+                            textBoxTagServiceComputer.Text = dgViewRow.Cells[2].Value.ToString();
+                            textBoxIPComputer.Text = dgViewRow.Cells[3].Value.ToString();
+                            dateTimePickerPurchaseDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
+                            dateTimePickerWarrantyDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
+                            barcode = dgViewRow.Cells[6].Value.ToString();
+                            richTextBoxComentsComputer.Text = dgViewRow.Cells[7].Value.ToString();
+                            textBoxCompanyFixedAssetComputer.Text = dgViewRow.Cells[8].Value.ToString();
+                            textBoxFirstName.Text = dgViewRow.Cells[9].Value.ToString();
+                            textBoxLastName.Text = dgViewRow.Cells[10].Value.ToString();
+                            textBoxJob.Text = dgViewRow.Cells[11].Value.ToString();
+                            comboBoxCPUComputer.Text = dgViewRow.Cells[12].Value.ToString();
+                            comboBoxHardDriveComputer.Text = dgViewRow.Cells[13].Value.ToString();
+                            comboBoxLocationComputer.Text = dgViewRow.Cells[14].Value.ToString();
+                            comboBoxOfficeComputer.Text = dgViewRow.Cells[15].Value.ToString();
+                            comboBoxModelComputer.Text = dgViewRow.Cells[16].Value.ToString();
+                            comboBoxOperatigSystemComputer.Text = dgViewRow.Cells[17].Value.ToString();
+                            comboBoxRAMComputer.Text = dgViewRow.Cells[18].Value.ToString();
+                            break;
                     }
                     case DialogResult.No:
                     {
@@ -79,7 +82,7 @@ namespace GUI.Forms
         {
             _computersLogic.Update(Convert.ToInt32(textBoxIDComputer.Text), textBoxNameComputer.Text,comboBoxOperatigSystemComputer.Text,
                     textBoxCompanyFixedAssetComputer.Text, textBoxTagServiceComputer.Text,comboBoxLocationComputer.Text,
-                    textBoxFirstNameUserComputer.Text, comboBoxOfficeComputer.Text,textBoxIPComputer.Text, comboBoxModelComputer.Text,
+                    comboBoxUser.Text, comboBoxOfficeComputer.Text,textBoxIPComputer.Text, comboBoxModelComputer.Text,
                     comboBoxCPUComputer.Text, comboBoxRAMComputer.Text,comboBoxHardDriveComputer.Text,richTextBoxComentsComputer.Text,
                     dateTimePickerPurchaseDateComputer.Value, dateTimePickerWarrantyDateComputer.Value);
         }
@@ -131,7 +134,10 @@ namespace GUI.Forms
 
         private void linkLabelAddNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ////
+            _computersLogic.InsertComboBoxUser(textBoxFirstName.Text,textBoxLastName.Text,textBoxJob.Text);
+            comboBoxUser.DataSource = _computersLogic.FillComboBoxUsers().ToList();
+            comboBoxUser.Text = textBoxFirstName.Text + " " + textBoxLastName.Text;
+
         }
         #endregion
 

@@ -26,13 +26,14 @@ namespace GUI.Forms
             comboBoxHardDriveNotebook.DataSource = _notebooksLogic.FillComboBoxHardDrive().ToList();
             comboBoxOfficeNotebook.DataSource = _notebooksLogic.FillComboBoxOffice().ToList();
             comboBoxOperatigSystemNotebook.DataSource = _notebooksLogic.FillComboBoxOperatingSystem().ToList();
+            comboBoxUsers.DataSource = _notebooksLogic.FillComboBoxUsers().ToList();
         }
 
         #region COMBOBOX DATA
         public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
             
-            var barcode = "edit barcode";
+            var barcode = "q";
 
             var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             try
@@ -53,14 +54,16 @@ namespace GUI.Forms
                         barcode = dgViewRow.Cells[6].Value.ToString();
                         richTextBoxComentsNotebook.Text = dgViewRow.Cells[7].Value.ToString();
                         textBoxCompanyFixedAssetNotebook.Text = dgViewRow.Cells[8].Value.ToString();
-                        textBoxFirstNameUserNotebook.Text = dgViewRow.Cells[9].Value.ToString();
-                        comboBoxCPUNotebook.Text = dgViewRow.Cells[10].Value.ToString();
-                        comboBoxHardDriveNotebook.Text = dgViewRow.Cells[11].Value.ToString();
-                        comboBoxLocationNotebook.Text = dgViewRow.Cells[12].Value.ToString();
-                        comboBoxOfficeNotebook.Text = dgViewRow.Cells[13].Value.ToString();
-                        comboBoxModelNotebook.Text = dgViewRow.Cells[14].Value.ToString();
-                        comboBoxOperatigSystemNotebook.Text = dgViewRow.Cells[15].Value.ToString();
-                        comboBoxRAMNotebook.Text = dgViewRow.Cells[16].Value.ToString();
+                        textBoxFirstName.Text = dgViewRow.Cells[9].Value.ToString();
+                        textBoxLastName.Text = dgViewRow.Cells[10].Value.ToString();
+                        textBoxJob.Text = dgViewRow.Cells[11].Value.ToString();
+                        comboBoxCPUNotebook.Text = dgViewRow.Cells[12].Value.ToString();
+                        comboBoxHardDriveNotebook.Text = dgViewRow.Cells[13].Value.ToString();
+                        comboBoxLocationNotebook.Text = dgViewRow.Cells[14].Value.ToString();
+                        comboBoxOfficeNotebook.Text = dgViewRow.Cells[15].Value.ToString();
+                        comboBoxModelNotebook.Text = dgViewRow.Cells[16].Value.ToString();
+                        comboBoxOperatigSystemNotebook.Text = dgViewRow.Cells[17].Value.ToString();
+                        comboBoxRAMNotebook.Text = dgViewRow.Cells[18].Value.ToString();
                         break;
                     }
                     case DialogResult.No:
@@ -81,7 +84,7 @@ namespace GUI.Forms
         {
             _notebooksLogic.Update(Convert.ToInt32(textBoxIDNotebooks.Text), textBoxNameNotebook.Text,
                     comboBoxOperatigSystemNotebook.Text,textBoxCompanyFixedAssetNotebook.Text, textBoxTagServiceNotebook.Text,
-                    comboBoxLocationNotebook.Text,textBoxFirstNameUserNotebook.Text, comboBoxOfficeNotebook.Text,
+                    comboBoxLocationNotebook.Text,comboBoxUsers.Text, comboBoxOfficeNotebook.Text,
                     textBoxIPNotebook.Text, comboBoxModelNotebook.Text,comboBoxCPUNotebook.Text, comboBoxRAMNotebook.Text,
                     comboBoxHardDriveNotebook.Text, richTextBoxComentsNotebook.Text,
                     dateTimePickerPurchaseDateNotebook.Value, dateTimePickerWarrantyDateNotebook.Value);
@@ -133,7 +136,9 @@ namespace GUI.Forms
         }
         private void linkLabelAddNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ///
+            _notebooksLogic.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text);
+            comboBoxUsers.DataSource = _notebooksLogic.FillComboBoxUsers().ToList();
+            comboBoxUsers.Text = textBoxFirstName.Text + " " + textBoxLastName.Text;
         }
         #endregion
     }

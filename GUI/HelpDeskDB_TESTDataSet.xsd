@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Computers" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers</CommandText>
+                    <CommandText>SELECT Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -29,6 +29,8 @@
               <Mapping SourceColumn="Coments" DataSetColumn="Coments" />
               <Mapping SourceColumn="CompanyFixedAsset" DataSetColumn="CompanyFixedAsset" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="Job" DataSetColumn="Job" />
               <Mapping SourceColumn="CPUVersion" DataSetColumn="CPUVersion" />
               <Mapping SourceColumn="HardDriveVersion" DataSetColumn="HardDriveVersion" />
               <Mapping SourceColumn="LocationName" DataSetColumn="LocationName" />
@@ -44,7 +46,7 @@
               <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Monitors" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, TagService, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, LocationName, ModelVersionMonitors FROM dbo.vwAll_Monitors</CommandText>
+                    <CommandText>SELECT Id, TagService, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, LastName, Job, LocationName, ModelVersionMonitors FROM dbo.vwAll_Monitors</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -59,6 +61,8 @@
               <Mapping SourceColumn="Coments" DataSetColumn="Coments" />
               <Mapping SourceColumn="CompanyFixedAsset" DataSetColumn="CompanyFixedAsset" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="Job" DataSetColumn="Job" />
               <Mapping SourceColumn="LocationName" DataSetColumn="LocationName" />
               <Mapping SourceColumn="ModelVersionMonitors" DataSetColumn="ModelVersionMonitors" />
             </Mappings>
@@ -69,7 +73,7 @@
               <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Notebooks" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks</CommandText>
+                    <CommandText>SELECT Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -86,6 +90,8 @@
               <Mapping SourceColumn="Coments" DataSetColumn="Coments" />
               <Mapping SourceColumn="CompanyFixedAsset" DataSetColumn="CompanyFixedAsset" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="Job" DataSetColumn="Job" />
               <Mapping SourceColumn="CPUVersion" DataSetColumn="CPUVersion" />
               <Mapping SourceColumn="HardDriveVersion" DataSetColumn="HardDriveVersion" />
               <Mapping SourceColumn="LocationName" DataSetColumn="LocationName" />
@@ -153,6 +159,20 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Job" msprop:Generator_ColumnVarNameInTable="columnJob" msprop:Generator_ColumnPropNameInRow="Job" msprop:Generator_ColumnPropNameInTable="JobColumn" msprop:Generator_UserColumnName="Job" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -252,6 +272,20 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Job" msprop:Generator_ColumnVarNameInTable="columnJob" msprop:Generator_ColumnPropNameInRow="Job" msprop:Generator_ColumnPropNameInTable="JobColumn" msprop:Generator_UserColumnName="Job" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="LocationName" msprop:Generator_ColumnVarNameInTable="columnLocationName" msprop:Generator_ColumnPropNameInRow="LocationName" msprop:Generator_ColumnPropNameInTable="LocationNameColumn" msprop:Generator_UserColumnName="LocationName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -318,6 +352,20 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Job" msprop:Generator_ColumnVarNameInTable="columnJob" msprop:Generator_ColumnPropNameInRow="Job" msprop:Generator_ColumnPropNameInTable="JobColumn" msprop:Generator_UserColumnName="Job" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

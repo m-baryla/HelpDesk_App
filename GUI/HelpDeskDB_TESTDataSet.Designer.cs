@@ -369,6 +369,10 @@ namespace GUI {
             
             private global::System.Data.DataColumn columnFirstName;
             
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnJob;
+            
             private global::System.Data.DataColumn columnCPUVersion;
             
             private global::System.Data.DataColumn columnHardDriveVersion;
@@ -498,6 +502,22 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobColumn {
+                get {
+                    return this.columnJob;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn CPUVersionColumn {
                 get {
                     return this.columnCPUVersion;
@@ -600,6 +620,8 @@ namespace GUI {
                         string Coments, 
                         string CompanyFixedAsset, 
                         string FirstName, 
+                        string LastName, 
+                        string Job, 
                         string CPUVersion, 
                         string HardDriveVersion, 
                         string LocationName, 
@@ -619,6 +641,8 @@ namespace GUI {
                         Coments,
                         CompanyFixedAsset,
                         FirstName,
+                        LastName,
+                        Job,
                         CPUVersion,
                         HardDriveVersion,
                         LocationName,
@@ -665,6 +689,8 @@ namespace GUI {
                 this.columnComents = base.Columns["Coments"];
                 this.columnCompanyFixedAsset = base.Columns["CompanyFixedAsset"];
                 this.columnFirstName = base.Columns["FirstName"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnJob = base.Columns["Job"];
                 this.columnCPUVersion = base.Columns["CPUVersion"];
                 this.columnHardDriveVersion = base.Columns["HardDriveVersion"];
                 this.columnLocationName = base.Columns["LocationName"];
@@ -697,6 +723,10 @@ namespace GUI {
                 base.Columns.Add(this.columnCompanyFixedAsset);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnJob = new global::System.Data.DataColumn("Job", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJob);
                 this.columnCPUVersion = new global::System.Data.DataColumn("CPUVersion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCPUVersion);
                 this.columnHardDriveVersion = new global::System.Data.DataColumn("HardDriveVersion", typeof(string), null, global::System.Data.MappingType.Element);
@@ -722,6 +752,8 @@ namespace GUI {
                 this.columnComents.MaxLength = 2147483647;
                 this.columnCompanyFixedAsset.MaxLength = 50;
                 this.columnFirstName.MaxLength = 50;
+                this.columnLastName.MaxLength = 50;
+                this.columnJob.MaxLength = 50;
                 this.columnCPUVersion.MaxLength = 50;
                 this.columnHardDriveVersion.MaxLength = 50;
                 this.columnLocationName.MaxLength = 50;
@@ -878,6 +910,10 @@ namespace GUI {
             
             private global::System.Data.DataColumn columnFirstName;
             
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnJob;
+            
             private global::System.Data.DataColumn columnLocationName;
             
             private global::System.Data.DataColumn columnModelVersionMonitors;
@@ -981,6 +1017,22 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobColumn {
+                get {
+                    return this.columnJob;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn LocationNameColumn {
                 get {
                     return this.columnLocationName;
@@ -1032,7 +1084,7 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwAll_MonitorsRow AddvwAll_MonitorsRow(int Id, string TagService, System.DateTime PurchaseDate, System.DateTime WarrantyDate, string Barcode, string Coments, string CompanyFixedAsset, string FirstName, string LocationName, string ModelVersionMonitors) {
+            public vwAll_MonitorsRow AddvwAll_MonitorsRow(int Id, string TagService, System.DateTime PurchaseDate, System.DateTime WarrantyDate, string Barcode, string Coments, string CompanyFixedAsset, string FirstName, string LastName, string Job, string LocationName, string ModelVersionMonitors) {
                 vwAll_MonitorsRow rowvwAll_MonitorsRow = ((vwAll_MonitorsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
@@ -1043,6 +1095,8 @@ namespace GUI {
                         Coments,
                         CompanyFixedAsset,
                         FirstName,
+                        LastName,
+                        Job,
                         LocationName,
                         ModelVersionMonitors};
                 rowvwAll_MonitorsRow.ItemArray = columnValuesArray;
@@ -1082,6 +1136,8 @@ namespace GUI {
                 this.columnComents = base.Columns["Coments"];
                 this.columnCompanyFixedAsset = base.Columns["CompanyFixedAsset"];
                 this.columnFirstName = base.Columns["FirstName"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnJob = base.Columns["Job"];
                 this.columnLocationName = base.Columns["LocationName"];
                 this.columnModelVersionMonitors = base.Columns["ModelVersionMonitors"];
             }
@@ -1105,6 +1161,10 @@ namespace GUI {
                 base.Columns.Add(this.columnCompanyFixedAsset);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnJob = new global::System.Data.DataColumn("Job", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJob);
                 this.columnLocationName = new global::System.Data.DataColumn("LocationName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLocationName);
                 this.columnModelVersionMonitors = new global::System.Data.DataColumn("ModelVersionMonitors", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1118,6 +1178,8 @@ namespace GUI {
                 this.columnComents.MaxLength = 2147483647;
                 this.columnCompanyFixedAsset.MaxLength = 50;
                 this.columnFirstName.MaxLength = 50;
+                this.columnLastName.MaxLength = 50;
+                this.columnJob.MaxLength = 50;
                 this.columnLocationName.MaxLength = 50;
                 this.columnModelVersionMonitors.MaxLength = 50;
             }
@@ -1273,6 +1335,10 @@ namespace GUI {
             
             private global::System.Data.DataColumn columnFirstName;
             
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnJob;
+            
             private global::System.Data.DataColumn columnCPUVersion;
             
             private global::System.Data.DataColumn columnHardDriveVersion;
@@ -1402,6 +1468,22 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobColumn {
+                get {
+                    return this.columnJob;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn CPUVersionColumn {
                 get {
                     return this.columnCPUVersion;
@@ -1504,6 +1586,8 @@ namespace GUI {
                         string Coments, 
                         string CompanyFixedAsset, 
                         string FirstName, 
+                        string LastName, 
+                        string Job, 
                         string CPUVersion, 
                         string HardDriveVersion, 
                         string LocationName, 
@@ -1523,6 +1607,8 @@ namespace GUI {
                         Coments,
                         CompanyFixedAsset,
                         FirstName,
+                        LastName,
+                        Job,
                         CPUVersion,
                         HardDriveVersion,
                         LocationName,
@@ -1569,6 +1655,8 @@ namespace GUI {
                 this.columnComents = base.Columns["Coments"];
                 this.columnCompanyFixedAsset = base.Columns["CompanyFixedAsset"];
                 this.columnFirstName = base.Columns["FirstName"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnJob = base.Columns["Job"];
                 this.columnCPUVersion = base.Columns["CPUVersion"];
                 this.columnHardDriveVersion = base.Columns["HardDriveVersion"];
                 this.columnLocationName = base.Columns["LocationName"];
@@ -1601,6 +1689,10 @@ namespace GUI {
                 base.Columns.Add(this.columnCompanyFixedAsset);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnJob = new global::System.Data.DataColumn("Job", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJob);
                 this.columnCPUVersion = new global::System.Data.DataColumn("CPUVersion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCPUVersion);
                 this.columnHardDriveVersion = new global::System.Data.DataColumn("HardDriveVersion", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1626,6 +1718,8 @@ namespace GUI {
                 this.columnComents.MaxLength = 2147483647;
                 this.columnCompanyFixedAsset.MaxLength = 50;
                 this.columnFirstName.MaxLength = 50;
+                this.columnLastName.MaxLength = 50;
+                this.columnJob.MaxLength = 50;
                 this.columnCPUVersion.MaxLength = 50;
                 this.columnHardDriveVersion.MaxLength = 50;
                 this.columnLocationName.MaxLength = 50;
@@ -1930,6 +2024,38 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastName {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwAll_Computers.LastNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'vwAll_Computers\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Computers.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Job {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwAll_Computers.JobColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Job\' in table \'vwAll_Computers\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Computers.JobColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string CPUVersion {
                 get {
                     try {
@@ -2149,6 +2275,30 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFirstNameNull() {
                 this[this.tablevwAll_Computers.FirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLastNameNull() {
+                return this.IsNull(this.tablevwAll_Computers.LastNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLastNameNull() {
+                this[this.tablevwAll_Computers.LastNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsJobNull() {
+                return this.IsNull(this.tablevwAll_Computers.JobColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetJobNull() {
+                this[this.tablevwAll_Computers.JobColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2375,6 +2525,38 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastName {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwAll_Monitors.LastNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'vwAll_Monitors\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Monitors.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Job {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwAll_Monitors.JobColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Job\' in table \'vwAll_Monitors\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Monitors.JobColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string LocationName {
                 get {
                     try {
@@ -2487,6 +2669,30 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFirstNameNull() {
                 this[this.tablevwAll_Monitors.FirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLastNameNull() {
+                return this.IsNull(this.tablevwAll_Monitors.LastNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLastNameNull() {
+                this[this.tablevwAll_Monitors.LastNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsJobNull() {
+                return this.IsNull(this.tablevwAll_Monitors.JobColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetJobNull() {
+                this[this.tablevwAll_Monitors.JobColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2680,6 +2886,38 @@ namespace GUI {
                 }
                 set {
                     this[this.tablevwAll_Notebooks.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastName {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwAll_Notebooks.LastNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'vwAll_Notebooks\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Notebooks.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Job {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwAll_Notebooks.JobColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Job\' in table \'vwAll_Notebooks\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Notebooks.JobColumn] = value;
                 }
             }
             
@@ -2904,6 +3142,30 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFirstNameNull() {
                 this[this.tablevwAll_Notebooks.FirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLastNameNull() {
+                return this.IsNull(this.tablevwAll_Notebooks.LastNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLastNameNull() {
+                this[this.tablevwAll_Notebooks.LastNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsJobNull() {
+                return this.IsNull(this.tablevwAll_Notebooks.JobColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetJobNull() {
+                this[this.tablevwAll_Notebooks.JobColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3228,6 +3490,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Coments", "Coments");
             tableMapping.ColumnMappings.Add("CompanyFixedAsset", "CompanyFixedAsset");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("Job", "Job");
             tableMapping.ColumnMappings.Add("CPUVersion", "CPUVersion");
             tableMapping.ColumnMappings.Add("HardDriveVersion", "HardDriveVersion");
             tableMapping.ColumnMappings.Add("LocationName", "LocationName");
@@ -3251,7 +3515,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers";
+            this._commandCollection[0].CommandText = @"SELECT Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3409,6 +3673,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Coments", "Coments");
             tableMapping.ColumnMappings.Add("CompanyFixedAsset", "CompanyFixedAsset");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("Job", "Job");
             tableMapping.ColumnMappings.Add("LocationName", "LocationName");
             tableMapping.ColumnMappings.Add("ModelVersionMonitors", "ModelVersionMonitors");
             this._adapter.TableMappings.Add(tableMapping);
@@ -3428,7 +3694,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, TagService, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixed" +
-                "Asset, FirstName, LocationName, ModelVersionMonitors FROM dbo.vwAll_Monitors";
+                "Asset, FirstName, LastName, Job, LocationName, ModelVersionMonitors FROM dbo.vwA" +
+                "ll_Monitors";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3588,6 +3855,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Coments", "Coments");
             tableMapping.ColumnMappings.Add("CompanyFixedAsset", "CompanyFixedAsset");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("Job", "Job");
             tableMapping.ColumnMappings.Add("CPUVersion", "CPUVersion");
             tableMapping.ColumnMappings.Add("HardDriveVersion", "HardDriveVersion");
             tableMapping.ColumnMappings.Add("LocationName", "LocationName");
@@ -3611,7 +3880,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks";
+            this._commandCollection[0].CommandText = @"SELECT Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

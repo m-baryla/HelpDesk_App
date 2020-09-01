@@ -39,27 +39,27 @@ namespace DataBaseLayer.DataBase
         #region InsertData
 
         public void InsertComputer(string _computerName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate)
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertComputer(_computerName, _operatingSystem, _companyFixedAsset,
-                    _tagService, _location, _firstName, _office, _ip, _model,
+                    _tagService, _location, _user, _office, _ip, _model,
                     _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
         }
 
         public void InsertNotebooks(string _notebooksName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate)
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertNotebooks(_notebooksName, _operatingSystem, _companyFixedAsset,
-                           _tagService, _location, _firstName, _office, _ip, _model,
+                           _tagService, _location, _user, _office, _ip, _model,
                            _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
         }
         public void InsertMonitors(string _companyFixedAsset, string _tagService, string _location,
-            string _firstName, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate)
+            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate)
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertMonitors(_companyFixedAsset, _tagService, _location,
-                         _firstName, _model, _coments, purchaseDate, warrantyDate));
+                _user, _model, _coments, purchaseDate, warrantyDate));
         }
         public void InsertComboBoxCPU(string _value)
         {
@@ -106,24 +106,24 @@ namespace DataBaseLayer.DataBase
 
         #region UpdateData
         public void UpdateComputer(int _id, string _computerName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate)
         {
-            _infoMessageBox.Info(_updateDataServiceClient.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _firstName,
+            _infoMessageBox.Info(_updateDataServiceClient.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user,
                             _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
         }
         public void UpdateNotebooks(int _id, string _notebooksName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate)
         {
-            _infoMessageBox.Info(_updateDataServiceClient.UpdateNotebooks(_id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _firstName,
+            _infoMessageBox.Info(_updateDataServiceClient.UpdateNotebooks(_id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user,
                             _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
         }
         public void UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location,
-            string _firstName, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate)
+            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate)
         {
             _infoMessageBox.Info(_updateDataServiceClient.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location,
-                        _firstName, _model, _coments, purchaseDate, warrantyDate));
+                _user, _model, _coments, purchaseDate, warrantyDate));
         }
         #endregion
 
@@ -145,39 +145,43 @@ namespace DataBaseLayer.DataBase
         #region FillComboBox
         public List<string> FillComboBoxLocation()
         {
-            return _fillComboBoxDataServiceClient?.FillComboBoxLocation().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxLocation().ToList(); // if != null
         }
         public List<string> FillComboBoxOffice()
         {
-            return _fillComboBoxDataServiceClient?.FillComboBoxOffice().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxOffice().ToList(); // if != null
         }
         public List<string> FillComboBoxOperatingSystem()
         {
-            return _fillComboBoxDataServiceClient?.FillComboBoxOperatingSystem().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxOperatingSystem().ToList(); // if != null
         }
         public List<string> FillComboBoxCPU()
         {
-            return _fillComboBoxDataServiceClient?.FillComboBoxCPU().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxCPU().ToList(); // if != null
         }
         public List<string> FillComboBoxHardDrive()
         {
-            return _fillComboBoxDataServiceClient?.FillComboBoxHardDrive().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxHardDrive().ToList(); // if != null
         }
         public List<string> FillComboBoxRAM()
         {
-            return _fillComboBoxDataServiceClient?.FillComboBoxRAM().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxRAM().ToList(); // if != null
         }
         public List<string> FillComboBoxModelComputer()
         {
-            return _fillComboBoxDataServiceClient?.FillComboBoxModelComputer().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxModelComputer().ToList(); // if != null
         }
         public List<string> FillComboBoxModelMonitors()
         {
-            return _fillComboBoxDataServiceClient?.FillComboBoxModelMonitors().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxModelMonitors().ToList(); // if != null
         }
         public List<string> FillComboBoxModelNotebooks()
         {
-            return _fillComboBoxDataServiceClient?.FillComboBoxModelNotebooks().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxModelNotebooks().ToList(); // if != null
+        }
+        public List<string> FillComboBoxUsers()
+        {
+            return _fillComboBoxDataServiceClient.vwFillComboBoxUsers().ToList(); // if != null
         }
         #endregion
     }

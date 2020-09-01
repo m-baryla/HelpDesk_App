@@ -61,7 +61,7 @@ namespace GUI.Forms
         {
             if (_hidden)
             {
-                panelSideMenu.Width = panelSideMenu.Width + 10;
+                panelSideMenu.Width += 10;
                 if (panelSideMenu.Width >= _panelWidthSideMenu)
                 {
                     timer1.Stop();
@@ -71,7 +71,7 @@ namespace GUI.Forms
             }
             else
             {
-                panelSideMenu.Width = panelSideMenu.Width - 10;
+                panelSideMenu.Width -= 10;
                 if (panelSideMenu.Width <= 0)
                 {
                     timer1.Stop();

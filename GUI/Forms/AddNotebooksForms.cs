@@ -25,6 +25,7 @@ namespace GUI.Forms
             comboBoxHardDriveNotebook.DataSource = _notebooksLogic.FillComboBoxHardDrive().ToList();
             comboBoxOfficeNotebook.DataSource = _notebooksLogic.FillComboBoxOffice().ToList();
             comboBoxOperatigSystemNotebook.DataSource = _notebooksLogic.FillComboBoxOperatingSystem().ToList();
+            comboBoxUsers.DataSource = _notebooksLogic.FillComboBoxUsers().ToList();
             ///
             textBoxNameNotebook.Text = "OPP-00000";
             textBoxCompanyFixedAssetNotebook.Text = "T-D-00000";
@@ -33,13 +34,13 @@ namespace GUI.Forms
         #region Button
         private void buttonInsertDataNotebooks_Click(object sender, EventArgs e)
         {
-            _notebooksLogic.Insert(textBoxNameNotebook.Text, comboBoxOperatigSystemNotebook.Text,
+            _notebooksLogic?.Insert(textBoxNameNotebook.Text, comboBoxOperatigSystemNotebook.Text,
                     textBoxCompanyFixedAssetNotebook.Text, textBoxTagServiceNotebook.Text,
-                    comboBoxLocationNotebook.Text, textBoxUserNotebook.Text,
+                    comboBoxLocationNotebook.Text, comboBoxUsers.Text,
                     comboBoxOfficeNotebook.Text, textBoxIPNotebook.Text, comboBoxModelNotebook.Text,
                     comboBoxCPUNotebook.Text, comboBoxRAMNotebook.Text, comboBoxHardDriveNotebook.Text,
                     richTextBoxComentsNotebook.Text, dateTimePickerPurchaseDateNotebook.Value,
-                    dateTimePickerWarrantyDateNotebook.Value);
+                    dateTimePickerWarrantyDateNotebook.Value); // if != null
         }
 
         private void buttonCloseMonitor_Click_1(object sender, EventArgs e)
@@ -51,48 +52,49 @@ namespace GUI.Forms
         #region Label link add new _values
         private void linkLabelAddNewOffice_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _notebooksLogic.InsertComboBoxMicrosoftOffice(comboBoxOfficeNotebook.Text);
+            _notebooksLogic?.InsertComboBoxMicrosoftOffice(comboBoxOfficeNotebook.Text); // if != null
             UploadData();
         }
 
         private void linkLabelAddNewLocation_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _notebooksLogic.InsertComboBoxLocation(comboBoxLocationNotebook.Text);
+            _notebooksLogic?.InsertComboBoxLocation(comboBoxLocationNotebook.Text); // if != null
             UploadData();
         }
 
         private void linkLabelAddNewOperatingSystem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _notebooksLogic.InsertComboBoxOperatingSystem(comboBoxOperatigSystemNotebook.Text);
+            _notebooksLogic?.InsertComboBoxOperatingSystem(comboBoxOperatigSystemNotebook.Text); // if != null
             UploadData();
         }
 
         private void linkLabelAddNewModel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _notebooksLogic.InsertComboBoxModelNotebook(comboBoxModelNotebook.Text);
+            _notebooksLogic?.InsertComboBoxModelNotebook(comboBoxModelNotebook.Text); // if != null
             UploadData();
         }
 
         private void linkLabelAddNewCPU_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _notebooksLogic.InsertComboBoxCPU(comboBoxCPUNotebook.Text);
+            _notebooksLogic?.InsertComboBoxCPU(comboBoxCPUNotebook.Text); // if != null
             UploadData();
         }
 
         private void linkLabelAddNewRAM_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _notebooksLogic.InsertComboBoxRAM(comboBoxRAMNotebook.Text);
+            _notebooksLogic?.InsertComboBoxRAM(comboBoxRAMNotebook.Text); // if != null
             UploadData();
         }
 
         private void linkLabelAddNewHardDrive_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _notebooksLogic.InsertComboBoxHardDrive(comboBoxHardDriveNotebook.Text);
+            _notebooksLogic?.InsertComboBoxHardDrive(comboBoxHardDriveNotebook.Text); // if != null
             UploadData();
         }
         private void linkLabelAddNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ///
+            _notebooksLogic?.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text); // if != null
+            UploadData();
         }
         #endregion
 

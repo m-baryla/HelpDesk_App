@@ -53,9 +53,7 @@
             this.labelIPNotebooks = new System.Windows.Forms.Label();
             this.linkLabelAddNewOperatingSystem = new System.Windows.Forms.LinkLabel();
             this.labelTagServiceNotebooks = new System.Windows.Forms.Label();
-            this.textBoxFirstNameUserNotebook = new System.Windows.Forms.TextBox();
             this.labelOfficeNotebooks = new System.Windows.Forms.Label();
-            this.labelFirstNameUserComputer = new System.Windows.Forms.Label();
             this.labelOperatingSystemNotebooks = new System.Windows.Forms.Label();
             this.labelComputerName = new System.Windows.Forms.Label();
             this.comboBoxOperatigSystemNotebook = new System.Windows.Forms.ComboBox();
@@ -80,6 +78,15 @@
             this.tabPageComentsNotebooks = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonUpdateDataNotebooks = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.textBoxJob = new System.Windows.Forms.TextBox();
+            this.labelFirstName = new System.Windows.Forms.Label();
+            this.labelJob = new System.Windows.Forms.Label();
+            this.labelLastName = new System.Windows.Forms.Label();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.comboBoxUsers = new System.Windows.Forms.ComboBox();
+            this.labelUserComputer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPageBarcodeNotebooks.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -89,6 +96,7 @@
             this.groupBox1.SuspendLayout();
             this.tabPageComentsNotebooks.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBoxComentsNotebook
@@ -103,7 +111,7 @@
             // 
             this.dateTimePickerPurchaseDateNotebook.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerPurchaseDateNotebook.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerPurchaseDateNotebook.Location = new System.Drawing.Point(138, 97);
+            this.dateTimePickerPurchaseDateNotebook.Location = new System.Drawing.Point(181, 72);
             this.dateTimePickerPurchaseDateNotebook.Name = "dateTimePickerPurchaseDateNotebook";
             this.dateTimePickerPurchaseDateNotebook.Size = new System.Drawing.Size(120, 20);
             this.dateTimePickerPurchaseDateNotebook.TabIndex = 5;
@@ -112,7 +120,7 @@
             // 
             this.dateTimePickerWarrantyDateNotebook.CustomFormat = "yyyy-MM-dd";
             this.dateTimePickerWarrantyDateNotebook.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerWarrantyDateNotebook.Location = new System.Drawing.Point(138, 50);
+            this.dateTimePickerWarrantyDateNotebook.Location = new System.Drawing.Point(181, 25);
             this.dateTimePickerWarrantyDateNotebook.Name = "dateTimePickerWarrantyDateNotebook";
             this.dateTimePickerWarrantyDateNotebook.Size = new System.Drawing.Size(120, 20);
             this.dateTimePickerWarrantyDateNotebook.TabIndex = 4;
@@ -122,7 +130,7 @@
             this.labelWarrantyDateNotebooks.AutoSize = true;
             this.labelWarrantyDateNotebooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelWarrantyDateNotebooks.ForeColor = System.Drawing.Color.White;
-            this.labelWarrantyDateNotebooks.Location = new System.Drawing.Point(16, 50);
+            this.labelWarrantyDateNotebooks.Location = new System.Drawing.Point(59, 25);
             this.labelWarrantyDateNotebooks.Name = "labelWarrantyDateNotebooks";
             this.labelWarrantyDateNotebooks.Size = new System.Drawing.Size(103, 16);
             this.labelWarrantyDateNotebooks.TabIndex = 2;
@@ -133,7 +141,7 @@
             this.labelDateOfPurchaseNotebooks.AutoSize = true;
             this.labelDateOfPurchaseNotebooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelDateOfPurchaseNotebooks.ForeColor = System.Drawing.Color.White;
-            this.labelDateOfPurchaseNotebooks.Location = new System.Drawing.Point(16, 97);
+            this.labelDateOfPurchaseNotebooks.Location = new System.Drawing.Point(59, 72);
             this.labelDateOfPurchaseNotebooks.Name = "labelDateOfPurchaseNotebooks";
             this.labelDateOfPurchaseNotebooks.Size = new System.Drawing.Size(106, 16);
             this.labelDateOfPurchaseNotebooks.TabIndex = 3;
@@ -152,14 +160,14 @@
             // 
             // textBoxIPNotebook
             // 
-            this.textBoxIPNotebook.Location = new System.Drawing.Point(184, 371);
+            this.textBoxIPNotebook.Location = new System.Drawing.Point(184, 258);
             this.textBoxIPNotebook.Name = "textBoxIPNotebook";
             this.textBoxIPNotebook.Size = new System.Drawing.Size(177, 20);
             this.textBoxIPNotebook.TabIndex = 26;
             // 
             // textBoxTagServiceNotebook
             // 
-            this.textBoxTagServiceNotebook.Location = new System.Drawing.Point(184, 185);
+            this.textBoxTagServiceNotebook.Location = new System.Drawing.Point(184, 140);
             this.textBoxTagServiceNotebook.Name = "textBoxTagServiceNotebook";
             this.textBoxTagServiceNotebook.Size = new System.Drawing.Size(177, 20);
             this.textBoxTagServiceNotebook.TabIndex = 24;
@@ -215,6 +223,7 @@
             // tabPageEquipmentNotebooks
             // 
             this.tabPageEquipmentNotebooks.BackColor = System.Drawing.Color.Black;
+            this.tabPageEquipmentNotebooks.Controls.Add(this.groupBox4);
             this.tabPageEquipmentNotebooks.Controls.Add(this.groupBox3);
             this.tabPageEquipmentNotebooks.Controls.Add(this.groupBox2);
             this.tabPageEquipmentNotebooks.Controls.Add(this.groupBox1);
@@ -233,9 +242,9 @@
             this.groupBox3.Controls.Add(this.dateTimePickerWarrantyDateNotebook);
             this.groupBox3.Controls.Add(this.dateTimePickerPurchaseDateNotebook);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(427, 256);
+            this.groupBox3.Location = new System.Drawing.Point(20, 312);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(284, 165);
+            this.groupBox3.Size = new System.Drawing.Size(388, 112);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Date";
@@ -246,15 +255,12 @@
             this.groupBox2.Controls.Add(this.textBoxNameNotebook);
             this.groupBox2.Controls.Add(this.linkLabelAddNewMicrosoftOffice);
             this.groupBox2.Controls.Add(this.labelCompanyFixedAssetNotebooks);
-            this.groupBox2.Controls.Add(this.linkLabelAddNewUser);
             this.groupBox2.Controls.Add(this.labelLocationNotebooks);
             this.groupBox2.Controls.Add(this.linkLabelAddNewLocation);
             this.groupBox2.Controls.Add(this.labelIPNotebooks);
             this.groupBox2.Controls.Add(this.linkLabelAddNewOperatingSystem);
             this.groupBox2.Controls.Add(this.labelTagServiceNotebooks);
-            this.groupBox2.Controls.Add(this.textBoxFirstNameUserNotebook);
             this.groupBox2.Controls.Add(this.labelOfficeNotebooks);
-            this.groupBox2.Controls.Add(this.labelFirstNameUserComputer);
             this.groupBox2.Controls.Add(this.labelOperatingSystemNotebooks);
             this.groupBox2.Controls.Add(this.textBoxIPNotebook);
             this.groupBox2.Controls.Add(this.labelComputerName);
@@ -264,16 +270,16 @@
             this.groupBox2.Controls.Add(this.comboBoxLocationNotebook);
             this.groupBox2.Controls.Add(this.comboBoxOfficeNotebook);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(20, 13);
+            this.groupBox2.Location = new System.Drawing.Point(20, 11);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(388, 408);
+            this.groupBox2.Size = new System.Drawing.Size(388, 292);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hardware Info";
             // 
             // textBoxNameNotebook
             // 
-            this.textBoxNameNotebook.Location = new System.Drawing.Point(184, 39);
+            this.textBoxNameNotebook.Location = new System.Drawing.Point(184, 25);
             this.textBoxNameNotebook.Name = "textBoxNameNotebook";
             this.textBoxNameNotebook.Size = new System.Drawing.Size(177, 20);
             this.textBoxNameNotebook.TabIndex = 22;
@@ -282,7 +288,7 @@
             // 
             this.linkLabelAddNewMicrosoftOffice.AutoSize = true;
             this.linkLabelAddNewMicrosoftOffice.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewMicrosoftOffice.Location = new System.Drawing.Point(228, 345);
+            this.linkLabelAddNewMicrosoftOffice.Location = new System.Drawing.Point(228, 236);
             this.linkLabelAddNewMicrosoftOffice.Name = "linkLabelAddNewMicrosoftOffice";
             this.linkLabelAddNewMicrosoftOffice.Size = new System.Drawing.Size(82, 13);
             this.linkLabelAddNewMicrosoftOffice.TabIndex = 38;
@@ -295,7 +301,7 @@
             this.labelCompanyFixedAssetNotebooks.AutoSize = true;
             this.labelCompanyFixedAssetNotebooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelCompanyFixedAssetNotebooks.ForeColor = System.Drawing.Color.White;
-            this.labelCompanyFixedAssetNotebooks.Location = new System.Drawing.Point(20, 147);
+            this.labelCompanyFixedAssetNotebooks.Location = new System.Drawing.Point(20, 106);
             this.labelCompanyFixedAssetNotebooks.Name = "labelCompanyFixedAssetNotebooks";
             this.labelCompanyFixedAssetNotebooks.Size = new System.Drawing.Size(148, 16);
             this.labelCompanyFixedAssetNotebooks.TabIndex = 10;
@@ -305,7 +311,7 @@
             // 
             this.linkLabelAddNewUser.AutoSize = true;
             this.linkLabelAddNewUser.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewUser.Location = new System.Drawing.Point(231, 296);
+            this.linkLabelAddNewUser.Location = new System.Drawing.Point(110, 148);
             this.linkLabelAddNewUser.Name = "linkLabelAddNewUser";
             this.linkLabelAddNewUser.Size = new System.Drawing.Size(76, 13);
             this.linkLabelAddNewUser.TabIndex = 37;
@@ -318,7 +324,7 @@
             this.labelLocationNotebooks.AutoSize = true;
             this.labelLocationNotebooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelLocationNotebooks.ForeColor = System.Drawing.Color.White;
-            this.labelLocationNotebooks.Location = new System.Drawing.Point(20, 231);
+            this.labelLocationNotebooks.Location = new System.Drawing.Point(20, 180);
             this.labelLocationNotebooks.Name = "labelLocationNotebooks";
             this.labelLocationNotebooks.Size = new System.Drawing.Size(68, 16);
             this.labelLocationNotebooks.TabIndex = 1;
@@ -328,7 +334,7 @@
             // 
             this.linkLabelAddNewLocation.AutoSize = true;
             this.linkLabelAddNewLocation.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewLocation.Location = new System.Drawing.Point(222, 247);
+            this.linkLabelAddNewLocation.Location = new System.Drawing.Point(222, 196);
             this.linkLabelAddNewLocation.Name = "linkLabelAddNewLocation";
             this.linkLabelAddNewLocation.Size = new System.Drawing.Size(95, 13);
             this.linkLabelAddNewLocation.TabIndex = 36;
@@ -341,7 +347,7 @@
             this.labelIPNotebooks.AutoSize = true;
             this.labelIPNotebooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelIPNotebooks.ForeColor = System.Drawing.Color.White;
-            this.labelIPNotebooks.Location = new System.Drawing.Point(20, 375);
+            this.labelIPNotebooks.Location = new System.Drawing.Point(20, 262);
             this.labelIPNotebooks.Name = "labelIPNotebooks";
             this.labelIPNotebooks.Size = new System.Drawing.Size(29, 16);
             this.labelIPNotebooks.TabIndex = 16;
@@ -351,7 +357,7 @@
             // 
             this.linkLabelAddNewOperatingSystem.AutoSize = true;
             this.linkLabelAddNewOperatingSystem.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewOperatingSystem.Location = new System.Drawing.Point(201, 108);
+            this.linkLabelAddNewOperatingSystem.Location = new System.Drawing.Point(201, 81);
             this.linkLabelAddNewOperatingSystem.Name = "linkLabelAddNewOperatingSystem";
             this.linkLabelAddNewOperatingSystem.Size = new System.Drawing.Size(137, 13);
             this.linkLabelAddNewOperatingSystem.TabIndex = 35;
@@ -364,47 +370,29 @@
             this.labelTagServiceNotebooks.AutoSize = true;
             this.labelTagServiceNotebooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelTagServiceNotebooks.ForeColor = System.Drawing.Color.White;
-            this.labelTagServiceNotebooks.Location = new System.Drawing.Point(20, 189);
+            this.labelTagServiceNotebooks.Location = new System.Drawing.Point(20, 144);
             this.labelTagServiceNotebooks.Name = "labelTagServiceNotebooks";
             this.labelTagServiceNotebooks.Size = new System.Drawing.Size(91, 16);
             this.labelTagServiceNotebooks.TabIndex = 8;
             this.labelTagServiceNotebooks.Text = "Tag Service : ";
-            // 
-            // textBoxFirstNameUserNotebook
-            // 
-            this.textBoxFirstNameUserNotebook.Location = new System.Drawing.Point(184, 275);
-            this.textBoxFirstNameUserNotebook.Name = "textBoxFirstNameUserNotebook";
-            this.textBoxFirstNameUserNotebook.Size = new System.Drawing.Size(177, 20);
-            this.textBoxFirstNameUserNotebook.TabIndex = 32;
             // 
             // labelOfficeNotebooks
             // 
             this.labelOfficeNotebooks.AutoSize = true;
             this.labelOfficeNotebooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelOfficeNotebooks.ForeColor = System.Drawing.Color.White;
-            this.labelOfficeNotebooks.Location = new System.Drawing.Point(20, 329);
+            this.labelOfficeNotebooks.Location = new System.Drawing.Point(20, 220);
             this.labelOfficeNotebooks.Name = "labelOfficeNotebooks";
             this.labelOfficeNotebooks.Size = new System.Drawing.Size(51, 16);
             this.labelOfficeNotebooks.TabIndex = 4;
             this.labelOfficeNotebooks.Text = "Office : ";
-            // 
-            // labelFirstNameUserComputer
-            // 
-            this.labelFirstNameUserComputer.AutoSize = true;
-            this.labelFirstNameUserComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelFirstNameUserComputer.ForeColor = System.Drawing.Color.White;
-            this.labelFirstNameUserComputer.Location = new System.Drawing.Point(20, 279);
-            this.labelFirstNameUserComputer.Name = "labelFirstNameUserComputer";
-            this.labelFirstNameUserComputer.Size = new System.Drawing.Size(114, 16);
-            this.labelFirstNameUserComputer.TabIndex = 31;
-            this.labelFirstNameUserComputer.Text = "First Name User : ";
             // 
             // labelOperatingSystemNotebooks
             // 
             this.labelOperatingSystemNotebooks.AutoSize = true;
             this.labelOperatingSystemNotebooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelOperatingSystemNotebooks.ForeColor = System.Drawing.Color.White;
-            this.labelOperatingSystemNotebooks.Location = new System.Drawing.Point(20, 91);
+            this.labelOperatingSystemNotebooks.Location = new System.Drawing.Point(20, 64);
             this.labelOperatingSystemNotebooks.Name = "labelOperatingSystemNotebooks";
             this.labelOperatingSystemNotebooks.Size = new System.Drawing.Size(124, 16);
             this.labelOperatingSystemNotebooks.TabIndex = 11;
@@ -415,7 +403,7 @@
             this.labelComputerName.AutoSize = true;
             this.labelComputerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelComputerName.ForeColor = System.Drawing.Color.White;
-            this.labelComputerName.Location = new System.Drawing.Point(20, 43);
+            this.labelComputerName.Location = new System.Drawing.Point(20, 29);
             this.labelComputerName.Name = "labelComputerName";
             this.labelComputerName.Size = new System.Drawing.Size(115, 16);
             this.labelComputerName.TabIndex = 0;
@@ -424,14 +412,14 @@
             // comboBoxOperatigSystemNotebook
             // 
             this.comboBoxOperatigSystemNotebook.FormattingEnabled = true;
-            this.comboBoxOperatigSystemNotebook.Location = new System.Drawing.Point(184, 86);
+            this.comboBoxOperatigSystemNotebook.Location = new System.Drawing.Point(184, 59);
             this.comboBoxOperatigSystemNotebook.Name = "comboBoxOperatigSystemNotebook";
             this.comboBoxOperatigSystemNotebook.Size = new System.Drawing.Size(177, 21);
             this.comboBoxOperatigSystemNotebook.TabIndex = 19;
             // 
             // textBoxCompanyFixedAssetNotebook
             // 
-            this.textBoxCompanyFixedAssetNotebook.Location = new System.Drawing.Point(184, 143);
+            this.textBoxCompanyFixedAssetNotebook.Location = new System.Drawing.Point(184, 102);
             this.textBoxCompanyFixedAssetNotebook.Name = "textBoxCompanyFixedAssetNotebook";
             this.textBoxCompanyFixedAssetNotebook.Size = new System.Drawing.Size(177, 20);
             this.textBoxCompanyFixedAssetNotebook.TabIndex = 23;
@@ -439,7 +427,7 @@
             // comboBoxLocationNotebook
             // 
             this.comboBoxLocationNotebook.FormattingEnabled = true;
-            this.comboBoxLocationNotebook.Location = new System.Drawing.Point(184, 226);
+            this.comboBoxLocationNotebook.Location = new System.Drawing.Point(184, 175);
             this.comboBoxLocationNotebook.Name = "comboBoxLocationNotebook";
             this.comboBoxLocationNotebook.Size = new System.Drawing.Size(177, 21);
             this.comboBoxLocationNotebook.TabIndex = 20;
@@ -447,7 +435,7 @@
             // comboBoxOfficeNotebook
             // 
             this.comboBoxOfficeNotebook.FormattingEnabled = true;
-            this.comboBoxOfficeNotebook.Location = new System.Drawing.Point(184, 324);
+            this.comboBoxOfficeNotebook.Location = new System.Drawing.Point(184, 215);
             this.comboBoxOfficeNotebook.Name = "comboBoxOfficeNotebook";
             this.comboBoxOfficeNotebook.Size = new System.Drawing.Size(177, 21);
             this.comboBoxOfficeNotebook.TabIndex = 21;
@@ -472,7 +460,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(427, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 229);
+            this.groupBox1.Size = new System.Drawing.Size(296, 229);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Equipment";
@@ -663,6 +651,102 @@
             this.buttonUpdateDataNotebooks.UseVisualStyleBackColor = false;
             this.buttonUpdateDataNotebooks.Click += new System.EventHandler(this.buttonUpdateDataNotebooks_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox4.Controls.Add(this.textBoxFirstName);
+            this.groupBox4.Controls.Add(this.textBoxJob);
+            this.groupBox4.Controls.Add(this.linkLabelAddNewUser);
+            this.groupBox4.Controls.Add(this.labelFirstName);
+            this.groupBox4.Controls.Add(this.labelJob);
+            this.groupBox4.Controls.Add(this.labelLastName);
+            this.groupBox4.Controls.Add(this.textBoxLastName);
+            this.groupBox4.Controls.Add(this.comboBoxUsers);
+            this.groupBox4.Controls.Add(this.labelUserComputer);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Location = new System.Drawing.Point(425, 247);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(298, 175);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "User";
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxFirstName.Location = new System.Drawing.Point(110, 56);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(163, 20);
+            this.textBoxFirstName.TabIndex = 34;
+            // 
+            // textBoxJob
+            // 
+            this.textBoxJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxJob.Location = new System.Drawing.Point(110, 118);
+            this.textBoxJob.Name = "textBoxJob";
+            this.textBoxJob.Size = new System.Drawing.Size(163, 20);
+            this.textBoxJob.TabIndex = 37;
+            // 
+            // labelFirstName
+            // 
+            this.labelFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelFirstName.AutoSize = true;
+            this.labelFirstName.Location = new System.Drawing.Point(38, 59);
+            this.labelFirstName.Name = "labelFirstName";
+            this.labelFirstName.Size = new System.Drawing.Size(66, 13);
+            this.labelFirstName.TabIndex = 32;
+            this.labelFirstName.Text = "First Name : ";
+            // 
+            // labelJob
+            // 
+            this.labelJob.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelJob.AutoSize = true;
+            this.labelJob.Location = new System.Drawing.Point(38, 121);
+            this.labelJob.Name = "labelJob";
+            this.labelJob.Size = new System.Drawing.Size(33, 13);
+            this.labelJob.TabIndex = 36;
+            this.labelJob.Text = "Job : ";
+            // 
+            // labelLastName
+            // 
+            this.labelLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelLastName.AutoSize = true;
+            this.labelLastName.Location = new System.Drawing.Point(38, 90);
+            this.labelLastName.Name = "labelLastName";
+            this.labelLastName.Size = new System.Drawing.Size(67, 13);
+            this.labelLastName.TabIndex = 33;
+            this.labelLastName.Text = "Last Name : ";
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxLastName.Location = new System.Drawing.Point(110, 87);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(163, 20);
+            this.textBoxLastName.TabIndex = 35;
+            // 
+            // comboBoxUsers
+            // 
+            this.comboBoxUsers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxUsers.FormattingEnabled = true;
+            this.comboBoxUsers.Location = new System.Drawing.Point(68, 21);
+            this.comboBoxUsers.Name = "comboBoxUsers";
+            this.comboBoxUsers.Size = new System.Drawing.Size(205, 21);
+            this.comboBoxUsers.TabIndex = 31;
+            // 
+            // labelUserComputer
+            // 
+            this.labelUserComputer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelUserComputer.AutoSize = true;
+            this.labelUserComputer.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserComputer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelUserComputer.ForeColor = System.Drawing.Color.White;
+            this.labelUserComputer.Location = new System.Drawing.Point(16, 26);
+            this.labelUserComputer.Name = "labelUserComputer";
+            this.labelUserComputer.Size = new System.Drawing.Size(46, 16);
+            this.labelUserComputer.TabIndex = 18;
+            this.labelUserComputer.Text = "User : ";
+            // 
             // UpdateNotebooksForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -688,6 +772,8 @@
             this.tabPageComentsNotebooks.ResumeLayout(false);
             this.tabPageComentsNotebooks.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -732,8 +818,6 @@
         private System.Windows.Forms.Button buttonUpdateDataNotebooks;
         private System.Windows.Forms.TextBox textBoxIDNotebooks;
         private System.Windows.Forms.Label labelIDNotebooks;
-        private System.Windows.Forms.TextBox textBoxFirstNameUserNotebook;
-        private System.Windows.Forms.Label labelFirstNameUserComputer;
         private System.Windows.Forms.LinkLabel linkLabelAddNewHardDrive;
         private System.Windows.Forms.LinkLabel linkLabelAddNewRAM;
         private System.Windows.Forms.LinkLabel linkLabelAddNewCPU;
@@ -745,5 +829,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBoxFirstName;
+        private System.Windows.Forms.TextBox textBoxJob;
+        private System.Windows.Forms.Label labelFirstName;
+        private System.Windows.Forms.Label labelJob;
+        private System.Windows.Forms.Label labelLastName;
+        private System.Windows.Forms.TextBox textBoxLastName;
+        private System.Windows.Forms.ComboBox comboBoxUsers;
+        private System.Windows.Forms.Label labelUserComputer;
     }
 }

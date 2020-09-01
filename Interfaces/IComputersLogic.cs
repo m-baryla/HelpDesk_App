@@ -8,11 +8,11 @@ namespace Interfaces
     public interface IComputersLogic
     {
         void Insert(string _computerName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate);
 
         void Update(int _id, string _computerName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _firstName, string _office, string _ip, string _model,
+            string _tagService, string _location, string _user, string _office, string _ip, string _model,
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate);
 
         void InsertComboBoxModelComputer(string _value);
@@ -22,6 +22,7 @@ namespace Interfaces
         void InsertComboBoxLocation(string _value);
         void InsertComboBoxMicrosoftOffice(string _value);
         void InsertComboBoxCPU(string _value);
+        void InsertComboBoxUser(string _firstName, string _lastName, string _job);
         void DeleteComputer(DataGridViewCellEventArgs e,AdvancedDataGridView advancedDataGridView);
         List<string> FillComboBoxLocation();
         List<string> FillComboBoxOffice();
@@ -30,5 +31,7 @@ namespace Interfaces
         List<string> FillComboBoxHardDrive();
         List<string> FillComboBoxRAM();
         List<string> FillComboBoxModelComputer();
+        List<string> FillComboBoxUsers();
+
     }
 }

@@ -20,6 +20,7 @@ namespace GUI.Forms
         {
             comboBoxLocationMonitors.DataSource = _monitorsLogic.FillComboBoxLocation().ToList();
             comboBoxModelMonitors.DataSource = _monitorsLogic.FillComboBoxModelMonitors().ToList();
+            comboBoxUsers.DataSource = _monitorsLogic.FillComboBoxUsers().ToList();
             ///
             textBoxCompanyFixedAssetMonitors.Text = "T-D-00000";
         }
@@ -27,9 +28,9 @@ namespace GUI.Forms
         #region Button
         private void buttonInsertDataMonitors_Click(object sender, EventArgs e)
         {
-            _monitorsLogic.Insert(textBoxCompanyFixedAssetMonitors.Text, textBoxTagServiceMonitors.Text,
-                comboBoxLocationMonitors.Text, textBoxUserMonitors.Text, comboBoxModelMonitors.Text, 
-                richTextBoxComentsMonitors.Text, dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value);
+            _monitorsLogic?.Insert(textBoxCompanyFixedAssetMonitors.Text, textBoxTagServiceMonitors.Text,
+                comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text, 
+                richTextBoxComentsMonitors.Text, dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value); // if != null
         }
 
         private void buttonCloseMonitor_Click_1(object sender, EventArgs e)
@@ -41,18 +42,19 @@ namespace GUI.Forms
         #region Label link add new _values
         private void linkLabelAddNewLocation_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _monitorsLogic.InsertComboBoxLocation(comboBoxLocationMonitors.Text);
+            _monitorsLogic?.InsertComboBoxLocation(comboBoxLocationMonitors.Text); // if != null
             UploadData();
         }
 
         private void linkLabelAddNewModel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _monitorsLogic.InsertComboBoxModelMonitor(comboBoxModelMonitors.Text);
+            _monitorsLogic?.InsertComboBoxModelMonitor(comboBoxModelMonitors.Text); // if != null
             UploadData();
         }
         private void linkLabelAddNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ////
+            _monitorsLogic?.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text); // if != null
+            UploadData();
         }
         #endregion
     }
