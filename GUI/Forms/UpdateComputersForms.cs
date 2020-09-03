@@ -14,6 +14,7 @@ namespace GUI.Forms
             this._computersLogic = computersLogic;
             InitializeComponent();
             UploadData();
+            groupBoxAddNewUser.Visible = false;
         }
 
         private void UploadData()
@@ -141,5 +142,14 @@ namespace GUI.Forms
         }
         #endregion
 
+        private void buttonAddNewUsers_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = true;
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = false;
+        }
     }
 }
