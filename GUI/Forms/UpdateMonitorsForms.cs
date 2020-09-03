@@ -15,6 +15,7 @@ namespace GUI.Forms
             this._monitorsLogic = monitorsLogic;
             InitializeComponent();
             UploadData();
+            groupBoxAddNewUser.Visible = false;
         }
 
         private void UploadData()
@@ -96,5 +97,15 @@ namespace GUI.Forms
             comboBoxUsers.Text = textBoxFirstName.Text + " " + textBoxLastName.Text;
         }
         #endregion
+
+        private void buttonAddNewUsers_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = true;
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = false;
+        }
     }
 }
