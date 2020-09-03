@@ -109,10 +109,5 @@ namespace GUI.Forms
         {
             groupBoxAddNewUser.Visible = false;
         }
-
-        private void comboBoxUser_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            labelFullName.Text = comboBoxUser.Text;
-        } 
     }
 }
