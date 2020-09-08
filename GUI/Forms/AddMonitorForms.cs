@@ -21,8 +21,16 @@ namespace GUI.Forms
         private void UploadData()
         {
             comboBoxLocationMonitors.DataSource = _monitorsLogic.FillComboBoxLocation().ToList();
+            comboBoxLocationMonitors.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxLocationMonitors.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             comboBoxModelMonitors.DataSource = _monitorsLogic.FillComboBoxModelMonitors().ToList();
+            comboBoxModelMonitors.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxModelMonitors.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             comboBoxUsers.DataSource = _monitorsLogic.FillComboBoxUsers().ToList();
+            comboBoxUsers.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxUsers.AutoCompleteSource = AutoCompleteSource.ListItems;
             ///
             textBoxCompanyFixedAssetMonitors.Text = "T-D-00000";
         }
@@ -34,10 +42,17 @@ namespace GUI.Forms
                 comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text, 
                 richTextBoxComentsMonitors.Text, dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value); // if != null
         }
-
         private void buttonCloseMonitor_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void buttonAddNewUsers_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = true;
+        }
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = false;
         }
         #endregion
 
@@ -60,14 +75,5 @@ namespace GUI.Forms
         }
         #endregion
 
-        private void buttonAddNewUsers_Click(object sender, EventArgs e)
-        {
-            groupBoxAddNewUser.Visible = true;
-        }
-
-        private void labelClose_Click(object sender, EventArgs e)
-        {
-            groupBoxAddNewUser.Visible = false;
-        }
     }
 }
