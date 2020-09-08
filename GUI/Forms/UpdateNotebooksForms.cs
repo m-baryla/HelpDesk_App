@@ -21,13 +21,37 @@ namespace GUI.Forms
         private void UploadData()
         {
             comboBoxLocationNotebook.DataSource = _notebooksLogic.FillComboBoxLocation().ToList();
+            comboBoxLocationNotebook.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxLocationNotebook.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             comboBoxModelNotebook.DataSource = _notebooksLogic.FillComboBoxModelNotebooks().ToList();
+            comboBoxModelNotebook.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxModelNotebook.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             comboBoxCPUNotebook.DataSource = _notebooksLogic.FillComboBoxCPU().ToList();
+            comboBoxCPUNotebook.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxCPUNotebook.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             comboBoxRAMNotebook.DataSource = _notebooksLogic.FillComboBoxRAM().ToList();
+            comboBoxRAMNotebook.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxRAMNotebook.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             comboBoxHardDriveNotebook.DataSource = _notebooksLogic.FillComboBoxHardDrive().ToList();
+            comboBoxHardDriveNotebook.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxHardDriveNotebook.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             comboBoxOfficeNotebook.DataSource = _notebooksLogic.FillComboBoxOffice().ToList();
+            comboBoxOfficeNotebook.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxOfficeNotebook.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             comboBoxOperatigSystemNotebook.DataSource = _notebooksLogic.FillComboBoxOperatingSystem().ToList();
+            comboBoxOperatigSystemNotebook.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxOperatigSystemNotebook.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             comboBoxUsers.DataSource = _notebooksLogic.FillComboBoxUsers().ToList();
+            comboBoxUsers.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxUsers.AutoCompleteSource = AutoCompleteSource.ListItems;
+
         }
 
         #region COMBOBOX DATA
@@ -90,6 +114,15 @@ namespace GUI.Forms
                     comboBoxHardDriveNotebook.Text, richTextBoxComentsNotebook.Text,
                     dateTimePickerPurchaseDateNotebook.Value, dateTimePickerWarrantyDateNotebook.Value);
         }
+        private void buttonAddNewUsers_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = true;
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = false;
+        }
         #endregion
 
         #region LABEL LINK ADD NEW --VALUES
@@ -143,14 +176,5 @@ namespace GUI.Forms
         }
         #endregion
 
-        private void buttonAddNewUsers_Click(object sender, EventArgs e)
-        {
-            groupBoxAddNewUser.Visible = true;
-        }
-
-        private void labelClose_Click(object sender, EventArgs e)
-        {
-            groupBoxAddNewUser.Visible = false;
-        }
     }
 }
