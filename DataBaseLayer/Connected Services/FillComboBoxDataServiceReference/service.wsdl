@@ -61,11 +61,11 @@
   <wsdl:message name="IFillComboBoxDataService_FillComboBoxModelNotebooks_OutputMessage">
     <wsdl:part name="parameters" element="tns:FillComboBoxModelNotebooksResponse" />
   </wsdl:message>
-  <wsdl:message name="IFillComboBoxDataService_vwFillComboBoxUsers_InputMessage">
-    <wsdl:part name="parameters" element="tns:vwFillComboBoxUsers" />
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxUsers" />
   </wsdl:message>
-  <wsdl:message name="IFillComboBoxDataService_vwFillComboBoxUsers_OutputMessage">
-    <wsdl:part name="parameters" element="tns:vwFillComboBoxUsersResponse" />
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxUsersResponse" />
   </wsdl:message>
   <wsdl:portType name="IFillComboBoxDataService">
     <wsdl:operation name="FillComboBoxLocation">
@@ -104,9 +104,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelNotebooks" message="tns:IFillComboBoxDataService_FillComboBoxModelNotebooks_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelNotebooksResponse" message="tns:IFillComboBoxDataService_FillComboBoxModelNotebooks_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="vwFillComboBoxUsers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsers" message="tns:IFillComboBoxDataService_vwFillComboBoxUsers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsersResponse" message="tns:IFillComboBoxDataService_vwFillComboBoxUsers_OutputMessage" />
+    <wsdl:operation name="FillComboBoxUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsers" message="tns:IFillComboBoxDataService_FillComboBoxUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsersResponse" message="tns:IFillComboBoxDataService_FillComboBoxUsers_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IFillComboBoxDataService" type="tns:IFillComboBoxDataService">
@@ -192,8 +192,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="vwFillComboBoxUsers">
-      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsers" style="document" />
+    <wsdl:operation name="FillComboBoxUsers">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

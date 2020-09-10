@@ -69,11 +69,11 @@ namespace DataBaseLayer.FillComboBoxDataServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelNotebooks", ReplyAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxModelNotebooksResponse")]
         System.Threading.Tasks.Task<string[]> FillComboBoxModelNotebooksAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsers", ReplyAction="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsersResponse")]
-        string[] vwFillComboBoxUsers();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsers", ReplyAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsersResponse")]
+        string[] FillComboBoxUsers();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsers", ReplyAction="http://tempuri.org/IFillComboBoxDataService/vwFillComboBoxUsersResponse")]
-        System.Threading.Tasks.Task<string[]> vwFillComboBoxUsersAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsers", ReplyAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsersResponse")]
+        System.Threading.Tasks.Task<string[]> FillComboBoxUsersAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -175,12 +175,12 @@ namespace DataBaseLayer.FillComboBoxDataServiceReference {
             return base.Channel.FillComboBoxModelNotebooksAsync();
         }
         
-        public string[] vwFillComboBoxUsers() {
-            return base.Channel.vwFillComboBoxUsers();
+        public string[] FillComboBoxUsers() {
+            return base.Channel.FillComboBoxUsers();
         }
         
-        public System.Threading.Tasks.Task<string[]> vwFillComboBoxUsersAsync() {
-            return base.Channel.vwFillComboBoxUsersAsync();
+        public System.Threading.Tasks.Task<string[]> FillComboBoxUsersAsync() {
+            return base.Channel.FillComboBoxUsersAsync();
         }
     }
 }

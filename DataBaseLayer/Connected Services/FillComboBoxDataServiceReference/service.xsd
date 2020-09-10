@@ -109,15 +109,15 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="vwFillComboBoxUsers">
+  <xs:element name="FillComboBoxUsers">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="vwFillComboBoxUsersResponse">
+  <xs:element name="FillComboBoxUsersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="vwFillComboBoxUsersResult" nillable="true" type="q10:ArrayOfstring" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FillComboBoxUsersResult" nillable="true" type="q10:ArrayOfstring" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

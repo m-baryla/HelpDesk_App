@@ -181,7 +181,7 @@ namespace DataBaseLayer.DataBase
         }
         public List<string> FillComboBoxUsers()
         {
-            return _fillComboBoxDataServiceClient.vwFillComboBoxUsers().ToList(); // if != null
+            return _fillComboBoxDataServiceClient.FillComboBoxUsers().ToList(); // if != null
         }
         #endregion
     }
