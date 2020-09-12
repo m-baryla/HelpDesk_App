@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
 using Interfaces;
@@ -51,17 +53,17 @@ namespace GUI.Forms
             comboBoxUsers.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxUsers.AutoCompleteSource = AutoCompleteSource.ListItems;
             ///
-            textBoxNameNotebook.Text = "OPP-00000";
-            textBoxCompanyFixedAssetNotebook.Text = "T-D-00000";
         }
 
         #region Button
         private void buttonInsertDataNotebooks_Click(object sender, EventArgs e)
         {
+            var strIP = ip_1.Text + '.' + ip_2.Text + '.' + ip_3.Text + '.' + ip_4.Text;
+
             _notebooksLogic?.Insert(textBoxNameNotebook.Text, comboBoxOperatigSystemNotebook.Text,
                     textBoxCompanyFixedAssetNotebook.Text, textBoxTagServiceNotebook.Text,
                     comboBoxLocationNotebook.Text, comboBoxUsers.Text,
-                    comboBoxOfficeNotebook.Text, textBoxIPNotebook.Text, comboBoxModelNotebook.Text,
+                    comboBoxOfficeNotebook.Text, strIP, comboBoxModelNotebook.Text,
                     comboBoxCPUNotebook.Text, comboBoxRAMNotebook.Text, comboBoxHardDriveNotebook.Text,
                     richTextBoxComentsNotebook.Text, dateTimePickerPurchaseDateNotebook.Value,
                     dateTimePickerWarrantyDateNotebook.Value); // if != null
@@ -77,6 +79,51 @@ namespace GUI.Forms
         private void labelClose_Click(object sender, EventArgs e)
         {
             groupBoxAddNewUser.Visible = false;
+        }
+        private void buttonCreateQR_Click(object sender, EventArgs e)
+        {
+
+            labelDateTimeCode.Text = DateTime.Now.ToString();
+            labelCompanyFixedCode.Text = textBoxCompanyFixedAssetNotebook.Text;
+            labelModelCode.Text = comboBoxModelNotebook.Text;
+            labelTahServiceCode.Text = textBoxTagServiceNotebook.Text;
+
+            Zen.Barcode.CodeQrBarcodeDraw qrBarcodeDraw = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+            pictureBoxQRCode.Image = qrBarcodeDraw.Draw(textBoxCompanyFixedAssetNotebook.Text
+                                                        + " " +
+                                                        textBoxTagServiceNotebook.Text
+                                                        + " " +
+                                                        comboBoxModelNotebook.Text, pictureBoxQRCode.Width);
+
+            Zen.Barcode.Code128BarcodeDraw barcodeDraw = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
+            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetNotebook.Text
+                                                       + " " +
+                                                       textBoxTagServiceNotebook.Text
+                                                       + " " +
+                                                       comboBoxModelNotebook.Text, pictureBoxBarcode.Height);
+        }
+        private void pictureBoxQRCode_Paint(object sender, PaintEventArgs e)
+        {
+            PictureBox panel = (PictureBox)sender;
+            float width = (float)4.0;
+            Pen pen = new Pen(Color.DarkRed, width);
+            pen.DashStyle = DashStyle.DashDotDot;
+            e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
+            e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
+            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
+            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, panel.Width - 1, 0);
+        }
+
+        private void pictureBoxBarcode_Paint(object sender, PaintEventArgs e)
+        {
+            PictureBox panel = (PictureBox)sender;
+            float width = (float)4.0;
+            Pen pen = new Pen(Color.DarkRed, width);
+            pen.DashStyle = DashStyle.DashDotDot;
+            e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
+            e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
+            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
+            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, panel.Width - 1, 0);
         }
         #endregion
 
@@ -127,7 +174,7 @@ namespace GUI.Forms
             _notebooksLogic?.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text); // if != null
             UploadData();
         }
-        #endregion
 
+        #endregion
     }
 }
