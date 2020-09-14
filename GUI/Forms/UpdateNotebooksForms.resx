@@ -118,15 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonUpdateDataNotebooks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonSaveAsJPG.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAVVJREFUWEft
-        lU1Kw1AUhV+hDot1CY4iaJqUbiAD4w50Ca5BdBc60bGL0NJBNyC2OnIlrUo1nlNOAq1etPASEN4HB/Lu
-        uzn3pPmpC/xrJml689jvX2vZLBjehQrqYTDYVrk5nuN4pwzAY5WbIwQIAUKA2gIUzrVeoqijpcmmAehJ
-        by1t8Gm9gukCylSqwBdvi8Oop15vtwzA47LOHrVX0Iue0yS5VMkGjSOaTtP0VKUlGHKA+jv3ftEbBu3r
-        tCX00t5IJRs2sXk9AK4uRv1TRqZw3kctAQjqOTTjvqEZbuGh2iu8BSDYy3GFcxmuDIdyta3gNQBBgKNJ
-        krzKtOAxa9r+hvcABANP8HMvKPQfq/wjtQQgeOX28HZEWprUFuCvhAAbBcBDda/mW57oQ/SiJx7cO42x
-        QeOFAngXLu5MY2z4Z4JmhhhCvB0+RK/zcZa1NSYQEM59AW+KyXxA24CdAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAPtJREFUWEft
+        U70OwiAY7OLsrA6+QX/S3cF30xdqow4+gvHnDRyMg+5GXfQgR9PQkhBg6MAll3AffMdBSxIxWJzy/BeS
+        tLVHn4kPaWsP50YNMUAMEMononOVSoNXcH0oy5Gon7NsBl2BT4z3x6KYygZfcLO+AIorUcem23YdAXay
+        wRfKkLLRlzRdcnxj/SM0Np6z/pYNvqBZJwA2WnB8b9flopDQjZVuUX4CpfWxE9BsvE5qwQfY/IRijahD
+        jznvHkD/ocCaU8bTobZRc6Y11uCTqsEXWOFUE04ZA4hnx56vaU2EFUJdn7NPDBADqMZQpK09+kx8SNuI
+        oSFJ/pZhxLYFhDIhAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="buttonCreateQR.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -152,6 +151,17 @@
         VXbXKxH1Xl1MgWwAeiu4JnGNUZ+cUgwUlGxITP4EM7qAAtmA5R1Rww3QdOGv1W3EnXC4VRdQULOBhh9M
         CEguHM3ARczErEUuob62oxkB09bYwykBJoZQtA/mWMQK36BDR/x+llWgaV/MPXCiBiBhCwAAAABJRU5E
         rkJggg==
+</value>
+  </data>
+  <data name="buttonUpdateDataNotebooks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAVVJREFUWEft
+        lU1Kw1AUhV+hDot1CY4iaJqUbiAD4w50Ca5BdBc60bGL0NJBNyC2OnIlrUo1nlNOAq1etPASEN4HB/Lu
+        uzn3pPmpC/xrJml689jvX2vZLBjehQrqYTDYVrk5nuN4pwzAY5WbIwQIAUKA2gIUzrVeoqijpcmmAehJ
+        by1t8Gm9gukCylSqwBdvi8Oop15vtwzA47LOHrVX0Iue0yS5VMkGjSOaTtP0VKUlGHKA+jv3ftEbBu3r
+        tCX00t5IJRs2sXk9AK4uRv1TRqZw3kctAQjqOTTjvqEZbuGh2iu8BSDYy3GFcxmuDIdyta3gNQBBgKNJ
+        krzKtOAxa9r+hvcABANP8HMvKPQfq/wjtQQgeOX28HZEWprUFuCvhAAbBcBDda/mW57oQ/SiJx7cO42x
+        QeOFAngXLu5MY2z4Z4JmhhhCvB0+RK/zcZa1NSYQEM59AW+KyXxA24CdAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

@@ -82,13 +82,14 @@
             this.comboBoxOperatigSystemNotebook = new System.Windows.Forms.ComboBox();
             this.linkLabelAddNewOperatingSystem = new System.Windows.Forms.LinkLabel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.textBoxCompanyFixedAssetNotebook = new System.Windows.Forms.MaskedTextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.textBoxNameNotebook = new System.Windows.Forms.MaskedTextBox();
             this.tabPageComentsNotebooks = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonUpdateDataNotebooks = new System.Windows.Forms.Button();
-            this.textBoxNameNotebook = new System.Windows.Forms.MaskedTextBox();
-            this.textBoxCompanyFixedAssetNotebook = new System.Windows.Forms.MaskedTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.paneLabelCode = new System.Windows.Forms.Panel();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.labelModelCode = new System.Windows.Forms.Label();
             this.labelCompanyFixedCode = new System.Windows.Forms.Label();
@@ -101,9 +102,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBoxBarcode = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonSaveAsJPG = new System.Windows.Forms.Button();
             this.buttonCreateQR = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBoxLabelQR = new System.Windows.Forms.PictureBox();
             this.tabPageBarcodeNotebooks.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageEquipmentNotebooks.SuspendLayout();
@@ -133,11 +134,11 @@
             this.tabPageComentsNotebooks.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.paneLabelCode.SuspendLayout();
             this.groupBox24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelQR)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBoxComentsNotebook
@@ -749,6 +750,15 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Company Fixed Asset ";
             // 
+            // textBoxCompanyFixedAssetNotebook
+            // 
+            this.textBoxCompanyFixedAssetNotebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBoxCompanyFixedAssetNotebook.Location = new System.Drawing.Point(6, 19);
+            this.textBoxCompanyFixedAssetNotebook.Mask = "TD-00000";
+            this.textBoxCompanyFixedAssetNotebook.Name = "textBoxCompanyFixedAssetNotebook";
+            this.textBoxCompanyFixedAssetNotebook.Size = new System.Drawing.Size(150, 20);
+            this.textBoxCompanyFixedAssetNotebook.TabIndex = 34;
+            // 
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.textBoxNameNotebook);
@@ -760,6 +770,15 @@
             this.groupBox12.TabIndex = 29;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Notebooks Name ";
+            // 
+            // textBoxNameNotebook
+            // 
+            this.textBoxNameNotebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBoxNameNotebook.Location = new System.Drawing.Point(3, 19);
+            this.textBoxNameNotebook.Mask = "OPP-00000";
+            this.textBoxNameNotebook.Name = "textBoxNameNotebook";
+            this.textBoxNameNotebook.Size = new System.Drawing.Size(150, 20);
+            this.textBoxNameNotebook.TabIndex = 35;
             // 
             // tabPageComentsNotebooks
             // 
@@ -801,31 +820,11 @@
             this.buttonUpdateDataNotebooks.UseVisualStyleBackColor = false;
             this.buttonUpdateDataNotebooks.Click += new System.EventHandler(this.buttonUpdateDataNotebooks_Click);
             // 
-            // textBoxNameNotebook
-            // 
-            this.textBoxNameNotebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxNameNotebook.Location = new System.Drawing.Point(3, 19);
-            this.textBoxNameNotebook.Mask = "OPP-00000";
-            this.textBoxNameNotebook.Name = "textBoxNameNotebook";
-            this.textBoxNameNotebook.Size = new System.Drawing.Size(150, 20);
-            this.textBoxNameNotebook.TabIndex = 35;
-            // 
-            // textBoxCompanyFixedAssetNotebook
-            // 
-            this.textBoxCompanyFixedAssetNotebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxCompanyFixedAssetNotebook.Location = new System.Drawing.Point(6, 19);
-            this.textBoxCompanyFixedAssetNotebook.Mask = "TD-00000";
-            this.textBoxCompanyFixedAssetNotebook.Name = "textBoxCompanyFixedAssetNotebook";
-            this.textBoxCompanyFixedAssetNotebook.Size = new System.Drawing.Size(150, 20);
-            this.textBoxCompanyFixedAssetNotebook.TabIndex = 34;
-            // 
             // groupBox4
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox4.Controls.Add(this.groupBox24);
-            this.groupBox4.Controls.Add(this.pictureBoxBarcode);
+            this.groupBox4.Controls.Add(this.paneLabelCode);
             this.groupBox4.Controls.Add(this.panel3);
-            this.groupBox4.Controls.Add(this.pictureBoxLabelQR);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.groupBox4.Location = new System.Drawing.Point(7, 8);
@@ -834,6 +833,17 @@
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "New Code";
+            // 
+            // paneLabelCode
+            // 
+            this.paneLabelCode.BackColor = System.Drawing.Color.White;
+            this.paneLabelCode.Controls.Add(this.groupBox24);
+            this.paneLabelCode.Controls.Add(this.pictureBoxBarcode);
+            this.paneLabelCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneLabelCode.Location = new System.Drawing.Point(3, 97);
+            this.paneLabelCode.Name = "paneLabelCode";
+            this.paneLabelCode.Size = new System.Drawing.Size(711, 313);
+            this.paneLabelCode.TabIndex = 44;
             // 
             // groupBox24
             // 
@@ -848,9 +858,9 @@
             this.groupBox24.Controls.Add(this.label10);
             this.groupBox24.Controls.Add(this.label12);
             this.groupBox24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox24.Location = new System.Drawing.Point(3, 97);
+            this.groupBox24.Location = new System.Drawing.Point(0, 0);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(711, 203);
+            this.groupBox24.Size = new System.Drawing.Size(711, 222);
             this.groupBox24.TabIndex = 43;
             this.groupBox24.TabStop = false;
             // 
@@ -859,7 +869,7 @@
             this.labelModelCode.AutoSize = true;
             this.labelModelCode.BackColor = System.Drawing.Color.White;
             this.labelModelCode.ForeColor = System.Drawing.Color.Black;
-            this.labelModelCode.Location = new System.Drawing.Point(81, 153);
+            this.labelModelCode.Location = new System.Drawing.Point(97, 166);
             this.labelModelCode.Name = "labelModelCode";
             this.labelModelCode.Size = new System.Drawing.Size(104, 16);
             this.labelModelCode.TabIndex = 44;
@@ -870,7 +880,7 @@
             this.labelCompanyFixedCode.AutoSize = true;
             this.labelCompanyFixedCode.BackColor = System.Drawing.Color.White;
             this.labelCompanyFixedCode.ForeColor = System.Drawing.Color.Black;
-            this.labelCompanyFixedCode.Location = new System.Drawing.Point(179, 109);
+            this.labelCompanyFixedCode.Location = new System.Drawing.Point(195, 122);
             this.labelCompanyFixedCode.Name = "labelCompanyFixedCode";
             this.labelCompanyFixedCode.Size = new System.Drawing.Size(104, 16);
             this.labelCompanyFixedCode.TabIndex = 43;
@@ -879,9 +889,10 @@
             // pictureBoxQRCode
             // 
             this.pictureBoxQRCode.BackColor = System.Drawing.Color.White;
-            this.pictureBoxQRCode.Location = new System.Drawing.Point(494, 3);
+            this.pictureBoxQRCode.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBoxQRCode.Location = new System.Drawing.Point(507, 18);
             this.pictureBoxQRCode.Name = "pictureBoxQRCode";
-            this.pictureBoxQRCode.Size = new System.Drawing.Size(200, 200);
+            this.pictureBoxQRCode.Size = new System.Drawing.Size(201, 201);
             this.pictureBoxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxQRCode.TabIndex = 35;
             this.pictureBoxQRCode.TabStop = false;
@@ -892,7 +903,7 @@
             this.labelDateTimeCode.AutoSize = true;
             this.labelDateTimeCode.BackColor = System.Drawing.Color.White;
             this.labelDateTimeCode.ForeColor = System.Drawing.Color.Black;
-            this.labelDateTimeCode.Location = new System.Drawing.Point(122, 39);
+            this.labelDateTimeCode.Location = new System.Drawing.Point(138, 52);
             this.labelDateTimeCode.Name = "labelDateTimeCode";
             this.labelDateTimeCode.Size = new System.Drawing.Size(104, 16);
             this.labelDateTimeCode.TabIndex = 38;
@@ -903,7 +914,7 @@
             this.labelTahServiceCode.AutoSize = true;
             this.labelTahServiceCode.BackColor = System.Drawing.Color.White;
             this.labelTahServiceCode.ForeColor = System.Drawing.Color.Black;
-            this.labelTahServiceCode.Location = new System.Drawing.Point(116, 77);
+            this.labelTahServiceCode.Location = new System.Drawing.Point(132, 90);
             this.labelTahServiceCode.Name = "labelTahServiceCode";
             this.labelTahServiceCode.Size = new System.Drawing.Size(104, 16);
             this.labelTahServiceCode.TabIndex = 42;
@@ -915,7 +926,7 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(29, 153);
+            this.label8.Location = new System.Drawing.Point(45, 166);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 16);
             this.label8.TabIndex = 41;
@@ -927,7 +938,7 @@
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(28, 39);
+            this.label9.Location = new System.Drawing.Point(44, 52);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 16);
             this.label9.TabIndex = 38;
@@ -939,7 +950,7 @@
             this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(28, 115);
+            this.label10.Location = new System.Drawing.Point(44, 128);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(145, 16);
             this.label10.TabIndex = 40;
@@ -951,7 +962,7 @@
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(28, 77);
+            this.label12.Location = new System.Drawing.Point(44, 90);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 16);
             this.label12.TabIndex = 39;
@@ -960,9 +971,10 @@
             // pictureBoxBarcode
             // 
             this.pictureBoxBarcode.BackColor = System.Drawing.Color.White;
-            this.pictureBoxBarcode.Location = new System.Drawing.Point(13, 306);
+            this.pictureBoxBarcode.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBoxBarcode.Location = new System.Drawing.Point(0, 225);
             this.pictureBoxBarcode.Name = "pictureBoxBarcode";
-            this.pictureBoxBarcode.Size = new System.Drawing.Size(684, 91);
+            this.pictureBoxBarcode.Size = new System.Drawing.Size(711, 88);
             this.pictureBoxBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxBarcode.TabIndex = 34;
             this.pictureBoxBarcode.TabStop = false;
@@ -970,6 +982,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.buttonSaveAsJPG);
             this.panel3.Controls.Add(this.buttonCreateQR);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -977,6 +990,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(711, 79);
             this.panel3.TabIndex = 32;
+            // 
+            // buttonSaveAsJPG
+            // 
+            this.buttonSaveAsJPG.BackColor = System.Drawing.Color.Black;
+            this.buttonSaveAsJPG.FlatAppearance.BorderSize = 2;
+            this.buttonSaveAsJPG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveAsJPG.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSaveAsJPG.ForeColor = System.Drawing.Color.White;
+            this.buttonSaveAsJPG.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveAsJPG.Image")));
+            this.buttonSaveAsJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveAsJPG.Location = new System.Drawing.Point(494, 13);
+            this.buttonSaveAsJPG.Name = "buttonSaveAsJPG";
+            this.buttonSaveAsJPG.Size = new System.Drawing.Size(103, 50);
+            this.buttonSaveAsJPG.TabIndex = 33;
+            this.buttonSaveAsJPG.Text = "Save";
+            this.buttonSaveAsJPG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveAsJPG.UseVisualStyleBackColor = false;
+            this.buttonSaveAsJPG.Click += new System.EventHandler(this.buttonSaveAsJPG_Click);
             // 
             // buttonCreateQR
             // 
@@ -1012,16 +1043,6 @@
             this.button2.Text = "Print";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // pictureBoxLabelQR
-            // 
-            this.pictureBoxLabelQR.BackColor = System.Drawing.Color.White;
-            this.pictureBoxLabelQR.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBoxLabelQR.Location = new System.Drawing.Point(3, 117);
-            this.pictureBoxLabelQR.Name = "pictureBoxLabelQR";
-            this.pictureBoxLabelQR.Size = new System.Drawing.Size(711, 293);
-            this.pictureBoxLabelQR.TabIndex = 19;
-            this.pictureBoxLabelQR.TabStop = false;
             // 
             // UpdateNotebooksForms
             // 
@@ -1081,12 +1102,12 @@
             this.tabPageComentsNotebooks.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.paneLabelCode.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelQR)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1153,6 +1174,7 @@
         private System.Windows.Forms.MaskedTextBox textBoxNameNotebook;
         private System.Windows.Forms.MaskedTextBox textBoxCompanyFixedAssetNotebook;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel paneLabelCode;
         private System.Windows.Forms.GroupBox groupBox24;
         private System.Windows.Forms.Label labelModelCode;
         private System.Windows.Forms.Label labelCompanyFixedCode;
@@ -1165,8 +1187,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBoxBarcode;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button buttonSaveAsJPG;
         private System.Windows.Forms.Button buttonCreateQR;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBoxLabelQR;
     }
 }
