@@ -69,6 +69,7 @@
             this.labelComentsMonitor = new System.Windows.Forms.Label();
             this.tabPageBarcodeMonitor = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.paneLabelCode = new System.Windows.Forms.Panel();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.labelModelCode = new System.Windows.Forms.Label();
             this.labelCompanyFixedCode = new System.Windows.Forms.Label();
@@ -81,9 +82,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBoxBarcode = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonSaveAsJPG = new System.Windows.Forms.Button();
             this.buttonCreateQR = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBoxLabelQR = new System.Windows.Forms.PictureBox();
             this.tabPageInserForm.SuspendLayout();
             this.groupBoxAddNewUser.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -105,11 +106,11 @@
             this.tabPageComentsMonitor.SuspendLayout();
             this.tabPageBarcodeMonitor.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.paneLabelCode.SuspendLayout();
             this.groupBox24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelQR)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxModelMonitors
@@ -591,10 +592,8 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox3.Controls.Add(this.groupBox24);
-            this.groupBox3.Controls.Add(this.pictureBoxBarcode);
+            this.groupBox3.Controls.Add(this.paneLabelCode);
             this.groupBox3.Controls.Add(this.panel3);
-            this.groupBox3.Controls.Add(this.pictureBoxLabelQR);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.groupBox3.Location = new System.Drawing.Point(7, 8);
@@ -603,6 +602,17 @@
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "New Code";
+            // 
+            // paneLabelCode
+            // 
+            this.paneLabelCode.BackColor = System.Drawing.Color.White;
+            this.paneLabelCode.Controls.Add(this.groupBox24);
+            this.paneLabelCode.Controls.Add(this.pictureBoxBarcode);
+            this.paneLabelCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneLabelCode.Location = new System.Drawing.Point(3, 97);
+            this.paneLabelCode.Name = "paneLabelCode";
+            this.paneLabelCode.Size = new System.Drawing.Size(711, 313);
+            this.paneLabelCode.TabIndex = 44;
             // 
             // groupBox24
             // 
@@ -617,9 +627,9 @@
             this.groupBox24.Controls.Add(this.label10);
             this.groupBox24.Controls.Add(this.label12);
             this.groupBox24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox24.Location = new System.Drawing.Point(3, 97);
+            this.groupBox24.Location = new System.Drawing.Point(0, 0);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(711, 203);
+            this.groupBox24.Size = new System.Drawing.Size(711, 187);
             this.groupBox24.TabIndex = 43;
             this.groupBox24.TabStop = false;
             // 
@@ -648,9 +658,10 @@
             // pictureBoxQRCode
             // 
             this.pictureBoxQRCode.BackColor = System.Drawing.Color.White;
-            this.pictureBoxQRCode.Location = new System.Drawing.Point(494, 3);
+            this.pictureBoxQRCode.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBoxQRCode.Location = new System.Drawing.Point(528, 18);
             this.pictureBoxQRCode.Name = "pictureBoxQRCode";
-            this.pictureBoxQRCode.Size = new System.Drawing.Size(200, 200);
+            this.pictureBoxQRCode.Size = new System.Drawing.Size(180, 166);
             this.pictureBoxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxQRCode.TabIndex = 35;
             this.pictureBoxQRCode.TabStop = false;
@@ -729,9 +740,10 @@
             // pictureBoxBarcode
             // 
             this.pictureBoxBarcode.BackColor = System.Drawing.Color.White;
-            this.pictureBoxBarcode.Location = new System.Drawing.Point(13, 306);
+            this.pictureBoxBarcode.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBoxBarcode.Location = new System.Drawing.Point(0, 193);
             this.pictureBoxBarcode.Name = "pictureBoxBarcode";
-            this.pictureBoxBarcode.Size = new System.Drawing.Size(684, 91);
+            this.pictureBoxBarcode.Size = new System.Drawing.Size(711, 120);
             this.pictureBoxBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxBarcode.TabIndex = 34;
             this.pictureBoxBarcode.TabStop = false;
@@ -739,6 +751,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.buttonSaveAsJPG);
             this.panel3.Controls.Add(this.buttonCreateQR);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -746,6 +759,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(711, 79);
             this.panel3.TabIndex = 32;
+            // 
+            // buttonSaveAsJPG
+            // 
+            this.buttonSaveAsJPG.BackColor = System.Drawing.Color.Black;
+            this.buttonSaveAsJPG.FlatAppearance.BorderSize = 2;
+            this.buttonSaveAsJPG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveAsJPG.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSaveAsJPG.ForeColor = System.Drawing.Color.White;
+            this.buttonSaveAsJPG.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveAsJPG.Image")));
+            this.buttonSaveAsJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveAsJPG.Location = new System.Drawing.Point(494, 13);
+            this.buttonSaveAsJPG.Name = "buttonSaveAsJPG";
+            this.buttonSaveAsJPG.Size = new System.Drawing.Size(103, 50);
+            this.buttonSaveAsJPG.TabIndex = 33;
+            this.buttonSaveAsJPG.Text = "Save";
+            this.buttonSaveAsJPG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveAsJPG.UseVisualStyleBackColor = false;
+            this.buttonSaveAsJPG.Click += new System.EventHandler(this.buttonSaveAsJPG_Click);
             // 
             // buttonCreateQR
             // 
@@ -781,16 +812,6 @@
             this.button2.Text = "Print";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // pictureBoxLabelQR
-            // 
-            this.pictureBoxLabelQR.BackColor = System.Drawing.Color.White;
-            this.pictureBoxLabelQR.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBoxLabelQR.Location = new System.Drawing.Point(3, 117);
-            this.pictureBoxLabelQR.Name = "pictureBoxLabelQR";
-            this.pictureBoxLabelQR.Size = new System.Drawing.Size(711, 293);
-            this.pictureBoxLabelQR.TabIndex = 19;
-            this.pictureBoxLabelQR.TabStop = false;
             // 
             // AddMonitorForms
             // 
@@ -831,12 +852,12 @@
             this.tabPageComentsMonitor.PerformLayout();
             this.tabPageBarcodeMonitor.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.paneLabelCode.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelQR)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -881,7 +902,9 @@
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.MaskedTextBox textBoxCompanyFixedAssetMonitors;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Panel paneLabelCode;
         private System.Windows.Forms.GroupBox groupBox24;
         private System.Windows.Forms.Label labelModelCode;
         private System.Windows.Forms.Label labelCompanyFixedCode;
@@ -894,9 +917,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBoxBarcode;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button buttonSaveAsJPG;
         private System.Windows.Forms.Button buttonCreateQR;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBoxLabelQR;
-        private System.Windows.Forms.MaskedTextBox textBoxCompanyFixedAssetMonitors;
     }
 }
