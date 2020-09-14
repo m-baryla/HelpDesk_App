@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonSaveAsJPG.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAPtJREFUWEft
+        U70OwiAY7OLsrA6+QX/S3cF30xdqow4+gvHnDRyMg+5GXfQgR9PQkhBg6MAll3AffMdBSxIxWJzy/BeS
+        tLVHn4kPaWsP50YNMUAMEMononOVSoNXcH0oy5Gon7NsBl2BT4z3x6KYygZfcLO+AIorUcem23YdAXay
+        wRfKkLLRlzRdcnxj/SM0Np6z/pYNvqBZJwA2WnB8b9flopDQjZVuUX4CpfWxE9BsvE5qwQfY/IRijahD
+        jznvHkD/ocCaU8bTobZRc6Y11uCTqsEXWOFUE04ZA4hnx56vaU2EFUJdn7NPDBADqMZQpK09+kx8SNuI
+        oSFJ/pZhxLYFhDIhAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="buttonCreateQR.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAOVJREFUWEft
