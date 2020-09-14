@@ -62,6 +62,11 @@
             this.comboBoxHardDriveNotebook = new System.Windows.Forms.ComboBox();
             this.linkLabelAddNewHardDrive = new System.Windows.Forms.LinkLabel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ip_4 = new System.Windows.Forms.NumericUpDown();
+            this.ip_3 = new System.Windows.Forms.NumericUpDown();
+            this.ip_1 = new System.Windows.Forms.NumericUpDown();
+            this.ip_2 = new System.Windows.Forms.NumericUpDown();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.linkLabelAddNewOffice = new System.Windows.Forms.LinkLabel();
             this.comboBoxOfficeNotebook = new System.Windows.Forms.ComboBox();
@@ -74,7 +79,9 @@
             this.comboBoxOperatigSystemNotebook = new System.Windows.Forms.ComboBox();
             this.linkLabelAddNewOperatingSystem = new System.Windows.Forms.LinkLabel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.textBoxCompanyFixedAssetNotebook = new System.Windows.Forms.MaskedTextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.textBoxNameNotebook = new System.Windows.Forms.MaskedTextBox();
             this.tabPageComentsNotebooks = new System.Windows.Forms.TabPage();
             this.richTextBoxComentsNotebook = new System.Windows.Forms.RichTextBox();
             this.labelComents = new System.Windows.Forms.Label();
@@ -85,6 +92,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageBarcodeNotebooks = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.paneLabelCode = new System.Windows.Forms.Panel();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.labelModelCode = new System.Windows.Forms.Label();
             this.labelCompanyFixedCode = new System.Windows.Forms.Label();
@@ -97,16 +105,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBoxBarcode = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonSaveAsJPG = new System.Windows.Forms.Button();
             this.buttonCreateQR = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBoxLabelQR = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.ip_4 = new System.Windows.Forms.NumericUpDown();
-            this.ip_3 = new System.Windows.Forms.NumericUpDown();
-            this.ip_1 = new System.Windows.Forms.NumericUpDown();
-            this.ip_2 = new System.Windows.Forms.NumericUpDown();
-            this.textBoxNameNotebook = new System.Windows.Forms.MaskedTextBox();
-            this.textBoxCompanyFixedAssetNotebook = new System.Windows.Forms.MaskedTextBox();
             this.tabPageEquipmentNotebooks.SuspendLayout();
             this.groupBoxAddNewUser.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -123,6 +124,11 @@
             this.groupBox16.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ip_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ip_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ip_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ip_2)).BeginInit();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -135,16 +141,11 @@
             this.tabControl1.SuspendLayout();
             this.tabPageBarcodeNotebooks.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.paneLabelCode.SuspendLayout();
             this.groupBox24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelQR)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ip_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ip_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ip_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ip_2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPageEquipmentNotebooks
@@ -555,6 +556,69 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Hardware Info";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.ip_4);
+            this.groupBox3.Controls.Add(this.ip_3);
+            this.groupBox3.Controls.Add(this.ip_1);
+            this.groupBox3.Controls.Add(this.ip_2);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(59, 228);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(249, 42);
+            this.groupBox3.TabIndex = 32;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "IP ";
+            // 
+            // ip_4
+            // 
+            this.ip_4.Location = new System.Drawing.Point(191, 15);
+            this.ip_4.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.ip_4.Name = "ip_4";
+            this.ip_4.Size = new System.Drawing.Size(40, 20);
+            this.ip_4.TabIndex = 35;
+            // 
+            // ip_3
+            // 
+            this.ip_3.Location = new System.Drawing.Point(132, 15);
+            this.ip_3.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.ip_3.Name = "ip_3";
+            this.ip_3.Size = new System.Drawing.Size(40, 20);
+            this.ip_3.TabIndex = 34;
+            // 
+            // ip_1
+            // 
+            this.ip_1.Location = new System.Drawing.Point(17, 15);
+            this.ip_1.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.ip_1.Name = "ip_1";
+            this.ip_1.Size = new System.Drawing.Size(40, 20);
+            this.ip_1.TabIndex = 32;
+            // 
+            // ip_2
+            // 
+            this.ip_2.Location = new System.Drawing.Point(72, 15);
+            this.ip_2.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.ip_2.Name = "ip_2";
+            this.ip_2.Size = new System.Drawing.Size(40, 20);
+            this.ip_2.TabIndex = 33;
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.linkLabelAddNewOffice);
@@ -685,6 +749,15 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Company Fixed Asset ";
             // 
+            // textBoxCompanyFixedAssetNotebook
+            // 
+            this.textBoxCompanyFixedAssetNotebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBoxCompanyFixedAssetNotebook.Location = new System.Drawing.Point(6, 19);
+            this.textBoxCompanyFixedAssetNotebook.Mask = "TD-00000";
+            this.textBoxCompanyFixedAssetNotebook.Name = "textBoxCompanyFixedAssetNotebook";
+            this.textBoxCompanyFixedAssetNotebook.Size = new System.Drawing.Size(150, 20);
+            this.textBoxCompanyFixedAssetNotebook.TabIndex = 33;
+            // 
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.textBoxNameNotebook);
@@ -696,6 +769,15 @@
             this.groupBox12.TabIndex = 29;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Notebooks Name ";
+            // 
+            // textBoxNameNotebook
+            // 
+            this.textBoxNameNotebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.textBoxNameNotebook.Location = new System.Drawing.Point(6, 19);
+            this.textBoxNameNotebook.Mask = "OPP-00000";
+            this.textBoxNameNotebook.Name = "textBoxNameNotebook";
+            this.textBoxNameNotebook.Size = new System.Drawing.Size(150, 20);
+            this.textBoxNameNotebook.TabIndex = 34;
             // 
             // tabPageComentsNotebooks
             // 
@@ -814,10 +896,8 @@
             // groupBox4
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox4.Controls.Add(this.groupBox24);
-            this.groupBox4.Controls.Add(this.pictureBoxBarcode);
+            this.groupBox4.Controls.Add(this.paneLabelCode);
             this.groupBox4.Controls.Add(this.panel3);
-            this.groupBox4.Controls.Add(this.pictureBoxLabelQR);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.groupBox4.Location = new System.Drawing.Point(7, 8);
@@ -826,6 +906,17 @@
             this.groupBox4.TabIndex = 23;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "New Code";
+            // 
+            // paneLabelCode
+            // 
+            this.paneLabelCode.BackColor = System.Drawing.Color.White;
+            this.paneLabelCode.Controls.Add(this.groupBox24);
+            this.paneLabelCode.Controls.Add(this.pictureBoxBarcode);
+            this.paneLabelCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneLabelCode.Location = new System.Drawing.Point(3, 97);
+            this.paneLabelCode.Name = "paneLabelCode";
+            this.paneLabelCode.Size = new System.Drawing.Size(711, 313);
+            this.paneLabelCode.TabIndex = 44;
             // 
             // groupBox24
             // 
@@ -840,9 +931,9 @@
             this.groupBox24.Controls.Add(this.label10);
             this.groupBox24.Controls.Add(this.label12);
             this.groupBox24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox24.Location = new System.Drawing.Point(3, 97);
+            this.groupBox24.Location = new System.Drawing.Point(0, 0);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(711, 203);
+            this.groupBox24.Size = new System.Drawing.Size(711, 187);
             this.groupBox24.TabIndex = 43;
             this.groupBox24.TabStop = false;
             // 
@@ -871,9 +962,10 @@
             // pictureBoxQRCode
             // 
             this.pictureBoxQRCode.BackColor = System.Drawing.Color.White;
-            this.pictureBoxQRCode.Location = new System.Drawing.Point(494, 3);
+            this.pictureBoxQRCode.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBoxQRCode.Location = new System.Drawing.Point(528, 18);
             this.pictureBoxQRCode.Name = "pictureBoxQRCode";
-            this.pictureBoxQRCode.Size = new System.Drawing.Size(200, 200);
+            this.pictureBoxQRCode.Size = new System.Drawing.Size(180, 166);
             this.pictureBoxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxQRCode.TabIndex = 35;
             this.pictureBoxQRCode.TabStop = false;
@@ -952,9 +1044,10 @@
             // pictureBoxBarcode
             // 
             this.pictureBoxBarcode.BackColor = System.Drawing.Color.White;
-            this.pictureBoxBarcode.Location = new System.Drawing.Point(13, 306);
+            this.pictureBoxBarcode.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBoxBarcode.Location = new System.Drawing.Point(0, 193);
             this.pictureBoxBarcode.Name = "pictureBoxBarcode";
-            this.pictureBoxBarcode.Size = new System.Drawing.Size(684, 91);
+            this.pictureBoxBarcode.Size = new System.Drawing.Size(711, 120);
             this.pictureBoxBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxBarcode.TabIndex = 34;
             this.pictureBoxBarcode.TabStop = false;
@@ -962,6 +1055,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.buttonSaveAsJPG);
             this.panel3.Controls.Add(this.buttonCreateQR);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -969,6 +1063,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(711, 79);
             this.panel3.TabIndex = 32;
+            // 
+            // buttonSaveAsJPG
+            // 
+            this.buttonSaveAsJPG.BackColor = System.Drawing.Color.Black;
+            this.buttonSaveAsJPG.FlatAppearance.BorderSize = 2;
+            this.buttonSaveAsJPG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveAsJPG.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSaveAsJPG.ForeColor = System.Drawing.Color.White;
+            this.buttonSaveAsJPG.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveAsJPG.Image")));
+            this.buttonSaveAsJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveAsJPG.Location = new System.Drawing.Point(494, 13);
+            this.buttonSaveAsJPG.Name = "buttonSaveAsJPG";
+            this.buttonSaveAsJPG.Size = new System.Drawing.Size(103, 50);
+            this.buttonSaveAsJPG.TabIndex = 33;
+            this.buttonSaveAsJPG.Text = "Save";
+            this.buttonSaveAsJPG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveAsJPG.UseVisualStyleBackColor = false;
+            this.buttonSaveAsJPG.Click += new System.EventHandler(this.buttonSaveAsJPG_Click);
             // 
             // buttonCreateQR
             // 
@@ -1005,97 +1117,6 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // pictureBoxLabelQR
-            // 
-            this.pictureBoxLabelQR.BackColor = System.Drawing.Color.White;
-            this.pictureBoxLabelQR.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBoxLabelQR.Location = new System.Drawing.Point(3, 117);
-            this.pictureBoxLabelQR.Name = "pictureBoxLabelQR";
-            this.pictureBoxLabelQR.Size = new System.Drawing.Size(711, 293);
-            this.pictureBoxLabelQR.TabIndex = 19;
-            this.pictureBoxLabelQR.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.ip_4);
-            this.groupBox3.Controls.Add(this.ip_3);
-            this.groupBox3.Controls.Add(this.ip_1);
-            this.groupBox3.Controls.Add(this.ip_2);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(59, 228);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(249, 42);
-            this.groupBox3.TabIndex = 32;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "IP ";
-            // 
-            // ip_4
-            // 
-            this.ip_4.Location = new System.Drawing.Point(191, 15);
-            this.ip_4.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.ip_4.Name = "ip_4";
-            this.ip_4.Size = new System.Drawing.Size(40, 20);
-            this.ip_4.TabIndex = 35;
-            // 
-            // ip_3
-            // 
-            this.ip_3.Location = new System.Drawing.Point(132, 15);
-            this.ip_3.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.ip_3.Name = "ip_3";
-            this.ip_3.Size = new System.Drawing.Size(40, 20);
-            this.ip_3.TabIndex = 34;
-            // 
-            // ip_1
-            // 
-            this.ip_1.Location = new System.Drawing.Point(17, 15);
-            this.ip_1.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.ip_1.Name = "ip_1";
-            this.ip_1.Size = new System.Drawing.Size(40, 20);
-            this.ip_1.TabIndex = 32;
-            // 
-            // ip_2
-            // 
-            this.ip_2.Location = new System.Drawing.Point(72, 15);
-            this.ip_2.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.ip_2.Name = "ip_2";
-            this.ip_2.Size = new System.Drawing.Size(40, 20);
-            this.ip_2.TabIndex = 33;
-            // 
-            // textBoxNameNotebook
-            // 
-            this.textBoxNameNotebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxNameNotebook.Location = new System.Drawing.Point(6, 19);
-            this.textBoxNameNotebook.Mask = "OPP-00000";
-            this.textBoxNameNotebook.Name = "textBoxNameNotebook";
-            this.textBoxNameNotebook.Size = new System.Drawing.Size(150, 20);
-            this.textBoxNameNotebook.TabIndex = 34;
-            // 
-            // textBoxCompanyFixedAssetNotebook
-            // 
-            this.textBoxCompanyFixedAssetNotebook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBoxCompanyFixedAssetNotebook.Location = new System.Drawing.Point(6, 19);
-            this.textBoxCompanyFixedAssetNotebook.Mask = "TD-00000";
-            this.textBoxCompanyFixedAssetNotebook.Name = "textBoxCompanyFixedAssetNotebook";
-            this.textBoxCompanyFixedAssetNotebook.Size = new System.Drawing.Size(150, 20);
-            this.textBoxCompanyFixedAssetNotebook.TabIndex = 33;
-            // 
             // AddNotebooksForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1129,6 +1150,11 @@
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ip_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ip_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ip_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ip_2)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
@@ -1148,17 +1174,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageBarcodeNotebooks.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.paneLabelCode.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
             this.groupBox24.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelQR)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ip_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ip_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ip_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ip_2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1220,7 +1241,15 @@
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.NumericUpDown ip_4;
+        private System.Windows.Forms.NumericUpDown ip_3;
+        private System.Windows.Forms.NumericUpDown ip_1;
+        private System.Windows.Forms.NumericUpDown ip_2;
+        private System.Windows.Forms.MaskedTextBox textBoxNameNotebook;
+        private System.Windows.Forms.MaskedTextBox textBoxCompanyFixedAssetNotebook;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel paneLabelCode;
         private System.Windows.Forms.GroupBox groupBox24;
         private System.Windows.Forms.Label labelModelCode;
         private System.Windows.Forms.Label labelCompanyFixedCode;
@@ -1233,15 +1262,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBoxBarcode;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button buttonSaveAsJPG;
         private System.Windows.Forms.Button buttonCreateQR;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBoxLabelQR;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.NumericUpDown ip_4;
-        private System.Windows.Forms.NumericUpDown ip_3;
-        private System.Windows.Forms.NumericUpDown ip_1;
-        private System.Windows.Forms.NumericUpDown ip_2;
-        private System.Windows.Forms.MaskedTextBox textBoxNameNotebook;
-        private System.Windows.Forms.MaskedTextBox textBoxCompanyFixedAssetNotebook;
     }
 }
