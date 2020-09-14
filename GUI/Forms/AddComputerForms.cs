@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Windows.Forms;
 using Interfaces;
 
@@ -128,6 +130,19 @@ namespace GUI.Forms
             e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
             e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, panel.Width - 1, 0);
         }
+        private void buttonSaveAsJPG_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog f = new SaveFileDialog();
+
+            f.Filter = "JPG(*.JPG)|*.jpg";
+
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap bmp = new Bitmap(paneLabelCode.Width + 50, paneLabelCode.Height + paneLabelCode.Height / 2);
+                paneLabelCode.DrawToBitmap(bmp, paneLabelCode.Bounds);
+                bmp.Save(f.FileName);
+            }
+        }
         #endregion
 
         #region Label link add new _values
@@ -183,6 +198,5 @@ namespace GUI.Forms
 
 
         #endregion
-
     }
 }
