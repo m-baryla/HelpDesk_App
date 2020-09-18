@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Interfaces;
@@ -18,6 +20,7 @@ namespace GUI.Forms
             InitializeComponent();
             UploadData();
             groupBoxAddNewUser.Visible = false;
+            buttonUpdateDataMonitor.Enabled = false;
         }
 
         private void UploadData()
@@ -40,8 +43,6 @@ namespace GUI.Forms
         public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
 
-            var barcode = "q";
-
             var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             try
             {
@@ -56,14 +57,13 @@ namespace GUI.Forms
                         textBoxTagServiceMonitors.Text = dgViewRow.Cells[1].Value.ToString();
                         dateTimePickerPurchaseDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[2].Value);
                         dateTimePickerWarrantyDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[3].Value);
-                        barcode = dgViewRow.Cells[4].Value.ToString();
-                        richTextBoxComentsMonitors.Text = dgViewRow.Cells[5].Value.ToString();
-                        textBoxCompanyFixedAssetMonitors.Text = dgViewRow.Cells[6].Value.ToString();
-                        textBoxFirstName.Text = dgViewRow.Cells[7].Value.ToString();
-                        textBoxLastName.Text = dgViewRow.Cells[8].Value.ToString();
-                        textBoxJob.Text = dgViewRow.Cells[9].Value.ToString();
-                        comboBoxLocationMonitors.Text = dgViewRow.Cells[10].Value.ToString();
-                        comboBoxModelMonitors.Text = dgViewRow.Cells[11].Value.ToString();
+                        richTextBoxComentsMonitors.Text = dgViewRow.Cells[4].Value.ToString();
+                        textBoxCompanyFixedAssetMonitors.Text = dgViewRow.Cells[5].Value.ToString();
+                        textBoxFirstName.Text = dgViewRow.Cells[6].Value.ToString();
+                        textBoxLastName.Text = dgViewRow.Cells[7].Value.ToString();
+                        textBoxJob.Text = dgViewRow.Cells[8].Value.ToString();
+                        comboBoxLocationMonitors.Text = dgViewRow.Cells[9].Value.ToString();
+                        comboBoxModelMonitors.Text = dgViewRow.Cells[10].Value.ToString();
                         break;
                     }
                     case DialogResult.No:
@@ -82,9 +82,17 @@ namespace GUI.Forms
         #region BUTTON
         private void buttonUpdateDataMonitor_Click(object sender, EventArgs e)
         {
+            MemoryStream ms = new MemoryStream();
+
+            pictureBoxBarcode.Image.Save(ms, ImageFormat.Png);
+            var bitmapDataBarcode = ms.ToArray();
+
+            pictureBoxQRCode.Image.Save(ms, ImageFormat.Png);
+            var bitmapDataQRCode = ms.ToArray();
+
             _monitorsLogic.Update(Convert.ToInt32(textBoxIDMonitor.Text), textBoxCompanyFixedAssetMonitors.Text,textBoxTagServiceMonitors.Text,
                 comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text,richTextBoxComentsMonitors.Text,
-                dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value);
+                dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value, bitmapDataBarcode, bitmapDataQRCode);
         }
         private void buttonAddNewUsers_Click(object sender, EventArgs e)
         {
@@ -110,11 +118,9 @@ namespace GUI.Forms
                                                         comboBoxModelMonitors.Text, pictureBoxQRCode.Width);
 
             Zen.Barcode.Code128BarcodeDraw barcodeDraw = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetMonitors.Text
-                                                       + " " +
-                                                       textBoxTagServiceMonitors.Text
-                                                       + " " +
-                                                       comboBoxModelMonitors.Text, pictureBoxBarcode.Height);
+            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetMonitors.Text, pictureBoxBarcode.Height);
+
+            buttonUpdateDataMonitor.Enabled = false;
         }
 
         private void pictureBoxQRCode_Paint(object sender, PaintEventArgs e)

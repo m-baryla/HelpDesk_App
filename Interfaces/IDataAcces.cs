@@ -18,7 +18,7 @@ namespace Interfaces
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate);
 
         void InsertMonitors(string _companyFixedAsset, string _tagService, string _location,
-            string _user, string _model,string _coments,DateTime purchaseDate,DateTime warrantyDate);
+            string _user, string _model,string _coments,DateTime purchaseDate,DateTime warrantyDate, byte[] _barcode, byte[] _qrCode);
 
         void InsertComboBoxCPU(string _value);
         void InsertComboBoxHardDrive(string _value);
@@ -40,7 +40,7 @@ namespace Interfaces
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate);
 
         void UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location,
-            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate);
+            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate, byte[] _barcode, byte[] _qrCode);
 
         void DeleteComputer(int _id);
         void DeleteNotebook(int _id);

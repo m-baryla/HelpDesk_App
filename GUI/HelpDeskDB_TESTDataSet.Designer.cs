@@ -363,6 +363,8 @@ namespace GUI {
             
             private global::System.Data.DataColumn columnBarcode;
             
+            private global::System.Data.DataColumn columnQRCode;
+            
             private global::System.Data.DataColumn columnComents;
             
             private global::System.Data.DataColumn columnCompanyFixedAsset;
@@ -473,6 +475,14 @@ namespace GUI {
             public global::System.Data.DataColumn BarcodeColumn {
                 get {
                     return this.columnBarcode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn QRCodeColumn {
+                get {
+                    return this.columnQRCode;
                 }
             }
             
@@ -617,6 +627,7 @@ namespace GUI {
                         System.DateTime PurchaseDate, 
                         System.DateTime WarrantyDate, 
                         byte[] Barcode, 
+                        byte[] QRCode, 
                         string Coments, 
                         string CompanyFixedAsset, 
                         string FirstName, 
@@ -638,6 +649,7 @@ namespace GUI {
                         PurchaseDate,
                         WarrantyDate,
                         Barcode,
+                        QRCode,
                         Coments,
                         CompanyFixedAsset,
                         FirstName,
@@ -686,6 +698,7 @@ namespace GUI {
                 this.columnPurchaseDate = base.Columns["PurchaseDate"];
                 this.columnWarrantyDate = base.Columns["WarrantyDate"];
                 this.columnBarcode = base.Columns["Barcode"];
+                this.columnQRCode = base.Columns["QRCode"];
                 this.columnComents = base.Columns["Coments"];
                 this.columnCompanyFixedAsset = base.Columns["CompanyFixedAsset"];
                 this.columnFirstName = base.Columns["FirstName"];
@@ -717,6 +730,8 @@ namespace GUI {
                 base.Columns.Add(this.columnWarrantyDate);
                 this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBarcode);
+                this.columnQRCode = new global::System.Data.DataColumn("QRCode", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQRCode);
                 this.columnComents = new global::System.Data.DataColumn("Coments", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComents);
                 this.columnCompanyFixedAsset = new global::System.Data.DataColumn("CompanyFixedAsset", typeof(string), null, global::System.Data.MappingType.Element);
@@ -903,6 +918,8 @@ namespace GUI {
             
             private global::System.Data.DataColumn columnBarcode;
             
+            private global::System.Data.DataColumn columnQRCode;
+            
             private global::System.Data.DataColumn columnComents;
             
             private global::System.Data.DataColumn columnCompanyFixedAsset;
@@ -987,6 +1004,14 @@ namespace GUI {
             public global::System.Data.DataColumn BarcodeColumn {
                 get {
                     return this.columnBarcode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn QRCodeColumn {
+                get {
+                    return this.columnQRCode;
                 }
             }
             
@@ -1083,7 +1108,7 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwAll_MonitorsRow AddvwAll_MonitorsRow(int Id, string TagService, System.DateTime PurchaseDate, System.DateTime WarrantyDate, string Barcode, string Coments, string CompanyFixedAsset, string FirstName, string LastName, string Job, string LocationName, string ModelVersionMonitors) {
+            public vwAll_MonitorsRow AddvwAll_MonitorsRow(int Id, string TagService, System.DateTime PurchaseDate, System.DateTime WarrantyDate, byte[] Barcode, byte[] QRCode, string Coments, string CompanyFixedAsset, string FirstName, string LastName, string Job, string LocationName, string ModelVersionMonitors) {
                 vwAll_MonitorsRow rowvwAll_MonitorsRow = ((vwAll_MonitorsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
@@ -1091,6 +1116,7 @@ namespace GUI {
                         PurchaseDate,
                         WarrantyDate,
                         Barcode,
+                        QRCode,
                         Coments,
                         CompanyFixedAsset,
                         FirstName,
@@ -1132,6 +1158,7 @@ namespace GUI {
                 this.columnPurchaseDate = base.Columns["PurchaseDate"];
                 this.columnWarrantyDate = base.Columns["WarrantyDate"];
                 this.columnBarcode = base.Columns["Barcode"];
+                this.columnQRCode = base.Columns["QRCode"];
                 this.columnComents = base.Columns["Coments"];
                 this.columnCompanyFixedAsset = base.Columns["CompanyFixedAsset"];
                 this.columnFirstName = base.Columns["FirstName"];
@@ -1152,8 +1179,10 @@ namespace GUI {
                 base.Columns.Add(this.columnPurchaseDate);
                 this.columnWarrantyDate = new global::System.Data.DataColumn("WarrantyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWarrantyDate);
-                this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBarcode);
+                this.columnQRCode = new global::System.Data.DataColumn("QRCode", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQRCode);
                 this.columnComents = new global::System.Data.DataColumn("Coments", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComents);
                 this.columnCompanyFixedAsset = new global::System.Data.DataColumn("CompanyFixedAsset", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1173,7 +1202,6 @@ namespace GUI {
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnTagService.MaxLength = 50;
-                this.columnBarcode.MaxLength = 50;
                 this.columnComents.MaxLength = 2147483647;
                 this.columnCompanyFixedAsset.MaxLength = 50;
                 this.columnFirstName.MaxLength = 50;
@@ -1975,6 +2003,22 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] QRCode {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablevwAll_Computers.QRCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QRCode\' in table \'vwAll_Computers\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Computers.QRCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Coments {
                 get {
                     try {
@@ -2242,6 +2286,18 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQRCodeNull() {
+                return this.IsNull(this.tablevwAll_Computers.QRCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQRCodeNull() {
+                this[this.tablevwAll_Computers.QRCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsComentsNull() {
                 return this.IsNull(this.tablevwAll_Computers.ComentsColumn);
             }
@@ -2460,10 +2516,10 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Barcode {
+            public byte[] Barcode {
                 get {
                     try {
-                        return ((string)(this[this.tablevwAll_Monitors.BarcodeColumn]));
+                        return ((byte[])(this[this.tablevwAll_Monitors.BarcodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Barcode\' in table \'vwAll_Monitors\' is DBNull.", e);
@@ -2471,6 +2527,22 @@ namespace GUI {
                 }
                 set {
                     this[this.tablevwAll_Monitors.BarcodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] QRCode {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablevwAll_Monitors.QRCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QRCode\' in table \'vwAll_Monitors\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Monitors.QRCodeColumn] = value;
                 }
             }
             
@@ -2632,6 +2704,18 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetBarcodeNull() {
                 this[this.tablevwAll_Monitors.BarcodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQRCodeNull() {
+                return this.IsNull(this.tablevwAll_Monitors.QRCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQRCodeNull() {
+                this[this.tablevwAll_Monitors.QRCodeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3486,6 +3570,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
             tableMapping.ColumnMappings.Add("WarrantyDate", "WarrantyDate");
             tableMapping.ColumnMappings.Add("Barcode", "Barcode");
+            tableMapping.ColumnMappings.Add("QRCode", "QRCode");
             tableMapping.ColumnMappings.Add("Coments", "Coments");
             tableMapping.ColumnMappings.Add("CompanyFixedAsset", "CompanyFixedAsset");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
@@ -3514,7 +3599,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers";
+            this._commandCollection[0].CommandText = @"SELECT Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3669,6 +3754,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
             tableMapping.ColumnMappings.Add("WarrantyDate", "WarrantyDate");
             tableMapping.ColumnMappings.Add("Barcode", "Barcode");
+            tableMapping.ColumnMappings.Add("QRCode", "QRCode");
             tableMapping.ColumnMappings.Add("Coments", "Coments");
             tableMapping.ColumnMappings.Add("CompanyFixedAsset", "CompanyFixedAsset");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
@@ -3692,9 +3778,9 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, TagService, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixed" +
-                "Asset, FirstName, LastName, Job, LocationName, ModelVersionMonitors FROM dbo.vwA" +
-                "ll_Monitors";
+            this._commandCollection[0].CommandText = "SELECT Id, TagService, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, Comp" +
+                "anyFixedAsset, FirstName, LastName, Job, LocationName, ModelVersionMonitors FROM" +
+                " dbo.vwAll_Monitors";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -57,10 +57,10 @@ namespace DataBaseLayer.DataBase
                            _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
         }
         public void InsertMonitors(string _companyFixedAsset, string _tagService, string _location,
-            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate)
+            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate, byte[] _barcode, byte[] _qrCode)
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertMonitors(_companyFixedAsset, _tagService, _location,
-                _user, _model, _coments, purchaseDate, warrantyDate));
+                _user, _model, _coments, purchaseDate, warrantyDate,_barcode,_qrCode));
         }
         public void InsertComboBoxCPU(string _value)
         {
@@ -121,10 +121,10 @@ namespace DataBaseLayer.DataBase
                             _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
         }
         public void UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location,
-            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate)
+            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate, byte[] _barcode, byte[] _qrCode)
         {
             _infoMessageBox.Info(_updateDataServiceClient.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location,
-                _user, _model, _coments, purchaseDate, warrantyDate));
+                _user, _model, _coments, purchaseDate, warrantyDate,_barcode,_qrCode));
         }
         #endregion
 

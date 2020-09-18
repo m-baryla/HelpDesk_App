@@ -21,16 +21,16 @@ namespace LogicApp
         #region Inset / Update / Delete / UpdateView
 
         public void Insert(string _companyFixedAsset,string _tagService, string _location, string _user, 
-            string _model, string _coments, DateTime _purchaseDate, DateTime _warrantyDate)
+            string _model, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
         {
-            _data.InsertMonitors(_companyFixedAsset,_tagService,_location, _user, _model,_coments,_purchaseDate,_warrantyDate);
+            _data.InsertMonitors(_companyFixedAsset,_tagService,_location, _user, _model,_coments,_purchaseDate,_warrantyDate,_barcode,_qrCode);
         }
 
         public void Update(int _id, string _companyFixedAsset, string _tagService, string _location, string _user,
-            string _model, string _coments, DateTime _purchaseDate, DateTime _warrantyDate)
+            string _model, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
         {
             _data.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location, _user, _model, _coments,
-                _purchaseDate, _warrantyDate);
+                _purchaseDate, _warrantyDate,_barcode,_qrCode);
         }
         public void DeleteMonitors(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Interfaces;
@@ -17,7 +19,7 @@ namespace GUI.Forms
             InitializeComponent();
             UploadData();
             groupBoxAddNewUser.Visible = false;
-
+            buttonInsertDataMonitors.Enabled = false;
         }
 
         private void UploadData()
@@ -39,9 +41,18 @@ namespace GUI.Forms
         #region Button
         private void buttonInsertDataMonitors_Click(object sender, EventArgs e)
         {
+            var ms = new MemoryStream();
+
+            pictureBoxBarcode.Image.Save(ms, ImageFormat.Png);
+            var bitmapData = ms.ToArray();
+
+            pictureBoxQRCode.Image.Save(ms, ImageFormat.Png);
+
+            var bitmapDataQRCode = ms.ToArray();
+
             _monitorsLogic?.Insert(textBoxCompanyFixedAssetMonitors.Text, textBoxTagServiceMonitors.Text,
                 comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text, 
-                richTextBoxComentsMonitors.Text, dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value); // if != null
+                richTextBoxComentsMonitors.Text, dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value, bitmapData, bitmapDataQRCode); // if != null
         }
         private void buttonCloseMonitor_Click_1(object sender, EventArgs e)
         {
@@ -70,11 +81,9 @@ namespace GUI.Forms
                                                         comboBoxModelMonitors.Text, pictureBoxQRCode.Width);
 
             Zen.Barcode.Code128BarcodeDraw barcodeDraw = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetMonitors.Text
-                                                       + " " +
-                                                       textBoxTagServiceMonitors.Text
-                                                       + " " +
-                                                       comboBoxModelMonitors.Text, pictureBoxBarcode.Height);
+            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetMonitors.Text, pictureBoxBarcode.Height);
+
+            buttonInsertDataMonitors.Enabled = true;
         }
         private void pictureBoxQRCode_Paint(object sender, PaintEventArgs e)
         {
