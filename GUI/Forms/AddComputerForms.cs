@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -19,6 +20,7 @@ namespace GUI.Forms
             InitializeComponent();
             UploadData();
             groupBoxAddNewUser.Visible = false;
+            buttonInsertDataComputer.Enabled = false;
 
         }
 
@@ -59,18 +61,33 @@ namespace GUI.Forms
         }
 
         #region Button
+
         private void buttonInsertDataComputer_Click(object sender, EventArgs e)
         {
             var strIP = ip_1.Text + '.' + ip_2.Text + '.' + ip_3.Text + '.' + ip_4.Text;
 
-            _computersLogic.Insert(textBoxNameComputer.Text, comboBoxOperatigSystemComputer.Text,
-                            textBoxCompanyFixedAssetComputer.Text,textBoxTagServiceComputer.Text,
-                            comboBoxLocationComputer.Text,comboBoxUser.Text,
-                            comboBoxOfficeComputer.Text, strIP, comboBoxModelComputer.Text,
-                            comboBoxCPUComputer.Text, comboBoxRAMComputer.Text, comboBoxHardDriveComputer.Text,
-                            richTextBoxComentsComputer.Text,dateTimePickerPurchaseDateComputer.Value,
-                            dateTimePickerWarrantyDateComputer.Value); // if != null
-        }  
+
+            var ms = new MemoryStream();
+
+            pictureBoxBarcode.Image.Save(ms, ImageFormat.Png);
+            var bitmapData = ms.ToArray();
+
+            pictureBoxQRCode.Image.Save(ms, ImageFormat.Png);
+            var bitmapDataQRCode = ms.ToArray();
+
+            _computersLogic?.Insert(textBoxNameComputer.Text, comboBoxOperatigSystemComputer.Text,
+                textBoxCompanyFixedAssetComputer.Text, textBoxTagServiceComputer.Text,
+                comboBoxLocationComputer.Text, comboBoxUser.Text,
+                comboBoxOfficeComputer.Text, strIP, comboBoxModelComputer.Text,
+                comboBoxCPUComputer.Text, comboBoxRAMComputer.Text, comboBoxHardDriveComputer.Text,
+                richTextBoxComentsComputer.Text, dateTimePickerPurchaseDateComputer.Value,
+                dateTimePickerWarrantyDateComputer.Value, bitmapData, bitmapDataQRCode); // if != null
+        }
+
+
+
+
+
         private void buttonCloseComputer_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -100,19 +117,15 @@ namespace GUI.Forms
                                                         comboBoxModelComputer.Text, pictureBoxQRCode.Width);
 
             Zen.Barcode.Code128BarcodeDraw barcodeDraw = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetComputer.Text
-                                                       + " " +
-                                                       textBoxTagServiceComputer.Text
-                                                       + " " +
-                                                       comboBoxModelComputer.Text, pictureBoxBarcode.Height);
+            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetComputer.Text, pictureBoxBarcode.Height);
 
+            buttonInsertDataComputer.Enabled = true;
         }
         private void pictureBoxBarcode_Paint(object sender, PaintEventArgs e)
         {
             PictureBox panel = (PictureBox)sender;
             float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width);
-            pen.DashStyle = DashStyle.DashDotDot;
+            Pen pen = new Pen(Color.DarkRed, width) {DashStyle = DashStyle.DashDotDot};
             e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
             e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
             e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
@@ -123,8 +136,7 @@ namespace GUI.Forms
         {
             PictureBox panel = (PictureBox)sender;
             float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width);
-            pen.DashStyle = DashStyle.DashDotDot;
+            Pen pen = new Pen(Color.DarkRed, width) {DashStyle = DashStyle.DashDotDot};
             e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
             e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
             e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
@@ -132,9 +144,8 @@ namespace GUI.Forms
         }
         private void buttonSaveAsJPG_Click(object sender, EventArgs e)
         {
-            SaveFileDialog f = new SaveFileDialog();
+            SaveFileDialog f = new SaveFileDialog {Filter = "JPG(*.JPG)|*.jpg"};
 
-            f.Filter = "JPG(*.JPG)|*.jpg";
 
             if (f.ShowDialog() == DialogResult.OK)
             {

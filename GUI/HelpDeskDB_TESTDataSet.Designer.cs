@@ -616,7 +616,7 @@ namespace GUI {
                         string IP, 
                         System.DateTime PurchaseDate, 
                         System.DateTime WarrantyDate, 
-                        string Barcode, 
+                        byte[] Barcode, 
                         string Coments, 
                         string CompanyFixedAsset, 
                         string FirstName, 
@@ -715,7 +715,7 @@ namespace GUI {
                 base.Columns.Add(this.columnPurchaseDate);
                 this.columnWarrantyDate = new global::System.Data.DataColumn("WarrantyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWarrantyDate);
-                this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBarcode);
                 this.columnComents = new global::System.Data.DataColumn("Coments", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnComents);
@@ -748,7 +748,6 @@ namespace GUI {
                 this.columnCompterName.MaxLength = 50;
                 this.columnTagService.MaxLength = 50;
                 this.columnIP.MaxLength = 50;
-                this.columnBarcode.MaxLength = 50;
                 this.columnComents.MaxLength = 2147483647;
                 this.columnCompanyFixedAsset.MaxLength = 50;
                 this.columnFirstName.MaxLength = 50;
@@ -1960,10 +1959,10 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Barcode {
+            public byte[] Barcode {
                 get {
                     try {
-                        return ((string)(this[this.tablevwAll_Computers.BarcodeColumn]));
+                        return ((byte[])(this[this.tablevwAll_Computers.BarcodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Barcode\' in table \'vwAll_Computers\' is DBNull.", e);

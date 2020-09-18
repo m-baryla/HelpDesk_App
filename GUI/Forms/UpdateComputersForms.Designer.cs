@@ -1024,7 +1024,7 @@
             this.buttonCreateQR.Name = "buttonCreateQR";
             this.buttonCreateQR.Size = new System.Drawing.Size(180, 50);
             this.buttonCreateQR.TabIndex = 30;
-            this.buttonCreateQR.Text = "Create Code";
+            this.buttonCreateQR.Text = "Update Code";
             this.buttonCreateQR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCreateQR.UseVisualStyleBackColor = false;
             this.buttonCreateQR.Click += new System.EventHandler(this.buttonCreateQR_Click);

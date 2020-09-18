@@ -9,11 +9,11 @@ namespace Interfaces
     {
         void Insert(string _computerName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate);
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode);
 
         void Update(int _id, string _computerName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate);
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode);
 
         void InsertComboBoxModelComputer(string _value);
         void InsertComboBoxRAM(string _value);

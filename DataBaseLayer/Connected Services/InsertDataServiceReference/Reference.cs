@@ -16,10 +16,44 @@ namespace DataBaseLayer.InsertDataServiceReference {
     public interface IInsertDataService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertComputer", ReplyAction="http://tempuri.org/IInsertDataService/InsertComputerResponse")]
-        string InsertComputer(string _computerName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate);
+        string InsertComputer(
+                    string _computerName, 
+                    string _operatingSystem, 
+                    string _companyFixedAsset, 
+                    string _tagService, 
+                    string _location, 
+                    string _user, 
+                    string _office, 
+                    string _ip, 
+                    string _model, 
+                    string _cpu, 
+                    string _ram, 
+                    string _hardDrive, 
+                    string _coments, 
+                    System.DateTime purchaseDate, 
+                    System.DateTime warrantyDate, 
+                    byte[] _barcode, 
+                    byte[] _qrCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertComputer", ReplyAction="http://tempuri.org/IInsertDataService/InsertComputerResponse")]
-        System.Threading.Tasks.Task<string> InsertComputerAsync(string _computerName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate);
+        System.Threading.Tasks.Task<string> InsertComputerAsync(
+                    string _computerName, 
+                    string _operatingSystem, 
+                    string _companyFixedAsset, 
+                    string _tagService, 
+                    string _location, 
+                    string _user, 
+                    string _office, 
+                    string _ip, 
+                    string _model, 
+                    string _cpu, 
+                    string _ram, 
+                    string _hardDrive, 
+                    string _coments, 
+                    System.DateTime purchaseDate, 
+                    System.DateTime warrantyDate, 
+                    byte[] _barcode, 
+                    byte[] _qrCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertNotebooks", ReplyAction="http://tempuri.org/IInsertDataService/InsertNotebooksResponse")]
         string InsertNotebooks(string _notebooksName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate);
@@ -121,12 +155,46 @@ namespace DataBaseLayer.InsertDataServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public string InsertComputer(string _computerName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate) {
-            return base.Channel.InsertComputer(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
+        public string InsertComputer(
+                    string _computerName, 
+                    string _operatingSystem, 
+                    string _companyFixedAsset, 
+                    string _tagService, 
+                    string _location, 
+                    string _user, 
+                    string _office, 
+                    string _ip, 
+                    string _model, 
+                    string _cpu, 
+                    string _ram, 
+                    string _hardDrive, 
+                    string _coments, 
+                    System.DateTime purchaseDate, 
+                    System.DateTime warrantyDate, 
+                    byte[] _barcode, 
+                    byte[] _qrCode) {
+            return base.Channel.InsertComputer(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
         }
         
-        public System.Threading.Tasks.Task<string> InsertComputerAsync(string _computerName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate) {
-            return base.Channel.InsertComputerAsync(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
+        public System.Threading.Tasks.Task<string> InsertComputerAsync(
+                    string _computerName, 
+                    string _operatingSystem, 
+                    string _companyFixedAsset, 
+                    string _tagService, 
+                    string _location, 
+                    string _user, 
+                    string _office, 
+                    string _ip, 
+                    string _model, 
+                    string _cpu, 
+                    string _ram, 
+                    string _hardDrive, 
+                    string _coments, 
+                    System.DateTime purchaseDate, 
+                    System.DateTime warrantyDate, 
+                    byte[] _barcode, 
+                    byte[] _qrCode) {
+            return base.Channel.InsertComputerAsync(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
         }
         
         public string InsertNotebooks(string _notebooksName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate) {

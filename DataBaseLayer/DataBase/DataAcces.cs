@@ -40,11 +40,12 @@ namespace DataBaseLayer.DataBase
 
         public void InsertComputer(string _computerName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate,
+            byte [] _barcode, byte[] _qrCode)
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertComputer(_computerName, _operatingSystem, _companyFixedAsset,
                     _tagService, _location, _user, _office, _ip, _model,
-                    _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
+                    _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode,_qrCode));
         }
 
         public void InsertNotebooks(string _notebooksName, string _operatingSystem, string _companyFixedAsset,
@@ -107,10 +108,10 @@ namespace DataBaseLayer.DataBase
         #region UpdateData
         public void UpdateComputer(int _id, string _computerName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate,byte [] _barcode, byte[] _qrCode)
         {
             _infoMessageBox.Info(_updateDataServiceClient.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user,
-                            _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
+                            _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode,_qrCode));
         }
         public void UpdateNotebooks(int _id, string _notebooksName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,

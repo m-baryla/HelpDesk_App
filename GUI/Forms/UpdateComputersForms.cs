@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Interfaces;
@@ -17,6 +19,7 @@ namespace GUI.Forms
             InitializeComponent();
             UploadData();
             groupBoxAddNewUser.Visible = false;
+            buttonUpdateDataComputer.Enabled = false;
         }
 
         private void UploadData()
@@ -57,8 +60,6 @@ namespace GUI.Forms
         #region COMBOBOX DATA
         public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
-            var barcode = "q";
-
             var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             try
             {
@@ -75,19 +76,18 @@ namespace GUI.Forms
                             textBoxIPComputer.Text = dgViewRow.Cells[3].Value.ToString();
                             dateTimePickerPurchaseDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
                             dateTimePickerWarrantyDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
-                            barcode = dgViewRow.Cells[6].Value.ToString();
-                            richTextBoxComentsComputer.Text = dgViewRow.Cells[7].Value.ToString();
-                            textBoxCompanyFixedAssetComputer.Text = dgViewRow.Cells[8].Value.ToString();
-                            textBoxFirstName.Text = dgViewRow.Cells[9].Value.ToString();
-                            textBoxLastName.Text = dgViewRow.Cells[10].Value.ToString();
-                            textBoxJob.Text = dgViewRow.Cells[11].Value.ToString();
-                            comboBoxCPUComputer.Text = dgViewRow.Cells[12].Value.ToString();
-                            comboBoxHardDriveComputer.Text = dgViewRow.Cells[13].Value.ToString();
-                            comboBoxLocationComputer.Text = dgViewRow.Cells[14].Value.ToString();
-                            comboBoxOfficeComputer.Text = dgViewRow.Cells[15].Value.ToString();
-                            comboBoxModelComputer.Text = dgViewRow.Cells[16].Value.ToString();
-                            comboBoxOperatigSystemComputer.Text = dgViewRow.Cells[17].Value.ToString();
-                            comboBoxRAMComputer.Text = dgViewRow.Cells[18].Value.ToString();
+                            richTextBoxComentsComputer.Text = dgViewRow.Cells[6].Value.ToString();
+                            textBoxCompanyFixedAssetComputer.Text = dgViewRow.Cells[7].Value.ToString();
+                            textBoxFirstName.Text = dgViewRow.Cells[8].Value.ToString();
+                            textBoxLastName.Text = dgViewRow.Cells[9].Value.ToString();
+                            textBoxJob.Text = dgViewRow.Cells[10].Value.ToString();
+                            comboBoxCPUComputer.Text = dgViewRow.Cells[11].Value.ToString();
+                            comboBoxHardDriveComputer.Text = dgViewRow.Cells[12].Value.ToString();
+                            comboBoxLocationComputer.Text = dgViewRow.Cells[13].Value.ToString();
+                            comboBoxOfficeComputer.Text = dgViewRow.Cells[14].Value.ToString();
+                            comboBoxModelComputer.Text = dgViewRow.Cells[15].Value.ToString();
+                            comboBoxOperatigSystemComputer.Text = dgViewRow.Cells[16].Value.ToString();
+                            comboBoxRAMComputer.Text = dgViewRow.Cells[17].Value.ToString();
                             break;
                     }
                     case DialogResult.No:
@@ -106,11 +106,19 @@ namespace GUI.Forms
         #region BUTTON
         private void buttonUpdateDataComputer_Click(object sender, EventArgs e)
         {
+            MemoryStream ms = new MemoryStream();
+
+            pictureBoxBarcode.Image.Save(ms, ImageFormat.Png);
+            var bitmapDataBarcode = ms.ToArray();
+
+            pictureBoxQRCode.Image.Save(ms, ImageFormat.Png);
+            var bitmapDataQRCode = ms.ToArray();
+
             _computersLogic.Update(Convert.ToInt32(textBoxIDComputer.Text), textBoxNameComputer.Text,comboBoxOperatigSystemComputer.Text,
                     textBoxCompanyFixedAssetComputer.Text, textBoxTagServiceComputer.Text,comboBoxLocationComputer.Text,
                     comboBoxUser.Text, comboBoxOfficeComputer.Text,textBoxIPComputer.Text, comboBoxModelComputer.Text,
                     comboBoxCPUComputer.Text, comboBoxRAMComputer.Text,comboBoxHardDriveComputer.Text,richTextBoxComentsComputer.Text,
-                    dateTimePickerPurchaseDateComputer.Value, dateTimePickerWarrantyDateComputer.Value);
+                    dateTimePickerPurchaseDateComputer.Value, dateTimePickerWarrantyDateComputer.Value, bitmapDataBarcode, bitmapDataQRCode);
         }
         private void buttonAddNewUsers_Click(object sender, EventArgs e)
         {
@@ -126,8 +134,7 @@ namespace GUI.Forms
 
             PictureBox panel = (PictureBox)sender;
             float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width);
-            pen.DashStyle = DashStyle.DashDotDot;
+            Pen pen = new Pen(Color.DarkRed, width) {DashStyle = DashStyle.DashDotDot};
             e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
             e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
             e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
@@ -139,8 +146,7 @@ namespace GUI.Forms
 
             PictureBox panel = (PictureBox)sender;
             float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width);
-            pen.DashStyle = DashStyle.DashDotDot;
+            Pen pen = new Pen(Color.DarkRed, width) {DashStyle = DashStyle.DashDotDot};
             e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
             e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
             e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
@@ -161,17 +167,13 @@ namespace GUI.Forms
                                                         comboBoxModelComputer.Text, pictureBoxQRCode.Width);
 
             Zen.Barcode.Code128BarcodeDraw barcodeDraw = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetComputer.Text
-                                                       + " " +
-                                                       textBoxTagServiceComputer.Text
-                                                       + " " +
-                                                       comboBoxModelComputer.Text, pictureBoxBarcode.Height);
+            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetComputer.Text, pictureBoxBarcode.Height);
+
+            buttonUpdateDataComputer.Enabled = true;
         }
         private void buttonSaveAsJPG_Click(object sender, EventArgs e)
         {
-            SaveFileDialog f = new SaveFileDialog();
-
-            f.Filter = "JPG(*.JPG)|*.jpg";
+            SaveFileDialog f = new SaveFileDialog {Filter = "JPG(*.JPG)|*.jpg"};
 
             if (f.ShowDialog() == DialogResult.OK)
             {
