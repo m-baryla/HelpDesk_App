@@ -157,6 +157,17 @@ namespace GUI.Forms
         {
           var fullScrean = new DataGrindViewForms(_computersLogic,_notebooksLogic,_monitorsLogic);
           fullScrean.Show();
+
+            if (fullScrean.WindowState == FormWindowState.Maximized)
+            {
+                fullScrean.WindowState = FormWindowState.Normal;
+                fullScrean.CenterToScreen();
+            }
+            else
+            {
+                fullScrean.WindowState = FormWindowState.Maximized;
+                fullScrean.CenterToScreen();
+            }
         } 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
