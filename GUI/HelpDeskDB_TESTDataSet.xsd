@@ -75,7 +75,7 @@
               <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Notebooks" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks</CommandText>
+                    <CommandText>SELECT Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -89,6 +89,7 @@
               <Mapping SourceColumn="PurchaseDate" DataSetColumn="PurchaseDate" />
               <Mapping SourceColumn="WarrantyDate" DataSetColumn="WarrantyDate" />
               <Mapping SourceColumn="Barcode" DataSetColumn="Barcode" />
+              <Mapping SourceColumn="QRCode" DataSetColumn="QRCode" />
               <Mapping SourceColumn="Coments" DataSetColumn="Coments" />
               <Mapping SourceColumn="CompanyFixedAsset" DataSetColumn="CompanyFixedAsset" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
@@ -322,13 +323,8 @@
               </xs:element>
               <xs:element name="PurchaseDate" msprop:Generator_ColumnVarNameInTable="columnPurchaseDate" msprop:Generator_ColumnPropNameInRow="PurchaseDate" msprop:Generator_ColumnPropNameInTable="PurchaseDateColumn" msprop:Generator_UserColumnName="PurchaseDate" type="xs:dateTime" minOccurs="0" />
               <xs:element name="WarrantyDate" msprop:Generator_ColumnVarNameInTable="columnWarrantyDate" msprop:Generator_ColumnPropNameInRow="WarrantyDate" msprop:Generator_ColumnPropNameInTable="WarrantyDateColumn" msprop:Generator_UserColumnName="WarrantyDate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="QRCode" msprop:Generator_ColumnVarNameInTable="columnQRCode" msprop:Generator_ColumnPropNameInRow="QRCode" msprop:Generator_ColumnPropNameInTable="QRCodeColumn" msprop:Generator_UserColumnName="QRCode" type="xs:base64Binary" minOccurs="0" />
               <xs:element name="Coments" msprop:Generator_ColumnVarNameInTable="columnComents" msprop:Generator_ColumnPropNameInRow="Coments" msprop:Generator_ColumnPropNameInTable="ComentsColumn" msprop:Generator_UserColumnName="Coments" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

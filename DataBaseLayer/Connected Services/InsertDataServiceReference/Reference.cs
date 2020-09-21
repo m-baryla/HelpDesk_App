@@ -56,10 +56,44 @@ namespace DataBaseLayer.InsertDataServiceReference {
                     byte[] _qrCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertNotebooks", ReplyAction="http://tempuri.org/IInsertDataService/InsertNotebooksResponse")]
-        string InsertNotebooks(string _notebooksName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate);
+        string InsertNotebooks(
+                    string _notebooksName, 
+                    string _operatingSystem, 
+                    string _companyFixedAsset, 
+                    string _tagService, 
+                    string _location, 
+                    string _user, 
+                    string _office, 
+                    string _ip, 
+                    string _model, 
+                    string _cpu, 
+                    string _ram, 
+                    string _hardDrive, 
+                    string _coments, 
+                    System.DateTime purchaseDate, 
+                    System.DateTime warrantyDate, 
+                    byte[] _barcode, 
+                    byte[] _qrCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertNotebooks", ReplyAction="http://tempuri.org/IInsertDataService/InsertNotebooksResponse")]
-        System.Threading.Tasks.Task<string> InsertNotebooksAsync(string _notebooksName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate);
+        System.Threading.Tasks.Task<string> InsertNotebooksAsync(
+                    string _notebooksName, 
+                    string _operatingSystem, 
+                    string _companyFixedAsset, 
+                    string _tagService, 
+                    string _location, 
+                    string _user, 
+                    string _office, 
+                    string _ip, 
+                    string _model, 
+                    string _cpu, 
+                    string _ram, 
+                    string _hardDrive, 
+                    string _coments, 
+                    System.DateTime purchaseDate, 
+                    System.DateTime warrantyDate, 
+                    byte[] _barcode, 
+                    byte[] _qrCode);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertMonitors", ReplyAction="http://tempuri.org/IInsertDataService/InsertMonitorsResponse")]
         string InsertMonitors(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode);
@@ -197,12 +231,46 @@ namespace DataBaseLayer.InsertDataServiceReference {
             return base.Channel.InsertComputerAsync(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
         }
         
-        public string InsertNotebooks(string _notebooksName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate) {
-            return base.Channel.InsertNotebooks(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
+        public string InsertNotebooks(
+                    string _notebooksName, 
+                    string _operatingSystem, 
+                    string _companyFixedAsset, 
+                    string _tagService, 
+                    string _location, 
+                    string _user, 
+                    string _office, 
+                    string _ip, 
+                    string _model, 
+                    string _cpu, 
+                    string _ram, 
+                    string _hardDrive, 
+                    string _coments, 
+                    System.DateTime purchaseDate, 
+                    System.DateTime warrantyDate, 
+                    byte[] _barcode, 
+                    byte[] _qrCode) {
+            return base.Channel.InsertNotebooks(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
         }
         
-        public System.Threading.Tasks.Task<string> InsertNotebooksAsync(string _notebooksName, string _operatingSystem, string _companyFixedAsset, string _tagService, string _location, string _user, string _office, string _ip, string _model, string _cpu, string _ram, string _hardDrive, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate) {
-            return base.Channel.InsertNotebooksAsync(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate);
+        public System.Threading.Tasks.Task<string> InsertNotebooksAsync(
+                    string _notebooksName, 
+                    string _operatingSystem, 
+                    string _companyFixedAsset, 
+                    string _tagService, 
+                    string _location, 
+                    string _user, 
+                    string _office, 
+                    string _ip, 
+                    string _model, 
+                    string _cpu, 
+                    string _ram, 
+                    string _hardDrive, 
+                    string _coments, 
+                    System.DateTime purchaseDate, 
+                    System.DateTime warrantyDate, 
+                    byte[] _barcode, 
+                    byte[] _qrCode) {
+            return base.Channel.InsertNotebooksAsync(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
         }
         
         public string InsertMonitors(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode) {

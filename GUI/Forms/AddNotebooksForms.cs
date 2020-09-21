@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Interfaces;
@@ -17,6 +19,8 @@ namespace GUI.Forms
             InitializeComponent();
             UploadData();
             groupBoxAddNewUser.Visible = false;
+            buttonInsertDataNotebooks.Enabled = false;
+
         }
 
         private void UploadData()
@@ -60,13 +64,21 @@ namespace GUI.Forms
         {
             var strIP = ip_1.Text + '.' + ip_2.Text + '.' + ip_3.Text + '.' + ip_4.Text;
 
+            MemoryStream ms = new MemoryStream();
+
+            pictureBoxBarcode.Image.Save(ms, ImageFormat.Png);
+            var bitmapDataBarcode = ms.ToArray();
+
+            pictureBoxQRCode.Image.Save(ms, ImageFormat.Png);
+            var bitmapDataQRCode = ms.ToArray();
+
             _notebooksLogic?.Insert(textBoxNameNotebook.Text, comboBoxOperatigSystemNotebook.Text,
                     textBoxCompanyFixedAssetNotebook.Text, textBoxTagServiceNotebook.Text,
                     comboBoxLocationNotebook.Text, comboBoxUsers.Text,
                     comboBoxOfficeNotebook.Text, strIP, comboBoxModelNotebook.Text,
                     comboBoxCPUNotebook.Text, comboBoxRAMNotebook.Text, comboBoxHardDriveNotebook.Text,
                     richTextBoxComentsNotebook.Text, dateTimePickerPurchaseDateNotebook.Value,
-                    dateTimePickerWarrantyDateNotebook.Value); // if != null
+                    dateTimePickerWarrantyDateNotebook.Value, bitmapDataBarcode, bitmapDataQRCode); // if != null
         }
         private void buttonCloseMonitor_Click_1(object sender, EventArgs e)
         {
@@ -96,11 +108,10 @@ namespace GUI.Forms
                                                         comboBoxModelNotebook.Text, pictureBoxQRCode.Width);
 
             Zen.Barcode.Code128BarcodeDraw barcodeDraw = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetNotebook.Text
-                                                       + " " +
-                                                       textBoxTagServiceNotebook.Text
-                                                       + " " +
-                                                       comboBoxModelNotebook.Text, pictureBoxBarcode.Height);
+            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetNotebook.Text, pictureBoxBarcode.Height);
+
+            buttonInsertDataNotebooks.Enabled = true;
+
         }
         private void pictureBoxQRCode_Paint(object sender, PaintEventArgs e)
         {

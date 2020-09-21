@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Interfaces;
@@ -18,6 +20,8 @@ namespace GUI.Forms
             InitializeComponent();
             UploadData();
             groupBoxAddNewUser.Visible = false;
+            buttonUpdateDataNotebooks.Enabled = false;
+
         }
 
         private void UploadData()
@@ -60,8 +64,6 @@ namespace GUI.Forms
         public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
             
-            var barcode = "q";
-
             var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             try
             {
@@ -78,19 +80,18 @@ namespace GUI.Forms
                         textBoxIPNotebook.Text = dgViewRow.Cells[3].Value.ToString();
                         dateTimePickerPurchaseDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
                         dateTimePickerWarrantyDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
-                        barcode = dgViewRow.Cells[6].Value.ToString();
-                        richTextBoxComentsNotebook.Text = dgViewRow.Cells[7].Value.ToString();
-                        textBoxCompanyFixedAssetNotebook.Text = dgViewRow.Cells[8].Value.ToString();
-                        textBoxFirstName.Text = dgViewRow.Cells[9].Value.ToString();
-                        textBoxLastName.Text = dgViewRow.Cells[10].Value.ToString();
-                        textBoxJob.Text = dgViewRow.Cells[11].Value.ToString();
-                        comboBoxCPUNotebook.Text = dgViewRow.Cells[12].Value.ToString();
-                        comboBoxHardDriveNotebook.Text = dgViewRow.Cells[13].Value.ToString();
-                        comboBoxLocationNotebook.Text = dgViewRow.Cells[14].Value.ToString();
-                        comboBoxOfficeNotebook.Text = dgViewRow.Cells[15].Value.ToString();
-                        comboBoxModelNotebook.Text = dgViewRow.Cells[16].Value.ToString();
-                        comboBoxOperatigSystemNotebook.Text = dgViewRow.Cells[17].Value.ToString();
-                        comboBoxRAMNotebook.Text = dgViewRow.Cells[18].Value.ToString();
+                        richTextBoxComentsNotebook.Text = dgViewRow.Cells[6].Value.ToString();
+                        textBoxCompanyFixedAssetNotebook.Text = dgViewRow.Cells[7].Value.ToString();
+                        textBoxFirstName.Text = dgViewRow.Cells[8].Value.ToString();
+                        textBoxLastName.Text = dgViewRow.Cells[9].Value.ToString();
+                        textBoxJob.Text = dgViewRow.Cells[10].Value.ToString();
+                        comboBoxCPUNotebook.Text = dgViewRow.Cells[11].Value.ToString();
+                        comboBoxHardDriveNotebook.Text = dgViewRow.Cells[12].Value.ToString();
+                        comboBoxLocationNotebook.Text = dgViewRow.Cells[13].Value.ToString();
+                        comboBoxOfficeNotebook.Text = dgViewRow.Cells[14].Value.ToString();
+                        comboBoxModelNotebook.Text = dgViewRow.Cells[15].Value.ToString();
+                        comboBoxOperatigSystemNotebook.Text = dgViewRow.Cells[16].Value.ToString();
+                        comboBoxRAMNotebook.Text = dgViewRow.Cells[17].Value.ToString();
                         break;
                     }
                     case DialogResult.No:
@@ -109,12 +110,20 @@ namespace GUI.Forms
         #region BUTTON
         private void buttonUpdateDataNotebooks_Click(object sender, EventArgs e)
         {
+            MemoryStream ms = new MemoryStream();
+
+            pictureBoxBarcode.Image.Save(ms, ImageFormat.Png);
+            var bitmapDataBarcode = ms.ToArray();
+
+            pictureBoxQRCode.Image.Save(ms, ImageFormat.Png);
+            var bitmapDataQRCode = ms.ToArray();
+
             _notebooksLogic.Update(Convert.ToInt32(textBoxIDNotebooks.Text), textBoxNameNotebook.Text,
                     comboBoxOperatigSystemNotebook.Text,textBoxCompanyFixedAssetNotebook.Text, textBoxTagServiceNotebook.Text,
                     comboBoxLocationNotebook.Text,comboBoxUsers.Text, comboBoxOfficeNotebook.Text,
                     textBoxIPNotebook.Text, comboBoxModelNotebook.Text,comboBoxCPUNotebook.Text, comboBoxRAMNotebook.Text,
                     comboBoxHardDriveNotebook.Text, richTextBoxComentsNotebook.Text,
-                    dateTimePickerPurchaseDateNotebook.Value, dateTimePickerWarrantyDateNotebook.Value);
+                    dateTimePickerPurchaseDateNotebook.Value, dateTimePickerWarrantyDateNotebook.Value, bitmapDataBarcode, bitmapDataQRCode);
         }
         private void buttonAddNewUsers_Click(object sender, EventArgs e)
         {
@@ -140,19 +149,20 @@ namespace GUI.Forms
                                                         comboBoxModelNotebook.Text, pictureBoxQRCode.Width);
 
             Zen.Barcode.Code128BarcodeDraw barcodeDraw = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetNotebook.Text
-                                                       + " " +
-                                                       textBoxTagServiceNotebook.Text
-                                                       + " " +
-                                                       comboBoxModelNotebook.Text, pictureBoxBarcode.Height);
+            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetNotebook.Text, pictureBoxBarcode.Height);
+
+            buttonUpdateDataNotebooks.Enabled = true;
+
         }
 
         private void pictureBoxQRCode_Paint(object sender, PaintEventArgs e)
         {
             PictureBox panel = (PictureBox)sender;
             float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width);
-            pen.DashStyle = DashStyle.DashDotDot;
+            Pen pen = new Pen(Color.DarkRed, width)
+            {
+                DashStyle = DashStyle.DashDotDot
+            };
             e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
             e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
             e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
@@ -163,8 +173,10 @@ namespace GUI.Forms
         {
             PictureBox panel = (PictureBox)sender;
             float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width);
-            pen.DashStyle = DashStyle.DashDotDot;
+            Pen pen = new Pen(Color.DarkRed, width)
+            {
+                DashStyle = DashStyle.DashDotDot
+            };
             e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
             e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
             e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
@@ -172,9 +184,10 @@ namespace GUI.Forms
         }
         private void buttonSaveAsJPG_Click(object sender, EventArgs e)
         {
-            SaveFileDialog f = new SaveFileDialog();
-
-            f.Filter = "JPG(*.JPG)|*.jpg";
+            SaveFileDialog f = new SaveFileDialog
+            {
+                Filter = "JPG(*.JPG)|*.jpg"
+            };
 
             if (f.ShowDialog() == DialogResult.OK)
             {

@@ -54,54 +54,53 @@ namespace GUI.Forms
             this.vwAll_MonitorsTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_MonitorsTableAdapter();
             this.vwAllNotebooksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vwAll_NotebooksTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_NotebooksTableAdapter();
-            this.rAMVersionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operatingSystemVersionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelVersionNotebooksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationNameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hardDriveVersionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPUVersionDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyFixedAssetDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comentsDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.barcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.warrantyDateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseDateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iPDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tagServiceDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notebooksNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.compterNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tagServiceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.warrantyDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyFixedAssetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPUVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hardDriveVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelVersionComputerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.operatingSystemVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rAMVersionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tagServiceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purchaseDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.warrantyDateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comentsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyFixedAssetDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.locationNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelVersionMonitorsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelDAtaGrindView.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl_Warehouse.SuspendLayout();
@@ -295,24 +294,24 @@ namespace GUI.Forms
             this.advancedDataGridViewComputers.AutoGenerateColumns = false;
             this.advancedDataGridViewComputers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.advancedDataGridViewComputers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.compterNameDataGridViewTextBoxColumn,
-            this.tagServiceDataGridViewTextBoxColumn,
-            this.iPDataGridViewTextBoxColumn,
-            this.purchaseDateDataGridViewTextBoxColumn,
-            this.warrantyDateDataGridViewTextBoxColumn,
-            this.comentsDataGridViewTextBoxColumn,
-            this.companyFixedAssetDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.jobDataGridViewTextBoxColumn,
-            this.cPUVersionDataGridViewTextBoxColumn,
-            this.hardDriveVersionDataGridViewTextBoxColumn,
-            this.locationNameDataGridViewTextBoxColumn,
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn,
-            this.modelVersionComputerDataGridViewTextBoxColumn,
-            this.operatingSystemVersionDataGridViewTextBoxColumn,
-            this.rAMVersionDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18});
             this.advancedDataGridViewComputers.DataSource = this.vwAllComputersBindingSource;
             this.advancedDataGridViewComputers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.advancedDataGridViewComputers.FilterAndSortEnabled = true;
@@ -341,17 +340,17 @@ namespace GUI.Forms
             this.advancedDataGridViewMonitors.AutoGenerateColumns = false;
             this.advancedDataGridViewMonitors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.advancedDataGridViewMonitors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.tagServiceDataGridViewTextBoxColumn1,
-            this.purchaseDateDataGridViewTextBoxColumn1,
-            this.warrantyDateDataGridViewTextBoxColumn1,
-            this.comentsDataGridViewTextBoxColumn1,
-            this.companyFixedAssetDataGridViewTextBoxColumn1,
-            this.firstNameDataGridViewTextBoxColumn1,
-            this.lastNameDataGridViewTextBoxColumn1,
-            this.jobDataGridViewTextBoxColumn1,
-            this.locationNameDataGridViewTextBoxColumn1,
-            this.modelVersionMonitorsDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29});
             this.advancedDataGridViewMonitors.DataSource = this.vwAllMonitorsBindingSource;
             this.advancedDataGridViewMonitors.Dock = System.Windows.Forms.DockStyle.Fill;
             this.advancedDataGridViewMonitors.FilterAndSortEnabled = true;
@@ -380,25 +379,24 @@ namespace GUI.Forms
             this.advancedDataGridViewNotebooks.AutoGenerateColumns = false;
             this.advancedDataGridViewNotebooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.advancedDataGridViewNotebooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn2,
-            this.notebooksNameDataGridViewTextBoxColumn,
-            this.tagServiceDataGridViewTextBoxColumn2,
-            this.iPDataGridViewTextBoxColumn1,
-            this.purchaseDateDataGridViewTextBoxColumn2,
-            this.warrantyDateDataGridViewTextBoxColumn2,
-            this.barcodeDataGridViewTextBoxColumn,
-            this.comentsDataGridViewTextBoxColumn2,
-            this.companyFixedAssetDataGridViewTextBoxColumn2,
-            this.firstNameDataGridViewTextBoxColumn2,
-            this.lastNameDataGridViewTextBoxColumn2,
-            this.jobDataGridViewTextBoxColumn2,
-            this.cPUVersionDataGridViewTextBoxColumn1,
-            this.hardDriveVersionDataGridViewTextBoxColumn1,
-            this.locationNameDataGridViewTextBoxColumn2,
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn1,
-            this.modelVersionNotebooksDataGridViewTextBoxColumn,
-            this.operatingSystemVersionDataGridViewTextBoxColumn1,
-            this.rAMVersionDataGridViewTextBoxColumn1});
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn47});
             this.advancedDataGridViewNotebooks.DataSource = this.vwAllNotebooksBindingSource;
             this.advancedDataGridViewNotebooks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.advancedDataGridViewNotebooks.FilterAndSortEnabled = true;
@@ -442,389 +440,381 @@ namespace GUI.Forms
             // 
             this.vwAll_NotebooksTableAdapter.ClearBeforeFill = true;
             // 
-            // rAMVersionDataGridViewTextBoxColumn1
-            // 
-            this.rAMVersionDataGridViewTextBoxColumn1.DataPropertyName = "RAMVersion";
-            this.rAMVersionDataGridViewTextBoxColumn1.HeaderText = "RAMVersion";
-            this.rAMVersionDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.rAMVersionDataGridViewTextBoxColumn1.Name = "rAMVersionDataGridViewTextBoxColumn1";
-            this.rAMVersionDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn30.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // operatingSystemVersionDataGridViewTextBoxColumn1
-            // 
-            this.operatingSystemVersionDataGridViewTextBoxColumn1.DataPropertyName = "OperatingSystemVersion";
-            this.operatingSystemVersionDataGridViewTextBoxColumn1.HeaderText = "OperatingSystemVersion";
-            this.operatingSystemVersionDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.operatingSystemVersionDataGridViewTextBoxColumn1.Name = "operatingSystemVersionDataGridViewTextBoxColumn1";
-            this.operatingSystemVersionDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "NotebooksName";
+            this.dataGridViewTextBoxColumn31.HeaderText = "NotebooksName";
+            this.dataGridViewTextBoxColumn31.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // modelVersionNotebooksDataGridViewTextBoxColumn
-            // 
-            this.modelVersionNotebooksDataGridViewTextBoxColumn.DataPropertyName = "ModelVersionNotebooks";
-            this.modelVersionNotebooksDataGridViewTextBoxColumn.HeaderText = "ModelVersionNotebooks";
-            this.modelVersionNotebooksDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.modelVersionNotebooksDataGridViewTextBoxColumn.Name = "modelVersionNotebooksDataGridViewTextBoxColumn";
-            this.modelVersionNotebooksDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "TagService";
+            this.dataGridViewTextBoxColumn32.HeaderText = "TagService";
+            this.dataGridViewTextBoxColumn32.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // microsoftOfficeVersionDataGridViewTextBoxColumn1
-            // 
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn1.DataPropertyName = "MicrosoftOfficeVersion";
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn1.HeaderText = "MicrosoftOfficeVersion";
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn1.Name = "microsoftOfficeVersionDataGridViewTextBoxColumn1";
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "IP";
+            this.dataGridViewTextBoxColumn33.HeaderText = "IP";
+            this.dataGridViewTextBoxColumn33.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // locationNameDataGridViewTextBoxColumn2
-            // 
-            this.locationNameDataGridViewTextBoxColumn2.DataPropertyName = "LocationName";
-            this.locationNameDataGridViewTextBoxColumn2.HeaderText = "LocationName";
-            this.locationNameDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.locationNameDataGridViewTextBoxColumn2.Name = "locationNameDataGridViewTextBoxColumn2";
-            this.locationNameDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "PurchaseDate";
+            this.dataGridViewTextBoxColumn34.HeaderText = "PurchaseDate";
+            this.dataGridViewTextBoxColumn34.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // hardDriveVersionDataGridViewTextBoxColumn1
-            // 
-            this.hardDriveVersionDataGridViewTextBoxColumn1.DataPropertyName = "HardDriveVersion";
-            this.hardDriveVersionDataGridViewTextBoxColumn1.HeaderText = "HardDriveVersion";
-            this.hardDriveVersionDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.hardDriveVersionDataGridViewTextBoxColumn1.Name = "hardDriveVersionDataGridViewTextBoxColumn1";
-            this.hardDriveVersionDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "WarrantyDate";
+            this.dataGridViewTextBoxColumn35.HeaderText = "WarrantyDate";
+            this.dataGridViewTextBoxColumn35.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // cPUVersionDataGridViewTextBoxColumn1
-            // 
-            this.cPUVersionDataGridViewTextBoxColumn1.DataPropertyName = "CPUVersion";
-            this.cPUVersionDataGridViewTextBoxColumn1.HeaderText = "CPUVersion";
-            this.cPUVersionDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.cPUVersionDataGridViewTextBoxColumn1.Name = "cPUVersionDataGridViewTextBoxColumn1";
-            this.cPUVersionDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "Coments";
+            this.dataGridViewTextBoxColumn36.HeaderText = "Coments";
+            this.dataGridViewTextBoxColumn36.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // jobDataGridViewTextBoxColumn2
-            // 
-            this.jobDataGridViewTextBoxColumn2.DataPropertyName = "Job";
-            this.jobDataGridViewTextBoxColumn2.HeaderText = "Job";
-            this.jobDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.jobDataGridViewTextBoxColumn2.Name = "jobDataGridViewTextBoxColumn2";
-            this.jobDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "CompanyFixedAsset";
+            this.dataGridViewTextBoxColumn37.HeaderText = "CompanyFixedAsset";
+            this.dataGridViewTextBoxColumn37.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // lastNameDataGridViewTextBoxColumn2
-            // 
-            this.lastNameDataGridViewTextBoxColumn2.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn2.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.lastNameDataGridViewTextBoxColumn2.Name = "lastNameDataGridViewTextBoxColumn2";
-            this.lastNameDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn38.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn38.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            this.dataGridViewTextBoxColumn38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // firstNameDataGridViewTextBoxColumn2
-            // 
-            this.firstNameDataGridViewTextBoxColumn2.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn2.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.firstNameDataGridViewTextBoxColumn2.Name = "firstNameDataGridViewTextBoxColumn2";
-            this.firstNameDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn39.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn39.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            this.dataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // companyFixedAssetDataGridViewTextBoxColumn2
-            // 
-            this.companyFixedAssetDataGridViewTextBoxColumn2.DataPropertyName = "CompanyFixedAsset";
-            this.companyFixedAssetDataGridViewTextBoxColumn2.HeaderText = "CompanyFixedAsset";
-            this.companyFixedAssetDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.companyFixedAssetDataGridViewTextBoxColumn2.Name = "companyFixedAssetDataGridViewTextBoxColumn2";
-            this.companyFixedAssetDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "Job";
+            this.dataGridViewTextBoxColumn40.HeaderText = "Job";
+            this.dataGridViewTextBoxColumn40.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // comentsDataGridViewTextBoxColumn2
-            // 
-            this.comentsDataGridViewTextBoxColumn2.DataPropertyName = "Coments";
-            this.comentsDataGridViewTextBoxColumn2.HeaderText = "Coments";
-            this.comentsDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.comentsDataGridViewTextBoxColumn2.Name = "comentsDataGridViewTextBoxColumn2";
-            this.comentsDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "CPUVersion";
+            this.dataGridViewTextBoxColumn41.HeaderText = "CPUVersion";
+            this.dataGridViewTextBoxColumn41.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            this.dataGridViewTextBoxColumn41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // barcodeDataGridViewTextBoxColumn
-            // 
-            this.barcodeDataGridViewTextBoxColumn.DataPropertyName = "Barcode";
-            this.barcodeDataGridViewTextBoxColumn.HeaderText = "Barcode";
-            this.barcodeDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.barcodeDataGridViewTextBoxColumn.Name = "barcodeDataGridViewTextBoxColumn";
-            this.barcodeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.DataPropertyName = "HardDriveVersion";
+            this.dataGridViewTextBoxColumn42.HeaderText = "HardDriveVersion";
+            this.dataGridViewTextBoxColumn42.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            this.dataGridViewTextBoxColumn42.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // warrantyDateDataGridViewTextBoxColumn2
-            // 
-            this.warrantyDateDataGridViewTextBoxColumn2.DataPropertyName = "WarrantyDate";
-            this.warrantyDateDataGridViewTextBoxColumn2.HeaderText = "WarrantyDate";
-            this.warrantyDateDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.warrantyDateDataGridViewTextBoxColumn2.Name = "warrantyDateDataGridViewTextBoxColumn2";
-            this.warrantyDateDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.DataPropertyName = "LocationName";
+            this.dataGridViewTextBoxColumn43.HeaderText = "LocationName";
+            this.dataGridViewTextBoxColumn43.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            this.dataGridViewTextBoxColumn43.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // purchaseDateDataGridViewTextBoxColumn2
-            // 
-            this.purchaseDateDataGridViewTextBoxColumn2.DataPropertyName = "PurchaseDate";
-            this.purchaseDateDataGridViewTextBoxColumn2.HeaderText = "PurchaseDate";
-            this.purchaseDateDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.purchaseDateDataGridViewTextBoxColumn2.Name = "purchaseDateDataGridViewTextBoxColumn2";
-            this.purchaseDateDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.DataPropertyName = "MicrosoftOfficeVersion";
+            this.dataGridViewTextBoxColumn44.HeaderText = "MicrosoftOfficeVersion";
+            this.dataGridViewTextBoxColumn44.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            this.dataGridViewTextBoxColumn44.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // iPDataGridViewTextBoxColumn1
-            // 
-            this.iPDataGridViewTextBoxColumn1.DataPropertyName = "IP";
-            this.iPDataGridViewTextBoxColumn1.HeaderText = "IP";
-            this.iPDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.iPDataGridViewTextBoxColumn1.Name = "iPDataGridViewTextBoxColumn1";
-            this.iPDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "ModelVersionNotebooks";
+            this.dataGridViewTextBoxColumn45.HeaderText = "ModelVersionNotebooks";
+            this.dataGridViewTextBoxColumn45.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            this.dataGridViewTextBoxColumn45.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // tagServiceDataGridViewTextBoxColumn2
-            // 
-            this.tagServiceDataGridViewTextBoxColumn2.DataPropertyName = "TagService";
-            this.tagServiceDataGridViewTextBoxColumn2.HeaderText = "TagService";
-            this.tagServiceDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.tagServiceDataGridViewTextBoxColumn2.Name = "tagServiceDataGridViewTextBoxColumn2";
-            this.tagServiceDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "OperatingSystemVersion";
+            this.dataGridViewTextBoxColumn46.HeaderText = "OperatingSystemVersion";
+            this.dataGridViewTextBoxColumn46.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // notebooksNameDataGridViewTextBoxColumn
-            // 
-            this.notebooksNameDataGridViewTextBoxColumn.DataPropertyName = "NotebooksName";
-            this.notebooksNameDataGridViewTextBoxColumn.HeaderText = "NotebooksName";
-            this.notebooksNameDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.notebooksNameDataGridViewTextBoxColumn.Name = "notebooksNameDataGridViewTextBoxColumn";
-            this.notebooksNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "RAMVersion";
+            this.dataGridViewTextBoxColumn47.HeaderText = "RAMVersion";
+            this.dataGridViewTextBoxColumn47.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // idDataGridViewTextBoxColumn2
-            // 
-            this.idDataGridViewTextBoxColumn2.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn2.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
-            this.idDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "TagService";
+            this.dataGridViewTextBoxColumn20.HeaderText = "TagService";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // compterNameDataGridViewTextBoxColumn
-            // 
-            this.compterNameDataGridViewTextBoxColumn.DataPropertyName = "CompterName";
-            this.compterNameDataGridViewTextBoxColumn.HeaderText = "CompterName";
-            this.compterNameDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.compterNameDataGridViewTextBoxColumn.Name = "compterNameDataGridViewTextBoxColumn";
-            this.compterNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "PurchaseDate";
+            this.dataGridViewTextBoxColumn21.HeaderText = "PurchaseDate";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // tagServiceDataGridViewTextBoxColumn
-            // 
-            this.tagServiceDataGridViewTextBoxColumn.DataPropertyName = "TagService";
-            this.tagServiceDataGridViewTextBoxColumn.HeaderText = "TagService";
-            this.tagServiceDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.tagServiceDataGridViewTextBoxColumn.Name = "tagServiceDataGridViewTextBoxColumn";
-            this.tagServiceDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "WarrantyDate";
+            this.dataGridViewTextBoxColumn22.HeaderText = "WarrantyDate";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // iPDataGridViewTextBoxColumn
-            // 
-            this.iPDataGridViewTextBoxColumn.DataPropertyName = "IP";
-            this.iPDataGridViewTextBoxColumn.HeaderText = "IP";
-            this.iPDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.iPDataGridViewTextBoxColumn.Name = "iPDataGridViewTextBoxColumn";
-            this.iPDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Coments";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Coments";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // purchaseDateDataGridViewTextBoxColumn
-            // 
-            this.purchaseDateDataGridViewTextBoxColumn.DataPropertyName = "PurchaseDate";
-            this.purchaseDateDataGridViewTextBoxColumn.HeaderText = "PurchaseDate";
-            this.purchaseDateDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.purchaseDateDataGridViewTextBoxColumn.Name = "purchaseDateDataGridViewTextBoxColumn";
-            this.purchaseDateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "CompanyFixedAsset";
+            this.dataGridViewTextBoxColumn24.HeaderText = "CompanyFixedAsset";
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // warrantyDateDataGridViewTextBoxColumn
-            // 
-            this.warrantyDateDataGridViewTextBoxColumn.DataPropertyName = "WarrantyDate";
-            this.warrantyDateDataGridViewTextBoxColumn.HeaderText = "WarrantyDate";
-            this.warrantyDateDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.warrantyDateDataGridViewTextBoxColumn.Name = "warrantyDateDataGridViewTextBoxColumn";
-            this.warrantyDateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn25.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // comentsDataGridViewTextBoxColumn
-            // 
-            this.comentsDataGridViewTextBoxColumn.DataPropertyName = "Coments";
-            this.comentsDataGridViewTextBoxColumn.HeaderText = "Coments";
-            this.comentsDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.comentsDataGridViewTextBoxColumn.Name = "comentsDataGridViewTextBoxColumn";
-            this.comentsDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn26.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // companyFixedAssetDataGridViewTextBoxColumn
-            // 
-            this.companyFixedAssetDataGridViewTextBoxColumn.DataPropertyName = "CompanyFixedAsset";
-            this.companyFixedAssetDataGridViewTextBoxColumn.HeaderText = "CompanyFixedAsset";
-            this.companyFixedAssetDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.companyFixedAssetDataGridViewTextBoxColumn.Name = "companyFixedAssetDataGridViewTextBoxColumn";
-            this.companyFixedAssetDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "Job";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Job";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "LocationName";
+            this.dataGridViewTextBoxColumn28.HeaderText = "LocationName";
+            this.dataGridViewTextBoxColumn28.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "ModelVersionMonitors";
+            this.dataGridViewTextBoxColumn29.HeaderText = "ModelVersionMonitors";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // jobDataGridViewTextBoxColumn
-            // 
-            this.jobDataGridViewTextBoxColumn.DataPropertyName = "Job";
-            this.jobDataGridViewTextBoxColumn.HeaderText = "Job";
-            this.jobDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.jobDataGridViewTextBoxColumn.Name = "jobDataGridViewTextBoxColumn";
-            this.jobDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // cPUVersionDataGridViewTextBoxColumn
-            // 
-            this.cPUVersionDataGridViewTextBoxColumn.DataPropertyName = "CPUVersion";
-            this.cPUVersionDataGridViewTextBoxColumn.HeaderText = "CPUVersion";
-            this.cPUVersionDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.cPUVersionDataGridViewTextBoxColumn.Name = "cPUVersionDataGridViewTextBoxColumn";
-            this.cPUVersionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CompterName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CompterName";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // hardDriveVersionDataGridViewTextBoxColumn
-            // 
-            this.hardDriveVersionDataGridViewTextBoxColumn.DataPropertyName = "HardDriveVersion";
-            this.hardDriveVersionDataGridViewTextBoxColumn.HeaderText = "HardDriveVersion";
-            this.hardDriveVersionDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.hardDriveVersionDataGridViewTextBoxColumn.Name = "hardDriveVersionDataGridViewTextBoxColumn";
-            this.hardDriveVersionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "TagService";
+            this.dataGridViewTextBoxColumn3.HeaderText = "TagService";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // locationNameDataGridViewTextBoxColumn
-            // 
-            this.locationNameDataGridViewTextBoxColumn.DataPropertyName = "LocationName";
-            this.locationNameDataGridViewTextBoxColumn.HeaderText = "LocationName";
-            this.locationNameDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.locationNameDataGridViewTextBoxColumn.Name = "locationNameDataGridViewTextBoxColumn";
-            this.locationNameDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "IP";
+            this.dataGridViewTextBoxColumn4.HeaderText = "IP";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // microsoftOfficeVersionDataGridViewTextBoxColumn
-            // 
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn.DataPropertyName = "MicrosoftOfficeVersion";
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn.HeaderText = "MicrosoftOfficeVersion";
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn.Name = "microsoftOfficeVersionDataGridViewTextBoxColumn";
-            this.microsoftOfficeVersionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "PurchaseDate";
+            this.dataGridViewTextBoxColumn5.HeaderText = "PurchaseDate";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // modelVersionComputerDataGridViewTextBoxColumn
-            // 
-            this.modelVersionComputerDataGridViewTextBoxColumn.DataPropertyName = "ModelVersionComputer";
-            this.modelVersionComputerDataGridViewTextBoxColumn.HeaderText = "ModelVersionComputer";
-            this.modelVersionComputerDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.modelVersionComputerDataGridViewTextBoxColumn.Name = "modelVersionComputerDataGridViewTextBoxColumn";
-            this.modelVersionComputerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // operatingSystemVersionDataGridViewTextBoxColumn
-            // 
-            this.operatingSystemVersionDataGridViewTextBoxColumn.DataPropertyName = "OperatingSystemVersion";
-            this.operatingSystemVersionDataGridViewTextBoxColumn.HeaderText = "OperatingSystemVersion";
-            this.operatingSystemVersionDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.operatingSystemVersionDataGridViewTextBoxColumn.Name = "operatingSystemVersionDataGridViewTextBoxColumn";
-            this.operatingSystemVersionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // rAMVersionDataGridViewTextBoxColumn
-            // 
-            this.rAMVersionDataGridViewTextBoxColumn.DataPropertyName = "RAMVersion";
-            this.rAMVersionDataGridViewTextBoxColumn.HeaderText = "RAMVersion";
-            this.rAMVersionDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.rAMVersionDataGridViewTextBoxColumn.Name = "rAMVersionDataGridViewTextBoxColumn";
-            this.rAMVersionDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // tagServiceDataGridViewTextBoxColumn1
-            // 
-            this.tagServiceDataGridViewTextBoxColumn1.DataPropertyName = "TagService";
-            this.tagServiceDataGridViewTextBoxColumn1.HeaderText = "TagService";
-            this.tagServiceDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.tagServiceDataGridViewTextBoxColumn1.Name = "tagServiceDataGridViewTextBoxColumn1";
-            this.tagServiceDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // purchaseDateDataGridViewTextBoxColumn1
-            // 
-            this.purchaseDateDataGridViewTextBoxColumn1.DataPropertyName = "PurchaseDate";
-            this.purchaseDateDataGridViewTextBoxColumn1.HeaderText = "PurchaseDate";
-            this.purchaseDateDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.purchaseDateDataGridViewTextBoxColumn1.Name = "purchaseDateDataGridViewTextBoxColumn1";
-            this.purchaseDateDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // warrantyDateDataGridViewTextBoxColumn1
-            // 
-            this.warrantyDateDataGridViewTextBoxColumn1.DataPropertyName = "WarrantyDate";
-            this.warrantyDateDataGridViewTextBoxColumn1.HeaderText = "WarrantyDate";
-            this.warrantyDateDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.warrantyDateDataGridViewTextBoxColumn1.Name = "warrantyDateDataGridViewTextBoxColumn1";
-            this.warrantyDateDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // comentsDataGridViewTextBoxColumn1
-            // 
-            this.comentsDataGridViewTextBoxColumn1.DataPropertyName = "Coments";
-            this.comentsDataGridViewTextBoxColumn1.HeaderText = "Coments";
-            this.comentsDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.comentsDataGridViewTextBoxColumn1.Name = "comentsDataGridViewTextBoxColumn1";
-            this.comentsDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // companyFixedAssetDataGridViewTextBoxColumn1
-            // 
-            this.companyFixedAssetDataGridViewTextBoxColumn1.DataPropertyName = "CompanyFixedAsset";
-            this.companyFixedAssetDataGridViewTextBoxColumn1.HeaderText = "CompanyFixedAsset";
-            this.companyFixedAssetDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.companyFixedAssetDataGridViewTextBoxColumn1.Name = "companyFixedAssetDataGridViewTextBoxColumn1";
-            this.companyFixedAssetDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // firstNameDataGridViewTextBoxColumn1
-            // 
-            this.firstNameDataGridViewTextBoxColumn1.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn1.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.firstNameDataGridViewTextBoxColumn1.Name = "firstNameDataGridViewTextBoxColumn1";
-            this.firstNameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // lastNameDataGridViewTextBoxColumn1
-            // 
-            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
-            this.lastNameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // jobDataGridViewTextBoxColumn1
-            // 
-            this.jobDataGridViewTextBoxColumn1.DataPropertyName = "Job";
-            this.jobDataGridViewTextBoxColumn1.HeaderText = "Job";
-            this.jobDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.jobDataGridViewTextBoxColumn1.Name = "jobDataGridViewTextBoxColumn1";
-            this.jobDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // locationNameDataGridViewTextBoxColumn1
-            // 
-            this.locationNameDataGridViewTextBoxColumn1.DataPropertyName = "LocationName";
-            this.locationNameDataGridViewTextBoxColumn1.HeaderText = "LocationName";
-            this.locationNameDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.locationNameDataGridViewTextBoxColumn1.Name = "locationNameDataGridViewTextBoxColumn1";
-            this.locationNameDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // modelVersionMonitorsDataGridViewTextBoxColumn
-            // 
-            this.modelVersionMonitorsDataGridViewTextBoxColumn.DataPropertyName = "ModelVersionMonitors";
-            this.modelVersionMonitorsDataGridViewTextBoxColumn.HeaderText = "ModelVersionMonitors";
-            this.modelVersionMonitorsDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.modelVersionMonitorsDataGridViewTextBoxColumn.Name = "modelVersionMonitorsDataGridViewTextBoxColumn";
-            this.modelVersionMonitorsDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "WarrantyDate";
+            this.dataGridViewTextBoxColumn6.HeaderText = "WarrantyDate";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Coments";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Coments";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "CompanyFixedAsset";
+            this.dataGridViewTextBoxColumn8.HeaderText = "CompanyFixedAsset";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "FirstName";
+            this.dataGridViewTextBoxColumn9.HeaderText = "FirstName";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "LastName";
+            this.dataGridViewTextBoxColumn10.HeaderText = "LastName";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Job";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Job";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "CPUVersion";
+            this.dataGridViewTextBoxColumn12.HeaderText = "CPUVersion";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "HardDriveVersion";
+            this.dataGridViewTextBoxColumn13.HeaderText = "HardDriveVersion";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "LocationName";
+            this.dataGridViewTextBoxColumn14.HeaderText = "LocationName";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "MicrosoftOfficeVersion";
+            this.dataGridViewTextBoxColumn15.HeaderText = "MicrosoftOfficeVersion";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "ModelVersionComputer";
+            this.dataGridViewTextBoxColumn16.HeaderText = "ModelVersionComputer";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "OperatingSystemVersion";
+            this.dataGridViewTextBoxColumn17.HeaderText = "OperatingSystemVersion";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "RAMVersion";
+            this.dataGridViewTextBoxColumn18.HeaderText = "RAMVersion";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // DataGrindViewForms
             // 
@@ -873,13 +863,6 @@ namespace GUI.Forms
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonExel;
         private System.Windows.Forms.Button buttonFullScrean;
-        private HelpDeskDB_TESTDataSet helpDeskDB_TESTDataSet;
-        private System.Windows.Forms.BindingSource vwAllComputersBindingSource;
-        private HelpDeskDB_TESTDataSetTableAdapters.vwAll_ComputersTableAdapter vwAll_ComputersTableAdapter;
-        private System.Windows.Forms.BindingSource vwAllMonitorsBindingSource;
-        private HelpDeskDB_TESTDataSetTableAdapters.vwAll_MonitorsTableAdapter vwAll_MonitorsTableAdapter;
-        private System.Windows.Forms.BindingSource vwAllNotebooksBindingSource;
-        private HelpDeskDB_TESTDataSetTableAdapters.vwAll_NotebooksTableAdapter vwAll_NotebooksTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn notebooksNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tagServiceDataGridViewTextBoxColumn2;
@@ -928,5 +911,59 @@ namespace GUI.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn jobDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationNameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelVersionMonitorsDataGridViewTextBoxColumn;
+        private HelpDeskDB_TESTDataSet helpDeskDB_TESTDataSet;
+        private System.Windows.Forms.BindingSource vwAllComputersBindingSource;
+        private HelpDeskDB_TESTDataSetTableAdapters.vwAll_ComputersTableAdapter vwAll_ComputersTableAdapter;
+        private System.Windows.Forms.BindingSource vwAllMonitorsBindingSource;
+        private HelpDeskDB_TESTDataSetTableAdapters.vwAll_MonitorsTableAdapter vwAll_MonitorsTableAdapter;
+        private System.Windows.Forms.BindingSource vwAllNotebooksBindingSource;
+        private HelpDeskDB_TESTDataSetTableAdapters.vwAll_NotebooksTableAdapter vwAll_NotebooksTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
     }
 }

@@ -50,11 +50,12 @@ namespace DataBaseLayer.DataBase
 
         public void InsertNotebooks(string _notebooksName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate,
+            byte[] _barcode, byte[] _qrCode)
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertNotebooks(_notebooksName, _operatingSystem, _companyFixedAsset,
                            _tagService, _location, _user, _office, _ip, _model,
-                           _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
+                           _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode));
         }
         public void InsertMonitors(string _companyFixedAsset, string _tagService, string _location,
             string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate, byte[] _barcode, byte[] _qrCode)
@@ -115,10 +116,10 @@ namespace DataBaseLayer.DataBase
         }
         public void UpdateNotebooks(int _id, string _notebooksName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate, byte[] _barcode, byte[] _qrCode)
         {
             _infoMessageBox.Info(_updateDataServiceClient.UpdateNotebooks(_id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user,
-                            _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate));
+                            _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode));
         }
         public void UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location,
             string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate, byte[] _barcode, byte[] _qrCode)

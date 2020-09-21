@@ -20,19 +20,19 @@ namespace LogicApp
         #region Inset / Update / Delete / UpdateView
         public void Insert(string _notebooksName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
         {
 
             _data.InsertNotebooks(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location,
-                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate);
+                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate, _barcode, _qrCode);
         }
 
         public void Update(int _id, string _notebooksName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
         {
             _data.UpdateNotebooks(_id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location,
-                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate);
+                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate, _barcode, _qrCode);
         }
         public void DeleteNotebooks(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
