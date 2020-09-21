@@ -59,6 +59,30 @@ namespace LogicApp
                 _infoMessageBox.Error(exception.Message);
             }
         }
+        public void ExportExelNotebooks(AdvancedDataGridView advancedDataGridView)
+        {
+            Microsoft.Office.Interop.Excel.Application exelApps = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook exelWorkbook = exelApps.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel.Worksheet exelWorkshet = null;
+            exelApps.Visible = true;
+
+            //exelWorkshet = exelWorkbook.Sheets["Arkusz1"];
+            exelWorkshet = exelWorkbook.ActiveSheet;
+            exelWorkshet.Name = "ExportDataGrindViewToExel";
+
+            for (int i = 1; i < advancedDataGridView.Columns.Count + 1; i++)
+            {
+                exelWorkshet.Cells[1, i] = advancedDataGridView.Columns[i - 1].HeaderText;
+            }
+
+            for (int j = 0; j < advancedDataGridView.RowCount - 1; j++)
+            {
+                for (int k = 0; k < advancedDataGridView.ColumnCount; k++)
+                {
+                    exelWorkshet.Cells[j + 2, k + 1] = advancedDataGridView.Rows[j].Cells[k].Value.ToString();
+                }
+            }
+        }
         #endregion
 
         #region InsertComboBox

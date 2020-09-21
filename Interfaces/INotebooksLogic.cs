@@ -16,6 +16,8 @@ namespace Interfaces
             string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode);
 
         void DeleteNotebooks(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView);
+        void ExportExelNotebooks(AdvancedDataGridView advancedDataGridView);
+
         void InsertComboBoxModelNotebook(string _value);
         void InsertComboBoxRAM(string _value);
         void InsertComboBoxHardDrive(string _value);

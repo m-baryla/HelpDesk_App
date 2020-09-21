@@ -2,7 +2,9 @@
 using System.Windows.Forms;
 using Interfaces;
 using LogicApp;
+using Microsoft.Office.Interop.Excel;
 using Zuby.ADGV;
+using Application = Microsoft.Office.Interop.Excel.Application;
 
 namespace GUI.Forms
 {
@@ -173,8 +175,37 @@ namespace GUI.Forms
         {
             UploadData();
         }
+
         #endregion
 
-     
+        #region EXPORT TO EXEL
+        private void buttonExel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (advancedDataGridViewComputers.SelectedRows.Count == 1)
+                {                 
+                    _computersLogic.ExportExelComputers(advancedDataGridViewComputers);
+                    UploadData();
+                }
+                else if (advancedDataGridViewNotebooks.SelectedRows.Count == 1)
+                { 
+                    _notebooksLogic.ExportExelNotebooks(advancedDataGridViewNotebooks);
+                    UploadData();
+                }
+                else if (advancedDataGridViewMonitors.SelectedRows.Count == 1)
+                {
+                    _monitorsLogic.ExportExelMonitors(advancedDataGridViewMonitors);
+                    UploadData();
+                }             
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
     }
 }

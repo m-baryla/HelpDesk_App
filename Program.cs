@@ -14,19 +14,22 @@ namespace HelpDesk_DB
         [STAThread]
         static void Main()
         {
-            try
-            {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Dashboard(new DataAcces(new InfoMessageBox()), new InfoMessageBox()));
-            }
-            catch (Exception)
-            {
+            //try
+            //{
+            //    Application.EnableVisualStyles();
+            //    Application.SetCompatibleTextRenderingDefault(false);
+            //    Application.Run(new Dashboard(new DataAcces(new InfoMessageBox()), new InfoMessageBox()));
+            //}
+            //catch (Exception)
+            //{
 
-            }
-            finally
-            {
-            }
+            //}
+            //finally
+            //{
+            //}
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Dashboard(new DataAcces(new InfoMessageBox()), new InfoMessageBox()));
         }
     }
 }

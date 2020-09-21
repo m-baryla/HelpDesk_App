@@ -24,6 +24,8 @@ namespace Interfaces
         void InsertComboBoxCPU(string _value);
         void InsertComboBoxUser(string _firstName, string _lastName, string _job);
         void DeleteComputer(DataGridViewCellEventArgs e,AdvancedDataGridView advancedDataGridView);
+        void ExportExelComputers(AdvancedDataGridView advancedDataGridView);
+
         List<string> FillComboBoxLocation();
         List<string> FillComboBoxOffice();
         List<string> FillComboBoxOperatingSystem();

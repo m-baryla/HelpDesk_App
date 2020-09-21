@@ -17,6 +17,8 @@ namespace Interfaces
         void InsertComboBoxLocation(string _value);
         void InsertComboBoxUser(string _firstName, string _lastName, string _job);
         void DeleteMonitors(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView);
+        void ExportExelMonitors(AdvancedDataGridView advancedDataGridView);
+
         List<string> FillComboBoxLocation();
         List<string> FillComboBoxModelMonitors();
         List<string> FillComboBoxUsers();
