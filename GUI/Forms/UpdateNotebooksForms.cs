@@ -22,6 +22,16 @@ namespace GUI.Forms
             groupBoxAddNewUser.Visible = false;
             buttonUpdateDataNotebooks.Enabled = false;
 
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewCPU.Visible = false;
+            linkLabelAddNewHardDrive.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewMicrosoftOffice.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewOperatingSystem.Visible = false;
+            linkLabelAddNewRAM.Visible = false;
+            linkLabelAddNewUser.Visible = false;
+
         }
 
         private void UploadData()
@@ -58,6 +68,10 @@ namespace GUI.Forms
             comboBoxUsers.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxUsers.AutoCompleteSource = AutoCompleteSource.ListItems;
 
+            comboBoxEquState.DataSource = _notebooksLogic.FillComboBoxEquipmentStatus().ToList();
+            comboBoxEquState.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxEquState.AutoCompleteSource = AutoCompleteSource.ListItems;
+
         }
 
         #region COMBOBOX DATA
@@ -74,24 +88,25 @@ namespace GUI.Forms
                         DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
 
                         // [UpdateNotebooksDataViev] must be like the view as [vwAll_Notebooks]
-                        textBoxIDNotebooks.Text = dgViewRow.Cells[0].Value.ToString();
-                        textBoxNameNotebook.Text = dgViewRow.Cells[1].Value.ToString();
-                        textBoxTagServiceNotebook.Text = dgViewRow.Cells[2].Value.ToString();
-                        textBoxIPNotebook.Text = dgViewRow.Cells[3].Value.ToString();
-                        dateTimePickerPurchaseDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
-                        dateTimePickerWarrantyDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
-                        richTextBoxComentsNotebook.Text = dgViewRow.Cells[6].Value.ToString();
-                        textBoxCompanyFixedAssetNotebook.Text = dgViewRow.Cells[7].Value.ToString();
-                        textBoxFirstName.Text = dgViewRow.Cells[8].Value.ToString();
-                        textBoxLastName.Text = dgViewRow.Cells[9].Value.ToString();
-                        textBoxJob.Text = dgViewRow.Cells[10].Value.ToString();
-                        comboBoxCPUNotebook.Text = dgViewRow.Cells[11].Value.ToString();
-                        comboBoxHardDriveNotebook.Text = dgViewRow.Cells[12].Value.ToString();
-                        comboBoxLocationNotebook.Text = dgViewRow.Cells[13].Value.ToString();
-                        comboBoxOfficeNotebook.Text = dgViewRow.Cells[14].Value.ToString();
-                        comboBoxModelNotebook.Text = dgViewRow.Cells[15].Value.ToString();
-                        comboBoxOperatigSystemNotebook.Text = dgViewRow.Cells[16].Value.ToString();
-                        comboBoxRAMNotebook.Text = dgViewRow.Cells[17].Value.ToString();
+                        comboBoxEquState.Text = dgViewRow.Cells[1].Value.ToString();
+                        textBoxIDNotebooks.Text = dgViewRow.Cells[2].Value.ToString();
+                        textBoxNameNotebook.Text = dgViewRow.Cells[3].Value.ToString();
+                        textBoxTagServiceNotebook.Text = dgViewRow.Cells[4].Value.ToString();
+                        textBoxIPNotebook.Text = dgViewRow.Cells[5].Value.ToString();
+                        dateTimePickerWarrantyDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[6].Value);
+                        dateTimePickerPurchaseDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[7].Value);
+                        richTextBoxComentsNotebook.Text = dgViewRow.Cells[8].Value.ToString();
+                        textBoxCompanyFixedAssetNotebook.Text = dgViewRow.Cells[9].Value.ToString();
+                        textBoxFirstName.Text = dgViewRow.Cells[10].Value.ToString();
+                        textBoxLastName.Text = dgViewRow.Cells[11].Value.ToString();
+                        textBoxJob.Text = dgViewRow.Cells[12].Value.ToString();
+                        comboBoxCPUNotebook.Text = dgViewRow.Cells[13].Value.ToString();
+                        comboBoxHardDriveNotebook.Text = dgViewRow.Cells[14].Value.ToString();
+                        comboBoxLocationNotebook.Text = dgViewRow.Cells[15].Value.ToString();
+                        comboBoxOfficeNotebook.Text = dgViewRow.Cells[16].Value.ToString();
+                        comboBoxModelNotebook.Text = dgViewRow.Cells[17].Value.ToString();
+                        comboBoxOperatigSystemNotebook.Text = dgViewRow.Cells[18].Value.ToString();
+                        comboBoxRAMNotebook.Text = dgViewRow.Cells[19].Value.ToString();
                         break;
                     }
                     case DialogResult.No:
@@ -123,7 +138,8 @@ namespace GUI.Forms
                     comboBoxLocationNotebook.Text,comboBoxUsers.Text, comboBoxOfficeNotebook.Text,
                     textBoxIPNotebook.Text, comboBoxModelNotebook.Text,comboBoxCPUNotebook.Text, comboBoxRAMNotebook.Text,
                     comboBoxHardDriveNotebook.Text, richTextBoxComentsNotebook.Text,
-                    dateTimePickerPurchaseDateNotebook.Value, dateTimePickerWarrantyDateNotebook.Value, bitmapDataBarcode, bitmapDataQRCode);
+                    dateTimePickerWarrantyDateNotebook.Value.Date, dateTimePickerPurchaseDateNotebook.Value.Date, 
+                    bitmapDataBarcode, bitmapDataQRCode, comboBoxEquState.Text);
         }
         private void buttonAddNewUsers_Click(object sender, EventArgs e)
         {
@@ -196,6 +212,31 @@ namespace GUI.Forms
                 bmp.Save(f.FileName);
             }
         }
+        private void radioButtonLabelLinkON_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = true;
+            linkLabelAddNewCPU.Visible = true;
+            linkLabelAddNewHardDrive.Visible = true;
+            linkLabelAddNewLocation.Visible = true;
+            linkLabelAddNewMicrosoftOffice.Visible = true;
+            linkLabelAddNewModel.Visible = true;
+            linkLabelAddNewOperatingSystem.Visible = true;
+            linkLabelAddNewRAM.Visible = true;
+            linkLabelAddNewUser.Visible = true;
+        }
+
+        private void radioButtonLabelLinkOFF_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewCPU.Visible = false;
+            linkLabelAddNewHardDrive.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewMicrosoftOffice.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewOperatingSystem.Visible = false;
+            linkLabelAddNewRAM.Visible = false;
+            linkLabelAddNewUser.Visible = false;
+        }
         #endregion
 
         #region LABEL LINK ADD NEW --VALUES
@@ -247,8 +288,14 @@ namespace GUI.Forms
             comboBoxUsers.DataSource = _notebooksLogic.FillComboBoxUsers().ToList();
             comboBoxUsers.Text = textBoxFirstName.Text + " " + textBoxLastName.Text;
         }
+        private void linkLabelEquState_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _notebooksLogic.InsertComboEquipmentStatus(comboBoxEquState.Text);  // if != null
+            UploadData();
+        }
+
         #endregion
 
-        
+       
     }
 }

@@ -20,6 +20,16 @@ namespace GUI.Forms
             UploadData();
             groupBoxAddNewUser.Visible = false;
             buttonUpdateDataComputer.Enabled = false;
+
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewCPU.Visible = false;
+            linkLabelAddNewHardDrive.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewMicrosoftOffice.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewOperatingSystem.Visible = false;
+            linkLabelAddNewRAM.Visible = false;
+            linkLabelAddNewUser.Visible = false;
         }
 
         private void UploadData()
@@ -55,6 +65,10 @@ namespace GUI.Forms
             comboBoxUser.DataSource = _computersLogic.FillComboBoxUsers().ToList();
             comboBoxUser.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxUser.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            comboBoxEquState.DataSource = _computersLogic.FillComboBoxEquipmentStatus().ToList();
+            comboBoxEquState.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxEquState.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         #region COMBOBOX DATA
@@ -70,24 +84,25 @@ namespace GUI.Forms
                         DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
 
                             // [UpdateComputersDataViev] must be like the view as [vwAll_Computers]
-                            textBoxIDComputer.Text = dgViewRow.Cells[0].Value.ToString();
-                            textBoxNameComputer.Text = dgViewRow.Cells[1].Value.ToString();
-                            textBoxTagServiceComputer.Text = dgViewRow.Cells[2].Value.ToString();
-                            textBoxIPComputer.Text = dgViewRow.Cells[3].Value.ToString();
-                            dateTimePickerPurchaseDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
-                            dateTimePickerWarrantyDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
-                            richTextBoxComentsComputer.Text = dgViewRow.Cells[6].Value.ToString();
-                            textBoxCompanyFixedAssetComputer.Text = dgViewRow.Cells[7].Value.ToString();
-                            textBoxFirstName.Text = dgViewRow.Cells[8].Value.ToString();
-                            textBoxLastName.Text = dgViewRow.Cells[9].Value.ToString();
-                            textBoxJob.Text = dgViewRow.Cells[10].Value.ToString();
-                            comboBoxCPUComputer.Text = dgViewRow.Cells[11].Value.ToString();
-                            comboBoxHardDriveComputer.Text = dgViewRow.Cells[12].Value.ToString();
-                            comboBoxLocationComputer.Text = dgViewRow.Cells[13].Value.ToString();
-                            comboBoxOfficeComputer.Text = dgViewRow.Cells[14].Value.ToString();
-                            comboBoxModelComputer.Text = dgViewRow.Cells[15].Value.ToString();
-                            comboBoxOperatigSystemComputer.Text = dgViewRow.Cells[16].Value.ToString();
-                            comboBoxRAMComputer.Text = dgViewRow.Cells[17].Value.ToString();
+                            comboBoxEquState.Text = dgViewRow.Cells[1].Value.ToString();
+                            textBoxIDComputer.Text = dgViewRow.Cells[2].Value.ToString();
+                            textBoxNameComputer.Text = dgViewRow.Cells[3].Value.ToString();
+                            textBoxTagServiceComputer.Text = dgViewRow.Cells[4].Value.ToString();
+                            textBoxIPComputer.Text = dgViewRow.Cells[5].Value.ToString();
+                            dateTimePickerWarrantyDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[6].Value);
+                            dateTimePickerPurchaseDateComputer.Value = Convert.ToDateTime(dgViewRow.Cells[7].Value);
+                            richTextBoxComentsComputer.Text = dgViewRow.Cells[8].Value.ToString();
+                            textBoxCompanyFixedAssetComputer.Text = dgViewRow.Cells[9].Value.ToString();
+                            textBoxFirstName.Text = dgViewRow.Cells[10].Value.ToString();
+                            textBoxLastName.Text = dgViewRow.Cells[11].Value.ToString();
+                            textBoxJob.Text = dgViewRow.Cells[12].Value.ToString();
+                            comboBoxCPUComputer.Text = dgViewRow.Cells[13].Value.ToString();
+                            comboBoxHardDriveComputer.Text = dgViewRow.Cells[14].Value.ToString();
+                            comboBoxLocationComputer.Text = dgViewRow.Cells[15].Value.ToString();
+                            comboBoxOfficeComputer.Text = dgViewRow.Cells[16].Value.ToString();
+                            comboBoxModelComputer.Text = dgViewRow.Cells[17].Value.ToString();
+                            comboBoxOperatigSystemComputer.Text = dgViewRow.Cells[18].Value.ToString();
+                            comboBoxRAMComputer.Text = dgViewRow.Cells[19].Value.ToString();
                             break;
                     }
                     case DialogResult.No:
@@ -118,7 +133,8 @@ namespace GUI.Forms
                     textBoxCompanyFixedAssetComputer.Text, textBoxTagServiceComputer.Text,comboBoxLocationComputer.Text,
                     comboBoxUser.Text, comboBoxOfficeComputer.Text,textBoxIPComputer.Text, comboBoxModelComputer.Text,
                     comboBoxCPUComputer.Text, comboBoxRAMComputer.Text,comboBoxHardDriveComputer.Text,richTextBoxComentsComputer.Text,
-                    dateTimePickerPurchaseDateComputer.Value, dateTimePickerWarrantyDateComputer.Value, bitmapDataBarcode, bitmapDataQRCode);
+                    dateTimePickerWarrantyDateComputer.Value.Date, dateTimePickerPurchaseDateComputer.Value.Date,
+                    bitmapDataBarcode, bitmapDataQRCode, comboBoxEquState.Text);
         }
         private void buttonAddNewUsers_Click(object sender, EventArgs e)
         {
@@ -235,8 +251,38 @@ namespace GUI.Forms
             comboBoxUser.Text = textBoxFirstName.Text + " " + textBoxLastName.Text;
 
         }
+        private void linkLabelEquState_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _computersLogic.InsertComboEquipmentStatus(comboBoxEquState.Text);  // if != null
+            UploadData();
+        }
+
         #endregion
 
-       
+        private void radioButtonLabelLinkON_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = true;
+            linkLabelAddNewCPU.Visible = true;
+            linkLabelAddNewHardDrive.Visible = true;
+            linkLabelAddNewLocation.Visible = true;
+            linkLabelAddNewMicrosoftOffice.Visible = true;
+            linkLabelAddNewModel.Visible = true;
+            linkLabelAddNewOperatingSystem.Visible = true;
+            linkLabelAddNewRAM.Visible = true;
+            linkLabelAddNewUser.Visible = true;
+        }
+
+        private void radioButtonLabelLinkOFF_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewCPU.Visible = false;
+            linkLabelAddNewHardDrive.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewMicrosoftOffice.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewOperatingSystem.Visible = false;
+            linkLabelAddNewRAM.Visible = false;
+            linkLabelAddNewUser.Visible = false;
+        }
     }
 }

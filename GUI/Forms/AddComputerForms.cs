@@ -22,6 +22,15 @@ namespace GUI.Forms
             groupBoxAddNewUser.Visible = false;
             buttonInsertDataComputer.Enabled = false;
 
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewCPU.Visible = false;
+            linkLabelAddNewHardDrive.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewMicrosoftOffice.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewOperatingSystem.Visible = false;
+            linkLabelAddNewRAM.Visible = false;
+            linkLabelAddNewUser.Visible = false;
         }
 
         private void UploadData()
@@ -57,6 +66,11 @@ namespace GUI.Forms
             comboBoxUser.DataSource = _computersLogic.FillComboBoxUsers().ToList();
             comboBoxUser.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxUser.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            comboBoxEquState.DataSource = _computersLogic.FillComboBoxEquipmentStatus().ToList();
+            comboBoxEquState.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxEquState.AutoCompleteSource = AutoCompleteSource.ListItems;
+
             ///
         }
 
@@ -80,13 +94,33 @@ namespace GUI.Forms
                 comboBoxLocationComputer.Text, comboBoxUser.Text,
                 comboBoxOfficeComputer.Text, strIP, comboBoxModelComputer.Text,
                 comboBoxCPUComputer.Text, comboBoxRAMComputer.Text, comboBoxHardDriveComputer.Text,
-                richTextBoxComentsComputer.Text, dateTimePickerPurchaseDateComputer.Value,
-                dateTimePickerWarrantyDateComputer.Value, bitmapData, bitmapDataQRCode); // if != null
+                richTextBoxComentsComputer.Text, dateTimePickerWarrantyDateComputer.Value.Date, dateTimePickerPurchaseDateComputer.Value.Date,
+                bitmapData, bitmapDataQRCode,comboBoxEquState.Text); // if != null
         }
-
-
-
-
+        private void radioButtonLabelLinkON_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = true;
+            linkLabelAddNewCPU.Visible = true;
+            linkLabelAddNewHardDrive.Visible = true;
+            linkLabelAddNewLocation.Visible = true;
+            linkLabelAddNewMicrosoftOffice.Visible = true;
+            linkLabelAddNewModel.Visible = true;
+            linkLabelAddNewOperatingSystem.Visible = true;
+            linkLabelAddNewRAM.Visible = true;
+            linkLabelAddNewUser.Visible = true;
+        }
+        private void radioButtonLabelLinkOFF_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewCPU.Visible = false;
+            linkLabelAddNewHardDrive.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewMicrosoftOffice.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewOperatingSystem.Visible = false;
+            linkLabelAddNewRAM.Visible = false;
+            linkLabelAddNewUser.Visible = false;
+        }
 
         private void buttonCloseComputer_Click(object sender, EventArgs e)
         {
@@ -205,9 +239,12 @@ namespace GUI.Forms
             UploadData();
         }
 
-
-
-
+        private void linkLabelEquState_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _computersLogic.InsertComboEquipmentStatus(comboBoxEquState.Text);  // if != null
+            UploadData();
+        }
         #endregion
+      
     }
 }

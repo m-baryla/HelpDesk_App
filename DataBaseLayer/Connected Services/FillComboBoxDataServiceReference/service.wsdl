@@ -67,6 +67,12 @@
   <wsdl:message name="IFillComboBoxDataService_FillComboBoxUsers_OutputMessage">
     <wsdl:part name="parameters" element="tns:FillComboBoxUsersResponse" />
   </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxEquipmentStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxEquipmentStatus" />
+  </wsdl:message>
+  <wsdl:message name="IFillComboBoxDataService_FillComboBoxEquipmentStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FillComboBoxEquipmentStatusResponse" />
+  </wsdl:message>
   <wsdl:portType name="IFillComboBoxDataService">
     <wsdl:operation name="FillComboBoxLocation">
       <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxLocation" message="tns:IFillComboBoxDataService_FillComboBoxLocation_InputMessage" />
@@ -107,6 +113,10 @@
     <wsdl:operation name="FillComboBoxUsers">
       <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsers" message="tns:IFillComboBoxDataService_FillComboBoxUsers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsersResponse" message="tns:IFillComboBoxDataService_FillComboBoxUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxEquipmentStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxEquipmentStatus" message="tns:IFillComboBoxDataService_FillComboBoxEquipmentStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFillComboBoxDataService/FillComboBoxEquipmentStatusResponse" message="tns:IFillComboBoxDataService_FillComboBoxEquipmentStatus_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IFillComboBoxDataService" type="tns:IFillComboBoxDataService">
@@ -194,6 +204,15 @@
     </wsdl:operation>
     <wsdl:operation name="FillComboBoxUsers">
       <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FillComboBoxEquipmentStatus">
+      <soap:operation soapAction="http://tempuri.org/IFillComboBoxDataService/FillComboBoxEquipmentStatus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

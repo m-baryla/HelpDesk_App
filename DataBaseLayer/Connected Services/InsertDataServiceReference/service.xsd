@@ -16,10 +16,11 @@
         <xs:element minOccurs="0" name="_ram" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_hardDrive" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
         <xs:element minOccurs="0" name="warrantyDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
         <xs:element minOccurs="0" name="_barcode" nillable="true" type="xs:base64Binary" />
         <xs:element minOccurs="0" name="_qrCode" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="_equipmentStatus" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -46,10 +47,11 @@
         <xs:element minOccurs="0" name="_ram" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_hardDrive" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
         <xs:element minOccurs="0" name="warrantyDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
         <xs:element minOccurs="0" name="_barcode" nillable="true" type="xs:base64Binary" />
         <xs:element minOccurs="0" name="_qrCode" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="_equipmentStatus" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -69,10 +71,11 @@
         <xs:element minOccurs="0" name="_user" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_model" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="_coments" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
         <xs:element minOccurs="0" name="warrantyDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="purchaseDate" type="xs:dateTime" />
         <xs:element minOccurs="0" name="_barcode" nillable="true" type="xs:base64Binary" />
         <xs:element minOccurs="0" name="_qrCode" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="_equipmentStatus" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -222,6 +225,20 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="InsertComboBoxUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboEquipmentStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertComboEquipmentStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertComboEquipmentStatusResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

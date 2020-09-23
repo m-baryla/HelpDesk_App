@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using Interfaces;
 using Zuby.ADGV;
@@ -18,23 +19,30 @@ namespace LogicApp
             this._infoMessageBox = infoMessageBox;
         }
 
-        #region Inset / Update / Delete / UpdateView
-
+        #region Inset 
         public void Insert(string _computerName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _warrantyDate, DateTime _purchaseDate, 
+            byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
             _data.InsertComputer(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location,
-                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate, _barcode, _qrCode);
+                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _warrantyDate,_purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
+        #endregion
+
+        #region Update
         public void Update(int _id, string _computerName, string _operatingSystem, string _companyFixedAsset,
-            string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
+           string _tagService, string _location, string _user, string _office, string _ip, string _model,
+           string _cpu, string _ram, string _hardDrive, string _coments, DateTime _warrantyDate, DateTime _purchaseDate, 
+           byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
 
             _data.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location,
-                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate, _barcode, _qrCode);
+                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _warrantyDate, _purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
+        #endregion
+
+        #region Delete
         public void DeleteComputer(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
             DialogResult dialogResult = _infoMessageBox.InfoYesNo("Do you want to delete");
@@ -60,6 +68,10 @@ namespace LogicApp
                 _infoMessageBox.Error(exception.Message);
             }
         }
+
+        #endregion
+
+        #region ExportToExel
         public void ExportExelComputers(AdvancedDataGridView advancedDataGridView)
         {
             Microsoft.Office.Interop.Excel.Application exelApps = new Microsoft.Office.Interop.Excel.Application();
@@ -84,7 +96,29 @@ namespace LogicApp
                 }
             }
         }
+        #endregion
 
+        #region ChangeColorState
+        public void ChangeStateColorComputers(AdvancedDataGridView advancedDataGridView)
+        {
+            for (int i = 0; i < advancedDataGridView.Rows.Count - 1; i++)
+            {
+                int value = Int32.Parse(advancedDataGridView.Rows[i].Cells[0].Value.ToString());
+
+                if (value == 1)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else if (value == 2)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Green;
+                }
+                else if (value == 3)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
+                }
+            }
+        }
         #endregion
 
         #region InsertComboBox
@@ -120,6 +154,11 @@ namespace LogicApp
         {
             _data.InsertComboBoxUser(_firstName, _lastName, _job);
         }
+        public void InsertComboEquipmentStatus(string _value)
+        {
+            _data.InsertComboEquipmentStatus(_value);
+        }
+
         #endregion
 
         #region GetFillComboBox
@@ -162,6 +201,10 @@ namespace LogicApp
         public List<string> FillComboBoxUsers()
         {
             return _data.FillComboBoxUsers();
+        }
+        public List<string> FillComboBoxEquipmentStatus()
+        {
+            return _data.FillComboBoxEquipmentStatus();
         }
         #endregion
 

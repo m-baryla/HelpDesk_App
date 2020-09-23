@@ -33,6 +33,7 @@ namespace GUI.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataGrindViewForms));
             this.panelDAtaGrindView = new System.Windows.Forms.Panel();
+            this.radioButtonColorOn = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonFullScrean = new System.Windows.Forms.Button();
             this.buttonExel = new System.Windows.Forms.Button();
@@ -43,12 +44,25 @@ namespace GUI.Forms
             this.tabControl_Warehouse = new System.Windows.Forms.TabControl();
             this.tabPageComputers = new System.Windows.Forms.TabPage();
             this.advancedDataGridViewComputers = new Zuby.ADGV.AdvancedDataGridView();
+            this.vwAllComputersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.helpDeskDB_TESTDataSet = new GUI.HelpDeskDB_TESTDataSet();
+            this.tabPageMonitors = new System.Windows.Forms.TabPage();
+            this.advancedDataGridViewMonitors = new Zuby.ADGV.AdvancedDataGridView();
+            this.vwAllMonitorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPageNotebooks = new System.Windows.Forms.TabPage();
+            this.advancedDataGridViewNotebooks = new Zuby.ADGV.AdvancedDataGridView();
+            this.vwAllNotebooksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwAll_ComputersTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_ComputersTableAdapter();
+            this.vwAll_MonitorsTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_MonitorsTableAdapter();
+            this.vwAll_NotebooksTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_NotebooksTableAdapter();
+            this.iDEquipmentStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,14 +75,12 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vwAllComputersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpDeskDB_TESTDataSet = new GUI.HelpDeskDB_TESTDataSet();
-            this.tabPageMonitors = new System.Windows.Forms.TabPage();
-            this.advancedDataGridViewMonitors = new Zuby.ADGV.AdvancedDataGridView();
+            this.iDEquipmentStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,15 +88,14 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vwAllMonitorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPageNotebooks = new System.Windows.Forms.TabPage();
-            this.advancedDataGridViewNotebooks = new Zuby.ADGV.AdvancedDataGridView();
+            this.iDEquipmentStatusDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,10 +108,6 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vwAllNotebooksBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwAll_ComputersTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_ComputersTableAdapter();
-            this.vwAll_MonitorsTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_MonitorsTableAdapter();
-            this.vwAll_NotebooksTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_NotebooksTableAdapter();
             this.panelDAtaGrindView.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl_Warehouse.SuspendLayout();
@@ -119,6 +126,7 @@ namespace GUI.Forms
             // panelDAtaGrindView
             // 
             this.panelDAtaGrindView.BackColor = System.Drawing.Color.Black;
+            this.panelDAtaGrindView.Controls.Add(this.radioButtonColorOn);
             this.panelDAtaGrindView.Controls.Add(this.panel1);
             this.panelDAtaGrindView.Controls.Add(this.tabControl_Warehouse);
             this.panelDAtaGrindView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -126,6 +134,23 @@ namespace GUI.Forms
             this.panelDAtaGrindView.Name = "panelDAtaGrindView";
             this.panelDAtaGrindView.Size = new System.Drawing.Size(739, 572);
             this.panelDAtaGrindView.TabIndex = 0;
+            // 
+            // radioButtonColorOn
+            // 
+            this.radioButtonColorOn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radioButtonColorOn.AutoSize = true;
+            this.radioButtonColorOn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonColorOn.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonColorOn.ForeColor = System.Drawing.Color.White;
+            this.radioButtonColorOn.Location = new System.Drawing.Point(616, 65);
+            this.radioButtonColorOn.Name = "radioButtonColorOn";
+            this.radioButtonColorOn.Size = new System.Drawing.Size(115, 22);
+            this.radioButtonColorOn.TabIndex = 2;
+            this.radioButtonColorOn.TabStop = true;
+            this.radioButtonColorOn.Text = "ColorFilter ON";
+            this.radioButtonColorOn.UseVisualStyleBackColor = true;
+            this.radioButtonColorOn.CheckedChanged += new System.EventHandler(this.radioButtonColorOn_CheckedChanged);
             // 
             // panel1
             // 
@@ -295,12 +320,14 @@ namespace GUI.Forms
             this.advancedDataGridViewComputers.AutoGenerateColumns = false;
             this.advancedDataGridViewComputers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.advancedDataGridViewComputers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDEquipmentStatusDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
@@ -323,6 +350,148 @@ namespace GUI.Forms
             this.advancedDataGridViewComputers.TabIndex = 0;
             this.advancedDataGridViewComputers.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewComputers_SortStringChanged);
             this.advancedDataGridViewComputers.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewComputers_FilterStringChanged);
+            this.advancedDataGridViewComputers.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.advancedDataGridViewComputers_RowPrePaint);
+            // 
+            // vwAllComputersBindingSource
+            // 
+            this.vwAllComputersBindingSource.DataMember = "vwAll_Computers";
+            this.vwAllComputersBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
+            // 
+            // helpDeskDB_TESTDataSet
+            // 
+            this.helpDeskDB_TESTDataSet.DataSetName = "HelpDeskDB_TESTDataSet";
+            this.helpDeskDB_TESTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPageMonitors
+            // 
+            this.tabPageMonitors.Controls.Add(this.advancedDataGridViewMonitors);
+            this.tabPageMonitors.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMonitors.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPageMonitors.Name = "tabPageMonitors";
+            this.tabPageMonitors.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPageMonitors.Size = new System.Drawing.Size(731, 463);
+            this.tabPageMonitors.TabIndex = 1;
+            this.tabPageMonitors.Text = "Monitors";
+            this.tabPageMonitors.UseVisualStyleBackColor = true;
+            // 
+            // advancedDataGridViewMonitors
+            // 
+            this.advancedDataGridViewMonitors.AllowUserToOrderColumns = true;
+            this.advancedDataGridViewMonitors.AutoGenerateColumns = false;
+            this.advancedDataGridViewMonitors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridViewMonitors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDEquipmentStatusDataGridViewTextBoxColumn1,
+            this.statusDataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29});
+            this.advancedDataGridViewMonitors.DataSource = this.vwAllMonitorsBindingSource;
+            this.advancedDataGridViewMonitors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advancedDataGridViewMonitors.FilterAndSortEnabled = true;
+            this.advancedDataGridViewMonitors.Location = new System.Drawing.Point(4, 4);
+            this.advancedDataGridViewMonitors.Name = "advancedDataGridViewMonitors";
+            this.advancedDataGridViewMonitors.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridViewMonitors.Size = new System.Drawing.Size(723, 455);
+            this.advancedDataGridViewMonitors.TabIndex = 0;
+            this.advancedDataGridViewMonitors.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewMonitors_SortStringChanged);
+            this.advancedDataGridViewMonitors.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewMonitors_FilterStringChanged);
+            this.advancedDataGridViewMonitors.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.advancedDataGridViewMonitors_RowPrePaint);
+            // 
+            // vwAllMonitorsBindingSource
+            // 
+            this.vwAllMonitorsBindingSource.DataMember = "vwAll_Monitors";
+            this.vwAllMonitorsBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
+            // 
+            // tabPageNotebooks
+            // 
+            this.tabPageNotebooks.Controls.Add(this.advancedDataGridViewNotebooks);
+            this.tabPageNotebooks.Location = new System.Drawing.Point(4, 22);
+            this.tabPageNotebooks.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPageNotebooks.Name = "tabPageNotebooks";
+            this.tabPageNotebooks.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPageNotebooks.Size = new System.Drawing.Size(731, 463);
+            this.tabPageNotebooks.TabIndex = 2;
+            this.tabPageNotebooks.Text = "Notebooks";
+            this.tabPageNotebooks.UseVisualStyleBackColor = true;
+            // 
+            // advancedDataGridViewNotebooks
+            // 
+            this.advancedDataGridViewNotebooks.AllowUserToOrderColumns = true;
+            this.advancedDataGridViewNotebooks.AutoGenerateColumns = false;
+            this.advancedDataGridViewNotebooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridViewNotebooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDEquipmentStatusDataGridViewTextBoxColumn2,
+            this.statusDataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn47});
+            this.advancedDataGridViewNotebooks.DataSource = this.vwAllNotebooksBindingSource;
+            this.advancedDataGridViewNotebooks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advancedDataGridViewNotebooks.FilterAndSortEnabled = true;
+            this.advancedDataGridViewNotebooks.Location = new System.Drawing.Point(4, 4);
+            this.advancedDataGridViewNotebooks.Name = "advancedDataGridViewNotebooks";
+            this.advancedDataGridViewNotebooks.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridViewNotebooks.Size = new System.Drawing.Size(723, 455);
+            this.advancedDataGridViewNotebooks.TabIndex = 0;
+            this.advancedDataGridViewNotebooks.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewNotebooks_SortStringChanged);
+            this.advancedDataGridViewNotebooks.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewNotebooks_FilterStringChanged);
+            this.advancedDataGridViewNotebooks.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.advancedDataGridViewNotebooks_RowPrePaint);
+            // 
+            // vwAllNotebooksBindingSource
+            // 
+            this.vwAllNotebooksBindingSource.DataMember = "vwAll_Notebooks";
+            this.vwAllNotebooksBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
+            // 
+            // vwAll_ComputersTableAdapter
+            // 
+            this.vwAll_ComputersTableAdapter.ClearBeforeFill = true;
+            // 
+            // vwAll_MonitorsTableAdapter
+            // 
+            this.vwAll_MonitorsTableAdapter.ClearBeforeFill = true;
+            // 
+            // vwAll_NotebooksTableAdapter
+            // 
+            this.vwAll_NotebooksTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDEquipmentStatusDataGridViewTextBoxColumn
+            // 
+            this.iDEquipmentStatusDataGridViewTextBoxColumn.DataPropertyName = "IDEquipmentStatus";
+            this.iDEquipmentStatusDataGridViewTextBoxColumn.HeaderText = "IDEquipmentStatus";
+            this.iDEquipmentStatusDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.iDEquipmentStatusDataGridViewTextBoxColumn.Name = "iDEquipmentStatusDataGridViewTextBoxColumn";
+            this.iDEquipmentStatusDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -356,14 +525,6 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "PurchaseDate";
-            this.dataGridViewTextBoxColumn5.HeaderText = "PurchaseDate";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "WarrantyDate";
@@ -371,6 +532,14 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn6.MinimumWidth = 22;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "PurchaseDate";
+            this.dataGridViewTextBoxColumn5.HeaderText = "PurchaseDate";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -468,54 +637,21 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // vwAllComputersBindingSource
+            // iDEquipmentStatusDataGridViewTextBoxColumn1
             // 
-            this.vwAllComputersBindingSource.DataMember = "vwAll_Computers";
-            this.vwAllComputersBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
+            this.iDEquipmentStatusDataGridViewTextBoxColumn1.DataPropertyName = "IDEquipmentStatus";
+            this.iDEquipmentStatusDataGridViewTextBoxColumn1.HeaderText = "IDEquipmentStatus";
+            this.iDEquipmentStatusDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.iDEquipmentStatusDataGridViewTextBoxColumn1.Name = "iDEquipmentStatusDataGridViewTextBoxColumn1";
+            this.iDEquipmentStatusDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // helpDeskDB_TESTDataSet
+            // statusDataGridViewTextBoxColumn1
             // 
-            this.helpDeskDB_TESTDataSet.DataSetName = "HelpDeskDB_TESTDataSet";
-            this.helpDeskDB_TESTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tabPageMonitors
-            // 
-            this.tabPageMonitors.Controls.Add(this.advancedDataGridViewMonitors);
-            this.tabPageMonitors.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMonitors.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPageMonitors.Name = "tabPageMonitors";
-            this.tabPageMonitors.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageMonitors.Size = new System.Drawing.Size(731, 463);
-            this.tabPageMonitors.TabIndex = 1;
-            this.tabPageMonitors.Text = "Monitors";
-            this.tabPageMonitors.UseVisualStyleBackColor = true;
-            // 
-            // advancedDataGridViewMonitors
-            // 
-            this.advancedDataGridViewMonitors.AutoGenerateColumns = false;
-            this.advancedDataGridViewMonitors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridViewMonitors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn29});
-            this.advancedDataGridViewMonitors.DataSource = this.vwAllMonitorsBindingSource;
-            this.advancedDataGridViewMonitors.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedDataGridViewMonitors.FilterAndSortEnabled = true;
-            this.advancedDataGridViewMonitors.Location = new System.Drawing.Point(4, 4);
-            this.advancedDataGridViewMonitors.Name = "advancedDataGridViewMonitors";
-            this.advancedDataGridViewMonitors.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.advancedDataGridViewMonitors.Size = new System.Drawing.Size(723, 455);
-            this.advancedDataGridViewMonitors.TabIndex = 0;
-            this.advancedDataGridViewMonitors.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewMonitors_SortStringChanged);
-            this.advancedDataGridViewMonitors.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewMonitors_FilterStringChanged);
+            this.statusDataGridViewTextBoxColumn1.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn1.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.statusDataGridViewTextBoxColumn1.Name = "statusDataGridViewTextBoxColumn1";
+            this.statusDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // dataGridViewTextBoxColumn19
             // 
@@ -533,14 +669,6 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "PurchaseDate";
-            this.dataGridViewTextBoxColumn21.HeaderText = "PurchaseDate";
-            this.dataGridViewTextBoxColumn21.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
             // dataGridViewTextBoxColumn22
             // 
             this.dataGridViewTextBoxColumn22.DataPropertyName = "WarrantyDate";
@@ -548,6 +676,14 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn22.MinimumWidth = 22;
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "PurchaseDate";
+            this.dataGridViewTextBoxColumn21.HeaderText = "PurchaseDate";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // dataGridViewTextBoxColumn23
             // 
@@ -605,56 +741,21 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
             this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // vwAllMonitorsBindingSource
+            // iDEquipmentStatusDataGridViewTextBoxColumn2
             // 
-            this.vwAllMonitorsBindingSource.DataMember = "vwAll_Monitors";
-            this.vwAllMonitorsBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
+            this.iDEquipmentStatusDataGridViewTextBoxColumn2.DataPropertyName = "IDEquipmentStatus";
+            this.iDEquipmentStatusDataGridViewTextBoxColumn2.HeaderText = "IDEquipmentStatus";
+            this.iDEquipmentStatusDataGridViewTextBoxColumn2.MinimumWidth = 22;
+            this.iDEquipmentStatusDataGridViewTextBoxColumn2.Name = "iDEquipmentStatusDataGridViewTextBoxColumn2";
+            this.iDEquipmentStatusDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // tabPageNotebooks
+            // statusDataGridViewTextBoxColumn2
             // 
-            this.tabPageNotebooks.Controls.Add(this.advancedDataGridViewNotebooks);
-            this.tabPageNotebooks.Location = new System.Drawing.Point(4, 22);
-            this.tabPageNotebooks.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPageNotebooks.Name = "tabPageNotebooks";
-            this.tabPageNotebooks.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageNotebooks.Size = new System.Drawing.Size(731, 463);
-            this.tabPageNotebooks.TabIndex = 2;
-            this.tabPageNotebooks.Text = "Notebooks";
-            this.tabPageNotebooks.UseVisualStyleBackColor = true;
-            // 
-            // advancedDataGridViewNotebooks
-            // 
-            this.advancedDataGridViewNotebooks.AutoGenerateColumns = false;
-            this.advancedDataGridViewNotebooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridViewNotebooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn30,
-            this.dataGridViewTextBoxColumn31,
-            this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn33,
-            this.dataGridViewTextBoxColumn34,
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37,
-            this.dataGridViewTextBoxColumn38,
-            this.dataGridViewTextBoxColumn39,
-            this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41,
-            this.dataGridViewTextBoxColumn42,
-            this.dataGridViewTextBoxColumn43,
-            this.dataGridViewTextBoxColumn44,
-            this.dataGridViewTextBoxColumn45,
-            this.dataGridViewTextBoxColumn46,
-            this.dataGridViewTextBoxColumn47});
-            this.advancedDataGridViewNotebooks.DataSource = this.vwAllNotebooksBindingSource;
-            this.advancedDataGridViewNotebooks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedDataGridViewNotebooks.FilterAndSortEnabled = true;
-            this.advancedDataGridViewNotebooks.Location = new System.Drawing.Point(4, 4);
-            this.advancedDataGridViewNotebooks.Name = "advancedDataGridViewNotebooks";
-            this.advancedDataGridViewNotebooks.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.advancedDataGridViewNotebooks.Size = new System.Drawing.Size(723, 455);
-            this.advancedDataGridViewNotebooks.TabIndex = 0;
-            this.advancedDataGridViewNotebooks.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewNotebooks_SortStringChanged);
-            this.advancedDataGridViewNotebooks.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewNotebooks_FilterStringChanged);
+            this.statusDataGridViewTextBoxColumn2.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn2.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn2.MinimumWidth = 22;
+            this.statusDataGridViewTextBoxColumn2.Name = "statusDataGridViewTextBoxColumn2";
+            this.statusDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // dataGridViewTextBoxColumn30
             // 
@@ -688,14 +789,6 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
             this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.DataPropertyName = "PurchaseDate";
-            this.dataGridViewTextBoxColumn34.HeaderText = "PurchaseDate";
-            this.dataGridViewTextBoxColumn34.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
             // dataGridViewTextBoxColumn35
             // 
             this.dataGridViewTextBoxColumn35.DataPropertyName = "WarrantyDate";
@@ -703,6 +796,14 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn35.MinimumWidth = 22;
             this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
             this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "PurchaseDate";
+            this.dataGridViewTextBoxColumn34.HeaderText = "PurchaseDate";
+            this.dataGridViewTextBoxColumn34.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // dataGridViewTextBoxColumn36
             // 
@@ -800,23 +901,6 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
             this.dataGridViewTextBoxColumn47.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // vwAllNotebooksBindingSource
-            // 
-            this.vwAllNotebooksBindingSource.DataMember = "vwAll_Notebooks";
-            this.vwAllNotebooksBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
-            // 
-            // vwAll_ComputersTableAdapter
-            // 
-            this.vwAll_ComputersTableAdapter.ClearBeforeFill = true;
-            // 
-            // vwAll_MonitorsTableAdapter
-            // 
-            this.vwAll_MonitorsTableAdapter.ClearBeforeFill = true;
-            // 
-            // vwAll_NotebooksTableAdapter
-            // 
-            this.vwAll_NotebooksTableAdapter.ClearBeforeFill = true;
-            // 
             // DataGrindViewForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -829,6 +913,7 @@ namespace GUI.Forms
             this.Text = "DataGrindViewForms";
             this.Load += new System.EventHandler(this.DataGrindViewForms_Load);
             this.panelDAtaGrindView.ResumeLayout(false);
+            this.panelDAtaGrindView.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tabControl_Warehouse.ResumeLayout(false);
             this.tabPageComputers.ResumeLayout(false);
@@ -919,12 +1004,15 @@ namespace GUI.Forms
         private HelpDeskDB_TESTDataSetTableAdapters.vwAll_MonitorsTableAdapter vwAll_MonitorsTableAdapter;
         private System.Windows.Forms.BindingSource vwAllNotebooksBindingSource;
         private HelpDeskDB_TESTDataSetTableAdapters.vwAll_NotebooksTableAdapter vwAll_NotebooksTableAdapter;
+        private System.Windows.Forms.RadioButton radioButtonColorOn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDEquipmentStatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
@@ -937,10 +1025,12 @@ namespace GUI.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDEquipmentStatusDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
@@ -948,12 +1038,14 @@ namespace GUI.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDEquipmentStatusDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;

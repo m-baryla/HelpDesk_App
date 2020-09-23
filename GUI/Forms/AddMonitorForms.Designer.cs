@@ -50,6 +50,9 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerWarrantyDateMonitors = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxEquState = new System.Windows.Forms.GroupBox();
+            this.linkLabelEquState = new System.Windows.Forms.LinkLabel();
+            this.comboBoxEquState = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBoxTagServiceMonitors = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -63,6 +66,8 @@
             this.buttonInsertDataMonitors = new System.Windows.Forms.Button();
             this.panelAddNewMonitors = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButtonLabelLinkOFF = new System.Windows.Forms.RadioButton();
+            this.radioButtonLabelLinkON = new System.Windows.Forms.RadioButton();
             this.buttonCloseMonitor = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageComentsMonitor = new System.Windows.Forms.TabPage();
@@ -96,6 +101,7 @@
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBoxEquState.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -355,6 +361,7 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Black;
+            this.groupBox1.Controls.Add(this.groupBoxEquState);
             this.groupBox1.Controls.Add(this.groupBox8);
             this.groupBox1.Controls.Add(this.groupBox7);
             this.groupBox1.Controls.Add(this.groupBox6);
@@ -368,13 +375,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hardware Info";
             // 
+            // groupBoxEquState
+            // 
+            this.groupBoxEquState.Controls.Add(this.linkLabelEquState);
+            this.groupBoxEquState.Controls.Add(this.comboBoxEquState);
+            this.groupBoxEquState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.groupBoxEquState.ForeColor = System.Drawing.Color.White;
+            this.groupBoxEquState.Location = new System.Drawing.Point(17, 151);
+            this.groupBoxEquState.Name = "groupBoxEquState";
+            this.groupBoxEquState.Size = new System.Drawing.Size(155, 70);
+            this.groupBoxEquState.TabIndex = 38;
+            this.groupBoxEquState.TabStop = false;
+            this.groupBoxEquState.Text = "EquipmentState";
+            // 
+            // linkLabelEquState
+            // 
+            this.linkLabelEquState.AutoSize = true;
+            this.linkLabelEquState.LinkColor = System.Drawing.Color.Red;
+            this.linkLabelEquState.Location = new System.Drawing.Point(40, 48);
+            this.linkLabelEquState.Name = "linkLabelEquState";
+            this.linkLabelEquState.Size = new System.Drawing.Size(79, 13);
+            this.linkLabelEquState.TabIndex = 16;
+            this.linkLabelEquState.TabStop = true;
+            this.linkLabelEquState.Text = "Add New State";
+            this.linkLabelEquState.VisitedLinkColor = System.Drawing.Color.Yellow;
+            this.linkLabelEquState.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelEquState_LinkClicked);
+            // 
+            // comboBoxEquState
+            // 
+            this.comboBoxEquState.FormattingEnabled = true;
+            this.comboBoxEquState.Location = new System.Drawing.Point(7, 17);
+            this.comboBoxEquState.Name = "comboBoxEquState";
+            this.comboBoxEquState.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxEquState.TabIndex = 13;
+            // 
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.Black;
             this.groupBox8.Controls.Add(this.textBoxTagServiceMonitors);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox8.ForeColor = System.Drawing.Color.White;
-            this.groupBox8.Location = new System.Drawing.Point(15, 150);
+            this.groupBox8.Location = new System.Drawing.Point(15, 95);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(160, 50);
             this.groupBox8.TabIndex = 35;
@@ -459,7 +500,7 @@
             this.groupBox5.Controls.Add(this.textBoxCompanyFixedAssetMonitors);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(15, 59);
+            this.groupBox5.Location = new System.Drawing.Point(15, 35);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(160, 50);
             this.groupBox5.TabIndex = 35;
@@ -516,6 +557,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.radioButtonLabelLinkOFF);
+            this.panel1.Controls.Add(this.radioButtonLabelLinkON);
             this.panel1.Controls.Add(this.buttonInsertDataMonitors);
             this.panel1.Controls.Add(this.buttonCloseMonitor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -523,6 +566,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(739, 50);
             this.panel1.TabIndex = 29;
+            // 
+            // radioButtonLabelLinkOFF
+            // 
+            this.radioButtonLabelLinkOFF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButtonLabelLinkOFF.AutoSize = true;
+            this.radioButtonLabelLinkOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonLabelLinkOFF.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonLabelLinkOFF.ForeColor = System.Drawing.Color.White;
+            this.radioButtonLabelLinkOFF.Location = new System.Drawing.Point(133, 12);
+            this.radioButtonLabelLinkOFF.Name = "radioButtonLabelLinkOFF";
+            this.radioButtonLabelLinkOFF.Size = new System.Drawing.Size(111, 22);
+            this.radioButtonLabelLinkOFF.TabIndex = 32;
+            this.radioButtonLabelLinkOFF.TabStop = true;
+            this.radioButtonLabelLinkOFF.Text = "AddNew  OFF";
+            this.radioButtonLabelLinkOFF.UseVisualStyleBackColor = true;
+            this.radioButtonLabelLinkOFF.CheckedChanged += new System.EventHandler(this.radioButtonLabelLinkOFF_CheckedChanged);
+            // 
+            // radioButtonLabelLinkON
+            // 
+            this.radioButtonLabelLinkON.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButtonLabelLinkON.AutoSize = true;
+            this.radioButtonLabelLinkON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonLabelLinkON.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonLabelLinkON.ForeColor = System.Drawing.Color.White;
+            this.radioButtonLabelLinkON.Location = new System.Drawing.Point(14, 12);
+            this.radioButtonLabelLinkON.Name = "radioButtonLabelLinkON";
+            this.radioButtonLabelLinkON.Size = new System.Drawing.Size(105, 22);
+            this.radioButtonLabelLinkON.TabIndex = 31;
+            this.radioButtonLabelLinkON.TabStop = true;
+            this.radioButtonLabelLinkON.Text = "AddNew  ON";
+            this.radioButtonLabelLinkON.UseVisualStyleBackColor = true;
+            this.radioButtonLabelLinkON.CheckedChanged += new System.EventHandler(this.radioButtonLabelLinkON_CheckedChanged);
             // 
             // buttonCloseMonitor
             // 
@@ -837,6 +914,8 @@
             this.groupBox14.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBoxEquState.ResumeLayout(false);
+            this.groupBoxEquState.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -847,6 +926,7 @@
             this.groupBox5.PerformLayout();
             this.panelAddNewMonitors.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPageComentsMonitor.ResumeLayout(false);
             this.tabPageComentsMonitor.PerformLayout();
@@ -920,5 +1000,10 @@
         private System.Windows.Forms.Button buttonSaveAsJPG;
         private System.Windows.Forms.Button buttonCreateQR;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBoxEquState;
+        private System.Windows.Forms.LinkLabel linkLabelEquState;
+        private System.Windows.Forms.ComboBox comboBoxEquState;
+        private System.Windows.Forms.RadioButton radioButtonLabelLinkOFF;
+        private System.Windows.Forms.RadioButton radioButtonLabelLinkON;
     }
 }

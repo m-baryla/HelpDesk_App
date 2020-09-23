@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using Interfaces;
 using Zuby.ADGV;
@@ -17,23 +18,30 @@ namespace LogicApp
             this._infoMessageBox = infoMessageBox;
         }
 
-        #region Inset / Update / Delete / UpdateView
+        #region Inset 
         public void Insert(string _notebooksName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _warrantyDate, DateTime _purchaseDate,  
+            byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
 
             _data.InsertNotebooks(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location,
-                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate, _barcode, _qrCode);
+                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _warrantyDate, _purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
+        #endregion
 
+        #region Update
         public void Update(int _id, string _notebooksName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime _warrantyDate, DateTime _purchaseDate, 
+            byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
             _data.UpdateNotebooks(_id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location,
-                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _purchaseDate, _warrantyDate, _barcode, _qrCode);
+                _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, _warrantyDate, _purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
+        #endregion
+
+        #region Delete
         public void DeleteNotebooks(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
             DialogResult dialogResult = _infoMessageBox.InfoYesNo("Do you want to delete");
@@ -42,16 +50,16 @@ namespace LogicApp
                 switch (dialogResult)
                 {
                     case DialogResult.Yes:
-                    {
-                        DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
-                        var id = Convert.ToInt32(dgViewRow.Cells[0].Value.ToString());
-                        _data.DeleteNotebook(id);
-                        break;
-                    }
+                        {
+                            DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
+                            var id = Convert.ToInt32(dgViewRow.Cells[0].Value.ToString());
+                            _data.DeleteNotebook(id);
+                            break;
+                        }
                     case DialogResult.No:
-                    {
-                        break;
-                    }
+                        {
+                            break;
+                        }
                 }
             }
             catch (Exception exception)
@@ -59,6 +67,9 @@ namespace LogicApp
                 _infoMessageBox.Error(exception.Message);
             }
         }
+        #endregion
+
+        #region ExportToExel
         public void ExportExelNotebooks(AdvancedDataGridView advancedDataGridView)
         {
             Microsoft.Office.Interop.Excel.Application exelApps = new Microsoft.Office.Interop.Excel.Application();
@@ -80,6 +91,29 @@ namespace LogicApp
                 for (int k = 0; k < advancedDataGridView.ColumnCount; k++)
                 {
                     exelWorkshet.Cells[j + 2, k + 1] = advancedDataGridView.Rows[j].Cells[k].Value.ToString();
+                }
+            }
+        }
+        #endregion
+
+        #region ChangeColorState
+        public void ChangeStateColorNotebooks(AdvancedDataGridView advancedDataGridView)
+        {
+            for (int i = 0; i < advancedDataGridView.Rows.Count - 1; i++)
+            {
+                int value = Int32.Parse(advancedDataGridView.Rows[i].Cells[0].Value.ToString());
+
+                if (value == 1)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else if (value == 2)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Green;
+                }
+                else if (value == 3)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
                 }
             }
         }
@@ -118,6 +152,10 @@ namespace LogicApp
         public void InsertComboBoxUser(string _firstName, string _lastName, string _job)
         {
             _data.InsertComboBoxUser(_firstName, _lastName, _job);
+        }
+        public void InsertComboEquipmentStatus(string _value)
+        {
+            _data.InsertComboEquipmentStatus(_value);
         }
         #endregion
 
@@ -160,6 +198,10 @@ namespace LogicApp
         public List<string> FillComboBoxUsers()
         {
             return _data.FillComboBoxUsers();
+        }
+        public List<string> FillComboBoxEquipmentStatus()
+        {
+            return _data.FillComboBoxEquipmentStatus();
         }
         #endregion
 

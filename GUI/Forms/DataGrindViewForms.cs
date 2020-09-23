@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Interfaces;
 using LogicApp;
@@ -20,18 +21,34 @@ namespace GUI.Forms
             this._monitorsLogic = monitorsLogic;
             InitializeComponent();
             UploadData();
+           
         }
 
-        #region GET
+        #region Get
         private void UploadData()
         {
             this.vwAll_NotebooksTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Notebooks);
             this.vwAll_MonitorsTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Monitors);
             this.vwAll_ComputersTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Computers);
+            this.advancedDataGridViewComputers.Columns[0].Visible = false;
+            this.advancedDataGridViewMonitors.Columns[0].Visible = false;
+            this.advancedDataGridViewNotebooks.Columns[0].Visible = false;
+        }
+        private void DataGrindViewForms_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'helpDeskDB_TESTDataSet.vwAll_Notebooks' table. You can move, or remove it, as needed.
+            this.vwAll_NotebooksTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Notebooks);
+            // TODO: This line of code loads data into the 'helpDeskDB_TESTDataSet.vwAll_Monitors' table. You can move, or remove it, as needed.
+            this.vwAll_MonitorsTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Monitors);
+            // TODO: This line of code loads data into the 'helpDeskDB_TESTDataSet.vwAll_Computers' table. You can move, or remove it, as needed.
+            this.vwAll_ComputersTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Computers);
+
+            UploadData();
+
         }
         #endregion
 
-        #region DELETE
+        #region Delete
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             try
@@ -65,7 +82,7 @@ namespace GUI.Forms
 
         #endregion
 
-        #region UPDATE
+        #region Update
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
@@ -107,29 +124,16 @@ namespace GUI.Forms
 
         #endregion
 
-        #region FILTER AND SORTING
-
-        private void DataGrindViewForms_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'helpDeskDB_TESTDataSet.vwAll_Notebooks' table. You can move, or remove it, as needed.
-            this.vwAll_NotebooksTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Notebooks);
-            // TODO: This line of code loads data into the 'helpDeskDB_TESTDataSet.vwAll_Monitors' table. You can move, or remove it, as needed.
-            this.vwAll_MonitorsTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Monitors);
-            // TODO: This line of code loads data into the 'helpDeskDB_TESTDataSet.vwAll_Computers' table. You can move, or remove it, as needed.
-            this.vwAll_ComputersTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Computers);
-
-        }
+        #region Filter and Sorting
 
         private void advancedDataGridViewComputers_SortStringChanged(object sender, AdvancedDataGridView.SortEventArgs e)
         {
             this.vwAllComputersBindingSource.Sort = advancedDataGridViewComputers.SortString;
         }
-
         private void advancedDataGridViewComputers_FilterStringChanged(object sender, AdvancedDataGridView.FilterEventArgs e)
         {
             this.vwAllComputersBindingSource.Filter = advancedDataGridViewComputers.FilterString;
         }
-
         private void advancedDataGridViewMonitors_SortStringChanged(object sender, AdvancedDataGridView.SortEventArgs e)
         {
             this.vwAllMonitorsBindingSource.Sort = advancedDataGridViewMonitors.SortString;
@@ -138,19 +142,17 @@ namespace GUI.Forms
         {
             this.vwAllMonitorsBindingSource.Filter = advancedDataGridViewMonitors.FilterString;
         }
-
         private void advancedDataGridViewNotebooks_SortStringChanged(object sender, AdvancedDataGridView.SortEventArgs e)
         {
             this.vwAllNotebooksBindingSource.Sort = advancedDataGridViewNotebooks.SortString;
         }
-
         private void advancedDataGridViewNotebooks_FilterStringChanged(object sender, AdvancedDataGridView.FilterEventArgs e)
         {
             this.vwAllNotebooksBindingSource.Filter = advancedDataGridViewNotebooks.FilterString;
         }
         #endregion
 
-        #region BUTTON
+        #region Buttons
         private void buttonCloseDataGrind_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -178,12 +180,11 @@ namespace GUI.Forms
 
         #endregion
 
-        #region EXPORT TO EXEL
+        #region ExportToExel
         private void buttonExel_Click(object sender, EventArgs e)
         {
             try
             {
-
                 if (advancedDataGridViewComputers.SelectedRows.Count == 1)
                 {                 
                     _computersLogic.ExportExelComputers(advancedDataGridViewComputers);
@@ -207,5 +208,55 @@ namespace GUI.Forms
         }
         #endregion
 
+        #region ChangeColorState
+        private void advancedDataGridViewComputers_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            if (radioButtonColorOn.Checked)
+            {
+                try
+                {
+                    _computersLogic.ChangeStateColorComputers(advancedDataGridViewComputers);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+               
+        }
+        private void advancedDataGridViewNotebooks_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            if (radioButtonColorOn.Checked)
+            {
+                try
+                {
+                    _notebooksLogic.ChangeStateColorNotebooks(advancedDataGridViewNotebooks);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        private void advancedDataGridViewMonitors_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            if(radioButtonColorOn.Checked)
+            {
+                try
+                {
+                    _monitorsLogic.ChangeStateColorMonitors(advancedDataGridViewMonitors);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        #endregion
+
+        private void radioButtonColorOn_CheckedChanged(object sender, EventArgs e)
+        {
+            UploadData();
+        }
     }
 }

@@ -21,6 +21,17 @@ namespace GUI.Forms
             groupBoxAddNewUser.Visible = false;
             buttonInsertDataNotebooks.Enabled = false;
 
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewCPU.Visible = false;
+            linkLabelAddNewHardDrive.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewOffice.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewOperatingSystem.Visible = false;
+            linkLabelAddNewRAM.Visible = false;
+            linkLabelAddNewUser.Visible = false;
+
+
         }
 
         private void UploadData()
@@ -56,6 +67,10 @@ namespace GUI.Forms
             comboBoxUsers.DataSource = _notebooksLogic.FillComboBoxUsers().ToList();
             comboBoxUsers.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxUsers.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            comboBoxEquState.DataSource = _notebooksLogic.FillComboBoxEquipmentStatus().ToList();
+            comboBoxEquState.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxEquState.AutoCompleteSource = AutoCompleteSource.ListItems;
             ///
         }
 
@@ -77,8 +92,8 @@ namespace GUI.Forms
                     comboBoxLocationNotebook.Text, comboBoxUsers.Text,
                     comboBoxOfficeNotebook.Text, strIP, comboBoxModelNotebook.Text,
                     comboBoxCPUNotebook.Text, comboBoxRAMNotebook.Text, comboBoxHardDriveNotebook.Text,
-                    richTextBoxComentsNotebook.Text, dateTimePickerPurchaseDateNotebook.Value,
-                    dateTimePickerWarrantyDateNotebook.Value, bitmapDataBarcode, bitmapDataQRCode); // if != null
+                    richTextBoxComentsNotebook.Text,dateTimePickerWarrantyDateNotebook.Value.Date,
+                    dateTimePickerPurchaseDateNotebook.Value.Date, bitmapDataBarcode, bitmapDataQRCode, comboBoxEquState.Text); // if != null
         }
         private void buttonCloseMonitor_Click_1(object sender, EventArgs e)
         {
@@ -149,6 +164,31 @@ namespace GUI.Forms
                 bmp.Save(f.FileName);
             }
         }
+        private void radioButtonLabelLinkON_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = true;
+            linkLabelAddNewCPU.Visible = true;
+            linkLabelAddNewHardDrive.Visible = true;
+            linkLabelAddNewLocation.Visible = true;
+            linkLabelAddNewOffice.Visible = true;
+            linkLabelAddNewModel.Visible = true;
+            linkLabelAddNewOperatingSystem.Visible = true;
+            linkLabelAddNewRAM.Visible = true;
+            linkLabelAddNewUser.Visible = true;
+        }
+
+        private void radioButtonLabelLinkOFF_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewCPU.Visible = false;
+            linkLabelAddNewHardDrive.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewOffice.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewOperatingSystem.Visible = false;
+            linkLabelAddNewRAM.Visible = false;
+            linkLabelAddNewUser.Visible = false;
+        }
         #endregion
 
         #region Label link add new _values
@@ -198,8 +238,14 @@ namespace GUI.Forms
             _notebooksLogic?.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text); // if != null
             UploadData();
         }
+        private void linkLabelEquState_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _notebooksLogic.InsertComboEquipmentStatus(comboBoxEquState.Text);  // if != null
+            UploadData();
+        }
 
         #endregion
 
+        
     }
 }

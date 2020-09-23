@@ -21,6 +21,12 @@ namespace GUI.Forms
             UploadData();
             groupBoxAddNewUser.Visible = false;
             buttonUpdateDataMonitor.Enabled = false;
+
+            linkLabelEquState.Visible = false;
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewUser.Visible = false;
         }
 
         private void UploadData()
@@ -36,6 +42,10 @@ namespace GUI.Forms
             comboBoxUsers.DataSource = _monitorsLogic.FillComboBoxUsers().ToList();
             comboBoxUsers.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxUsers.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            comboBoxEquState.DataSource = _monitorsLogic.FillComboBoxEquipmentStatus().ToList();
+            comboBoxEquState.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxEquState.AutoCompleteSource = AutoCompleteSource.ListItems;
 
         }
 
@@ -53,17 +63,18 @@ namespace GUI.Forms
                         DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
 
                         // [UpdateMonitorsDataViev] must be like the view as [vwAll_Monitors]
-                        textBoxIDMonitor.Text = dgViewRow.Cells[0].Value.ToString();
-                        textBoxTagServiceMonitors.Text = dgViewRow.Cells[1].Value.ToString();
-                        dateTimePickerPurchaseDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[2].Value);
-                        dateTimePickerWarrantyDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[3].Value);
-                        richTextBoxComentsMonitors.Text = dgViewRow.Cells[4].Value.ToString();
-                        textBoxCompanyFixedAssetMonitors.Text = dgViewRow.Cells[5].Value.ToString();
-                        textBoxFirstName.Text = dgViewRow.Cells[6].Value.ToString();
-                        textBoxLastName.Text = dgViewRow.Cells[7].Value.ToString();
-                        textBoxJob.Text = dgViewRow.Cells[8].Value.ToString();
-                        comboBoxLocationMonitors.Text = dgViewRow.Cells[9].Value.ToString();
-                        comboBoxModelMonitors.Text = dgViewRow.Cells[10].Value.ToString();
+                        comboBoxEquState.Text = dgViewRow.Cells[1].Value.ToString();
+                        textBoxIDMonitor.Text = dgViewRow.Cells[2].Value.ToString();
+                        textBoxTagServiceMonitors.Text = dgViewRow.Cells[3].Value.ToString();
+                        dateTimePickerWarrantyDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
+                        dateTimePickerPurchaseDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
+                        richTextBoxComentsMonitors.Text = dgViewRow.Cells[6].Value.ToString();
+                        textBoxCompanyFixedAssetMonitors.Text = dgViewRow.Cells[7].Value.ToString();
+                        textBoxFirstName.Text = dgViewRow.Cells[8].Value.ToString();
+                        textBoxLastName.Text = dgViewRow.Cells[9].Value.ToString();
+                        textBoxJob.Text = dgViewRow.Cells[10].Value.ToString();
+                        comboBoxLocationMonitors.Text = dgViewRow.Cells[11].Value.ToString();
+                        comboBoxModelMonitors.Text = dgViewRow.Cells[12].Value.ToString();
                         break;
                     }
                     case DialogResult.No:
@@ -91,8 +102,8 @@ namespace GUI.Forms
             var bitmapDataQRCode = ms.ToArray();
 
             _monitorsLogic.Update(Convert.ToInt32(textBoxIDMonitor.Text), textBoxCompanyFixedAssetMonitors.Text,textBoxTagServiceMonitors.Text,
-                comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text,richTextBoxComentsMonitors.Text,
-                dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value, bitmapDataBarcode, bitmapDataQRCode);
+                comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text,richTextBoxComentsMonitors.Text, dateTimePickerWarrantyDateMonitors.Value.Date,
+                dateTimePickerPurchaseDateMonitors.Value.Date, bitmapDataBarcode, bitmapDataQRCode, comboBoxEquState.Text);
         }
         private void buttonAddNewUsers_Click(object sender, EventArgs e)
         {
@@ -159,6 +170,23 @@ namespace GUI.Forms
                 bmp.Save(f.FileName);
             }
         }
+        private void radioButtonLabelLinkON_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = true;
+            linkLabelEquState.Visible = true;
+            linkLabelAddNewLocation.Visible = true;
+            linkLabelAddNewModel.Visible = true;
+            linkLabelAddNewUser.Visible = true;
+        }
+
+        private void radioButtonLabelLinkOFF_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = false;
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewUser.Visible = false;
+        }
         #endregion
 
         #region LABEL LINK ADD NEW --VALUES
@@ -180,9 +208,15 @@ namespace GUI.Forms
             comboBoxUsers.DataSource = _monitorsLogic.FillComboBoxUsers().ToList();
             comboBoxUsers.Text = textBoxFirstName.Text + " " + textBoxLastName.Text;
         }
+        private void linkLabelEquState_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _monitorsLogic.InsertComboEquipmentStatus(comboBoxEquState.Text);  // if != null
+            UploadData();
+        }
+
 
         #endregion
 
-      
+       
     }
 }

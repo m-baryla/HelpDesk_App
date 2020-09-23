@@ -36,6 +36,23 @@
             this.textBoxIPNotebook = new System.Windows.Forms.TextBox();
             this.textBoxTagServiceNotebook = new System.Windows.Forms.TextBox();
             this.tabPageBarcodeNotebooks = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.paneLabelCode = new System.Windows.Forms.Panel();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.labelModelCode = new System.Windows.Forms.Label();
+            this.labelCompanyFixedCode = new System.Windows.Forms.Label();
+            this.pictureBoxQRCode = new System.Windows.Forms.PictureBox();
+            this.labelDateTimeCode = new System.Windows.Forms.Label();
+            this.labelTahServiceCode = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBoxBarcode = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonSaveAsJPG = new System.Windows.Forms.Button();
+            this.buttonCreateQR = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageEquipmentNotebooks = new System.Windows.Forms.TabPage();
             this.groupBoxAddNewUser = new System.Windows.Forms.GroupBox();
@@ -55,6 +72,9 @@
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.groupBoxEquipment = new System.Windows.Forms.GroupBox();
+            this.groupBoxEquState = new System.Windows.Forms.GroupBox();
+            this.linkLabelEquState = new System.Windows.Forms.LinkLabel();
+            this.comboBoxEquState = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxIDNotebooks = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
@@ -87,25 +107,16 @@
             this.textBoxNameNotebook = new System.Windows.Forms.MaskedTextBox();
             this.tabPageComentsNotebooks = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButtonLabelLinkOFF = new System.Windows.Forms.RadioButton();
+            this.radioButtonLabelLinkON = new System.Windows.Forms.RadioButton();
             this.buttonUpdateDataNotebooks = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.paneLabelCode = new System.Windows.Forms.Panel();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.labelModelCode = new System.Windows.Forms.Label();
-            this.labelCompanyFixedCode = new System.Windows.Forms.Label();
-            this.pictureBoxQRCode = new System.Windows.Forms.PictureBox();
-            this.labelDateTimeCode = new System.Windows.Forms.Label();
-            this.labelTahServiceCode = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.pictureBoxBarcode = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonSaveAsJPG = new System.Windows.Forms.Button();
-            this.buttonCreateQR = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPageBarcodeNotebooks.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.paneLabelCode.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).BeginInit();
+            this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageEquipmentNotebooks.SuspendLayout();
             this.groupBoxAddNewUser.SuspendLayout();
@@ -118,6 +129,7 @@
             this.groupBox13.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBoxEquipment.SuspendLayout();
+            this.groupBoxEquState.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -133,12 +145,6 @@
             this.groupBox12.SuspendLayout();
             this.tabPageComentsNotebooks.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.paneLabelCode.SuspendLayout();
-            this.groupBox24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBoxComentsNotebook
@@ -202,6 +208,230 @@
             this.tabPageBarcodeNotebooks.Size = new System.Drawing.Size(731, 429);
             this.tabPageBarcodeNotebooks.TabIndex = 4;
             this.tabPageBarcodeNotebooks.Text = "Barcode";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox4.Controls.Add(this.paneLabelCode);
+            this.groupBox4.Controls.Add(this.panel3);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.groupBox4.Location = new System.Drawing.Point(7, 8);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(717, 413);
+            this.groupBox4.TabIndex = 24;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "New Code";
+            // 
+            // paneLabelCode
+            // 
+            this.paneLabelCode.BackColor = System.Drawing.Color.White;
+            this.paneLabelCode.Controls.Add(this.groupBox24);
+            this.paneLabelCode.Controls.Add(this.pictureBoxBarcode);
+            this.paneLabelCode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneLabelCode.Location = new System.Drawing.Point(3, 97);
+            this.paneLabelCode.Name = "paneLabelCode";
+            this.paneLabelCode.Size = new System.Drawing.Size(711, 313);
+            this.paneLabelCode.TabIndex = 44;
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.BackColor = System.Drawing.Color.White;
+            this.groupBox24.Controls.Add(this.labelModelCode);
+            this.groupBox24.Controls.Add(this.labelCompanyFixedCode);
+            this.groupBox24.Controls.Add(this.pictureBoxQRCode);
+            this.groupBox24.Controls.Add(this.labelDateTimeCode);
+            this.groupBox24.Controls.Add(this.labelTahServiceCode);
+            this.groupBox24.Controls.Add(this.label8);
+            this.groupBox24.Controls.Add(this.label9);
+            this.groupBox24.Controls.Add(this.label10);
+            this.groupBox24.Controls.Add(this.label12);
+            this.groupBox24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox24.Location = new System.Drawing.Point(0, 0);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(711, 222);
+            this.groupBox24.TabIndex = 43;
+            this.groupBox24.TabStop = false;
+            // 
+            // labelModelCode
+            // 
+            this.labelModelCode.AutoSize = true;
+            this.labelModelCode.BackColor = System.Drawing.Color.White;
+            this.labelModelCode.ForeColor = System.Drawing.Color.Black;
+            this.labelModelCode.Location = new System.Drawing.Point(97, 166);
+            this.labelModelCode.Name = "labelModelCode";
+            this.labelModelCode.Size = new System.Drawing.Size(104, 16);
+            this.labelModelCode.TabIndex = 44;
+            this.labelModelCode.Text = "........................";
+            // 
+            // labelCompanyFixedCode
+            // 
+            this.labelCompanyFixedCode.AutoSize = true;
+            this.labelCompanyFixedCode.BackColor = System.Drawing.Color.White;
+            this.labelCompanyFixedCode.ForeColor = System.Drawing.Color.Black;
+            this.labelCompanyFixedCode.Location = new System.Drawing.Point(195, 122);
+            this.labelCompanyFixedCode.Name = "labelCompanyFixedCode";
+            this.labelCompanyFixedCode.Size = new System.Drawing.Size(104, 16);
+            this.labelCompanyFixedCode.TabIndex = 43;
+            this.labelCompanyFixedCode.Text = "........................";
+            // 
+            // pictureBoxQRCode
+            // 
+            this.pictureBoxQRCode.BackColor = System.Drawing.Color.White;
+            this.pictureBoxQRCode.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBoxQRCode.Location = new System.Drawing.Point(507, 18);
+            this.pictureBoxQRCode.Name = "pictureBoxQRCode";
+            this.pictureBoxQRCode.Size = new System.Drawing.Size(201, 201);
+            this.pictureBoxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxQRCode.TabIndex = 35;
+            this.pictureBoxQRCode.TabStop = false;
+            this.pictureBoxQRCode.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxQRCode_Paint);
+            // 
+            // labelDateTimeCode
+            // 
+            this.labelDateTimeCode.AutoSize = true;
+            this.labelDateTimeCode.BackColor = System.Drawing.Color.White;
+            this.labelDateTimeCode.ForeColor = System.Drawing.Color.Black;
+            this.labelDateTimeCode.Location = new System.Drawing.Point(138, 52);
+            this.labelDateTimeCode.Name = "labelDateTimeCode";
+            this.labelDateTimeCode.Size = new System.Drawing.Size(104, 16);
+            this.labelDateTimeCode.TabIndex = 38;
+            this.labelDateTimeCode.Text = "........................";
+            // 
+            // labelTahServiceCode
+            // 
+            this.labelTahServiceCode.AutoSize = true;
+            this.labelTahServiceCode.BackColor = System.Drawing.Color.White;
+            this.labelTahServiceCode.ForeColor = System.Drawing.Color.Black;
+            this.labelTahServiceCode.Location = new System.Drawing.Point(132, 90);
+            this.labelTahServiceCode.Name = "labelTahServiceCode";
+            this.labelTahServiceCode.Size = new System.Drawing.Size(104, 16);
+            this.labelTahServiceCode.TabIndex = 42;
+            this.labelTahServiceCode.Text = "........................";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(45, 166);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 16);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Model : ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(44, 52);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 16);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Create Date : ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(44, 128);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(145, 16);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Company Fixed Asset :";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(44, 90);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 16);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Tag Service : ";
+            // 
+            // pictureBoxBarcode
+            // 
+            this.pictureBoxBarcode.BackColor = System.Drawing.Color.White;
+            this.pictureBoxBarcode.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBoxBarcode.Location = new System.Drawing.Point(0, 225);
+            this.pictureBoxBarcode.Name = "pictureBoxBarcode";
+            this.pictureBoxBarcode.Size = new System.Drawing.Size(711, 88);
+            this.pictureBoxBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxBarcode.TabIndex = 34;
+            this.pictureBoxBarcode.TabStop = false;
+            this.pictureBoxBarcode.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxBarcode_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.buttonSaveAsJPG);
+            this.panel3.Controls.Add(this.buttonCreateQR);
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 18);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(711, 79);
+            this.panel3.TabIndex = 32;
+            // 
+            // buttonSaveAsJPG
+            // 
+            this.buttonSaveAsJPG.BackColor = System.Drawing.Color.Black;
+            this.buttonSaveAsJPG.FlatAppearance.BorderSize = 2;
+            this.buttonSaveAsJPG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveAsJPG.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSaveAsJPG.ForeColor = System.Drawing.Color.White;
+            this.buttonSaveAsJPG.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveAsJPG.Image")));
+            this.buttonSaveAsJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveAsJPG.Location = new System.Drawing.Point(494, 13);
+            this.buttonSaveAsJPG.Name = "buttonSaveAsJPG";
+            this.buttonSaveAsJPG.Size = new System.Drawing.Size(103, 50);
+            this.buttonSaveAsJPG.TabIndex = 33;
+            this.buttonSaveAsJPG.Text = "Save";
+            this.buttonSaveAsJPG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveAsJPG.UseVisualStyleBackColor = false;
+            this.buttonSaveAsJPG.Click += new System.EventHandler(this.buttonSaveAsJPG_Click);
+            // 
+            // buttonCreateQR
+            // 
+            this.buttonCreateQR.BackColor = System.Drawing.Color.Black;
+            this.buttonCreateQR.FlatAppearance.BorderSize = 2;
+            this.buttonCreateQR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateQR.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonCreateQR.ForeColor = System.Drawing.Color.White;
+            this.buttonCreateQR.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateQR.Image")));
+            this.buttonCreateQR.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCreateQR.Location = new System.Drawing.Point(8, 13);
+            this.buttonCreateQR.Name = "buttonCreateQR";
+            this.buttonCreateQR.Size = new System.Drawing.Size(180, 50);
+            this.buttonCreateQR.TabIndex = 30;
+            this.buttonCreateQR.Text = "Create Code";
+            this.buttonCreateQR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCreateQR.UseVisualStyleBackColor = false;
+            this.buttonCreateQR.Click += new System.EventHandler(this.buttonCreateQR_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(605, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 50);
+            this.button2.TabIndex = 31;
+            this.button2.Text = "Print";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 
@@ -427,6 +657,7 @@
             // 
             this.groupBoxEquipment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxEquipment.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxEquipment.Controls.Add(this.groupBoxEquState);
             this.groupBoxEquipment.Controls.Add(this.groupBox2);
             this.groupBoxEquipment.Controls.Add(this.groupBox15);
             this.groupBoxEquipment.Controls.Add(this.groupBox14);
@@ -440,6 +671,40 @@
             this.groupBoxEquipment.TabIndex = 41;
             this.groupBoxEquipment.TabStop = false;
             this.groupBoxEquipment.Text = "Equipment";
+            // 
+            // groupBoxEquState
+            // 
+            this.groupBoxEquState.Controls.Add(this.linkLabelEquState);
+            this.groupBoxEquState.Controls.Add(this.comboBoxEquState);
+            this.groupBoxEquState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.groupBoxEquState.ForeColor = System.Drawing.Color.White;
+            this.groupBoxEquState.Location = new System.Drawing.Point(179, 190);
+            this.groupBoxEquState.Name = "groupBoxEquState";
+            this.groupBoxEquState.Size = new System.Drawing.Size(155, 70);
+            this.groupBoxEquState.TabIndex = 34;
+            this.groupBoxEquState.TabStop = false;
+            this.groupBoxEquState.Text = "EquipmentState";
+            // 
+            // linkLabelEquState
+            // 
+            this.linkLabelEquState.AutoSize = true;
+            this.linkLabelEquState.LinkColor = System.Drawing.Color.Red;
+            this.linkLabelEquState.Location = new System.Drawing.Point(40, 48);
+            this.linkLabelEquState.Name = "linkLabelEquState";
+            this.linkLabelEquState.Size = new System.Drawing.Size(79, 13);
+            this.linkLabelEquState.TabIndex = 16;
+            this.linkLabelEquState.TabStop = true;
+            this.linkLabelEquState.Text = "Add New State";
+            this.linkLabelEquState.VisitedLinkColor = System.Drawing.Color.Yellow;
+            this.linkLabelEquState.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelEquState_LinkClicked);
+            // 
+            // comboBoxEquState
+            // 
+            this.comboBoxEquState.FormattingEnabled = true;
+            this.comboBoxEquState.Location = new System.Drawing.Point(7, 17);
+            this.comboBoxEquState.Name = "comboBoxEquState";
+            this.comboBoxEquState.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxEquState.TabIndex = 13;
             // 
             // groupBox2
             // 
@@ -795,6 +1060,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.radioButtonLabelLinkOFF);
+            this.panel1.Controls.Add(this.radioButtonLabelLinkON);
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.buttonUpdateDataNotebooks);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -802,6 +1069,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(739, 572);
             this.panel1.TabIndex = 29;
+            // 
+            // radioButtonLabelLinkOFF
+            // 
+            this.radioButtonLabelLinkOFF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButtonLabelLinkOFF.AutoSize = true;
+            this.radioButtonLabelLinkOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonLabelLinkOFF.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonLabelLinkOFF.ForeColor = System.Drawing.Color.White;
+            this.radioButtonLabelLinkOFF.Location = new System.Drawing.Point(133, 20);
+            this.radioButtonLabelLinkOFF.Name = "radioButtonLabelLinkOFF";
+            this.radioButtonLabelLinkOFF.Size = new System.Drawing.Size(111, 22);
+            this.radioButtonLabelLinkOFF.TabIndex = 32;
+            this.radioButtonLabelLinkOFF.TabStop = true;
+            this.radioButtonLabelLinkOFF.Text = "AddNew  OFF";
+            this.radioButtonLabelLinkOFF.UseVisualStyleBackColor = true;
+            this.radioButtonLabelLinkOFF.CheckedChanged += new System.EventHandler(this.radioButtonLabelLinkOFF_CheckedChanged);
+            // 
+            // radioButtonLabelLinkON
+            // 
+            this.radioButtonLabelLinkON.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButtonLabelLinkON.AutoSize = true;
+            this.radioButtonLabelLinkON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonLabelLinkON.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonLabelLinkON.ForeColor = System.Drawing.Color.White;
+            this.radioButtonLabelLinkON.Location = new System.Drawing.Point(14, 20);
+            this.radioButtonLabelLinkON.Name = "radioButtonLabelLinkON";
+            this.radioButtonLabelLinkON.Size = new System.Drawing.Size(105, 22);
+            this.radioButtonLabelLinkON.TabIndex = 31;
+            this.radioButtonLabelLinkON.TabStop = true;
+            this.radioButtonLabelLinkON.Text = "AddNew  ON";
+            this.radioButtonLabelLinkON.UseVisualStyleBackColor = true;
+            this.radioButtonLabelLinkON.CheckedChanged += new System.EventHandler(this.radioButtonLabelLinkON_CheckedChanged);
             // 
             // buttonUpdateDataNotebooks
             // 
@@ -820,230 +1121,6 @@
             this.buttonUpdateDataNotebooks.UseVisualStyleBackColor = false;
             this.buttonUpdateDataNotebooks.Click += new System.EventHandler(this.buttonUpdateDataNotebooks_Click);
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox4.Controls.Add(this.paneLabelCode);
-            this.groupBox4.Controls.Add(this.panel3);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.groupBox4.Location = new System.Drawing.Point(7, 8);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(717, 413);
-            this.groupBox4.TabIndex = 24;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "New Code";
-            // 
-            // paneLabelCode
-            // 
-            this.paneLabelCode.BackColor = System.Drawing.Color.White;
-            this.paneLabelCode.Controls.Add(this.groupBox24);
-            this.paneLabelCode.Controls.Add(this.pictureBoxBarcode);
-            this.paneLabelCode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneLabelCode.Location = new System.Drawing.Point(3, 97);
-            this.paneLabelCode.Name = "paneLabelCode";
-            this.paneLabelCode.Size = new System.Drawing.Size(711, 313);
-            this.paneLabelCode.TabIndex = 44;
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.BackColor = System.Drawing.Color.White;
-            this.groupBox24.Controls.Add(this.labelModelCode);
-            this.groupBox24.Controls.Add(this.labelCompanyFixedCode);
-            this.groupBox24.Controls.Add(this.pictureBoxQRCode);
-            this.groupBox24.Controls.Add(this.labelDateTimeCode);
-            this.groupBox24.Controls.Add(this.labelTahServiceCode);
-            this.groupBox24.Controls.Add(this.label8);
-            this.groupBox24.Controls.Add(this.label9);
-            this.groupBox24.Controls.Add(this.label10);
-            this.groupBox24.Controls.Add(this.label12);
-            this.groupBox24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox24.Location = new System.Drawing.Point(0, 0);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(711, 222);
-            this.groupBox24.TabIndex = 43;
-            this.groupBox24.TabStop = false;
-            // 
-            // labelModelCode
-            // 
-            this.labelModelCode.AutoSize = true;
-            this.labelModelCode.BackColor = System.Drawing.Color.White;
-            this.labelModelCode.ForeColor = System.Drawing.Color.Black;
-            this.labelModelCode.Location = new System.Drawing.Point(97, 166);
-            this.labelModelCode.Name = "labelModelCode";
-            this.labelModelCode.Size = new System.Drawing.Size(104, 16);
-            this.labelModelCode.TabIndex = 44;
-            this.labelModelCode.Text = "........................";
-            // 
-            // labelCompanyFixedCode
-            // 
-            this.labelCompanyFixedCode.AutoSize = true;
-            this.labelCompanyFixedCode.BackColor = System.Drawing.Color.White;
-            this.labelCompanyFixedCode.ForeColor = System.Drawing.Color.Black;
-            this.labelCompanyFixedCode.Location = new System.Drawing.Point(195, 122);
-            this.labelCompanyFixedCode.Name = "labelCompanyFixedCode";
-            this.labelCompanyFixedCode.Size = new System.Drawing.Size(104, 16);
-            this.labelCompanyFixedCode.TabIndex = 43;
-            this.labelCompanyFixedCode.Text = "........................";
-            // 
-            // pictureBoxQRCode
-            // 
-            this.pictureBoxQRCode.BackColor = System.Drawing.Color.White;
-            this.pictureBoxQRCode.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBoxQRCode.Location = new System.Drawing.Point(507, 18);
-            this.pictureBoxQRCode.Name = "pictureBoxQRCode";
-            this.pictureBoxQRCode.Size = new System.Drawing.Size(201, 201);
-            this.pictureBoxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxQRCode.TabIndex = 35;
-            this.pictureBoxQRCode.TabStop = false;
-            this.pictureBoxQRCode.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxQRCode_Paint);
-            // 
-            // labelDateTimeCode
-            // 
-            this.labelDateTimeCode.AutoSize = true;
-            this.labelDateTimeCode.BackColor = System.Drawing.Color.White;
-            this.labelDateTimeCode.ForeColor = System.Drawing.Color.Black;
-            this.labelDateTimeCode.Location = new System.Drawing.Point(138, 52);
-            this.labelDateTimeCode.Name = "labelDateTimeCode";
-            this.labelDateTimeCode.Size = new System.Drawing.Size(104, 16);
-            this.labelDateTimeCode.TabIndex = 38;
-            this.labelDateTimeCode.Text = "........................";
-            // 
-            // labelTahServiceCode
-            // 
-            this.labelTahServiceCode.AutoSize = true;
-            this.labelTahServiceCode.BackColor = System.Drawing.Color.White;
-            this.labelTahServiceCode.ForeColor = System.Drawing.Color.Black;
-            this.labelTahServiceCode.Location = new System.Drawing.Point(132, 90);
-            this.labelTahServiceCode.Name = "labelTahServiceCode";
-            this.labelTahServiceCode.Size = new System.Drawing.Size(104, 16);
-            this.labelTahServiceCode.TabIndex = 42;
-            this.labelTahServiceCode.Text = "........................";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(45, 166);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 16);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Model : ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(44, 52);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 16);
-            this.label9.TabIndex = 38;
-            this.label9.Text = "Create Date : ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(44, 128);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 16);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "Company Fixed Asset :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(44, 90);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 16);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Tag Service : ";
-            // 
-            // pictureBoxBarcode
-            // 
-            this.pictureBoxBarcode.BackColor = System.Drawing.Color.White;
-            this.pictureBoxBarcode.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBoxBarcode.Location = new System.Drawing.Point(0, 225);
-            this.pictureBoxBarcode.Name = "pictureBoxBarcode";
-            this.pictureBoxBarcode.Size = new System.Drawing.Size(711, 88);
-            this.pictureBoxBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxBarcode.TabIndex = 34;
-            this.pictureBoxBarcode.TabStop = false;
-            this.pictureBoxBarcode.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxBarcode_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.buttonSaveAsJPG);
-            this.panel3.Controls.Add(this.buttonCreateQR);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 18);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(711, 79);
-            this.panel3.TabIndex = 32;
-            // 
-            // buttonSaveAsJPG
-            // 
-            this.buttonSaveAsJPG.BackColor = System.Drawing.Color.Black;
-            this.buttonSaveAsJPG.FlatAppearance.BorderSize = 2;
-            this.buttonSaveAsJPG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSaveAsJPG.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSaveAsJPG.ForeColor = System.Drawing.Color.White;
-            this.buttonSaveAsJPG.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveAsJPG.Image")));
-            this.buttonSaveAsJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSaveAsJPG.Location = new System.Drawing.Point(494, 13);
-            this.buttonSaveAsJPG.Name = "buttonSaveAsJPG";
-            this.buttonSaveAsJPG.Size = new System.Drawing.Size(103, 50);
-            this.buttonSaveAsJPG.TabIndex = 33;
-            this.buttonSaveAsJPG.Text = "Save";
-            this.buttonSaveAsJPG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaveAsJPG.UseVisualStyleBackColor = false;
-            this.buttonSaveAsJPG.Click += new System.EventHandler(this.buttonSaveAsJPG_Click);
-            // 
-            // buttonCreateQR
-            // 
-            this.buttonCreateQR.BackColor = System.Drawing.Color.Black;
-            this.buttonCreateQR.FlatAppearance.BorderSize = 2;
-            this.buttonCreateQR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateQR.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonCreateQR.ForeColor = System.Drawing.Color.White;
-            this.buttonCreateQR.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateQR.Image")));
-            this.buttonCreateQR.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCreateQR.Location = new System.Drawing.Point(8, 13);
-            this.buttonCreateQR.Name = "buttonCreateQR";
-            this.buttonCreateQR.Size = new System.Drawing.Size(180, 50);
-            this.buttonCreateQR.TabIndex = 30;
-            this.buttonCreateQR.Text = "Create Code";
-            this.buttonCreateQR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCreateQR.UseVisualStyleBackColor = false;
-            this.buttonCreateQR.Click += new System.EventHandler(this.buttonCreateQR_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(605, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 50);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Print";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // UpdateNotebooksForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1057,6 +1134,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateNotebooksForms";
             this.tabPageBarcodeNotebooks.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.paneLabelCode.ResumeLayout(false);
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPageEquipmentNotebooks.ResumeLayout(false);
             this.groupBoxAddNewUser.ResumeLayout(false);
@@ -1073,6 +1157,8 @@
             this.groupBox13.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBoxEquipment.ResumeLayout(false);
+            this.groupBoxEquState.ResumeLayout(false);
+            this.groupBoxEquState.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox15.ResumeLayout(false);
@@ -1101,13 +1187,7 @@
             this.tabPageComentsNotebooks.ResumeLayout(false);
             this.tabPageComentsNotebooks.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.paneLabelCode.ResumeLayout(false);
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox24.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRCode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBarcode)).EndInit();
-            this.panel3.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1190,5 +1270,10 @@
         private System.Windows.Forms.Button buttonSaveAsJPG;
         private System.Windows.Forms.Button buttonCreateQR;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBoxEquState;
+        private System.Windows.Forms.LinkLabel linkLabelEquState;
+        private System.Windows.Forms.ComboBox comboBoxEquState;
+        private System.Windows.Forms.RadioButton radioButtonLabelLinkOFF;
+        private System.Windows.Forms.RadioButton radioButtonLabelLinkON;
     }
 }

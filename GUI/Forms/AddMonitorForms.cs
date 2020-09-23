@@ -20,6 +20,12 @@ namespace GUI.Forms
             UploadData();
             groupBoxAddNewUser.Visible = false;
             buttonInsertDataMonitors.Enabled = false;
+
+            linkLabelEquState.Visible = false;
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewUser.Visible = false;
         }
 
         private void UploadData()
@@ -35,6 +41,10 @@ namespace GUI.Forms
             comboBoxUsers.DataSource = _monitorsLogic.FillComboBoxUsers().ToList();
             comboBoxUsers.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxUsers.AutoCompleteSource = AutoCompleteSource.ListItems;
+
+            comboBoxEquState.DataSource = _monitorsLogic.FillComboBoxEquipmentStatus().ToList();
+            comboBoxEquState.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxEquState.AutoCompleteSource = AutoCompleteSource.ListItems;
             ///
         }
 
@@ -52,7 +62,8 @@ namespace GUI.Forms
 
             _monitorsLogic?.Insert(textBoxCompanyFixedAssetMonitors.Text, textBoxTagServiceMonitors.Text,
                 comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text, 
-                richTextBoxComentsMonitors.Text, dateTimePickerPurchaseDateMonitors.Value, dateTimePickerWarrantyDateMonitors.Value, bitmapData, bitmapDataQRCode); // if != null
+                richTextBoxComentsMonitors.Text, dateTimePickerWarrantyDateMonitors.Value.Date, dateTimePickerPurchaseDateMonitors.Value.Date, 
+                 bitmapData, bitmapDataQRCode, comboBoxEquState.Text); // if != null
         }
         private void buttonCloseMonitor_Click_1(object sender, EventArgs e)
         {
@@ -121,6 +132,23 @@ namespace GUI.Forms
                 bmp.Save(f.FileName);
             }
         }
+        private void radioButtonLabelLinkON_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = true;
+            linkLabelEquState.Visible = true;
+            linkLabelAddNewLocation.Visible = true;
+            linkLabelAddNewModel.Visible = true;
+            linkLabelAddNewUser.Visible = true;
+        }
+
+        private void radioButtonLabelLinkOFF_CheckedChanged(object sender, EventArgs e)
+        {
+            linkLabelEquState.Visible = false;
+            linkLabelEquState.Visible = false;
+            linkLabelAddNewLocation.Visible = false;
+            linkLabelAddNewModel.Visible = false;
+            linkLabelAddNewUser.Visible = false;
+        }
         #endregion
 
         #region Label link add new _values
@@ -140,7 +168,14 @@ namespace GUI.Forms
             _monitorsLogic?.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text); // if != null
             UploadData();
         }
+        private void linkLabelEquState_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _monitorsLogic.InsertComboEquipmentStatus(comboBoxEquState.Text);  // if != null
+            UploadData();
+        }
 
         #endregion
+
+        
     }
 }

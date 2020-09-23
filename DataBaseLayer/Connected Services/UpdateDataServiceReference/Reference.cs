@@ -31,10 +31,11 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateDataService/UpdateComputer", ReplyAction="http://tempuri.org/IUpdateDataService/UpdateComputerResponse")]
         System.Threading.Tasks.Task<string> UpdateComputerAsync(
@@ -52,10 +53,11 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateDataService/UpdateNotebooks", ReplyAction="http://tempuri.org/IUpdateDataService/UpdateNotebooksResponse")]
         string UpdateNotebooks(
@@ -73,10 +75,11 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateDataService/UpdateNotebooks", ReplyAction="http://tempuri.org/IUpdateDataService/UpdateNotebooksResponse")]
         System.Threading.Tasks.Task<string> UpdateNotebooksAsync(
@@ -94,16 +97,17 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateDataService/UpdateMonitors", ReplyAction="http://tempuri.org/IUpdateDataService/UpdateMonitorsResponse")]
-        string UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode);
+        string UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime warrantyDate, System.DateTime purchaseDate, byte[] _barcode, byte[] _qrCode, string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUpdateDataService/UpdateMonitors", ReplyAction="http://tempuri.org/IUpdateDataService/UpdateMonitorsResponse")]
-        System.Threading.Tasks.Task<string> UpdateMonitorsAsync(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode);
+        System.Threading.Tasks.Task<string> UpdateMonitorsAsync(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime warrantyDate, System.DateTime purchaseDate, byte[] _barcode, byte[] _qrCode, string _equipmentStatus);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -148,11 +152,12 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode) {
-            return base.Channel.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus) {
+            return base.Channel.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
         public System.Threading.Tasks.Task<string> UpdateComputerAsync(
@@ -170,11 +175,12 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode) {
-            return base.Channel.UpdateComputerAsync(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus) {
+            return base.Channel.UpdateComputerAsync(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
         public string UpdateNotebooks(
@@ -192,11 +198,12 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode) {
-            return base.Channel.UpdateNotebooks(id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus) {
+            return base.Channel.UpdateNotebooks(id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
         public System.Threading.Tasks.Task<string> UpdateNotebooksAsync(
@@ -214,19 +221,20 @@ namespace DataBaseLayer.UpdateDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode) {
-            return base.Channel.UpdateNotebooksAsync(id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus) {
+            return base.Channel.UpdateNotebooksAsync(id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
-        public string UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode) {
-            return base.Channel.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location, _user, _model, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+        public string UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime warrantyDate, System.DateTime purchaseDate, byte[] _barcode, byte[] _qrCode, string _equipmentStatus) {
+            return base.Channel.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location, _user, _model, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
-        public System.Threading.Tasks.Task<string> UpdateMonitorsAsync(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode) {
-            return base.Channel.UpdateMonitorsAsync(_id, _companyFixedAsset, _tagService, _location, _user, _model, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+        public System.Threading.Tasks.Task<string> UpdateMonitorsAsync(int _id, string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime warrantyDate, System.DateTime purchaseDate, byte[] _barcode, byte[] _qrCode, string _equipmentStatus) {
+            return base.Channel.UpdateMonitorsAsync(_id, _companyFixedAsset, _tagService, _location, _user, _model, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
     }
 }

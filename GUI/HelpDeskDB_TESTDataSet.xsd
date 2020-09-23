@@ -12,13 +12,15 @@
               <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Computers" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers</CommandText>
+                    <CommandText>SELECT IDEquipmentStatus, Status, Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="IDEquipmentStatus" DataSetColumn="IDEquipmentStatus" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="CompterName" DataSetColumn="CompterName" />
               <Mapping SourceColumn="TagService" DataSetColumn="TagService" />
@@ -47,13 +49,15 @@
               <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Monitors" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, TagService, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, LocationName, ModelVersionMonitors FROM dbo.vwAll_Monitors</CommandText>
+                    <CommandText>SELECT IDEquipmentStatus, Status, Id, TagService, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, LocationName, ModelVersionMonitors FROM dbo.vwAll_Monitors</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="IDEquipmentStatus" DataSetColumn="IDEquipmentStatus" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="TagService" DataSetColumn="TagService" />
               <Mapping SourceColumn="PurchaseDate" DataSetColumn="PurchaseDate" />
@@ -75,13 +79,15 @@
               <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Notebooks" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks</CommandText>
+                    <CommandText>SELECT IDEquipmentStatus, Status, Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
+              <Mapping SourceColumn="IDEquipmentStatus" DataSetColumn="IDEquipmentStatus" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="NotebooksName" DataSetColumn="NotebooksName" />
               <Mapping SourceColumn="TagService" DataSetColumn="TagService" />
@@ -116,6 +122,14 @@
         <xs:element name="vwAll_Computers" msprop:Generator_TableClassName="vwAll_ComputersDataTable" msprop:Generator_TableVarName="tablevwAll_Computers" msprop:Generator_TablePropName="vwAll_Computers" msprop:Generator_RowDeletingName="vwAll_ComputersRowDeleting" msprop:Generator_RowChangingName="vwAll_ComputersRowChanging" msprop:Generator_RowEvHandlerName="vwAll_ComputersRowChangeEventHandler" msprop:Generator_RowDeletedName="vwAll_ComputersRowDeleted" msprop:Generator_UserTableName="vwAll_Computers" msprop:Generator_RowChangedName="vwAll_ComputersRowChanged" msprop:Generator_RowEvArgName="vwAll_ComputersRowChangeEvent" msprop:Generator_RowClassName="vwAll_ComputersRow">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="IDEquipmentStatus" msprop:Generator_ColumnVarNameInTable="columnIDEquipmentStatus" msprop:Generator_ColumnPropNameInRow="IDEquipmentStatus" msprop:Generator_ColumnPropNameInTable="IDEquipmentStatusColumn" msprop:Generator_UserColumnName="IDEquipmentStatus" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
               <xs:element name="CompterName" msprop:Generator_ColumnVarNameInTable="columnCompterName" msprop:Generator_ColumnPropNameInRow="CompterName" msprop:Generator_ColumnPropNameInTable="CompterNameColumn" msprop:Generator_UserColumnName="CompterName" minOccurs="0">
                 <xs:simpleType>
@@ -232,6 +246,14 @@
         <xs:element name="vwAll_Monitors" msprop:Generator_TableClassName="vwAll_MonitorsDataTable" msprop:Generator_TableVarName="tablevwAll_Monitors" msprop:Generator_TablePropName="vwAll_Monitors" msprop:Generator_RowDeletingName="vwAll_MonitorsRowDeleting" msprop:Generator_RowChangingName="vwAll_MonitorsRowChanging" msprop:Generator_RowEvHandlerName="vwAll_MonitorsRowChangeEventHandler" msprop:Generator_RowDeletedName="vwAll_MonitorsRowDeleted" msprop:Generator_UserTableName="vwAll_Monitors" msprop:Generator_RowChangedName="vwAll_MonitorsRowChanged" msprop:Generator_RowEvArgName="vwAll_MonitorsRowChangeEvent" msprop:Generator_RowClassName="vwAll_MonitorsRow">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="IDEquipmentStatus" msprop:Generator_ColumnVarNameInTable="columnIDEquipmentStatus" msprop:Generator_ColumnPropNameInRow="IDEquipmentStatus" msprop:Generator_ColumnPropNameInTable="IDEquipmentStatusColumn" msprop:Generator_UserColumnName="IDEquipmentStatus" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
               <xs:element name="TagService" msprop:Generator_ColumnVarNameInTable="columnTagService" msprop:Generator_ColumnPropNameInRow="TagService" msprop:Generator_ColumnPropNameInTable="TagServiceColumn" msprop:Generator_UserColumnName="TagService" minOccurs="0">
                 <xs:simpleType>
@@ -299,6 +321,14 @@
         <xs:element name="vwAll_Notebooks" msprop:Generator_TableClassName="vwAll_NotebooksDataTable" msprop:Generator_TableVarName="tablevwAll_Notebooks" msprop:Generator_TablePropName="vwAll_Notebooks" msprop:Generator_RowDeletingName="vwAll_NotebooksRowDeleting" msprop:Generator_RowChangingName="vwAll_NotebooksRowChanging" msprop:Generator_RowEvHandlerName="vwAll_NotebooksRowChangeEventHandler" msprop:Generator_RowDeletedName="vwAll_NotebooksRowDeleted" msprop:Generator_UserTableName="vwAll_Notebooks" msprop:Generator_RowChangedName="vwAll_NotebooksRowChanged" msprop:Generator_RowEvArgName="vwAll_NotebooksRowChangeEvent" msprop:Generator_RowClassName="vwAll_NotebooksRow">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="IDEquipmentStatus" msprop:Generator_ColumnVarNameInTable="columnIDEquipmentStatus" msprop:Generator_ColumnPropNameInRow="IDEquipmentStatus" msprop:Generator_ColumnPropNameInTable="IDEquipmentStatusColumn" msprop:Generator_UserColumnName="IDEquipmentStatus" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
               <xs:element name="NotebooksName" msprop:Generator_ColumnVarNameInTable="columnNotebooksName" msprop:Generator_ColumnPropNameInRow="NotebooksName" msprop:Generator_ColumnPropNameInTable="NotebooksNameColumn" msprop:Generator_UserColumnName="NotebooksName" minOccurs="0">
                 <xs:simpleType>

@@ -349,6 +349,10 @@ namespace GUI {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class vwAll_ComputersDataTable : global::System.Data.TypedTableBase<vwAll_ComputersRow> {
             
+            private global::System.Data.DataColumn columnIDEquipmentStatus;
+            
+            private global::System.Data.DataColumn columnStatus;
+            
             private global::System.Data.DataColumn columnId;
             
             private global::System.Data.DataColumn columnCompterName;
@@ -420,6 +424,22 @@ namespace GUI {
             protected vwAll_ComputersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IDEquipmentStatusColumn {
+                get {
+                    return this.columnIDEquipmentStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StatusColumn {
+                get {
+                    return this.columnStatus;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -620,6 +640,8 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public vwAll_ComputersRow AddvwAll_ComputersRow(
+                        int IDEquipmentStatus, 
+                        string Status, 
                         int Id, 
                         string CompterName, 
                         string TagService, 
@@ -642,6 +664,8 @@ namespace GUI {
                         string RAMVersion) {
                 vwAll_ComputersRow rowvwAll_ComputersRow = ((vwAll_ComputersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        IDEquipmentStatus,
+                        Status,
                         Id,
                         CompterName,
                         TagService,
@@ -691,6 +715,8 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnIDEquipmentStatus = base.Columns["IDEquipmentStatus"];
+                this.columnStatus = base.Columns["Status"];
                 this.columnId = base.Columns["Id"];
                 this.columnCompterName = base.Columns["CompterName"];
                 this.columnTagService = base.Columns["TagService"];
@@ -716,6 +742,10 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnIDEquipmentStatus = new global::System.Data.DataColumn("IDEquipmentStatus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDEquipmentStatus);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus);
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
                 this.columnCompterName = new global::System.Data.DataColumn("CompterName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -758,6 +788,8 @@ namespace GUI {
                 base.Columns.Add(this.columnRAMVersion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnIDEquipmentStatus.AllowDBNull = false;
+                this.columnStatus.MaxLength = 50;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnCompterName.MaxLength = 50;
@@ -908,6 +940,10 @@ namespace GUI {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class vwAll_MonitorsDataTable : global::System.Data.TypedTableBase<vwAll_MonitorsRow> {
             
+            private global::System.Data.DataColumn columnIDEquipmentStatus;
+            
+            private global::System.Data.DataColumn columnStatus;
+            
             private global::System.Data.DataColumn columnId;
             
             private global::System.Data.DataColumn columnTagService;
@@ -965,6 +1001,22 @@ namespace GUI {
             protected vwAll_MonitorsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IDEquipmentStatusColumn {
+                get {
+                    return this.columnIDEquipmentStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StatusColumn {
+                get {
+                    return this.columnStatus;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1108,9 +1160,11 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwAll_MonitorsRow AddvwAll_MonitorsRow(int Id, string TagService, System.DateTime PurchaseDate, System.DateTime WarrantyDate, byte[] Barcode, byte[] QRCode, string Coments, string CompanyFixedAsset, string FirstName, string LastName, string Job, string LocationName, string ModelVersionMonitors) {
+            public vwAll_MonitorsRow AddvwAll_MonitorsRow(int IDEquipmentStatus, string Status, int Id, string TagService, System.DateTime PurchaseDate, System.DateTime WarrantyDate, byte[] Barcode, byte[] QRCode, string Coments, string CompanyFixedAsset, string FirstName, string LastName, string Job, string LocationName, string ModelVersionMonitors) {
                 vwAll_MonitorsRow rowvwAll_MonitorsRow = ((vwAll_MonitorsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        IDEquipmentStatus,
+                        Status,
                         Id,
                         TagService,
                         PurchaseDate,
@@ -1153,6 +1207,8 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnIDEquipmentStatus = base.Columns["IDEquipmentStatus"];
+                this.columnStatus = base.Columns["Status"];
                 this.columnId = base.Columns["Id"];
                 this.columnTagService = base.Columns["TagService"];
                 this.columnPurchaseDate = base.Columns["PurchaseDate"];
@@ -1171,6 +1227,10 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnIDEquipmentStatus = new global::System.Data.DataColumn("IDEquipmentStatus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDEquipmentStatus);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus);
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
                 this.columnTagService = new global::System.Data.DataColumn("TagService", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1199,6 +1259,8 @@ namespace GUI {
                 base.Columns.Add(this.columnModelVersionMonitors);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnIDEquipmentStatus.AllowDBNull = false;
+                this.columnStatus.MaxLength = 50;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnTagService.MaxLength = 50;
@@ -1342,6 +1404,10 @@ namespace GUI {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class vwAll_NotebooksDataTable : global::System.Data.TypedTableBase<vwAll_NotebooksRow> {
             
+            private global::System.Data.DataColumn columnIDEquipmentStatus;
+            
+            private global::System.Data.DataColumn columnStatus;
+            
             private global::System.Data.DataColumn columnId;
             
             private global::System.Data.DataColumn columnNotebooksName;
@@ -1413,6 +1479,22 @@ namespace GUI {
             protected vwAll_NotebooksDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IDEquipmentStatusColumn {
+                get {
+                    return this.columnIDEquipmentStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StatusColumn {
+                get {
+                    return this.columnStatus;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1613,6 +1695,8 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public vwAll_NotebooksRow AddvwAll_NotebooksRow(
+                        int IDEquipmentStatus, 
+                        string Status, 
                         int Id, 
                         string NotebooksName, 
                         string TagService, 
@@ -1635,6 +1719,8 @@ namespace GUI {
                         string RAMVersion) {
                 vwAll_NotebooksRow rowvwAll_NotebooksRow = ((vwAll_NotebooksRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        IDEquipmentStatus,
+                        Status,
                         Id,
                         NotebooksName,
                         TagService,
@@ -1684,6 +1770,8 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnIDEquipmentStatus = base.Columns["IDEquipmentStatus"];
+                this.columnStatus = base.Columns["Status"];
                 this.columnId = base.Columns["Id"];
                 this.columnNotebooksName = base.Columns["NotebooksName"];
                 this.columnTagService = base.Columns["TagService"];
@@ -1709,6 +1797,10 @@ namespace GUI {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnIDEquipmentStatus = new global::System.Data.DataColumn("IDEquipmentStatus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDEquipmentStatus);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus);
                 this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnId);
                 this.columnNotebooksName = new global::System.Data.DataColumn("NotebooksName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1751,6 +1843,8 @@ namespace GUI {
                 base.Columns.Add(this.columnRAMVersion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnIDEquipmentStatus.AllowDBNull = false;
+                this.columnStatus.MaxLength = 50;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnNotebooksName.MaxLength = 50;
@@ -1906,6 +2000,33 @@ namespace GUI {
             internal vwAll_ComputersRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tablevwAll_Computers = ((vwAll_ComputersDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IDEquipmentStatus {
+                get {
+                    return ((int)(this[this.tablevwAll_Computers.IDEquipmentStatusColumn]));
+                }
+                set {
+                    this[this.tablevwAll_Computers.IDEquipmentStatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Status {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwAll_Computers.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'vwAll_Computers\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Computers.StatusColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2228,6 +2349,18 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tablevwAll_Computers.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tablevwAll_Computers.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCompterNameNull() {
                 return this.IsNull(this.tablevwAll_Computers.CompterNameColumn);
             }
@@ -2471,6 +2604,33 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IDEquipmentStatus {
+                get {
+                    return ((int)(this[this.tablevwAll_Monitors.IDEquipmentStatusColumn]));
+                }
+                set {
+                    this[this.tablevwAll_Monitors.IDEquipmentStatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Status {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwAll_Monitors.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'vwAll_Monitors\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Monitors.StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Id {
                 get {
                     return ((int)(this[this.tablevwAll_Monitors.IdColumn]));
@@ -2674,6 +2834,18 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tablevwAll_Monitors.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tablevwAll_Monitors.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTagServiceNull() {
                 return this.IsNull(this.tablevwAll_Monitors.TagServiceColumn);
             }
@@ -2829,6 +3001,33 @@ namespace GUI {
             internal vwAll_NotebooksRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tablevwAll_Notebooks = ((vwAll_NotebooksDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IDEquipmentStatus {
+                get {
+                    return ((int)(this[this.tablevwAll_Notebooks.IDEquipmentStatusColumn]));
+                }
+                set {
+                    this[this.tablevwAll_Notebooks.IDEquipmentStatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Status {
+                get {
+                    try {
+                        return ((string)(this[this.tablevwAll_Notebooks.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'vwAll_Notebooks\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Notebooks.StatusColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3147,6 +3346,18 @@ namespace GUI {
                 set {
                     this[this.tablevwAll_Notebooks.RAMVersionColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tablevwAll_Notebooks.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tablevwAll_Notebooks.StatusColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3605,6 +3816,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "vwAll_Computers";
+            tableMapping.ColumnMappings.Add("IDEquipmentStatus", "IDEquipmentStatus");
+            tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("CompterName", "CompterName");
             tableMapping.ColumnMappings.Add("TagService", "TagService");
@@ -3641,7 +3854,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers";
+            this._commandCollection[0].CommandText = @"SELECT IDEquipmentStatus, Status, Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3791,6 +4004,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "vwAll_Monitors";
+            tableMapping.ColumnMappings.Add("IDEquipmentStatus", "IDEquipmentStatus");
+            tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("TagService", "TagService");
             tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
@@ -3820,9 +4035,9 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, TagService, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, Comp" +
-                "anyFixedAsset, FirstName, LastName, Job, LocationName, ModelVersionMonitors FROM" +
-                " dbo.vwAll_Monitors";
+            this._commandCollection[0].CommandText = "SELECT IDEquipmentStatus, Status, Id, TagService, PurchaseDate, WarrantyDate, Bar" +
+                "code, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, LocationName" +
+                ", ModelVersionMonitors FROM dbo.vwAll_Monitors";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3972,6 +4187,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "vwAll_Notebooks";
+            tableMapping.ColumnMappings.Add("IDEquipmentStatus", "IDEquipmentStatus");
+            tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("NotebooksName", "NotebooksName");
             tableMapping.ColumnMappings.Add("TagService", "TagService");
@@ -4008,7 +4225,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks";
+            this._commandCollection[0].CommandText = @"SELECT IDEquipmentStatus, Status, Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

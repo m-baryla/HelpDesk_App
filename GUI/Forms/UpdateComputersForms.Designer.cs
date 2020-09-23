@@ -51,6 +51,9 @@
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerWarrantyDateComputer = new System.Windows.Forms.DateTimePicker();
             this.groupBoxEquipment = new System.Windows.Forms.GroupBox();
+            this.groupBoxEquState = new System.Windows.Forms.GroupBox();
+            this.linkLabelEquState = new System.Windows.Forms.LinkLabel();
+            this.comboBoxEquState = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxIDComputer = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
@@ -84,6 +87,8 @@
             this.richTextBoxComentsComputer = new System.Windows.Forms.RichTextBox();
             this.buttonUpdateDataComputer = new System.Windows.Forms.Button();
             this.panelUpdateComputer = new System.Windows.Forms.Panel();
+            this.radioButtonLabelLinkOFF = new System.Windows.Forms.RadioButton();
+            this.radioButtonLabelLinkON = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageComentsComputer = new System.Windows.Forms.TabPage();
             this.labelComentsComputer = new System.Windows.Forms.Label();
@@ -116,6 +121,7 @@
             this.groupBox13.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBoxEquipment.SuspendLayout();
+            this.groupBoxEquState.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -382,6 +388,7 @@
             // 
             this.groupBoxEquipment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBoxEquipment.BackColor = System.Drawing.Color.Transparent;
+            this.groupBoxEquipment.Controls.Add(this.groupBoxEquState);
             this.groupBoxEquipment.Controls.Add(this.groupBox2);
             this.groupBoxEquipment.Controls.Add(this.groupBox15);
             this.groupBoxEquipment.Controls.Add(this.groupBox14);
@@ -395,6 +402,40 @@
             this.groupBoxEquipment.TabIndex = 28;
             this.groupBoxEquipment.TabStop = false;
             this.groupBoxEquipment.Text = "Equipment";
+            // 
+            // groupBoxEquState
+            // 
+            this.groupBoxEquState.Controls.Add(this.linkLabelEquState);
+            this.groupBoxEquState.Controls.Add(this.comboBoxEquState);
+            this.groupBoxEquState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.groupBoxEquState.ForeColor = System.Drawing.Color.White;
+            this.groupBoxEquState.Location = new System.Drawing.Point(176, 184);
+            this.groupBoxEquState.Name = "groupBoxEquState";
+            this.groupBoxEquState.Size = new System.Drawing.Size(155, 70);
+            this.groupBoxEquState.TabIndex = 33;
+            this.groupBoxEquState.TabStop = false;
+            this.groupBoxEquState.Text = "EquipmentState";
+            // 
+            // linkLabelEquState
+            // 
+            this.linkLabelEquState.AutoSize = true;
+            this.linkLabelEquState.LinkColor = System.Drawing.Color.Red;
+            this.linkLabelEquState.Location = new System.Drawing.Point(40, 48);
+            this.linkLabelEquState.Name = "linkLabelEquState";
+            this.linkLabelEquState.Size = new System.Drawing.Size(79, 13);
+            this.linkLabelEquState.TabIndex = 16;
+            this.linkLabelEquState.TabStop = true;
+            this.linkLabelEquState.Text = "Add New State";
+            this.linkLabelEquState.VisitedLinkColor = System.Drawing.Color.Yellow;
+            this.linkLabelEquState.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelEquState_LinkClicked);
+            // 
+            // comboBoxEquState
+            // 
+            this.comboBoxEquState.FormattingEnabled = true;
+            this.comboBoxEquState.Location = new System.Drawing.Point(7, 17);
+            this.comboBoxEquState.Name = "comboBoxEquState";
+            this.comboBoxEquState.Size = new System.Drawing.Size(145, 21);
+            this.comboBoxEquState.TabIndex = 13;
             // 
             // groupBox2
             // 
@@ -765,6 +806,8 @@
             // panelUpdateComputer
             // 
             this.panelUpdateComputer.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panelUpdateComputer.Controls.Add(this.radioButtonLabelLinkOFF);
+            this.panelUpdateComputer.Controls.Add(this.radioButtonLabelLinkON);
             this.panelUpdateComputer.Controls.Add(this.buttonUpdateDataComputer);
             this.panelUpdateComputer.Controls.Add(this.tabControl1);
             this.panelUpdateComputer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -772,6 +815,40 @@
             this.panelUpdateComputer.Name = "panelUpdateComputer";
             this.panelUpdateComputer.Size = new System.Drawing.Size(739, 572);
             this.panelUpdateComputer.TabIndex = 27;
+            // 
+            // radioButtonLabelLinkOFF
+            // 
+            this.radioButtonLabelLinkOFF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButtonLabelLinkOFF.AutoSize = true;
+            this.radioButtonLabelLinkOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonLabelLinkOFF.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonLabelLinkOFF.ForeColor = System.Drawing.Color.White;
+            this.radioButtonLabelLinkOFF.Location = new System.Drawing.Point(127, 12);
+            this.radioButtonLabelLinkOFF.Name = "radioButtonLabelLinkOFF";
+            this.radioButtonLabelLinkOFF.Size = new System.Drawing.Size(111, 22);
+            this.radioButtonLabelLinkOFF.TabIndex = 32;
+            this.radioButtonLabelLinkOFF.TabStop = true;
+            this.radioButtonLabelLinkOFF.Text = "AddNew  OFF";
+            this.radioButtonLabelLinkOFF.UseVisualStyleBackColor = true;
+            this.radioButtonLabelLinkOFF.CheckedChanged += new System.EventHandler(this.radioButtonLabelLinkOFF_CheckedChanged);
+            // 
+            // radioButtonLabelLinkON
+            // 
+            this.radioButtonLabelLinkON.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButtonLabelLinkON.AutoSize = true;
+            this.radioButtonLabelLinkON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonLabelLinkON.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonLabelLinkON.ForeColor = System.Drawing.Color.White;
+            this.radioButtonLabelLinkON.Location = new System.Drawing.Point(8, 12);
+            this.radioButtonLabelLinkON.Name = "radioButtonLabelLinkON";
+            this.radioButtonLabelLinkON.Size = new System.Drawing.Size(105, 22);
+            this.radioButtonLabelLinkON.TabIndex = 31;
+            this.radioButtonLabelLinkON.TabStop = true;
+            this.radioButtonLabelLinkON.Text = "AddNew  ON";
+            this.radioButtonLabelLinkON.UseVisualStyleBackColor = true;
+            this.radioButtonLabelLinkON.CheckedChanged += new System.EventHandler(this.radioButtonLabelLinkON_CheckedChanged);
             // 
             // tabControl1
             // 
@@ -1073,6 +1150,8 @@
             this.groupBox13.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBoxEquipment.ResumeLayout(false);
+            this.groupBoxEquState.ResumeLayout(false);
+            this.groupBoxEquState.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox15.ResumeLayout(false);
@@ -1099,6 +1178,7 @@
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.panelUpdateComputer.ResumeLayout(false);
+            this.panelUpdateComputer.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPageComentsComputer.ResumeLayout(false);
             this.tabPageComentsComputer.PerformLayout();
@@ -1192,5 +1272,10 @@
         private System.Windows.Forms.Button buttonSaveAsJPG;
         private System.Windows.Forms.Button buttonCreateQR;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBoxEquState;
+        private System.Windows.Forms.LinkLabel linkLabelEquState;
+        private System.Windows.Forms.ComboBox comboBoxEquState;
+        private System.Windows.Forms.RadioButton radioButtonLabelLinkOFF;
+        private System.Windows.Forms.RadioButton radioButtonLabelLinkON;
     }
 }

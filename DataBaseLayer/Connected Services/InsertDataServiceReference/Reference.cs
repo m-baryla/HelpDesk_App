@@ -30,10 +30,11 @@ namespace DataBaseLayer.InsertDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertComputer", ReplyAction="http://tempuri.org/IInsertDataService/InsertComputerResponse")]
         System.Threading.Tasks.Task<string> InsertComputerAsync(
@@ -50,10 +51,11 @@ namespace DataBaseLayer.InsertDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertNotebooks", ReplyAction="http://tempuri.org/IInsertDataService/InsertNotebooksResponse")]
         string InsertNotebooks(
@@ -70,10 +72,11 @@ namespace DataBaseLayer.InsertDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertNotebooks", ReplyAction="http://tempuri.org/IInsertDataService/InsertNotebooksResponse")]
         System.Threading.Tasks.Task<string> InsertNotebooksAsync(
@@ -90,16 +93,17 @@ namespace DataBaseLayer.InsertDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertMonitors", ReplyAction="http://tempuri.org/IInsertDataService/InsertMonitorsResponse")]
-        string InsertMonitors(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode);
+        string InsertMonitors(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime warrantyDate, System.DateTime purchaseDate, byte[] _barcode, byte[] _qrCode, string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertMonitors", ReplyAction="http://tempuri.org/IInsertDataService/InsertMonitorsResponse")]
-        System.Threading.Tasks.Task<string> InsertMonitorsAsync(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode);
+        System.Threading.Tasks.Task<string> InsertMonitorsAsync(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime warrantyDate, System.DateTime purchaseDate, byte[] _barcode, byte[] _qrCode, string _equipmentStatus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertComboBoxCPU", ReplyAction="http://tempuri.org/IInsertDataService/InsertComboBoxCPUResponse")]
         string InsertComboBoxCPU(string _value);
@@ -160,6 +164,12 @@ namespace DataBaseLayer.InsertDataServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertComboBoxUser", ReplyAction="http://tempuri.org/IInsertDataService/InsertComboBoxUserResponse")]
         System.Threading.Tasks.Task<string> InsertComboBoxUserAsync(string _firstName, string _lastName, string _job);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertComboEquipmentStatus", ReplyAction="http://tempuri.org/IInsertDataService/InsertComboEquipmentStatusResponse")]
+        string InsertComboEquipmentStatus(string _value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInsertDataService/InsertComboEquipmentStatus", ReplyAction="http://tempuri.org/IInsertDataService/InsertComboEquipmentStatusResponse")]
+        System.Threading.Tasks.Task<string> InsertComboEquipmentStatusAsync(string _value);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -203,11 +213,12 @@ namespace DataBaseLayer.InsertDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode) {
-            return base.Channel.InsertComputer(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus) {
+            return base.Channel.InsertComputer(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
         public System.Threading.Tasks.Task<string> InsertComputerAsync(
@@ -224,11 +235,12 @@ namespace DataBaseLayer.InsertDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode) {
-            return base.Channel.InsertComputerAsync(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus) {
+            return base.Channel.InsertComputerAsync(_computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
         public string InsertNotebooks(
@@ -245,11 +257,12 @@ namespace DataBaseLayer.InsertDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode) {
-            return base.Channel.InsertNotebooks(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus) {
+            return base.Channel.InsertNotebooks(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
         public System.Threading.Tasks.Task<string> InsertNotebooksAsync(
@@ -266,19 +279,20 @@ namespace DataBaseLayer.InsertDataServiceReference {
                     string _ram, 
                     string _hardDrive, 
                     string _coments, 
-                    System.DateTime purchaseDate, 
                     System.DateTime warrantyDate, 
+                    System.DateTime purchaseDate, 
                     byte[] _barcode, 
-                    byte[] _qrCode) {
-            return base.Channel.InsertNotebooksAsync(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+                    byte[] _qrCode, 
+                    string _equipmentStatus) {
+            return base.Channel.InsertNotebooksAsync(_notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user, _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
-        public string InsertMonitors(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode) {
-            return base.Channel.InsertMonitors(_companyFixedAsset, _tagService, _location, _user, _model, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+        public string InsertMonitors(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime warrantyDate, System.DateTime purchaseDate, byte[] _barcode, byte[] _qrCode, string _equipmentStatus) {
+            return base.Channel.InsertMonitors(_companyFixedAsset, _tagService, _location, _user, _model, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
-        public System.Threading.Tasks.Task<string> InsertMonitorsAsync(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime purchaseDate, System.DateTime warrantyDate, byte[] _barcode, byte[] _qrCode) {
-            return base.Channel.InsertMonitorsAsync(_companyFixedAsset, _tagService, _location, _user, _model, _coments, purchaseDate, warrantyDate, _barcode, _qrCode);
+        public System.Threading.Tasks.Task<string> InsertMonitorsAsync(string _companyFixedAsset, string _tagService, string _location, string _user, string _model, string _coments, System.DateTime warrantyDate, System.DateTime purchaseDate, byte[] _barcode, byte[] _qrCode, string _equipmentStatus) {
+            return base.Channel.InsertMonitorsAsync(_companyFixedAsset, _tagService, _location, _user, _model, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
         
         public string InsertComboBoxCPU(string _value) {
@@ -359,6 +373,14 @@ namespace DataBaseLayer.InsertDataServiceReference {
         
         public System.Threading.Tasks.Task<string> InsertComboBoxUserAsync(string _firstName, string _lastName, string _job) {
             return base.Channel.InsertComboBoxUserAsync(_firstName, _lastName, _job);
+        }
+        
+        public string InsertComboEquipmentStatus(string _value) {
+            return base.Channel.InsertComboEquipmentStatus(_value);
+        }
+        
+        public System.Threading.Tasks.Task<string> InsertComboEquipmentStatusAsync(string _value) {
+            return base.Channel.InsertComboEquipmentStatusAsync(_value);
         }
     }
 }

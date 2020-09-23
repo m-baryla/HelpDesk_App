@@ -40,28 +40,29 @@ namespace DataBaseLayer.DataBase
 
         public void InsertComputer(string _computerName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate,
-            byte [] _barcode, byte[] _qrCode)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime warrantyDate, DateTime purchaseDate, 
+            byte [] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertComputer(_computerName, _operatingSystem, _companyFixedAsset,
                     _tagService, _location, _user, _office, _ip, _model,
-                    _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode,_qrCode));
+                    _cpu, _ram, _hardDrive, _coments, warrantyDate,purchaseDate, _barcode,_qrCode, _equipmentStatus));
         }
 
         public void InsertNotebooks(string _notebooksName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate,
-            byte[] _barcode, byte[] _qrCode)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime warrantyDate, DateTime purchaseDate, 
+            byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertNotebooks(_notebooksName, _operatingSystem, _companyFixedAsset,
                            _tagService, _location, _user, _office, _ip, _model,
-                           _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode));
+                           _cpu, _ram, _hardDrive, _coments, warrantyDate,purchaseDate, _barcode, _qrCode, _equipmentStatus));
         }
         public void InsertMonitors(string _companyFixedAsset, string _tagService, string _location,
-            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate, byte[] _barcode, byte[] _qrCode)
+            string _user, string _model, string _coments, DateTime warrantyDate, DateTime purchaseDate,  
+            byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertMonitors(_companyFixedAsset, _tagService, _location,
-                _user, _model, _coments, purchaseDate, warrantyDate,_barcode,_qrCode));
+                _user, _model, _coments, warrantyDate,purchaseDate, _barcode,_qrCode, _equipmentStatus));
         }
         public void InsertComboBoxCPU(string _value)
         {
@@ -103,29 +104,36 @@ namespace DataBaseLayer.DataBase
         {
             _infoMessageBox.Info(_insertDataServiceClient.InsertComboBoxUser(_firstName, _lastName, _job));
         }
+        public void InsertComboEquipmentStatus(string _value)
+        {
+            _infoMessageBox.Info(_insertDataServiceClient.InsertComboEquipmentStatus(_value));
+        }
 
         #endregion
 
         #region UpdateData
         public void UpdateComputer(int _id, string _computerName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate,byte [] _barcode, byte[] _qrCode)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime warrantyDate, DateTime purchaseDate, 
+            byte [] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
             _infoMessageBox.Info(_updateDataServiceClient.UpdateComputer(_id, _computerName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user,
-                            _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode,_qrCode));
+                            _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate,purchaseDate, _barcode,_qrCode, _equipmentStatus));
         }
         public void UpdateNotebooks(int _id, string _notebooksName, string _operatingSystem, string _companyFixedAsset,
             string _tagService, string _location, string _user, string _office, string _ip, string _model,
-            string _cpu, string _ram, string _hardDrive, string _coments, DateTime purchaseDate, DateTime warrantyDate, byte[] _barcode, byte[] _qrCode)
+            string _cpu, string _ram, string _hardDrive, string _coments, DateTime warrantyDate, DateTime purchaseDate, 
+            byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
             _infoMessageBox.Info(_updateDataServiceClient.UpdateNotebooks(_id, _notebooksName, _operatingSystem, _companyFixedAsset, _tagService, _location, _user,
-                            _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, purchaseDate, warrantyDate, _barcode, _qrCode));
+                            _office, _ip, _model, _cpu, _ram, _hardDrive, _coments, warrantyDate, purchaseDate, _barcode, _qrCode, _equipmentStatus));
         }
         public void UpdateMonitors(int _id, string _companyFixedAsset, string _tagService, string _location,
-            string _user, string _model, string _coments, DateTime purchaseDate, DateTime warrantyDate, byte[] _barcode, byte[] _qrCode)
+            string _user, string _model, string _coments, DateTime warrantyDate, DateTime purchaseDate, 
+            byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
             _infoMessageBox.Info(_updateDataServiceClient.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location,
-                _user, _model, _coments, purchaseDate, warrantyDate,_barcode,_qrCode));
+                _user, _model, _coments, warrantyDate, purchaseDate,_barcode,_qrCode, _equipmentStatus));
         }
         #endregion
 
@@ -184,6 +192,10 @@ namespace DataBaseLayer.DataBase
         public List<string> FillComboBoxUsers()
         {
             return _fillComboBoxDataServiceClient.FillComboBoxUsers().ToList(); // if != null
+        }
+        public List<string> FillComboBoxEquipmentStatus()
+        {
+            return _fillComboBoxDataServiceClient.FillComboBoxEquipmentStatus().ToList(); // if != null
         }
         #endregion
     }

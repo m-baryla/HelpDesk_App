@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using Interfaces;
 using Zuby.ADGV;
@@ -18,20 +19,28 @@ namespace LogicApp
             this._infoMessageBox = infoMessageBox;
         }
 
-        #region Inset / Update / Delete / UpdateView
+        #region Inset
 
         public void Insert(string _companyFixedAsset,string _tagService, string _location, string _user, 
-            string _model, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
+            string _model, string _coments, DateTime _warrantyDate, DateTime _purchaseDate, 
+            byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
-            _data.InsertMonitors(_companyFixedAsset,_tagService,_location, _user, _model,_coments,_purchaseDate,_warrantyDate,_barcode,_qrCode);
+            _data.InsertMonitors(_companyFixedAsset,_tagService,_location, _user, _model,_coments, 
+                _warrantyDate,_purchaseDate, _barcode,_qrCode, _equipmentStatus);
         }
+        #endregion
 
+        #region Update
         public void Update(int _id, string _companyFixedAsset, string _tagService, string _location, string _user,
-            string _model, string _coments, DateTime _purchaseDate, DateTime _warrantyDate, byte[] _barcode, byte[] _qrCode)
+            string _model, string _coments, DateTime _warrantyDate, DateTime _purchaseDate, 
+            byte[] _barcode, byte[] _qrCode, string _equipmentStatus)
         {
             _data.UpdateMonitors(_id, _companyFixedAsset, _tagService, _location, _user, _model, _coments,
-                _purchaseDate, _warrantyDate,_barcode,_qrCode);
+                _warrantyDate,_purchaseDate, _barcode, _qrCode, _equipmentStatus);
         }
+        #endregion
+
+        #region Delete
         public void DeleteMonitors(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
             DialogResult dialogResult = _infoMessageBox.InfoYesNo("Do you want to delete");
@@ -40,16 +49,16 @@ namespace LogicApp
                 switch (dialogResult)
                 {
                     case DialogResult.Yes:
-                    {
-                        DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
-                        var id = Convert.ToInt32(dgViewRow.Cells[0].Value.ToString());
-                        _data.DeleteMonitor(id);
-                        break;
-                    }
+                        {
+                            DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
+                            var id = Convert.ToInt32(dgViewRow.Cells[0].Value.ToString());
+                            _data.DeleteMonitor(id);
+                            break;
+                        }
                     case DialogResult.No:
-                    {
-                        break;
-                    }
+                        {
+                            break;
+                        }
                 }
             }
             catch (Exception exception)
@@ -57,6 +66,9 @@ namespace LogicApp
                 _infoMessageBox.Error(exception.Message);
             }
         }
+        #endregion
+
+        #region ExportToExel
         public void ExportExelMonitors(AdvancedDataGridView advancedDataGridView)
         {
             Microsoft.Office.Interop.Excel.Application exelApps = new Microsoft.Office.Interop.Excel.Application();
@@ -81,7 +93,29 @@ namespace LogicApp
                 }
             }
         }
+        #endregion
 
+        #region ChangeColorState
+        public void ChangeStateColorMonitors(AdvancedDataGridView advancedDataGridView)
+        {
+            for (int i = 0; i < advancedDataGridView.Rows.Count - 1; i++)
+            {
+                int value = Int32.Parse(advancedDataGridView.Rows[i].Cells[0].Value.ToString());
+
+                if (value == 1)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else if (value == 2)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Green;
+                }
+                else if (value == 3)
+                {
+                    advancedDataGridView.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
+                }
+            }
+        }
         #endregion
 
         #region InsertComboBox
@@ -97,6 +131,10 @@ namespace LogicApp
         {
             _data.InsertComboBoxUser(_firstName, _lastName, _job);
         }
+        public void InsertComboEquipmentStatus(string _value)
+        {
+            _data.InsertComboEquipmentStatus(_value);
+        }
         #endregion
 
         #region GetFillComboBox
@@ -111,6 +149,10 @@ namespace LogicApp
         public List<string> FillComboBoxUsers()
         {
             return _data.FillComboBoxUsers();
+        }
+        public List<string> FillComboBoxEquipmentStatus()
+        {
+            return _data.FillComboBoxEquipmentStatus();
         }
         #endregion
 
