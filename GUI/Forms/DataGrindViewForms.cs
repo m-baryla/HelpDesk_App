@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using GUI.CustomClass;
 using Interfaces;
 using LogicApp;
 using Microsoft.Office.Interop.Excel;
@@ -24,7 +25,7 @@ namespace GUI.Forms
            
         }
 
-        #region Get
+        #region Upload
         private void UploadData()
         {
             this.vwAll_NotebooksTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Notebooks);
@@ -177,7 +178,97 @@ namespace GUI.Forms
         {
             UploadData();
         }
+        private void radioButtonColorOn_CheckedChanged(object sender, EventArgs e)
+        {
+            UploadData();
+        }
+        private void buttonFullScrean_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonFullScrean);
+        }
 
+        private void buttonFullScrean_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonFullScrean, "FullScrean");
+        }
+
+        private void buttonExel_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonExel);
+        }
+
+        private void buttonExel_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonExel, "Exel");
+        }
+
+        private void buttonRefresh_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonRefresh);
+        }
+
+        private void buttonRefresh_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonRefresh, "Refresh");
+        }
+
+        private void buttonDelete_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonDelete);
+        }
+
+        private void buttonDelete_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonDelete, "Delete");
+        }
+
+        private void buttonEdit_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonEdit);
+        }
+
+        private void buttonEdit_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonEdit, "Edit");
+        }
+
+        private void buttonFullScrean_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttonExel_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttonRefresh_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttonDelete_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttonEdit_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+        private void buttonCloseDataGrind_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+        private void buttonCloseDataGrind_MouseMove(object sender, MouseEventArgs e)
+        {
+            buttonCloseDataGrind.BackColor = Color.DarkRed;
+        }
+
+        private void buttonCloseDataGrind_MouseLeave(object sender, EventArgs e)
+        {
+            buttonCloseDataGrind.BackColor = Color.Black;
+        }
         #endregion
 
         #region ExportToExel
@@ -252,11 +343,11 @@ namespace GUI.Forms
                 }
             }
         }
+
+
+
         #endregion
 
-        private void radioButtonColorOn_CheckedChanged(object sender, EventArgs e)
-        {
-            UploadData();
-        }
+      
     }
 }

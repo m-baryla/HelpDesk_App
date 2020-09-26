@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Windows.Forms;
+using GUI.CustomClass;
 using Interfaces;
 
 namespace GUI.Forms
@@ -19,75 +20,53 @@ namespace GUI.Forms
             this._computersLogic = computersLogic;
             InitializeComponent();
             UploadData();
+
             groupBoxAddNewUser.Visible = false;
             buttonInsertDataComputer.Enabled = false;
 
-            linkLabelEquState.Visible = false;
-            linkLabelAddNewCPU.Visible = false;
-            linkLabelAddNewHardDrive.Visible = false;
-            linkLabelAddNewLocation.Visible = false;
-            linkLabelAddNewMicrosoftOffice.Visible = false;
-            linkLabelAddNewModel.Visible = false;
-            linkLabelAddNewOperatingSystem.Visible = false;
-            linkLabelAddNewRAM.Visible = false;
-            linkLabelAddNewUser.Visible = false;
+            VisibleLabelLink(false);
         }
 
+        #region Upload 
         private void UploadData()
         {
             comboBoxLocationComputer.DataSource = _computersLogic.FillComboBoxLocation().ToList();
-            comboBoxLocationComputer.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxLocationComputer.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxLocationComputer);
 
             comboBoxModelComputer.DataSource = _computersLogic.FillComboBoxModelComputer().ToList();
-            comboBoxModelComputer.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxModelComputer.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxModelComputer);
 
             comboBoxCPUComputer.DataSource = _computersLogic.FillComboBoxCPU().ToList();
-            comboBoxCPUComputer.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxCPUComputer.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxCPUComputer);
 
             comboBoxRAMComputer.DataSource = _computersLogic.FillComboBoxRAM().ToList();
-            comboBoxRAMComputer.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxRAMComputer.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxRAMComputer);
 
             comboBoxHardDriveComputer.DataSource = _computersLogic.FillComboBoxHardDrive().ToList();
-            comboBoxHardDriveComputer.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxHardDriveComputer.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxHardDriveComputer);
 
             comboBoxOfficeComputer.DataSource = _computersLogic.FillComboBoxOffice().ToList();
-            comboBoxOfficeComputer.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxOfficeComputer.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxOfficeComputer);
 
             comboBoxOperatigSystemComputer.DataSource = _computersLogic.FillComboBoxOperatingSystem().ToList();
-            comboBoxOperatigSystemComputer.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxOperatigSystemComputer.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxOperatigSystemComputer);
 
             comboBoxUser.DataSource = _computersLogic.FillComboBoxUsers().ToList();
-            comboBoxUser.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxUser.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxUser);
 
             comboBoxEquState.DataSource = _computersLogic.FillComboBoxEquipmentStatus().ToList();
-            comboBoxEquState.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxEquState.AutoCompleteSource = AutoCompleteSource.ListItems;
-
+            AutoSugestComplet(comboBoxEquState);
             ///
         }
+        #endregion
 
-        #region Button
-
+        #region Insert
         private void buttonInsertDataComputer_Click(object sender, EventArgs e)
         {
             var strIP = ip_1.Text + '.' + ip_2.Text + '.' + ip_3.Text + '.' + ip_4.Text;
 
-
-            var ms = new MemoryStream();
-
-            pictureBoxBarcode.Image.Save(ms, ImageFormat.Png);
-            var bitmapData = ms.ToArray();
-
-            pictureBoxQRCode.Image.Save(ms, ImageFormat.Png);
-            var bitmapDataQRCode = ms.ToArray();
+            var bitmapDataBarcode = CustomConvertToBinary.ImgToBinary(pictureBoxBarcode);
+            var bitmapDataQRCode = CustomConvertToBinary.ImgToBinary(pictureBoxQRCode);
 
             _computersLogic?.Insert(textBoxNameComputer.Text, comboBoxOperatigSystemComputer.Text,
                 textBoxCompanyFixedAssetComputer.Text, textBoxTagServiceComputer.Text,
@@ -95,33 +74,36 @@ namespace GUI.Forms
                 comboBoxOfficeComputer.Text, strIP, comboBoxModelComputer.Text,
                 comboBoxCPUComputer.Text, comboBoxRAMComputer.Text, comboBoxHardDriveComputer.Text,
                 richTextBoxComentsComputer.Text, dateTimePickerWarrantyDateComputer.Value.Date, dateTimePickerPurchaseDateComputer.Value.Date,
-                bitmapData, bitmapDataQRCode,comboBoxEquState.Text); // if != null
+                bitmapDataBarcode, bitmapDataQRCode, comboBoxEquState.Text); // if != null
         }
+        #endregion
+
+        #region Create Code
+        private void buttonCreateQR_Click(object sender, EventArgs e)
+        {
+            labelDateTimeCode.Text = DateTime.Now.ToString();
+            labelCompanyFixedCode.Text = textBoxCompanyFixedAssetComputer.Text;
+            labelModelCode.Text = comboBoxModelComputer.Text;
+            labelTahServiceCode.Text = textBoxTagServiceComputer.Text;
+
+            CustomCreateCode.CreateQRCode(pictureBoxQRCode, textBoxCompanyFixedAssetComputer, textBoxTagServiceComputer, comboBoxModelComputer);
+
+            CustomCreateCode.CreateBarcodeCode(pictureBoxBarcode, textBoxCompanyFixedAssetComputer);
+
+            buttonInsertDataComputer.Enabled = true;
+        }
+        #endregion
+
+        #region Buttons
+
         private void radioButtonLabelLinkON_CheckedChanged(object sender, EventArgs e)
         {
-            linkLabelEquState.Visible = true;
-            linkLabelAddNewCPU.Visible = true;
-            linkLabelAddNewHardDrive.Visible = true;
-            linkLabelAddNewLocation.Visible = true;
-            linkLabelAddNewMicrosoftOffice.Visible = true;
-            linkLabelAddNewModel.Visible = true;
-            linkLabelAddNewOperatingSystem.Visible = true;
-            linkLabelAddNewRAM.Visible = true;
-            linkLabelAddNewUser.Visible = true;
+            VisibleLabelLink(true);
         }
         private void radioButtonLabelLinkOFF_CheckedChanged(object sender, EventArgs e)
         {
-            linkLabelEquState.Visible = false;
-            linkLabelAddNewCPU.Visible = false;
-            linkLabelAddNewHardDrive.Visible = false;
-            linkLabelAddNewLocation.Visible = false;
-            linkLabelAddNewMicrosoftOffice.Visible = false;
-            linkLabelAddNewModel.Visible = false;
-            linkLabelAddNewOperatingSystem.Visible = false;
-            linkLabelAddNewRAM.Visible = false;
-            linkLabelAddNewUser.Visible = false;
+            VisibleLabelLink(false);
         }
-
         private void buttonCloseComputer_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -130,121 +112,98 @@ namespace GUI.Forms
         {
             groupBoxAddNewUser.Visible = true;
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
             groupBoxAddNewUser.Visible = false;
-        }
-
-        private void buttonCreateQR_Click(object sender, EventArgs e)
-        {
-            labelDateTimeCode.Text = DateTime.Now.ToString();
-            labelCompanyFixedCode.Text = textBoxCompanyFixedAssetComputer.Text;
-            labelModelCode.Text = comboBoxModelComputer.Text;
-            labelTahServiceCode.Text = textBoxTagServiceComputer.Text;
-
-            Zen.Barcode.CodeQrBarcodeDraw qrBarcodeDraw = Zen.Barcode.BarcodeDrawFactory.CodeQr;
-            pictureBoxQRCode.Image = qrBarcodeDraw.Draw(textBoxCompanyFixedAssetComputer.Text
-                                                        +" "+
-                                                        textBoxTagServiceComputer.Text
-                                                        + " " +
-                                                        comboBoxModelComputer.Text, pictureBoxQRCode.Width);
-
-            Zen.Barcode.Code128BarcodeDraw barcodeDraw = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetComputer.Text, pictureBoxBarcode.Height);
-
-            buttonInsertDataComputer.Enabled = true;
-        }
+        }      
         private void pictureBoxBarcode_Paint(object sender, PaintEventArgs e)
         {
-            PictureBox panel = (PictureBox)sender;
-            float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width) {DashStyle = DashStyle.DashDotDot};
-            e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
-            e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
-            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
-            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, panel.Width - 1, 0);
+            CustomBorder.PaintBorderPictureBox(sender, e);
         }
-
         private void pictureBoxQRCode_Paint(object sender, PaintEventArgs e)
         {
-            PictureBox panel = (PictureBox)sender;
-            float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width) {DashStyle = DashStyle.DashDotDot};
-            e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
-            e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
-            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
-            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, panel.Width - 1, 0);
+            CustomBorder.PaintBorderPictureBox(sender, e);
         }
         private void buttonSaveAsJPG_Click(object sender, EventArgs e)
         {
-            SaveFileDialog f = new SaveFileDialog {Filter = "JPG(*.JPG)|*.jpg"};
-
-
-            if (f.ShowDialog() == DialogResult.OK)
-            {
-                Bitmap bmp = new Bitmap(paneLabelCode.Width + 50, paneLabelCode.Height + paneLabelCode.Height / 2);
-                paneLabelCode.DrawToBitmap(bmp, paneLabelCode.Bounds);
-                bmp.Save(f.FileName);
-            }
+            CustomSaveFileDialog.SaveFile(paneLabelCode);
         }
         #endregion
 
-        #region Label link add new _values
+        #region Label link add new values
 
         private void linkLabelAddNewModel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _computersLogic.InsertComboBoxModelComputer(comboBoxModelComputer.Text);  // if != null 
+            _computersLogic?.InsertComboBoxModelComputer(comboBoxModelComputer.Text);  
             UploadData();
         }
 
         private void linkLabelAddNewRAM_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _computersLogic.InsertComboBoxRAM(comboBoxRAMComputer.Text);  // if != null
+            _computersLogic?.InsertComboBoxRAM(comboBoxRAMComputer.Text);  
             UploadData();
         }
 
         private void linkLabelAddNewHardDrive_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _computersLogic.InsertComboBoxHardDrive(comboBoxHardDriveComputer.Text);  // if != null
+            _computersLogic?.InsertComboBoxHardDrive(comboBoxHardDriveComputer.Text);  
             UploadData();
         }
 
         private void linkLabelAddNewOperatingSystem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _computersLogic.InsertComboBoxOperatingSystem(comboBoxOperatigSystemComputer.Text);  // if != null
+            _computersLogic?.InsertComboBoxOperatingSystem(comboBoxOperatigSystemComputer.Text);  
             UploadData();
         }
 
         private void linkLabelAddNewLocation_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _computersLogic.InsertComboBoxLocation(comboBoxLocationComputer.Text);  // if != null
+            _computersLogic?.InsertComboBoxLocation(comboBoxLocationComputer.Text);  
             UploadData();
         }
 
         private void linkLabelAddNewMicrosoftOffice_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _computersLogic.InsertComboBoxMicrosoftOffice(comboBoxOfficeComputer.Text);  // if != null
+            _computersLogic?.InsertComboBoxMicrosoftOffice(comboBoxOfficeComputer.Text);  
             UploadData();
         }
         private void linkLabelAddNewCPU_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _computersLogic.InsertComboBoxCPU(comboBoxCPUComputer.Text);  // if != null
+            _computersLogic?.InsertComboBoxCPU(comboBoxCPUComputer.Text);  
             UploadData();
         }
 
         private void linkLabelAddNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _computersLogic.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text);  // if != null
+            _computersLogic?.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text);  
             UploadData();
         }
 
         private void linkLabelEquState_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            _computersLogic.InsertComboEquipmentStatus(comboBoxEquState.Text);  // if != null
+            _computersLogic?.InsertComboEquipmentStatus(comboBoxEquState.Text);  
             UploadData();
         }
         #endregion
-      
+
+        #region HelperMethod
+        private void VisibleLabelLink(bool visible)
+        {
+            linkLabelEquState.Visible = visible;
+            linkLabelAddNewCPU.Visible = visible;
+            linkLabelAddNewHardDrive.Visible = visible;
+            linkLabelAddNewLocation.Visible = visible;
+            linkLabelAddNewMicrosoftOffice.Visible = visible;
+            linkLabelAddNewModel.Visible = visible;
+            linkLabelAddNewOperatingSystem.Visible = visible;
+            linkLabelAddNewRAM.Visible = visible;
+            linkLabelAddNewUser.Visible = visible;
+        }
+        private void AutoSugestComplet(ComboBox comboBox)
+        {
+            comboBox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+        #endregion
     }
 }

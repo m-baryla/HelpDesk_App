@@ -1,11 +1,11 @@
 ﻿using System.Windows.Forms;
 
-namespace HelpDesk_DB.UIDesign
+namespace GUI.CustomClass
 {
-    public static class ChildForm
+    public static class CustomChildForm
     {
         private static Form activeForm = null;
-        public static void openChildForm(Form childForm,Panel panelChildForm)
+        public static void openChildForm(Form childForm, Panel panelChildForm)
         {
             if (activeForm != null)
             {

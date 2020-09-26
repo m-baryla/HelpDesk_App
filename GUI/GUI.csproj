@@ -56,7 +56,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChildForm.cs" />
+    <Compile Include="CustomClass\CustomButtonStyle.cs" />
+    <Compile Include="CustomClass\CustomChildForm.cs" />
+    <Compile Include="CustomClass\CustomBorder.cs" />
+    <Compile Include="CustomClass\CustomConvertToBinary.cs" />
+    <Compile Include="CustomClass\CustomCreateCode.cs" />
+    <Compile Include="CustomClass\CustomSaveFileDialog.cs" />
     <Compile Include="Forms\AboutForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,7 +121,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HelpDeskDB_TESTDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="InfoMessageBox.cs" />
+    <Compile Include="CustomClass\CustomInfoMessageBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -128,7 +133,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="ShowSubMenu.cs" />
+    <Compile Include="CustomClass\CustomShowSubMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\AboutForms.resx">
@@ -192,6 +197,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CustomControls\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

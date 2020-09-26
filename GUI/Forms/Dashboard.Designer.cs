@@ -92,6 +92,7 @@
             this.buttonLogo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonLogo.UseVisualStyleBackColor = false;
             this.buttonLogo.Click += new System.EventHandler(this.buttonLogo_Click);
+            this.buttonLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonLogo_Paint);
             // 
             // buttonAddNew
             // 
@@ -113,6 +114,9 @@
             this.buttonAddNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAddNew.UseVisualStyleBackColor = false;
             this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
+            this.buttonAddNew.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonAddNew_Paint);
+            this.buttonAddNew.MouseLeave += new System.EventHandler(this.buttonAddNew_MouseLeave);
+            this.buttonAddNew.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonAddNew_MouseMove);
             // 
             // panelAddNewSubMenu
             // 
@@ -256,6 +260,9 @@
             this.buttonShow.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonShow.UseVisualStyleBackColor = false;
             this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
+            this.buttonShow.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonShow_Paint);
+            this.buttonShow.MouseLeave += new System.EventHandler(this.buttonShow_MouseLeave);
+            this.buttonShow.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonShow_MouseMove);
             // 
             // panelReportsSubMenu
             // 
@@ -339,6 +346,9 @@
             this.buttonReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonReports.UseVisualStyleBackColor = false;
             this.buttonReports.Click += new System.EventHandler(this.buttonReports_Click);
+            this.buttonReports.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonReports_Paint);
+            this.buttonReports.MouseLeave += new System.EventHandler(this.buttonReports_MouseLeave);
+            this.buttonReports.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonReports_MouseMove);
             // 
             // panelChildForm
             // 
@@ -407,6 +417,9 @@
             this.buttonAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAbout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAbout.UseVisualStyleBackColor = false;
+            this.buttonAbout.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonAbout_Paint);
+            this.buttonAbout.MouseLeave += new System.EventHandler(this.buttonAbout_MouseLeave);
+            this.buttonAbout.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonAbout_MouseMove);
             // 
             // buttoSetings
             // 
@@ -425,6 +438,9 @@
             this.buttoSetings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttoSetings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttoSetings.UseVisualStyleBackColor = false;
+            this.buttoSetings.Paint += new System.Windows.Forms.PaintEventHandler(this.buttoSetings_Paint);
+            this.buttoSetings.MouseLeave += new System.EventHandler(this.buttoSetings_MouseLeave);
+            this.buttoSetings.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttoSetings_MouseMove);
             // 
             // buttonListMenu
             // 
@@ -444,6 +460,9 @@
             this.buttonListMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonListMenu.UseVisualStyleBackColor = false;
             this.buttonListMenu.Click += new System.EventHandler(this.buttonListMenu_Click);
+            this.buttonListMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonListMenu_Paint);
+            this.buttonListMenu.MouseLeave += new System.EventHandler(this.buttonListMenu_MouseLeave);
+            this.buttonListMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonListMenu_MouseMove);
             // 
             // buttonHome
             // 
@@ -462,6 +481,9 @@
             this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonHome.UseVisualStyleBackColor = false;
+            this.buttonHome.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonHome_Paint);
+            this.buttonHome.MouseLeave += new System.EventHandler(this.buttonHome_MouseLeave);
+            this.buttonHome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonHome_MouseMove);
             // 
             // timer1
             // 

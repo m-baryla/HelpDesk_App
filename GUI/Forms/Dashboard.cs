@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using HelpDesk_DB.UIDesign;
+using GUI.CustomClass;
 using HelpDesk_DB.UIDesign.Forms;
 using Interfaces;
 using LogicApp;
@@ -36,27 +36,6 @@ namespace GUI.Forms
             _panelWidthSideMenu = panelSideMenu.Width;
             _hidden = false;
         }
-
-        private void buttonChangeStyleOn(Button button,Panel panel)
-        {
-            button.BackColor = Color.White;
-            button.ImageAlign = ContentAlignment.MiddleCenter;
-            button.Text = "";
-            button.Padding = new Padding(0, 0, 0, 0);
-            panel.Visible = true;
-            panel.BackColor = Color.DarkOrange;
-            panel.Size = new Size(10, 35);
-        }
-        private void buttonChangeStyleOff(Button button,string name,Panel panel)
-        {
-            //button.BackColor = Color.FromArgb(43, 43, 43);
-            button.BackColor = Color.Black;
-            button.ForeColor = Color.White;
-            button.Text = name;
-            button.ImageAlign = ContentAlignment.MiddleRight;
-            button.Padding = new Padding(40, 0, 20, 0);
-            panel.Visible = false;
-        } 
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (_hidden)
@@ -82,72 +61,176 @@ namespace GUI.Forms
         }
         #endregion
 
-        #region ADD NEW
+        #region Submenu Add New
         private void buttonAddNew_Click(object sender, EventArgs e)
         {
-            ShowSubMenu.showSubMenu(panelAddNewSubMenu);
+            CustomShowSubMenu.showSubMenu(panelAddNewSubMenu);
         }
         private void buttonAddNewComputers_Click(object sender, EventArgs e)
         {
-            ChildForm.openChildForm(new AddComputerForms(new ComputersLogic(_dataAcces, _infoMessageBox)), panelChildForm);
+            CustomChildForm.openChildForm(new AddComputerForms(new ComputersLogic(_dataAcces, _infoMessageBox)), panelChildForm);
         }
         private void buttonAddNewNotebooks_Click(object sender, EventArgs e)
         {
-            ChildForm.openChildForm(new AddNotebooksForms(new NotebooksLogic(_dataAcces, _infoMessageBox)), panelChildForm);
+            CustomChildForm.openChildForm(new AddNotebooksForms(new NotebooksLogic(_dataAcces, _infoMessageBox)), panelChildForm);
         }
         private void buttonAddNewMonitors_Click(object sender, EventArgs e)
         {
-            ChildForm.openChildForm(new AddMonitorForms(new MonitorsLogic(_dataAcces, _infoMessageBox)), panelChildForm);
+            CustomChildForm.openChildForm(new AddMonitorForms(new MonitorsLogic(_dataAcces, _infoMessageBox)), panelChildForm);
         }
         #endregion
 
-        #region REPORTS
+        #region Submenu Reports
         private void buttonReports_Click(object sender, EventArgs e)
         {
-            ShowSubMenu.showSubMenu(panelReportsSubMenu);
+            CustomShowSubMenu.showSubMenu(panelReportsSubMenu);
         }
         #endregion
 
-        #region SHOW DATA GRIND
+        #region Submenu Show Data
         private void buttonShow_Click(object sender, EventArgs e)
         {
-            ChildForm.openChildForm(new DataGrindViewForms(new ComputersLogic(_dataAcces, _infoMessageBox),new NotebooksLogic(_dataAcces, _infoMessageBox),new MonitorsLogic(_dataAcces, _infoMessageBox)), panelChildForm);
+            CustomChildForm.openChildForm(new DataGrindViewForms(new ComputersLogic(_dataAcces, _infoMessageBox),
+                                                                 new NotebooksLogic(_dataAcces, _infoMessageBox),
+                                                                 new MonitorsLogic(_dataAcces, _infoMessageBox)), panelChildForm);
         }
         #endregion
 
-        #region BUTTON
+        #region Buttons
         private void buttonLogo_Click(object sender, EventArgs e)
         {
             var about = new AboutForms();
             about.Show();
         }
-
         private void buttonAddNewComputers_MouseMove(object sender, MouseEventArgs e)
         {
-            buttonChangeStyleOn(buttonAddNewComputers, panelComputerButton);
+            CustomButtonStyle.ButtonSubMenuChangeStyleOn(buttonAddNewComputers, panelComputerButton);
         }
-
         private void buttonAddNewComputers_MouseLeave(object sender, EventArgs e)
         {
-            buttonChangeStyleOff(buttonAddNewComputers,"COMPUTERS", panelComputerButton);
+            CustomButtonStyle.ButtonSubMenuChangeStyleOff(buttonAddNewComputers,"COMPUTERS", panelComputerButton);
         }
-
         private void buttonAddNewNotebooks_MouseMove(object sender, MouseEventArgs e)
         {
-            buttonChangeStyleOn(buttonAddNewNotebooks,panelNotebooksButton);
+            CustomButtonStyle.ButtonSubMenuChangeStyleOn(buttonAddNewNotebooks,panelNotebooksButton);
         }    
         private void buttonAddNewNotebooks_MouseLeave(object sender, EventArgs e)
         {
-            buttonChangeStyleOff(buttonAddNewNotebooks, "NOTEBOOKS", panelNotebooksButton);
+            CustomButtonStyle.ButtonSubMenuChangeStyleOff(buttonAddNewNotebooks, "NOTEBOOKS", panelNotebooksButton);
         } 
-
         private void buttonAddNewMonitors_MouseMove(object sender, MouseEventArgs e)
         {
-            buttonChangeStyleOn(buttonAddNewMonitors, panelMonitorsButton);
+            CustomButtonStyle.ButtonSubMenuChangeStyleOn(buttonAddNewMonitors, panelMonitorsButton);
         }
         private void buttonAddNewMonitors_MouseLeave(object sender, EventArgs e)
         {
-            buttonChangeStyleOff(buttonAddNewMonitors, "MONITORS", panelMonitorsButton);
+            CustomButtonStyle.ButtonSubMenuChangeStyleOff(buttonAddNewMonitors, "MONITORS", panelMonitorsButton);
+        }
+        private void buttonHome_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonMenuPanelChangeStyleOff(buttonHome);
+        }
+
+        private void buttonHome_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonMenuPanelChangeStyleOn(buttonHome);
+        }
+
+        private void buttonListMenu_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonMenuPanelChangeStyleOff(buttonListMenu);
+        }
+
+        private void buttonListMenu_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonMenuPanelChangeStyleOn(buttonListMenu);
+        }
+
+        private void buttoSetings_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonMenuPanelChangeStyleOff(buttoSetings);
+        }
+
+        private void buttoSetings_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonMenuPanelChangeStyleOn(buttoSetings);
+        }
+
+        private void buttonAbout_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonMenuPanelChangeStyleOff(buttonAbout);
+        }
+
+        private void buttonAbout_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonMenuPanelChangeStyleOn(buttonAbout);
+        }
+        private void buttonAddNew_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonSubmenuListChangeStyleOff(buttonAddNew);
+        }
+
+        private void buttonAddNew_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonSubmenuListChangeStyleOn(buttonAddNew);
+        }
+
+        private void buttonReports_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonSubmenuListChangeStyleOff(buttonReports);
+        }
+
+        private void buttonReports_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonSubmenuListChangeStyleOn(buttonReports);
+        }
+
+        private void buttonShow_MouseLeave(object sender, EventArgs e)
+        {
+            CustomButtonStyle.ButtonSubmenuListChangeStyleOff(buttonShow);
+        }
+
+        private void buttonShow_MouseMove(object sender, MouseEventArgs e)
+        {
+            CustomButtonStyle.ButtonSubmenuListChangeStyleOn(buttonShow);
+        }
+        private void buttonAddNew_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttonReports_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttonShow_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttonHome_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttonListMenu_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttoSetings_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+
+        private void buttonAbout_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
+        }
+        private void buttonLogo_Paint(object sender, PaintEventArgs e)
+        {
+            CustomBorder.PaintBorderButtons(sender, e);
         }
         private void buttonListMenu_Click(object sender, EventArgs e)
         {
@@ -156,5 +239,6 @@ namespace GUI.Forms
 
         #endregion
 
+       
     }
 }

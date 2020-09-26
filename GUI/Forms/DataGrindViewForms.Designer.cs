@@ -34,7 +34,7 @@ namespace GUI.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataGrindViewForms));
             this.panelDAtaGrindView = new System.Windows.Forms.Panel();
             this.radioButtonColorOn = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelButtons = new System.Windows.Forms.Panel();
             this.buttonFullScrean = new System.Windows.Forms.Button();
             this.buttonExel = new System.Windows.Forms.Button();
             this.buttonRefresh = new System.Windows.Forms.Button();
@@ -44,17 +44,6 @@ namespace GUI.Forms
             this.tabControl_Warehouse = new System.Windows.Forms.TabControl();
             this.tabPageComputers = new System.Windows.Forms.TabPage();
             this.advancedDataGridViewComputers = new Zuby.ADGV.AdvancedDataGridView();
-            this.vwAllComputersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.helpDeskDB_TESTDataSet = new GUI.HelpDeskDB_TESTDataSet();
-            this.tabPageMonitors = new System.Windows.Forms.TabPage();
-            this.advancedDataGridViewMonitors = new Zuby.ADGV.AdvancedDataGridView();
-            this.vwAllMonitorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPageNotebooks = new System.Windows.Forms.TabPage();
-            this.advancedDataGridViewNotebooks = new Zuby.ADGV.AdvancedDataGridView();
-            this.vwAllNotebooksBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwAll_ComputersTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_ComputersTableAdapter();
-            this.vwAll_MonitorsTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_MonitorsTableAdapter();
-            this.vwAll_NotebooksTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_NotebooksTableAdapter();
             this.iDEquipmentStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +64,10 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwAllComputersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.helpDeskDB_TESTDataSet = new GUI.HelpDeskDB_TESTDataSet();
+            this.tabPageMonitors = new System.Windows.Forms.TabPage();
+            this.advancedDataGridViewMonitors = new Zuby.ADGV.AdvancedDataGridView();
             this.iDEquipmentStatusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,6 +81,9 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwAllMonitorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPageNotebooks = new System.Windows.Forms.TabPage();
+            this.advancedDataGridViewNotebooks = new Zuby.ADGV.AdvancedDataGridView();
             this.iDEquipmentStatusDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,8 +104,12 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwAllNotebooksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwAll_ComputersTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_ComputersTableAdapter();
+            this.vwAll_MonitorsTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_MonitorsTableAdapter();
+            this.vwAll_NotebooksTableAdapter = new GUI.HelpDeskDB_TESTDataSetTableAdapters.vwAll_NotebooksTableAdapter();
             this.panelDAtaGrindView.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelButtons.SuspendLayout();
             this.tabControl_Warehouse.SuspendLayout();
             this.tabPageComputers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridViewComputers)).BeginInit();
@@ -127,7 +127,7 @@ namespace GUI.Forms
             // 
             this.panelDAtaGrindView.BackColor = System.Drawing.Color.Black;
             this.panelDAtaGrindView.Controls.Add(this.radioButtonColorOn);
-            this.panelDAtaGrindView.Controls.Add(this.panel1);
+            this.panelDAtaGrindView.Controls.Add(this.panelButtons);
             this.panelDAtaGrindView.Controls.Add(this.tabControl_Warehouse);
             this.panelDAtaGrindView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDAtaGrindView.Location = new System.Drawing.Point(0, 0);
@@ -152,25 +152,25 @@ namespace GUI.Forms
             this.radioButtonColorOn.UseVisualStyleBackColor = true;
             this.radioButtonColorOn.CheckedChanged += new System.EventHandler(this.radioButtonColorOn_CheckedChanged);
             // 
-            // panel1
+            // panelButtons
             // 
-            this.panel1.Controls.Add(this.buttonFullScrean);
-            this.panel1.Controls.Add(this.buttonExel);
-            this.panel1.Controls.Add(this.buttonRefresh);
-            this.panel1.Controls.Add(this.buttonDelete);
-            this.panel1.Controls.Add(this.buttonEdit);
-            this.panel1.Controls.Add(this.buttonCloseDataGrind);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(739, 50);
-            this.panel1.TabIndex = 1;
+            this.panelButtons.Controls.Add(this.buttonFullScrean);
+            this.panelButtons.Controls.Add(this.buttonExel);
+            this.panelButtons.Controls.Add(this.buttonRefresh);
+            this.panelButtons.Controls.Add(this.buttonDelete);
+            this.panelButtons.Controls.Add(this.buttonEdit);
+            this.panelButtons.Controls.Add(this.buttonCloseDataGrind);
+            this.panelButtons.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelButtons.Location = new System.Drawing.Point(0, 0);
+            this.panelButtons.Name = "panelButtons";
+            this.panelButtons.Size = new System.Drawing.Size(739, 50);
+            this.panelButtons.TabIndex = 1;
             // 
             // buttonFullScrean
             // 
             this.buttonFullScrean.BackColor = System.Drawing.Color.Black;
             this.buttonFullScrean.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonFullScrean.FlatAppearance.BorderSize = 2;
+            this.buttonFullScrean.FlatAppearance.BorderSize = 0;
             this.buttonFullScrean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFullScrean.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
             this.buttonFullScrean.ForeColor = System.Drawing.Color.White;
@@ -186,12 +186,15 @@ namespace GUI.Forms
             this.buttonFullScrean.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonFullScrean.UseVisualStyleBackColor = false;
             this.buttonFullScrean.Click += new System.EventHandler(this.buttonFullScrean_Click);
+            this.buttonFullScrean.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonFullScrean_Paint);
+            this.buttonFullScrean.MouseLeave += new System.EventHandler(this.buttonFullScrean_MouseLeave);
+            this.buttonFullScrean.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonFullScrean_MouseMove);
             // 
             // buttonExel
             // 
             this.buttonExel.BackColor = System.Drawing.Color.Black;
             this.buttonExel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonExel.FlatAppearance.BorderSize = 2;
+            this.buttonExel.FlatAppearance.BorderSize = 0;
             this.buttonExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
             this.buttonExel.ForeColor = System.Drawing.Color.White;
@@ -207,12 +210,15 @@ namespace GUI.Forms
             this.buttonExel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExel.UseVisualStyleBackColor = false;
             this.buttonExel.Click += new System.EventHandler(this.buttonExel_Click);
+            this.buttonExel.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonExel_Paint);
+            this.buttonExel.MouseLeave += new System.EventHandler(this.buttonExel_MouseLeave);
+            this.buttonExel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonExel_MouseMove);
             // 
             // buttonRefresh
             // 
             this.buttonRefresh.BackColor = System.Drawing.Color.Black;
             this.buttonRefresh.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonRefresh.FlatAppearance.BorderSize = 2;
+            this.buttonRefresh.FlatAppearance.BorderSize = 0;
             this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRefresh.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
             this.buttonRefresh.ForeColor = System.Drawing.Color.White;
@@ -228,12 +234,15 @@ namespace GUI.Forms
             this.buttonRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            this.buttonRefresh.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonRefresh_Paint);
+            this.buttonRefresh.MouseLeave += new System.EventHandler(this.buttonRefresh_MouseLeave);
+            this.buttonRefresh.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonRefresh_MouseMove);
             // 
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.Black;
             this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonDelete.FlatAppearance.BorderSize = 2;
+            this.buttonDelete.FlatAppearance.BorderSize = 0;
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDelete.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
             this.buttonDelete.ForeColor = System.Drawing.Color.White;
@@ -247,12 +256,15 @@ namespace GUI.Forms
             this.buttonDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            this.buttonDelete.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonDelete_Paint);
+            this.buttonDelete.MouseLeave += new System.EventHandler(this.buttonDelete_MouseLeave);
+            this.buttonDelete.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonDelete_MouseMove);
             // 
             // buttonEdit
             // 
             this.buttonEdit.BackColor = System.Drawing.Color.Black;
             this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonEdit.FlatAppearance.BorderSize = 2;
+            this.buttonEdit.FlatAppearance.BorderSize = 0;
             this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEdit.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
@@ -268,12 +280,15 @@ namespace GUI.Forms
             this.buttonEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.buttonEdit.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonEdit_Paint);
+            this.buttonEdit.MouseLeave += new System.EventHandler(this.buttonEdit_MouseLeave);
+            this.buttonEdit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonEdit_MouseMove);
             // 
             // buttonCloseDataGrind
             // 
             this.buttonCloseDataGrind.BackColor = System.Drawing.Color.Black;
             this.buttonCloseDataGrind.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonCloseDataGrind.FlatAppearance.BorderSize = 2;
+            this.buttonCloseDataGrind.FlatAppearance.BorderSize = 0;
             this.buttonCloseDataGrind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCloseDataGrind.Font = new System.Drawing.Font("Algerian", 36F);
             this.buttonCloseDataGrind.ForeColor = System.Drawing.Color.White;
@@ -284,6 +299,9 @@ namespace GUI.Forms
             this.buttonCloseDataGrind.TabIndex = 29;
             this.buttonCloseDataGrind.UseVisualStyleBackColor = false;
             this.buttonCloseDataGrind.Click += new System.EventHandler(this.buttonCloseDataGrind_Click);
+            this.buttonCloseDataGrind.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonCloseDataGrind_Paint);
+            this.buttonCloseDataGrind.MouseLeave += new System.EventHandler(this.buttonCloseDataGrind_MouseLeave);
+            this.buttonCloseDataGrind.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonCloseDataGrind_MouseMove);
             // 
             // tabControl_Warehouse
             // 
@@ -351,131 +369,6 @@ namespace GUI.Forms
             this.advancedDataGridViewComputers.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewComputers_SortStringChanged);
             this.advancedDataGridViewComputers.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewComputers_FilterStringChanged);
             this.advancedDataGridViewComputers.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.advancedDataGridViewComputers_RowPrePaint);
-            // 
-            // vwAllComputersBindingSource
-            // 
-            this.vwAllComputersBindingSource.DataMember = "vwAll_Computers";
-            this.vwAllComputersBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
-            // 
-            // helpDeskDB_TESTDataSet
-            // 
-            this.helpDeskDB_TESTDataSet.DataSetName = "HelpDeskDB_TESTDataSet";
-            this.helpDeskDB_TESTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tabPageMonitors
-            // 
-            this.tabPageMonitors.Controls.Add(this.advancedDataGridViewMonitors);
-            this.tabPageMonitors.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMonitors.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPageMonitors.Name = "tabPageMonitors";
-            this.tabPageMonitors.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageMonitors.Size = new System.Drawing.Size(731, 463);
-            this.tabPageMonitors.TabIndex = 1;
-            this.tabPageMonitors.Text = "Monitors";
-            this.tabPageMonitors.UseVisualStyleBackColor = true;
-            // 
-            // advancedDataGridViewMonitors
-            // 
-            this.advancedDataGridViewMonitors.AllowUserToOrderColumns = true;
-            this.advancedDataGridViewMonitors.AutoGenerateColumns = false;
-            this.advancedDataGridViewMonitors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridViewMonitors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDEquipmentStatusDataGridViewTextBoxColumn1,
-            this.statusDataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn29});
-            this.advancedDataGridViewMonitors.DataSource = this.vwAllMonitorsBindingSource;
-            this.advancedDataGridViewMonitors.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedDataGridViewMonitors.FilterAndSortEnabled = true;
-            this.advancedDataGridViewMonitors.Location = new System.Drawing.Point(4, 4);
-            this.advancedDataGridViewMonitors.Name = "advancedDataGridViewMonitors";
-            this.advancedDataGridViewMonitors.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.advancedDataGridViewMonitors.Size = new System.Drawing.Size(723, 455);
-            this.advancedDataGridViewMonitors.TabIndex = 0;
-            this.advancedDataGridViewMonitors.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewMonitors_SortStringChanged);
-            this.advancedDataGridViewMonitors.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewMonitors_FilterStringChanged);
-            this.advancedDataGridViewMonitors.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.advancedDataGridViewMonitors_RowPrePaint);
-            // 
-            // vwAllMonitorsBindingSource
-            // 
-            this.vwAllMonitorsBindingSource.DataMember = "vwAll_Monitors";
-            this.vwAllMonitorsBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
-            // 
-            // tabPageNotebooks
-            // 
-            this.tabPageNotebooks.Controls.Add(this.advancedDataGridViewNotebooks);
-            this.tabPageNotebooks.Location = new System.Drawing.Point(4, 22);
-            this.tabPageNotebooks.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPageNotebooks.Name = "tabPageNotebooks";
-            this.tabPageNotebooks.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageNotebooks.Size = new System.Drawing.Size(731, 463);
-            this.tabPageNotebooks.TabIndex = 2;
-            this.tabPageNotebooks.Text = "Notebooks";
-            this.tabPageNotebooks.UseVisualStyleBackColor = true;
-            // 
-            // advancedDataGridViewNotebooks
-            // 
-            this.advancedDataGridViewNotebooks.AllowUserToOrderColumns = true;
-            this.advancedDataGridViewNotebooks.AutoGenerateColumns = false;
-            this.advancedDataGridViewNotebooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.advancedDataGridViewNotebooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDEquipmentStatusDataGridViewTextBoxColumn2,
-            this.statusDataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn30,
-            this.dataGridViewTextBoxColumn31,
-            this.dataGridViewTextBoxColumn32,
-            this.dataGridViewTextBoxColumn33,
-            this.dataGridViewTextBoxColumn35,
-            this.dataGridViewTextBoxColumn34,
-            this.dataGridViewTextBoxColumn36,
-            this.dataGridViewTextBoxColumn37,
-            this.dataGridViewTextBoxColumn38,
-            this.dataGridViewTextBoxColumn39,
-            this.dataGridViewTextBoxColumn40,
-            this.dataGridViewTextBoxColumn41,
-            this.dataGridViewTextBoxColumn42,
-            this.dataGridViewTextBoxColumn43,
-            this.dataGridViewTextBoxColumn44,
-            this.dataGridViewTextBoxColumn45,
-            this.dataGridViewTextBoxColumn46,
-            this.dataGridViewTextBoxColumn47});
-            this.advancedDataGridViewNotebooks.DataSource = this.vwAllNotebooksBindingSource;
-            this.advancedDataGridViewNotebooks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedDataGridViewNotebooks.FilterAndSortEnabled = true;
-            this.advancedDataGridViewNotebooks.Location = new System.Drawing.Point(4, 4);
-            this.advancedDataGridViewNotebooks.Name = "advancedDataGridViewNotebooks";
-            this.advancedDataGridViewNotebooks.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.advancedDataGridViewNotebooks.Size = new System.Drawing.Size(723, 455);
-            this.advancedDataGridViewNotebooks.TabIndex = 0;
-            this.advancedDataGridViewNotebooks.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewNotebooks_SortStringChanged);
-            this.advancedDataGridViewNotebooks.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewNotebooks_FilterStringChanged);
-            this.advancedDataGridViewNotebooks.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.advancedDataGridViewNotebooks_RowPrePaint);
-            // 
-            // vwAllNotebooksBindingSource
-            // 
-            this.vwAllNotebooksBindingSource.DataMember = "vwAll_Notebooks";
-            this.vwAllNotebooksBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
-            // 
-            // vwAll_ComputersTableAdapter
-            // 
-            this.vwAll_ComputersTableAdapter.ClearBeforeFill = true;
-            // 
-            // vwAll_MonitorsTableAdapter
-            // 
-            this.vwAll_MonitorsTableAdapter.ClearBeforeFill = true;
-            // 
-            // vwAll_NotebooksTableAdapter
-            // 
-            this.vwAll_NotebooksTableAdapter.ClearBeforeFill = true;
             // 
             // iDEquipmentStatusDataGridViewTextBoxColumn
             // 
@@ -637,6 +530,59 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // vwAllComputersBindingSource
+            // 
+            this.vwAllComputersBindingSource.DataMember = "vwAll_Computers";
+            this.vwAllComputersBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
+            // 
+            // helpDeskDB_TESTDataSet
+            // 
+            this.helpDeskDB_TESTDataSet.DataSetName = "HelpDeskDB_TESTDataSet";
+            this.helpDeskDB_TESTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPageMonitors
+            // 
+            this.tabPageMonitors.Controls.Add(this.advancedDataGridViewMonitors);
+            this.tabPageMonitors.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMonitors.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPageMonitors.Name = "tabPageMonitors";
+            this.tabPageMonitors.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPageMonitors.Size = new System.Drawing.Size(731, 463);
+            this.tabPageMonitors.TabIndex = 1;
+            this.tabPageMonitors.Text = "Monitors";
+            this.tabPageMonitors.UseVisualStyleBackColor = true;
+            // 
+            // advancedDataGridViewMonitors
+            // 
+            this.advancedDataGridViewMonitors.AllowUserToOrderColumns = true;
+            this.advancedDataGridViewMonitors.AutoGenerateColumns = false;
+            this.advancedDataGridViewMonitors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridViewMonitors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDEquipmentStatusDataGridViewTextBoxColumn1,
+            this.statusDataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29});
+            this.advancedDataGridViewMonitors.DataSource = this.vwAllMonitorsBindingSource;
+            this.advancedDataGridViewMonitors.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advancedDataGridViewMonitors.FilterAndSortEnabled = true;
+            this.advancedDataGridViewMonitors.Location = new System.Drawing.Point(4, 4);
+            this.advancedDataGridViewMonitors.Name = "advancedDataGridViewMonitors";
+            this.advancedDataGridViewMonitors.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridViewMonitors.Size = new System.Drawing.Size(723, 455);
+            this.advancedDataGridViewMonitors.TabIndex = 0;
+            this.advancedDataGridViewMonitors.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewMonitors_SortStringChanged);
+            this.advancedDataGridViewMonitors.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewMonitors_FilterStringChanged);
+            this.advancedDataGridViewMonitors.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.advancedDataGridViewMonitors_RowPrePaint);
+            // 
             // iDEquipmentStatusDataGridViewTextBoxColumn1
             // 
             this.iDEquipmentStatusDataGridViewTextBoxColumn1.DataPropertyName = "IDEquipmentStatus";
@@ -740,6 +686,61 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn29.MinimumWidth = 22;
             this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
             this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // vwAllMonitorsBindingSource
+            // 
+            this.vwAllMonitorsBindingSource.DataMember = "vwAll_Monitors";
+            this.vwAllMonitorsBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
+            // 
+            // tabPageNotebooks
+            // 
+            this.tabPageNotebooks.Controls.Add(this.advancedDataGridViewNotebooks);
+            this.tabPageNotebooks.Location = new System.Drawing.Point(4, 22);
+            this.tabPageNotebooks.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPageNotebooks.Name = "tabPageNotebooks";
+            this.tabPageNotebooks.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPageNotebooks.Size = new System.Drawing.Size(731, 463);
+            this.tabPageNotebooks.TabIndex = 2;
+            this.tabPageNotebooks.Text = "Notebooks";
+            this.tabPageNotebooks.UseVisualStyleBackColor = true;
+            // 
+            // advancedDataGridViewNotebooks
+            // 
+            this.advancedDataGridViewNotebooks.AllowUserToOrderColumns = true;
+            this.advancedDataGridViewNotebooks.AutoGenerateColumns = false;
+            this.advancedDataGridViewNotebooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.advancedDataGridViewNotebooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDEquipmentStatusDataGridViewTextBoxColumn2,
+            this.statusDataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43,
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn47});
+            this.advancedDataGridViewNotebooks.DataSource = this.vwAllNotebooksBindingSource;
+            this.advancedDataGridViewNotebooks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advancedDataGridViewNotebooks.FilterAndSortEnabled = true;
+            this.advancedDataGridViewNotebooks.Location = new System.Drawing.Point(4, 4);
+            this.advancedDataGridViewNotebooks.Name = "advancedDataGridViewNotebooks";
+            this.advancedDataGridViewNotebooks.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.advancedDataGridViewNotebooks.Size = new System.Drawing.Size(723, 455);
+            this.advancedDataGridViewNotebooks.TabIndex = 0;
+            this.advancedDataGridViewNotebooks.SortStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.SortEventArgs>(this.advancedDataGridViewNotebooks_SortStringChanged);
+            this.advancedDataGridViewNotebooks.FilterStringChanged += new System.EventHandler<Zuby.ADGV.AdvancedDataGridView.FilterEventArgs>(this.advancedDataGridViewNotebooks_FilterStringChanged);
+            this.advancedDataGridViewNotebooks.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.advancedDataGridViewNotebooks_RowPrePaint);
             // 
             // iDEquipmentStatusDataGridViewTextBoxColumn2
             // 
@@ -901,6 +902,23 @@ namespace GUI.Forms
             this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
             this.dataGridViewTextBoxColumn47.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // vwAllNotebooksBindingSource
+            // 
+            this.vwAllNotebooksBindingSource.DataMember = "vwAll_Notebooks";
+            this.vwAllNotebooksBindingSource.DataSource = this.helpDeskDB_TESTDataSet;
+            // 
+            // vwAll_ComputersTableAdapter
+            // 
+            this.vwAll_ComputersTableAdapter.ClearBeforeFill = true;
+            // 
+            // vwAll_MonitorsTableAdapter
+            // 
+            this.vwAll_MonitorsTableAdapter.ClearBeforeFill = true;
+            // 
+            // vwAll_NotebooksTableAdapter
+            // 
+            this.vwAll_NotebooksTableAdapter.ClearBeforeFill = true;
+            // 
             // DataGrindViewForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -914,7 +932,7 @@ namespace GUI.Forms
             this.Load += new System.EventHandler(this.DataGrindViewForms_Load);
             this.panelDAtaGrindView.ResumeLayout(false);
             this.panelDAtaGrindView.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.panelButtons.ResumeLayout(false);
             this.tabControl_Warehouse.ResumeLayout(false);
             this.tabPageComputers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.advancedDataGridViewComputers)).EndInit();
@@ -946,7 +964,7 @@ namespace GUI.Forms
         private Zuby.ADGV.AdvancedDataGridView advancedDataGridViewMonitors;
         private Zuby.ADGV.AdvancedDataGridView advancedDataGridViewNotebooks;
        
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Button buttonExel;
         private System.Windows.Forms.Button buttonFullScrean;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;

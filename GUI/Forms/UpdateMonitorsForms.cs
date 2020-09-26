@@ -5,6 +5,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using GUI.CustomClass;
 using Interfaces;
 using Zuby.ADGV;
 
@@ -19,40 +20,33 @@ namespace GUI.Forms
             this._monitorsLogic = monitorsLogic;
             InitializeComponent();
             UploadData();
+
             groupBoxAddNewUser.Visible = false;
             buttonUpdateDataMonitor.Enabled = false;
 
-            linkLabelEquState.Visible = false;
-            linkLabelEquState.Visible = false;
-            linkLabelAddNewLocation.Visible = false;
-            linkLabelAddNewModel.Visible = false;
-            linkLabelAddNewUser.Visible = false;
+            VisibleLabelLink(false);
         }
 
+        #region Upload
         private void UploadData()
         {
             comboBoxLocationMonitors.DataSource = _monitorsLogic.FillComboBoxLocation().ToList();
-            comboBoxLocationMonitors.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxLocationMonitors.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxLocationMonitors);
 
             comboBoxModelMonitors.DataSource = _monitorsLogic.FillComboBoxModelMonitors().ToList();
-            comboBoxModelMonitors.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxModelMonitors.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxModelMonitors);
 
             comboBoxUsers.DataSource = _monitorsLogic.FillComboBoxUsers().ToList();
-            comboBoxUsers.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxUsers.AutoCompleteSource = AutoCompleteSource.ListItems;
+            AutoSugestComplet(comboBoxUsers);
 
             comboBoxEquState.DataSource = _monitorsLogic.FillComboBoxEquipmentStatus().ToList();
-            comboBoxEquState.AutoCompleteMode = AutoCompleteMode.Suggest;
-            comboBoxEquState.AutoCompleteSource = AutoCompleteSource.ListItems;
-
+            AutoSugestComplet(comboBoxEquState);
         }
+        #endregion
 
-        #region COMBOBOX DATA
+        #region ComboBox Data from DataGrindView
         public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
-
             var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             try
             {
@@ -90,30 +84,20 @@ namespace GUI.Forms
         }
         #endregion
 
-        #region BUTTON
+        #region Update
         private void buttonUpdateDataMonitor_Click(object sender, EventArgs e)
         {
-            MemoryStream ms = new MemoryStream();
+            var bitmapDataBarcode = CustomConvertToBinary.ImgToBinary(pictureBoxBarcode);
+            var bitmapDataQRCode = CustomConvertToBinary.ImgToBinary(pictureBoxQRCode);
 
-            pictureBoxBarcode.Image.Save(ms, ImageFormat.Png);
-            var bitmapDataBarcode = ms.ToArray();
-
-            pictureBoxQRCode.Image.Save(ms, ImageFormat.Png);
-            var bitmapDataQRCode = ms.ToArray();
-
-            _monitorsLogic.Update(Convert.ToInt32(textBoxIDMonitor.Text), textBoxCompanyFixedAssetMonitors.Text,textBoxTagServiceMonitors.Text,
-                comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text,richTextBoxComentsMonitors.Text, dateTimePickerWarrantyDateMonitors.Value.Date,
+            _monitorsLogic.Update(Convert.ToInt32(textBoxIDMonitor.Text), textBoxCompanyFixedAssetMonitors.Text, 
+                textBoxTagServiceMonitors.Text,comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text, 
+                richTextBoxComentsMonitors.Text, dateTimePickerWarrantyDateMonitors.Value.Date,
                 dateTimePickerPurchaseDateMonitors.Value.Date, bitmapDataBarcode, bitmapDataQRCode, comboBoxEquState.Text);
         }
-        private void buttonAddNewUsers_Click(object sender, EventArgs e)
-        {
-            groupBoxAddNewUser.Visible = true;
-        }
+        #endregion
 
-        private void labelClose_Click(object sender, EventArgs e)
-        {
-            groupBoxAddNewUser.Visible = false;
-        }
+        #region Create Code
         private void buttonCreateQR_Click(object sender, EventArgs e)
         {
             labelDateTimeCode.Text = DateTime.Now.ToString();
@@ -121,75 +105,48 @@ namespace GUI.Forms
             labelModelCode.Text = comboBoxModelMonitors.Text;
             labelTahServiceCode.Text = textBoxTagServiceMonitors.Text;
 
-            Zen.Barcode.CodeQrBarcodeDraw qrBarcodeDraw = Zen.Barcode.BarcodeDrawFactory.CodeQr;
-            pictureBoxQRCode.Image = qrBarcodeDraw.Draw(textBoxCompanyFixedAssetMonitors.Text
-                                                        + " " +
-                                                        textBoxTagServiceMonitors.Text
-                                                        + " " +
-                                                        comboBoxModelMonitors.Text, pictureBoxQRCode.Width);
+            CustomCreateCode.CreateQRCode(pictureBoxQRCode, textBoxCompanyFixedAssetMonitors, textBoxTagServiceMonitors, comboBoxModelMonitors);
 
-            Zen.Barcode.Code128BarcodeDraw barcodeDraw = Zen.Barcode.BarcodeDrawFactory.Code128WithChecksum;
-            pictureBoxBarcode.Image = barcodeDraw.Draw(textBoxCompanyFixedAssetMonitors.Text, pictureBoxBarcode.Height);
+            CustomCreateCode.CreateBarcodeCode(pictureBoxBarcode, textBoxCompanyFixedAssetMonitors);
 
             buttonUpdateDataMonitor.Enabled = false;
         }
+        #endregion
 
+        #region Buttons
+
+        private void buttonAddNewUsers_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = true;
+        }
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            groupBoxAddNewUser.Visible = false;
+        }
         private void pictureBoxQRCode_Paint(object sender, PaintEventArgs e)
         {
-            PictureBox panel = (PictureBox)sender;
-            float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width);
-            pen.DashStyle = DashStyle.DashDotDot;
-            e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
-            e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
-            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
-            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, panel.Width - 1, 0);
+            CustomBorder.PaintBorderPictureBox(sender, e);
         }
-
         private void pictureBoxBarcode_Paint(object sender, PaintEventArgs e)
         {
-            PictureBox panel = (PictureBox)sender;
-            float width = (float)4.0;
-            Pen pen = new Pen(Color.DarkRed, width);
-            pen.DashStyle = DashStyle.DashDotDot;
-            e.Graphics.DrawLine(pen, 0, 0, 0, panel.Height - 0);
-            e.Graphics.DrawLine(pen, 0, 0, panel.Width - 0, 0);
-            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, 0, panel.Height - 1);
-            e.Graphics.DrawLine(pen, panel.Width - 1, panel.Height - 1, panel.Width - 1, 0);
+            CustomBorder.PaintBorderPictureBox(sender, e);
         }
         private void buttonSaveAsJPG_Click(object sender, EventArgs e)
         {
-            SaveFileDialog f = new SaveFileDialog();
-
-            f.Filter = "JPG(*.JPG)|*.jpg";
-
-            if (f.ShowDialog() == DialogResult.OK)
-            {
-                Bitmap bmp = new Bitmap(paneLabelCode.Width + 50, paneLabelCode.Height + paneLabelCode.Height / 2);
-                paneLabelCode.DrawToBitmap(bmp, paneLabelCode.Bounds);
-                bmp.Save(f.FileName);
-            }
+            CustomSaveFileDialog.SaveFile(paneLabelCode);
         }
         private void radioButtonLabelLinkON_CheckedChanged(object sender, EventArgs e)
         {
-            linkLabelEquState.Visible = true;
-            linkLabelEquState.Visible = true;
-            linkLabelAddNewLocation.Visible = true;
-            linkLabelAddNewModel.Visible = true;
-            linkLabelAddNewUser.Visible = true;
+            VisibleLabelLink(true);
         }
 
         private void radioButtonLabelLinkOFF_CheckedChanged(object sender, EventArgs e)
         {
-            linkLabelEquState.Visible = false;
-            linkLabelEquState.Visible = false;
-            linkLabelAddNewLocation.Visible = false;
-            linkLabelAddNewModel.Visible = false;
-            linkLabelAddNewUser.Visible = false;
+            VisibleLabelLink(false);
         }
         #endregion
 
-        #region LABEL LINK ADD NEW --VALUES
+        #region Label link add new values
         private void linkLabelAddNewModel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             _monitorsLogic.InsertComboBoxModelMonitor(comboBoxModelMonitors.Text);
@@ -201,7 +158,6 @@ namespace GUI.Forms
             _monitorsLogic.InsertComboBoxLocation(comboBoxLocationMonitors.Text);
             UploadData();
         }
-
         private void linkLabelAddNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             _monitorsLogic.InsertComboBoxUser(textBoxFirstName.Text, textBoxLastName.Text, textBoxJob.Text);
@@ -213,10 +169,22 @@ namespace GUI.Forms
             _monitorsLogic.InsertComboEquipmentStatus(comboBoxEquState.Text);  // if != null
             UploadData();
         }
-
-
         #endregion
 
-       
+        #region HelperMethod
+        private void VisibleLabelLink(bool visible)
+        {
+            linkLabelEquState.Visible = visible;
+            linkLabelEquState.Visible = visible;
+            linkLabelAddNewLocation.Visible = visible;
+            linkLabelAddNewModel.Visible = visible;
+            linkLabelAddNewUser.Visible = visible;
+        }
+        private void AutoSugestComplet(ComboBox comboBox)
+        {
+            comboBox.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
+        }
+        #endregion
     }
 }

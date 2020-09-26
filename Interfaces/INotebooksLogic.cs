@@ -26,7 +26,6 @@ namespace Interfaces
         void InsertComboBoxCPU(string _value);
         void InsertComboBoxUser(string _firstName, string _lastName, string _job);
         void InsertComboEquipmentStatus(string _value);
-
         void DeleteNotebooks(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView);
         void ExportExelNotebooks(AdvancedDataGridView advancedDataGridView);
         void ChangeStateColorNotebooks(AdvancedDataGridView advancedDataGridView);

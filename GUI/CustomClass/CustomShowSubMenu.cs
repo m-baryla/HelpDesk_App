@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
 
-namespace HelpDesk_DB.UIDesign
+namespace GUI.CustomClass
 {
-    public static class ShowSubMenu
+    public static class CustomShowSubMenu
     {
         public static void showSubMenu(Panel submenuPanel)
         {
