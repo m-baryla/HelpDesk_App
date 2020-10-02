@@ -63,12 +63,11 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBoxCompanyFixedAssetMonitors = new System.Windows.Forms.MaskedTextBox();
             this.richTextBoxComentsMonitors = new System.Windows.Forms.RichTextBox();
-            this.buttonInsertDataMonitors = new System.Windows.Forms.Button();
             this.panelAddNewMonitors = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButtonLabelLinkOFF = new System.Windows.Forms.RadioButton();
             this.radioButtonLabelLinkON = new System.Windows.Forms.RadioButton();
-            this.buttonCloseMonitor = new System.Windows.Forms.Button();
+            this.buttonCloseMonitor = new GUI.CustomControls.BitmapButton();
+            this.buttonInsertDataMonitors = new GUI.CustomControls.BitmapButton();
+            this.radioButtonLabelLinkOFF = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageComentsMonitor = new System.Windows.Forms.TabPage();
             this.labelComentsMonitor = new System.Windows.Forms.Label();
@@ -87,9 +86,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBoxBarcode = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.buttonSaveAsJPG = new System.Windows.Forms.Button();
-            this.buttonCreateQR = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bitmapButton1 = new GUI.CustomControls.BitmapButton();
+            this.buttonCreateQR = new GUI.CustomControls.BitmapButton();
+            this.buttonSaveAsJPG = new GUI.CustomControls.BitmapButton();
             this.tabPageInserForm.SuspendLayout();
             this.groupBoxAddNewUser.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -107,7 +106,6 @@
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panelAddNewMonitors.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageComentsMonitor.SuspendLayout();
             this.tabPageBarcodeMonitor.SuspendLayout();
@@ -130,7 +128,7 @@
             // 
             // tabPageInserForm
             // 
-            this.tabPageInserForm.BackColor = System.Drawing.Color.Black;
+            this.tabPageInserForm.BackColor = System.Drawing.Color.LightSlateGray;
             this.tabPageInserForm.Controls.Add(this.groupBoxAddNewUser);
             this.tabPageInserForm.Controls.Add(this.groupBox4);
             this.tabPageInserForm.Controls.Add(this.groupBox2);
@@ -138,24 +136,25 @@
             this.tabPageInserForm.Location = new System.Drawing.Point(4, 25);
             this.tabPageInserForm.Name = "tabPageInserForm";
             this.tabPageInserForm.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInserForm.Size = new System.Drawing.Size(731, 429);
+            this.tabPageInserForm.Size = new System.Drawing.Size(860, 429);
             this.tabPageInserForm.TabIndex = 0;
             this.tabPageInserForm.Text = "Insert Form";
+            this.tabPageInserForm.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageInserForm_Paint);
             // 
             // groupBoxAddNewUser
             // 
             this.groupBoxAddNewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBoxAddNewUser.BackColor = System.Drawing.Color.Black;
+            this.groupBoxAddNewUser.BackColor = System.Drawing.Color.Transparent;
             this.groupBoxAddNewUser.Controls.Add(this.labelClose);
             this.groupBoxAddNewUser.Controls.Add(this.groupBox11);
             this.groupBoxAddNewUser.Controls.Add(this.linkLabelAddNewUser);
             this.groupBoxAddNewUser.Controls.Add(this.groupBox10);
             this.groupBoxAddNewUser.Controls.Add(this.groupBox9);
             this.groupBoxAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBoxAddNewUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.groupBoxAddNewUser.Location = new System.Drawing.Point(385, 247);
+            this.groupBoxAddNewUser.ForeColor = System.Drawing.Color.White;
+            this.groupBoxAddNewUser.Location = new System.Drawing.Point(450, 247);
             this.groupBoxAddNewUser.Name = "groupBoxAddNewUser";
-            this.groupBoxAddNewUser.Size = new System.Drawing.Size(343, 175);
+            this.groupBoxAddNewUser.Size = new System.Drawing.Size(402, 175);
             this.groupBoxAddNewUser.TabIndex = 30;
             this.groupBoxAddNewUser.TabStop = false;
             this.groupBoxAddNewUser.Text = "Add New User";
@@ -165,7 +164,7 @@
             this.labelClose.AutoSize = true;
             this.labelClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelClose.ForeColor = System.Drawing.Color.White;
-            this.labelClose.Location = new System.Drawing.Point(324, 9);
+            this.labelClose.Location = new System.Drawing.Point(381, 9);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(15, 16);
             this.labelClose.TabIndex = 33;
@@ -175,11 +174,11 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.BackColor = System.Drawing.Color.Black;
+            this.groupBox11.BackColor = System.Drawing.Color.Transparent;
             this.groupBox11.Controls.Add(this.textBoxJob);
             this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox11.ForeColor = System.Drawing.Color.White;
-            this.groupBox11.Location = new System.Drawing.Point(8, 93);
+            this.groupBox11.Location = new System.Drawing.Point(37, 93);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(160, 50);
             this.groupBox11.TabIndex = 32;
@@ -198,8 +197,8 @@
             this.linkLabelAddNewUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelAddNewUser.AutoSize = true;
             this.linkLabelAddNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.linkLabelAddNewUser.LinkColor = System.Drawing.Color.Red;
-            this.linkLabelAddNewUser.Location = new System.Drawing.Point(215, 115);
+            this.linkLabelAddNewUser.LinkColor = System.Drawing.SystemColors.ScrollBar;
+            this.linkLabelAddNewUser.Location = new System.Drawing.Point(274, 115);
             this.linkLabelAddNewUser.Name = "linkLabelAddNewUser";
             this.linkLabelAddNewUser.Size = new System.Drawing.Size(76, 13);
             this.linkLabelAddNewUser.TabIndex = 31;
@@ -209,11 +208,11 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.BackColor = System.Drawing.Color.Black;
+            this.groupBox10.BackColor = System.Drawing.Color.Transparent;
             this.groupBox10.Controls.Add(this.textBoxLastName);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox10.ForeColor = System.Drawing.Color.White;
-            this.groupBox10.Location = new System.Drawing.Point(177, 29);
+            this.groupBox10.Location = new System.Drawing.Point(206, 29);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(160, 50);
             this.groupBox10.TabIndex = 31;
@@ -229,11 +228,11 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.BackColor = System.Drawing.Color.Black;
+            this.groupBox9.BackColor = System.Drawing.Color.Transparent;
             this.groupBox9.Controls.Add(this.textBoxFirstName);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox9.Location = new System.Drawing.Point(8, 29);
+            this.groupBox9.Location = new System.Drawing.Point(37, 29);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(160, 50);
             this.groupBox9.TabIndex = 30;
@@ -250,12 +249,12 @@
             // groupBox4
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox4.BackColor = System.Drawing.Color.Black;
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.buttonAddNewUsers);
             this.groupBox4.Controls.Add(this.groupBox12);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.groupBox4.Location = new System.Drawing.Point(197, 247);
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(262, 247);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(182, 175);
             this.groupBox4.TabIndex = 34;
@@ -278,7 +277,7 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.BackColor = System.Drawing.Color.Black;
+            this.groupBox12.BackColor = System.Drawing.Color.Transparent;
             this.groupBox12.Controls.Add(this.comboBoxUsers);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox12.ForeColor = System.Drawing.Color.White;
@@ -301,25 +300,25 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.BackColor = System.Drawing.Color.Black;
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.groupBox14);
             this.groupBox2.Controls.Add(this.groupBox13);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.groupBox2.Location = new System.Drawing.Point(6, 247);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(10, 247);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(185, 175);
+            this.groupBox2.Size = new System.Drawing.Size(246, 175);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Date";
             // 
             // groupBox14
             // 
-            this.groupBox14.BackColor = System.Drawing.Color.Black;
+            this.groupBox14.BackColor = System.Drawing.Color.Transparent;
             this.groupBox14.Controls.Add(this.dateTimePickerPurchaseDateMonitors);
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox14.ForeColor = System.Drawing.Color.White;
-            this.groupBox14.Location = new System.Drawing.Point(12, 102);
+            this.groupBox14.Location = new System.Drawing.Point(41, 102);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(160, 50);
             this.groupBox14.TabIndex = 31;
@@ -337,11 +336,11 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.BackColor = System.Drawing.Color.Black;
+            this.groupBox13.BackColor = System.Drawing.Color.Transparent;
             this.groupBox13.Controls.Add(this.dateTimePickerWarrantyDateMonitors);
             this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox13.ForeColor = System.Drawing.Color.White;
-            this.groupBox13.Location = new System.Drawing.Point(12, 28);
+            this.groupBox13.Location = new System.Drawing.Point(41, 28);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(160, 50);
             this.groupBox13.TabIndex = 30;
@@ -360,17 +359,17 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.BackColor = System.Drawing.Color.Black;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.groupBoxEquState);
             this.groupBox1.Controls.Add(this.groupBox8);
             this.groupBox1.Controls.Add(this.groupBox7);
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.groupBox1.Location = new System.Drawing.Point(6, 4);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(10, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 237);
+            this.groupBox1.Size = new System.Drawing.Size(434, 237);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hardware Info";
@@ -381,9 +380,9 @@
             this.groupBoxEquState.Controls.Add(this.comboBoxEquState);
             this.groupBoxEquState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBoxEquState.ForeColor = System.Drawing.Color.White;
-            this.groupBoxEquState.Location = new System.Drawing.Point(17, 151);
+            this.groupBoxEquState.Location = new System.Drawing.Point(40, 151);
             this.groupBoxEquState.Name = "groupBoxEquState";
-            this.groupBoxEquState.Size = new System.Drawing.Size(155, 70);
+            this.groupBoxEquState.Size = new System.Drawing.Size(158, 70);
             this.groupBoxEquState.TabIndex = 38;
             this.groupBoxEquState.TabStop = false;
             this.groupBoxEquState.Text = "EquipmentState";
@@ -391,7 +390,7 @@
             // linkLabelEquState
             // 
             this.linkLabelEquState.AutoSize = true;
-            this.linkLabelEquState.LinkColor = System.Drawing.Color.Red;
+            this.linkLabelEquState.LinkColor = System.Drawing.SystemColors.ScrollBar;
             this.linkLabelEquState.Location = new System.Drawing.Point(40, 48);
             this.linkLabelEquState.Name = "linkLabelEquState";
             this.linkLabelEquState.Size = new System.Drawing.Size(79, 13);
@@ -411,11 +410,11 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.BackColor = System.Drawing.Color.Black;
+            this.groupBox8.BackColor = System.Drawing.Color.Transparent;
             this.groupBox8.Controls.Add(this.textBoxTagServiceMonitors);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox8.ForeColor = System.Drawing.Color.White;
-            this.groupBox8.Location = new System.Drawing.Point(15, 95);
+            this.groupBox8.Location = new System.Drawing.Point(38, 95);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(160, 50);
             this.groupBox8.TabIndex = 35;
@@ -432,12 +431,12 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.BackColor = System.Drawing.Color.Black;
+            this.groupBox7.BackColor = System.Drawing.Color.Transparent;
             this.groupBox7.Controls.Add(this.linkLabelAddNewModel);
             this.groupBox7.Controls.Add(this.comboBoxModelMonitors);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(187, 47);
+            this.groupBox7.Location = new System.Drawing.Point(239, 47);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(175, 70);
             this.groupBox7.TabIndex = 37;
@@ -448,7 +447,7 @@
             // 
             this.linkLabelAddNewModel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelAddNewModel.AutoSize = true;
-            this.linkLabelAddNewModel.LinkColor = System.Drawing.Color.Red;
+            this.linkLabelAddNewModel.LinkColor = System.Drawing.SystemColors.ScrollBar;
             this.linkLabelAddNewModel.Location = new System.Drawing.Point(48, 46);
             this.linkLabelAddNewModel.Name = "linkLabelAddNewModel";
             this.linkLabelAddNewModel.Size = new System.Drawing.Size(83, 13);
@@ -460,12 +459,12 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.Black;
+            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
             this.groupBox6.Controls.Add(this.comboBoxLocationMonitors);
             this.groupBox6.Controls.Add(this.linkLabelAddNewLocation);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(187, 140);
+            this.groupBox6.Location = new System.Drawing.Point(239, 140);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(175, 70);
             this.groupBox6.TabIndex = 36;
@@ -485,7 +484,7 @@
             // 
             this.linkLabelAddNewLocation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabelAddNewLocation.AutoSize = true;
-            this.linkLabelAddNewLocation.LinkColor = System.Drawing.Color.Red;
+            this.linkLabelAddNewLocation.LinkColor = System.Drawing.SystemColors.ScrollBar;
             this.linkLabelAddNewLocation.Location = new System.Drawing.Point(45, 47);
             this.linkLabelAddNewLocation.Name = "linkLabelAddNewLocation";
             this.linkLabelAddNewLocation.Size = new System.Drawing.Size(95, 13);
@@ -496,11 +495,11 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.Black;
+            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
             this.groupBox5.Controls.Add(this.textBoxCompanyFixedAssetMonitors);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(15, 35);
+            this.groupBox5.Location = new System.Drawing.Point(38, 35);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(160, 50);
             this.groupBox5.TabIndex = 35;
@@ -519,103 +518,118 @@
             // richTextBoxComentsMonitors
             // 
             this.richTextBoxComentsMonitors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxComentsMonitors.Location = new System.Drawing.Point(142, 51);
+            this.richTextBoxComentsMonitors.Location = new System.Drawing.Point(142, 6);
             this.richTextBoxComentsMonitors.Name = "richTextBoxComentsMonitors";
-            this.richTextBoxComentsMonitors.Size = new System.Drawing.Size(581, 371);
+            this.richTextBoxComentsMonitors.Size = new System.Drawing.Size(710, 416);
             this.richTextBoxComentsMonitors.TabIndex = 18;
             this.richTextBoxComentsMonitors.Text = "";
             // 
-            // buttonInsertDataMonitors
-            // 
-            this.buttonInsertDataMonitors.BackColor = System.Drawing.Color.Black;
-            this.buttonInsertDataMonitors.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonInsertDataMonitors.FlatAppearance.BorderSize = 2;
-            this.buttonInsertDataMonitors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonInsertDataMonitors.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
-            this.buttonInsertDataMonitors.ForeColor = System.Drawing.Color.White;
-            this.buttonInsertDataMonitors.Image = ((System.Drawing.Image)(resources.GetObject("buttonInsertDataMonitors.Image")));
-            this.buttonInsertDataMonitors.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonInsertDataMonitors.Location = new System.Drawing.Point(509, 0);
-            this.buttonInsertDataMonitors.Name = "buttonInsertDataMonitors";
-            this.buttonInsertDataMonitors.Size = new System.Drawing.Size(180, 50);
-            this.buttonInsertDataMonitors.TabIndex = 27;
-            this.buttonInsertDataMonitors.Text = "Insert Data";
-            this.buttonInsertDataMonitors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonInsertDataMonitors.UseVisualStyleBackColor = false;
-            this.buttonInsertDataMonitors.Click += new System.EventHandler(this.buttonInsertDataMonitors_Click);
-            // 
             // panelAddNewMonitors
             // 
-            this.panelAddNewMonitors.BackColor = System.Drawing.Color.Black;
-            this.panelAddNewMonitors.Controls.Add(this.panel1);
+            this.panelAddNewMonitors.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panelAddNewMonitors.Controls.Add(this.radioButtonLabelLinkON);
+            this.panelAddNewMonitors.Controls.Add(this.buttonCloseMonitor);
+            this.panelAddNewMonitors.Controls.Add(this.buttonInsertDataMonitors);
+            this.panelAddNewMonitors.Controls.Add(this.radioButtonLabelLinkOFF);
             this.panelAddNewMonitors.Controls.Add(this.tabControl1);
             this.panelAddNewMonitors.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAddNewMonitors.Location = new System.Drawing.Point(0, 0);
             this.panelAddNewMonitors.Name = "panelAddNewMonitors";
-            this.panelAddNewMonitors.Size = new System.Drawing.Size(739, 572);
+            this.panelAddNewMonitors.Size = new System.Drawing.Size(868, 572);
             this.panelAddNewMonitors.TabIndex = 27;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.radioButtonLabelLinkOFF);
-            this.panel1.Controls.Add(this.radioButtonLabelLinkON);
-            this.panel1.Controls.Add(this.buttonInsertDataMonitors);
-            this.panel1.Controls.Add(this.buttonCloseMonitor);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(739, 50);
-            this.panel1.TabIndex = 29;
-            // 
-            // radioButtonLabelLinkOFF
-            // 
-            this.radioButtonLabelLinkOFF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.radioButtonLabelLinkOFF.AutoSize = true;
-            this.radioButtonLabelLinkOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButtonLabelLinkOFF.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.radioButtonLabelLinkOFF.ForeColor = System.Drawing.Color.White;
-            this.radioButtonLabelLinkOFF.Location = new System.Drawing.Point(133, 12);
-            this.radioButtonLabelLinkOFF.Name = "radioButtonLabelLinkOFF";
-            this.radioButtonLabelLinkOFF.Size = new System.Drawing.Size(111, 22);
-            this.radioButtonLabelLinkOFF.TabIndex = 32;
-            this.radioButtonLabelLinkOFF.TabStop = true;
-            this.radioButtonLabelLinkOFF.Text = "AddNew  OFF";
-            this.radioButtonLabelLinkOFF.UseVisualStyleBackColor = true;
-            this.radioButtonLabelLinkOFF.CheckedChanged += new System.EventHandler(this.radioButtonLabelLinkOFF_CheckedChanged);
+            this.panelAddNewMonitors.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAddNewMonitors_Paint);
             // 
             // radioButtonLabelLinkON
             // 
             this.radioButtonLabelLinkON.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButtonLabelLinkON.AutoSize = true;
-            this.radioButtonLabelLinkON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonLabelLinkON.BackColor = System.Drawing.Color.Transparent;
             this.radioButtonLabelLinkON.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.radioButtonLabelLinkON.ForeColor = System.Drawing.Color.White;
-            this.radioButtonLabelLinkON.Location = new System.Drawing.Point(14, 12);
+            this.radioButtonLabelLinkON.Location = new System.Drawing.Point(14, 24);
             this.radioButtonLabelLinkON.Name = "radioButtonLabelLinkON";
-            this.radioButtonLabelLinkON.Size = new System.Drawing.Size(105, 22);
-            this.radioButtonLabelLinkON.TabIndex = 31;
-            this.radioButtonLabelLinkON.TabStop = true;
+            this.radioButtonLabelLinkON.Size = new System.Drawing.Size(106, 22);
+            this.radioButtonLabelLinkON.TabIndex = 39;
             this.radioButtonLabelLinkON.Text = "AddNew  ON";
-            this.radioButtonLabelLinkON.UseVisualStyleBackColor = true;
-            this.radioButtonLabelLinkON.CheckedChanged += new System.EventHandler(this.radioButtonLabelLinkON_CheckedChanged);
+            this.radioButtonLabelLinkON.UseVisualStyleBackColor = false;
+            this.radioButtonLabelLinkON.Click += new System.EventHandler(this.radioButtonLabelLinkON_CheckedChanged);
             // 
             // buttonCloseMonitor
             // 
-            this.buttonCloseMonitor.BackColor = System.Drawing.Color.Black;
-            this.buttonCloseMonitor.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonCloseMonitor.FlatAppearance.BorderSize = 2;
-            this.buttonCloseMonitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCloseMonitor.Font = new System.Drawing.Font("Algerian", 36F);
-            this.buttonCloseMonitor.ForeColor = System.Drawing.Color.White;
-            this.buttonCloseMonitor.Image = ((System.Drawing.Image)(resources.GetObject("buttonCloseMonitor.Image")));
-            this.buttonCloseMonitor.Location = new System.Drawing.Point(689, 0);
+            this.buttonCloseMonitor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCloseMonitor.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCloseMonitor.BorderColor = System.Drawing.Color.DimGray;
+            this.buttonCloseMonitor.FocusRectangleEnabled = true;
+            this.buttonCloseMonitor.Image = null;
+            this.buttonCloseMonitor.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonCloseMonitor.ImageBorderEnabled = true;
+            this.buttonCloseMonitor.ImageDropShadow = true;
+            this.buttonCloseMonitor.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonCloseMonitor.ImageFocused")));
+            this.buttonCloseMonitor.ImageInactive = null;
+            this.buttonCloseMonitor.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonCloseMonitor.ImageMouseOver")));
+            this.buttonCloseMonitor.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonCloseMonitor.ImageNormal")));
+            this.buttonCloseMonitor.ImagePressed = null;
+            this.buttonCloseMonitor.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonCloseMonitor.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonCloseMonitor.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonCloseMonitor.Location = new System.Drawing.Point(805, 4);
             this.buttonCloseMonitor.Name = "buttonCloseMonitor";
-            this.buttonCloseMonitor.Size = new System.Drawing.Size(50, 50);
-            this.buttonCloseMonitor.TabIndex = 28;
+            this.buttonCloseMonitor.OffsetPressedContent = true;
+            this.buttonCloseMonitor.Size = new System.Drawing.Size(60, 62);
+            this.buttonCloseMonitor.StretchImage = false;
+            this.buttonCloseMonitor.TabIndex = 38;
+            this.buttonCloseMonitor.TextDropShadow = true;
             this.buttonCloseMonitor.UseVisualStyleBackColor = false;
             this.buttonCloseMonitor.Click += new System.EventHandler(this.buttonCloseMonitor_Click_1);
+            // 
+            // buttonInsertDataMonitors
+            // 
+            this.buttonInsertDataMonitors.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInsertDataMonitors.BackColor = System.Drawing.Color.Transparent;
+            this.buttonInsertDataMonitors.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonInsertDataMonitors.FocusRectangleEnabled = true;
+            this.buttonInsertDataMonitors.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
+            this.buttonInsertDataMonitors.ForeColor = System.Drawing.Color.Black;
+            this.buttonInsertDataMonitors.Image = null;
+            this.buttonInsertDataMonitors.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonInsertDataMonitors.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonInsertDataMonitors.ImageBorderEnabled = true;
+            this.buttonInsertDataMonitors.ImageDropShadow = true;
+            this.buttonInsertDataMonitors.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonInsertDataMonitors.ImageFocused")));
+            this.buttonInsertDataMonitors.ImageInactive = null;
+            this.buttonInsertDataMonitors.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonInsertDataMonitors.ImageMouseOver")));
+            this.buttonInsertDataMonitors.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonInsertDataMonitors.ImageNormal")));
+            this.buttonInsertDataMonitors.ImagePressed = null;
+            this.buttonInsertDataMonitors.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonInsertDataMonitors.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonInsertDataMonitors.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonInsertDataMonitors.Location = new System.Drawing.Point(613, 4);
+            this.buttonInsertDataMonitors.Name = "buttonInsertDataMonitors";
+            this.buttonInsertDataMonitors.OffsetPressedContent = true;
+            this.buttonInsertDataMonitors.Size = new System.Drawing.Size(186, 62);
+            this.buttonInsertDataMonitors.StretchImage = false;
+            this.buttonInsertDataMonitors.TabIndex = 37;
+            this.buttonInsertDataMonitors.Text = "Insert Data";
+            this.buttonInsertDataMonitors.TextDropShadow = true;
+            this.buttonInsertDataMonitors.UseVisualStyleBackColor = false;
+            this.buttonInsertDataMonitors.Click += new System.EventHandler(this.buttonInsertDataMonitors_Click);
+            // 
+            // radioButtonLabelLinkOFF
+            // 
+            this.radioButtonLabelLinkOFF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioButtonLabelLinkOFF.AutoSize = true;
+            this.radioButtonLabelLinkOFF.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonLabelLinkOFF.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonLabelLinkOFF.ForeColor = System.Drawing.Color.White;
+            this.radioButtonLabelLinkOFF.Location = new System.Drawing.Point(14, 72);
+            this.radioButtonLabelLinkOFF.Name = "radioButtonLabelLinkOFF";
+            this.radioButtonLabelLinkOFF.Size = new System.Drawing.Size(112, 22);
+            this.radioButtonLabelLinkOFF.TabIndex = 32;
+            this.radioButtonLabelLinkOFF.Text = "AddNew  OFF";
+            this.radioButtonLabelLinkOFF.UseVisualStyleBackColor = false;
+            this.radioButtonLabelLinkOFF.CheckedChanged += new System.EventHandler(this.radioButtonLabelLinkOFF_CheckedChanged);
             // 
             // tabControl1
             // 
@@ -628,28 +642,30 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 114);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(739, 458);
+            this.tabControl1.Size = new System.Drawing.Size(868, 458);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 26;
             // 
             // tabPageComentsMonitor
             // 
-            this.tabPageComentsMonitor.BackColor = System.Drawing.Color.Black;
+            this.tabPageComentsMonitor.BackColor = System.Drawing.Color.LightSlateGray;
             this.tabPageComentsMonitor.Controls.Add(this.richTextBoxComentsMonitors);
             this.tabPageComentsMonitor.Controls.Add(this.labelComentsMonitor);
             this.tabPageComentsMonitor.Location = new System.Drawing.Point(4, 25);
             this.tabPageComentsMonitor.Name = "tabPageComentsMonitor";
             this.tabPageComentsMonitor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageComentsMonitor.Size = new System.Drawing.Size(731, 429);
+            this.tabPageComentsMonitor.Size = new System.Drawing.Size(860, 429);
             this.tabPageComentsMonitor.TabIndex = 2;
             this.tabPageComentsMonitor.Text = "Coments";
+            this.tabPageComentsMonitor.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageComentsMonitor_Paint);
             // 
             // labelComentsMonitor
             // 
             this.labelComentsMonitor.AutoSize = true;
+            this.labelComentsMonitor.BackColor = System.Drawing.Color.Transparent;
             this.labelComentsMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelComentsMonitor.ForeColor = System.Drawing.Color.White;
-            this.labelComentsMonitor.Location = new System.Drawing.Point(14, 50);
+            this.labelComentsMonitor.Location = new System.Drawing.Point(3, 19);
             this.labelComentsMonitor.Name = "labelComentsMonitor";
             this.labelComentsMonitor.Size = new System.Drawing.Size(132, 25);
             this.labelComentsMonitor.TabIndex = 17;
@@ -657,25 +673,27 @@
             // 
             // tabPageBarcodeMonitor
             // 
-            this.tabPageBarcodeMonitor.BackColor = System.Drawing.Color.Black;
+            this.tabPageBarcodeMonitor.BackColor = System.Drawing.Color.LightSlateGray;
             this.tabPageBarcodeMonitor.Controls.Add(this.groupBox3);
             this.tabPageBarcodeMonitor.Location = new System.Drawing.Point(4, 25);
             this.tabPageBarcodeMonitor.Name = "tabPageBarcodeMonitor";
             this.tabPageBarcodeMonitor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBarcodeMonitor.Size = new System.Drawing.Size(731, 429);
+            this.tabPageBarcodeMonitor.Size = new System.Drawing.Size(860, 429);
             this.tabPageBarcodeMonitor.TabIndex = 4;
             this.tabPageBarcodeMonitor.Text = "Barcode";
+            this.tabPageBarcodeMonitor.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageBarcodeMonitor_Paint);
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.paneLabelCode);
             this.groupBox3.Controls.Add(this.panel3);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.groupBox3.Location = new System.Drawing.Point(7, 8);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(10, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(717, 413);
+            this.groupBox3.Size = new System.Drawing.Size(842, 413);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "New Code";
@@ -688,7 +706,7 @@
             this.paneLabelCode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneLabelCode.Location = new System.Drawing.Point(3, 97);
             this.paneLabelCode.Name = "paneLabelCode";
-            this.paneLabelCode.Size = new System.Drawing.Size(711, 313);
+            this.paneLabelCode.Size = new System.Drawing.Size(836, 313);
             this.paneLabelCode.TabIndex = 44;
             // 
             // groupBox24
@@ -706,7 +724,7 @@
             this.groupBox24.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox24.Location = new System.Drawing.Point(0, 0);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(711, 187);
+            this.groupBox24.Size = new System.Drawing.Size(836, 226);
             this.groupBox24.TabIndex = 43;
             this.groupBox24.TabStop = false;
             // 
@@ -715,7 +733,7 @@
             this.labelModelCode.AutoSize = true;
             this.labelModelCode.BackColor = System.Drawing.Color.White;
             this.labelModelCode.ForeColor = System.Drawing.Color.Black;
-            this.labelModelCode.Location = new System.Drawing.Point(81, 153);
+            this.labelModelCode.Location = new System.Drawing.Point(81, 154);
             this.labelModelCode.Name = "labelModelCode";
             this.labelModelCode.Size = new System.Drawing.Size(104, 16);
             this.labelModelCode.TabIndex = 44;
@@ -726,7 +744,7 @@
             this.labelCompanyFixedCode.AutoSize = true;
             this.labelCompanyFixedCode.BackColor = System.Drawing.Color.White;
             this.labelCompanyFixedCode.ForeColor = System.Drawing.Color.Black;
-            this.labelCompanyFixedCode.Location = new System.Drawing.Point(179, 109);
+            this.labelCompanyFixedCode.Location = new System.Drawing.Point(179, 116);
             this.labelCompanyFixedCode.Name = "labelCompanyFixedCode";
             this.labelCompanyFixedCode.Size = new System.Drawing.Size(104, 16);
             this.labelCompanyFixedCode.TabIndex = 43;
@@ -736,9 +754,9 @@
             // 
             this.pictureBoxQRCode.BackColor = System.Drawing.Color.White;
             this.pictureBoxQRCode.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBoxQRCode.Location = new System.Drawing.Point(528, 18);
+            this.pictureBoxQRCode.Location = new System.Drawing.Point(628, 18);
             this.pictureBoxQRCode.Name = "pictureBoxQRCode";
-            this.pictureBoxQRCode.Size = new System.Drawing.Size(180, 166);
+            this.pictureBoxQRCode.Size = new System.Drawing.Size(205, 205);
             this.pictureBoxQRCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxQRCode.TabIndex = 35;
             this.pictureBoxQRCode.TabStop = false;
@@ -818,9 +836,9 @@
             // 
             this.pictureBoxBarcode.BackColor = System.Drawing.Color.White;
             this.pictureBoxBarcode.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBoxBarcode.Location = new System.Drawing.Point(0, 193);
+            this.pictureBoxBarcode.Location = new System.Drawing.Point(0, 232);
             this.pictureBoxBarcode.Name = "pictureBoxBarcode";
-            this.pictureBoxBarcode.Size = new System.Drawing.Size(711, 120);
+            this.pictureBoxBarcode.Size = new System.Drawing.Size(836, 81);
             this.pictureBoxBarcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxBarcode.TabIndex = 34;
             this.pictureBoxBarcode.TabStop = false;
@@ -828,74 +846,118 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.buttonSaveAsJPG);
+            this.panel3.Controls.Add(this.bitmapButton1);
             this.panel3.Controls.Add(this.buttonCreateQR);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.buttonSaveAsJPG);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 18);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(711, 79);
+            this.panel3.Size = new System.Drawing.Size(836, 79);
             this.panel3.TabIndex = 32;
             // 
-            // buttonSaveAsJPG
+            // bitmapButton1
             // 
-            this.buttonSaveAsJPG.BackColor = System.Drawing.Color.Black;
-            this.buttonSaveAsJPG.FlatAppearance.BorderSize = 2;
-            this.buttonSaveAsJPG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSaveAsJPG.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSaveAsJPG.ForeColor = System.Drawing.Color.White;
-            this.buttonSaveAsJPG.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveAsJPG.Image")));
-            this.buttonSaveAsJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSaveAsJPG.Location = new System.Drawing.Point(494, 13);
-            this.buttonSaveAsJPG.Name = "buttonSaveAsJPG";
-            this.buttonSaveAsJPG.Size = new System.Drawing.Size(103, 50);
-            this.buttonSaveAsJPG.TabIndex = 33;
-            this.buttonSaveAsJPG.Text = "Save";
-            this.buttonSaveAsJPG.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSaveAsJPG.UseVisualStyleBackColor = false;
-            this.buttonSaveAsJPG.Click += new System.EventHandler(this.buttonSaveAsJPG_Click);
+            this.bitmapButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bitmapButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bitmapButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton1.FocusRectangleEnabled = true;
+            this.bitmapButton1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
+            this.bitmapButton1.ForeColor = System.Drawing.Color.Black;
+            this.bitmapButton1.Image = null;
+            this.bitmapButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bitmapButton1.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton1.ImageBorderEnabled = true;
+            this.bitmapButton1.ImageDropShadow = true;
+            this.bitmapButton1.ImageFocused = ((System.Drawing.Image)(resources.GetObject("bitmapButton1.ImageFocused")));
+            this.bitmapButton1.ImageInactive = null;
+            this.bitmapButton1.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("bitmapButton1.ImageMouseOver")));
+            this.bitmapButton1.ImageNormal = ((System.Drawing.Image)(resources.GetObject("bitmapButton1.ImageNormal")));
+            this.bitmapButton1.ImagePressed = null;
+            this.bitmapButton1.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton1.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.bitmapButton1.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.bitmapButton1.Location = new System.Drawing.Point(718, 12);
+            this.bitmapButton1.Name = "bitmapButton1";
+            this.bitmapButton1.OffsetPressedContent = true;
+            this.bitmapButton1.Size = new System.Drawing.Size(114, 50);
+            this.bitmapButton1.StretchImage = false;
+            this.bitmapButton1.TabIndex = 42;
+            this.bitmapButton1.Text = "Print";
+            this.bitmapButton1.TextDropShadow = true;
+            this.bitmapButton1.UseVisualStyleBackColor = false;
             // 
             // buttonCreateQR
             // 
-            this.buttonCreateQR.BackColor = System.Drawing.Color.Black;
-            this.buttonCreateQR.FlatAppearance.BorderSize = 2;
-            this.buttonCreateQR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCreateQR.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonCreateQR.ForeColor = System.Drawing.Color.White;
-            this.buttonCreateQR.Image = ((System.Drawing.Image)(resources.GetObject("buttonCreateQR.Image")));
+            this.buttonCreateQR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCreateQR.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCreateQR.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonCreateQR.FocusRectangleEnabled = true;
+            this.buttonCreateQR.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
+            this.buttonCreateQR.ForeColor = System.Drawing.Color.Black;
+            this.buttonCreateQR.Image = null;
             this.buttonCreateQR.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCreateQR.Location = new System.Drawing.Point(8, 13);
+            this.buttonCreateQR.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonCreateQR.ImageBorderEnabled = true;
+            this.buttonCreateQR.ImageDropShadow = true;
+            this.buttonCreateQR.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonCreateQR.ImageFocused")));
+            this.buttonCreateQR.ImageInactive = null;
+            this.buttonCreateQR.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonCreateQR.ImageMouseOver")));
+            this.buttonCreateQR.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonCreateQR.ImageNormal")));
+            this.buttonCreateQR.ImagePressed = null;
+            this.buttonCreateQR.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonCreateQR.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonCreateQR.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonCreateQR.Location = new System.Drawing.Point(5, 12);
             this.buttonCreateQR.Name = "buttonCreateQR";
+            this.buttonCreateQR.OffsetPressedContent = true;
             this.buttonCreateQR.Size = new System.Drawing.Size(180, 50);
-            this.buttonCreateQR.TabIndex = 30;
+            this.buttonCreateQR.StretchImage = false;
+            this.buttonCreateQR.TabIndex = 40;
             this.buttonCreateQR.Text = "Create Code";
-            this.buttonCreateQR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCreateQR.TextDropShadow = true;
             this.buttonCreateQR.UseVisualStyleBackColor = false;
             this.buttonCreateQR.Click += new System.EventHandler(this.buttonCreateQR_Click);
             // 
-            // button2
+            // buttonSaveAsJPG
             // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(605, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 50);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Print";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonSaveAsJPG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSaveAsJPG.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSaveAsJPG.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonSaveAsJPG.FocusRectangleEnabled = true;
+            this.buttonSaveAsJPG.Font = new System.Drawing.Font("Comic Sans MS", 15.75F);
+            this.buttonSaveAsJPG.ForeColor = System.Drawing.Color.Black;
+            this.buttonSaveAsJPG.Image = null;
+            this.buttonSaveAsJPG.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveAsJPG.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonSaveAsJPG.ImageBorderEnabled = true;
+            this.buttonSaveAsJPG.ImageDropShadow = true;
+            this.buttonSaveAsJPG.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonSaveAsJPG.ImageFocused")));
+            this.buttonSaveAsJPG.ImageInactive = null;
+            this.buttonSaveAsJPG.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonSaveAsJPG.ImageMouseOver")));
+            this.buttonSaveAsJPG.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonSaveAsJPG.ImageNormal")));
+            this.buttonSaveAsJPG.ImagePressed = null;
+            this.buttonSaveAsJPG.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonSaveAsJPG.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonSaveAsJPG.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonSaveAsJPG.Location = new System.Drawing.Point(534, 12);
+            this.buttonSaveAsJPG.Name = "buttonSaveAsJPG";
+            this.buttonSaveAsJPG.OffsetPressedContent = true;
+            this.buttonSaveAsJPG.Size = new System.Drawing.Size(180, 50);
+            this.buttonSaveAsJPG.StretchImage = false;
+            this.buttonSaveAsJPG.TabIndex = 41;
+            this.buttonSaveAsJPG.Text = "Save to JPG";
+            this.buttonSaveAsJPG.TextDropShadow = true;
+            this.buttonSaveAsJPG.UseVisualStyleBackColor = false;
+            this.buttonSaveAsJPG.Click += new System.EventHandler(this.buttonSaveAsJPG_Click);
             // 
             // AddMonitorForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 572);
+            this.ClientSize = new System.Drawing.Size(868, 572);
             this.Controls.Add(this.panelAddNewMonitors);
+            this.MaximumSize = new System.Drawing.Size(884, 611);
+            this.MinimumSize = new System.Drawing.Size(884, 611);
             this.Name = "AddMonitorForms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AddMonitorForms";
@@ -925,8 +987,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.panelAddNewMonitors.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelAddNewMonitors.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPageComentsMonitor.ResumeLayout(false);
             this.tabPageComentsMonitor.PerformLayout();
@@ -951,7 +1012,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxComentsMonitors;
         private System.Windows.Forms.DateTimePicker dateTimePickerPurchaseDateMonitors;
         private System.Windows.Forms.DateTimePicker dateTimePickerWarrantyDateMonitors;
-        private System.Windows.Forms.Button buttonInsertDataMonitors;
         private System.Windows.Forms.Panel panelAddNewMonitors;
         private System.Windows.Forms.TabPage tabPageBarcodeMonitor;
         private System.Windows.Forms.TabPage tabPageComentsMonitor;
@@ -960,10 +1020,8 @@
         private System.Windows.Forms.LinkLabel linkLabelAddNewUser;
         private System.Windows.Forms.LinkLabel linkLabelAddNewLocation;
         private System.Windows.Forms.LinkLabel linkLabelAddNewModel;
-        private System.Windows.Forms.Button buttonCloseMonitor;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBoxUsers;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBoxFirstName;
@@ -997,13 +1055,15 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBoxBarcode;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button buttonSaveAsJPG;
-        private System.Windows.Forms.Button buttonCreateQR;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBoxEquState;
         private System.Windows.Forms.LinkLabel linkLabelEquState;
         private System.Windows.Forms.ComboBox comboBoxEquState;
         private System.Windows.Forms.RadioButton radioButtonLabelLinkOFF;
+        private CustomControls.BitmapButton buttonCloseMonitor;
+        private CustomControls.BitmapButton buttonInsertDataMonitors;
+        private CustomControls.BitmapButton bitmapButton1;
+        private CustomControls.BitmapButton buttonCreateQR;
+        private CustomControls.BitmapButton buttonSaveAsJPG;
         private System.Windows.Forms.RadioButton radioButtonLabelLinkON;
     }
 }

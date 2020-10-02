@@ -361,9 +361,9 @@ namespace GUI {
             
             private global::System.Data.DataColumn columnIP;
             
-            private global::System.Data.DataColumn columnPurchaseDate;
-            
             private global::System.Data.DataColumn columnWarrantyDate;
+            
+            private global::System.Data.DataColumn columnPurchaseDate;
             
             private global::System.Data.DataColumn columnBarcode;
             
@@ -476,17 +476,17 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PurchaseDateColumn {
+            public global::System.Data.DataColumn WarrantyDateColumn {
                 get {
-                    return this.columnPurchaseDate;
+                    return this.columnWarrantyDate;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn WarrantyDateColumn {
+            public global::System.Data.DataColumn PurchaseDateColumn {
                 get {
-                    return this.columnWarrantyDate;
+                    return this.columnPurchaseDate;
                 }
             }
             
@@ -646,8 +646,8 @@ namespace GUI {
                         string CompterName, 
                         string TagService, 
                         string IP, 
-                        System.DateTime PurchaseDate, 
                         System.DateTime WarrantyDate, 
+                        System.DateTime PurchaseDate, 
                         byte[] Barcode, 
                         byte[] QRCode, 
                         string Coments, 
@@ -670,8 +670,8 @@ namespace GUI {
                         CompterName,
                         TagService,
                         IP,
-                        PurchaseDate,
                         WarrantyDate,
+                        PurchaseDate,
                         Barcode,
                         QRCode,
                         Coments,
@@ -721,8 +721,8 @@ namespace GUI {
                 this.columnCompterName = base.Columns["CompterName"];
                 this.columnTagService = base.Columns["TagService"];
                 this.columnIP = base.Columns["IP"];
-                this.columnPurchaseDate = base.Columns["PurchaseDate"];
                 this.columnWarrantyDate = base.Columns["WarrantyDate"];
+                this.columnPurchaseDate = base.Columns["PurchaseDate"];
                 this.columnBarcode = base.Columns["Barcode"];
                 this.columnQRCode = base.Columns["QRCode"];
                 this.columnComents = base.Columns["Coments"];
@@ -754,10 +754,10 @@ namespace GUI {
                 base.Columns.Add(this.columnTagService);
                 this.columnIP = new global::System.Data.DataColumn("IP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIP);
-                this.columnPurchaseDate = new global::System.Data.DataColumn("PurchaseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPurchaseDate);
                 this.columnWarrantyDate = new global::System.Data.DataColumn("WarrantyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWarrantyDate);
+                this.columnPurchaseDate = new global::System.Data.DataColumn("PurchaseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchaseDate);
                 this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBarcode);
                 this.columnQRCode = new global::System.Data.DataColumn("QRCode", typeof(byte[]), null, global::System.Data.MappingType.Element);
@@ -948,9 +948,9 @@ namespace GUI {
             
             private global::System.Data.DataColumn columnTagService;
             
-            private global::System.Data.DataColumn columnPurchaseDate;
-            
             private global::System.Data.DataColumn columnWarrantyDate;
+            
+            private global::System.Data.DataColumn columnPurchaseDate;
             
             private global::System.Data.DataColumn columnBarcode;
             
@@ -1037,17 +1037,17 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PurchaseDateColumn {
+            public global::System.Data.DataColumn WarrantyDateColumn {
                 get {
-                    return this.columnPurchaseDate;
+                    return this.columnWarrantyDate;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn WarrantyDateColumn {
+            public global::System.Data.DataColumn PurchaseDateColumn {
                 get {
-                    return this.columnWarrantyDate;
+                    return this.columnPurchaseDate;
                 }
             }
             
@@ -1160,15 +1160,15 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public vwAll_MonitorsRow AddvwAll_MonitorsRow(int IDEquipmentStatus, string Status, int Id, string TagService, System.DateTime PurchaseDate, System.DateTime WarrantyDate, byte[] Barcode, byte[] QRCode, string Coments, string CompanyFixedAsset, string FirstName, string LastName, string Job, string LocationName, string ModelVersionMonitors) {
+            public vwAll_MonitorsRow AddvwAll_MonitorsRow(int IDEquipmentStatus, string Status, int Id, string TagService, System.DateTime WarrantyDate, System.DateTime PurchaseDate, byte[] Barcode, byte[] QRCode, string Coments, string CompanyFixedAsset, string FirstName, string LastName, string Job, string LocationName, string ModelVersionMonitors) {
                 vwAll_MonitorsRow rowvwAll_MonitorsRow = ((vwAll_MonitorsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IDEquipmentStatus,
                         Status,
                         Id,
                         TagService,
-                        PurchaseDate,
                         WarrantyDate,
+                        PurchaseDate,
                         Barcode,
                         QRCode,
                         Coments,
@@ -1211,8 +1211,8 @@ namespace GUI {
                 this.columnStatus = base.Columns["Status"];
                 this.columnId = base.Columns["Id"];
                 this.columnTagService = base.Columns["TagService"];
-                this.columnPurchaseDate = base.Columns["PurchaseDate"];
                 this.columnWarrantyDate = base.Columns["WarrantyDate"];
+                this.columnPurchaseDate = base.Columns["PurchaseDate"];
                 this.columnBarcode = base.Columns["Barcode"];
                 this.columnQRCode = base.Columns["QRCode"];
                 this.columnComents = base.Columns["Coments"];
@@ -1235,10 +1235,10 @@ namespace GUI {
                 base.Columns.Add(this.columnId);
                 this.columnTagService = new global::System.Data.DataColumn("TagService", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTagService);
-                this.columnPurchaseDate = new global::System.Data.DataColumn("PurchaseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPurchaseDate);
                 this.columnWarrantyDate = new global::System.Data.DataColumn("WarrantyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWarrantyDate);
+                this.columnPurchaseDate = new global::System.Data.DataColumn("PurchaseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchaseDate);
                 this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBarcode);
                 this.columnQRCode = new global::System.Data.DataColumn("QRCode", typeof(byte[]), null, global::System.Data.MappingType.Element);
@@ -1416,9 +1416,9 @@ namespace GUI {
             
             private global::System.Data.DataColumn columnIP;
             
-            private global::System.Data.DataColumn columnPurchaseDate;
-            
             private global::System.Data.DataColumn columnWarrantyDate;
+            
+            private global::System.Data.DataColumn columnPurchaseDate;
             
             private global::System.Data.DataColumn columnBarcode;
             
@@ -1531,17 +1531,17 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PurchaseDateColumn {
+            public global::System.Data.DataColumn WarrantyDateColumn {
                 get {
-                    return this.columnPurchaseDate;
+                    return this.columnWarrantyDate;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn WarrantyDateColumn {
+            public global::System.Data.DataColumn PurchaseDateColumn {
                 get {
-                    return this.columnWarrantyDate;
+                    return this.columnPurchaseDate;
                 }
             }
             
@@ -1701,8 +1701,8 @@ namespace GUI {
                         string NotebooksName, 
                         string TagService, 
                         string IP, 
-                        System.DateTime PurchaseDate, 
                         System.DateTime WarrantyDate, 
+                        System.DateTime PurchaseDate, 
                         byte[] Barcode, 
                         byte[] QRCode, 
                         string Coments, 
@@ -1725,8 +1725,8 @@ namespace GUI {
                         NotebooksName,
                         TagService,
                         IP,
-                        PurchaseDate,
                         WarrantyDate,
+                        PurchaseDate,
                         Barcode,
                         QRCode,
                         Coments,
@@ -1776,8 +1776,8 @@ namespace GUI {
                 this.columnNotebooksName = base.Columns["NotebooksName"];
                 this.columnTagService = base.Columns["TagService"];
                 this.columnIP = base.Columns["IP"];
-                this.columnPurchaseDate = base.Columns["PurchaseDate"];
                 this.columnWarrantyDate = base.Columns["WarrantyDate"];
+                this.columnPurchaseDate = base.Columns["PurchaseDate"];
                 this.columnBarcode = base.Columns["Barcode"];
                 this.columnQRCode = base.Columns["QRCode"];
                 this.columnComents = base.Columns["Coments"];
@@ -1809,10 +1809,10 @@ namespace GUI {
                 base.Columns.Add(this.columnTagService);
                 this.columnIP = new global::System.Data.DataColumn("IP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIP);
-                this.columnPurchaseDate = new global::System.Data.DataColumn("PurchaseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPurchaseDate);
                 this.columnWarrantyDate = new global::System.Data.DataColumn("WarrantyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWarrantyDate);
+                this.columnPurchaseDate = new global::System.Data.DataColumn("PurchaseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchaseDate);
                 this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBarcode);
                 this.columnQRCode = new global::System.Data.DataColumn("QRCode", typeof(byte[]), null, global::System.Data.MappingType.Element);
@@ -2090,22 +2090,6 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime PurchaseDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablevwAll_Computers.PurchaseDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PurchaseDate\' in table \'vwAll_Computers\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevwAll_Computers.PurchaseDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime WarrantyDate {
                 get {
                     try {
@@ -2117,6 +2101,22 @@ namespace GUI {
                 }
                 set {
                     this[this.tablevwAll_Computers.WarrantyDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime PurchaseDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablevwAll_Computers.PurchaseDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PurchaseDate\' in table \'vwAll_Computers\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Computers.PurchaseDateColumn] = value;
                 }
             }
             
@@ -2397,18 +2397,6 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPurchaseDateNull() {
-                return this.IsNull(this.tablevwAll_Computers.PurchaseDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPurchaseDateNull() {
-                this[this.tablevwAll_Computers.PurchaseDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWarrantyDateNull() {
                 return this.IsNull(this.tablevwAll_Computers.WarrantyDateColumn);
             }
@@ -2417,6 +2405,18 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWarrantyDateNull() {
                 this[this.tablevwAll_Computers.WarrantyDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPurchaseDateNull() {
+                return this.IsNull(this.tablevwAll_Computers.PurchaseDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPurchaseDateNull() {
+                this[this.tablevwAll_Computers.PurchaseDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2658,22 +2658,6 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime PurchaseDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablevwAll_Monitors.PurchaseDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PurchaseDate\' in table \'vwAll_Monitors\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevwAll_Monitors.PurchaseDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime WarrantyDate {
                 get {
                     try {
@@ -2685,6 +2669,22 @@ namespace GUI {
                 }
                 set {
                     this[this.tablevwAll_Monitors.WarrantyDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime PurchaseDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablevwAll_Monitors.PurchaseDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PurchaseDate\' in table \'vwAll_Monitors\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Monitors.PurchaseDateColumn] = value;
                 }
             }
             
@@ -2858,18 +2858,6 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPurchaseDateNull() {
-                return this.IsNull(this.tablevwAll_Monitors.PurchaseDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPurchaseDateNull() {
-                this[this.tablevwAll_Monitors.PurchaseDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWarrantyDateNull() {
                 return this.IsNull(this.tablevwAll_Monitors.WarrantyDateColumn);
             }
@@ -2878,6 +2866,18 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWarrantyDateNull() {
                 this[this.tablevwAll_Monitors.WarrantyDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPurchaseDateNull() {
+                return this.IsNull(this.tablevwAll_Monitors.PurchaseDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPurchaseDateNull() {
+                this[this.tablevwAll_Monitors.PurchaseDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3091,22 +3091,6 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime PurchaseDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablevwAll_Notebooks.PurchaseDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PurchaseDate\' in table \'vwAll_Notebooks\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevwAll_Notebooks.PurchaseDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime WarrantyDate {
                 get {
                     try {
@@ -3118,6 +3102,22 @@ namespace GUI {
                 }
                 set {
                     this[this.tablevwAll_Notebooks.WarrantyDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime PurchaseDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablevwAll_Notebooks.PurchaseDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PurchaseDate\' in table \'vwAll_Notebooks\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevwAll_Notebooks.PurchaseDateColumn] = value;
                 }
             }
             
@@ -3398,18 +3398,6 @@ namespace GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPurchaseDateNull() {
-                return this.IsNull(this.tablevwAll_Notebooks.PurchaseDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPurchaseDateNull() {
-                this[this.tablevwAll_Notebooks.PurchaseDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsWarrantyDateNull() {
                 return this.IsNull(this.tablevwAll_Notebooks.WarrantyDateColumn);
             }
@@ -3418,6 +3406,18 @@ namespace GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetWarrantyDateNull() {
                 this[this.tablevwAll_Notebooks.WarrantyDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPurchaseDateNull() {
+                return this.IsNull(this.tablevwAll_Notebooks.PurchaseDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPurchaseDateNull() {
+                this[this.tablevwAll_Notebooks.PurchaseDateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3822,8 +3822,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("CompterName", "CompterName");
             tableMapping.ColumnMappings.Add("TagService", "TagService");
             tableMapping.ColumnMappings.Add("IP", "IP");
-            tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
             tableMapping.ColumnMappings.Add("WarrantyDate", "WarrantyDate");
+            tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
             tableMapping.ColumnMappings.Add("Barcode", "Barcode");
             tableMapping.ColumnMappings.Add("QRCode", "QRCode");
             tableMapping.ColumnMappings.Add("Coments", "Coments");
@@ -3854,7 +3854,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT IDEquipmentStatus, Status, Id, CompterName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers";
+            this._commandCollection[0].CommandText = @"SELECT IDEquipmentStatus, Status, Id, CompterName, TagService, IP, WarrantyDate, PurchaseDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionComputer, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Computers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4008,8 +4008,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("TagService", "TagService");
-            tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
             tableMapping.ColumnMappings.Add("WarrantyDate", "WarrantyDate");
+            tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
             tableMapping.ColumnMappings.Add("Barcode", "Barcode");
             tableMapping.ColumnMappings.Add("QRCode", "QRCode");
             tableMapping.ColumnMappings.Add("Coments", "Coments");
@@ -4035,7 +4035,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IDEquipmentStatus, Status, Id, TagService, PurchaseDate, WarrantyDate, Bar" +
+            this._commandCollection[0].CommandText = "SELECT IDEquipmentStatus, Status, Id, TagService, WarrantyDate, PurchaseDate, Bar" +
                 "code, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, LocationName" +
                 ", ModelVersionMonitors FROM dbo.vwAll_Monitors";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
@@ -4193,8 +4193,8 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("NotebooksName", "NotebooksName");
             tableMapping.ColumnMappings.Add("TagService", "TagService");
             tableMapping.ColumnMappings.Add("IP", "IP");
-            tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
             tableMapping.ColumnMappings.Add("WarrantyDate", "WarrantyDate");
+            tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
             tableMapping.ColumnMappings.Add("Barcode", "Barcode");
             tableMapping.ColumnMappings.Add("QRCode", "QRCode");
             tableMapping.ColumnMappings.Add("Coments", "Coments");
@@ -4225,7 +4225,7 @@ namespace GUI.HelpDeskDB_TESTDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT IDEquipmentStatus, Status, Id, NotebooksName, TagService, IP, PurchaseDate, WarrantyDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks";
+            this._commandCollection[0].CommandText = @"SELECT IDEquipmentStatus, Status, Id, NotebooksName, TagService, IP, WarrantyDate, PurchaseDate, Barcode, QRCode, Coments, CompanyFixedAsset, FirstName, LastName, Job, CPUVersion, HardDriveVersion, LocationName, MicrosoftOfficeVersion, ModelVersionNotebooks, OperatingSystemVersion, RAMVersion FROM dbo.vwAll_Notebooks";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

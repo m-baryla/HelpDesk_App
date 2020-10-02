@@ -31,6 +31,7 @@ namespace GUI.Forms
             this.vwAll_NotebooksTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Notebooks);
             this.vwAll_MonitorsTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Monitors);
             this.vwAll_ComputersTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Computers);
+            // Colums[0] = id eq
             this.advancedDataGridViewComputers.Columns[0].Visible = false;
             this.advancedDataGridViewMonitors.Columns[0].Visible = false;
             this.advancedDataGridViewNotebooks.Columns[0].Visible = false;
@@ -43,6 +44,7 @@ namespace GUI.Forms
             this.vwAll_MonitorsTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Monitors);
             // TODO: This line of code loads data into the 'helpDeskDB_TESTDataSet.vwAll_Computers' table. You can move, or remove it, as needed.
             this.vwAll_ComputersTableAdapter.Fill(this.helpDeskDB_TESTDataSet.vwAll_Computers);
+
 
             UploadData();
 
@@ -87,39 +89,97 @@ namespace GUI.Forms
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            try
+            var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (advancedDataGridViewComputers.SelectedRows.Count == 1)
             {
-                if (advancedDataGridViewComputers.SelectedRows.Count == 1)
+                try
                 {
-                    int selectRowIdComputers = Convert.ToInt32(advancedDataGridViewComputers.CurrentCell.RowIndex);
+                    switch (dialogResult)
+                    {
+                        case DialogResult.Yes:
+                            {
+                                int selectRowIdComputers = Convert.ToInt32(advancedDataGridViewComputers.CurrentCell.RowIndex);
 
-                    var updateComputers = new UpdateComputersForms(_computersLogic);
-                    updateComputers.EditDataLoad(new DataGridViewCellEventArgs(1, selectRowIdComputers), advancedDataGridViewComputers);
-                    updateComputers.Show();
-                    UploadData();
+                                var updateComputers = new UpdateComputersForms(_computersLogic);
+                                updateComputers.EditDataLoad(new DataGridViewCellEventArgs(1, selectRowIdComputers), advancedDataGridViewComputers);
+                                updateComputers.Show();
+                                break;
+                            }
+                        case DialogResult.No:
+                            {
+                                break;
+                            }
+                    }
                 }
-                else if (advancedDataGridViewNotebooks.SelectedRows.Count == 1)
+                catch (Exception exception)
                 {
-                    int selectRowIdNotebooks = Convert.ToInt32(advancedDataGridViewNotebooks.CurrentCell.RowIndex);
-
-                    var _updateNotebooks = new UpdateNotebooksForms(_notebooksLogic);
-                    _updateNotebooks.EditDataLoad(new DataGridViewCellEventArgs(1, selectRowIdNotebooks), advancedDataGridViewNotebooks);
-                    _updateNotebooks.Show();
-                    UploadData();
+                    MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (advancedDataGridViewMonitors.SelectedRows.Count == 1)
+                finally
                 {
-                    int selectRowIdMonitors = Convert.ToInt32(advancedDataGridViewMonitors.CurrentCell.RowIndex);
-
-                    var _updateMonitors = new UpdateMonitorsForms(_monitorsLogic);
-                    _updateMonitors.EditDataLoad(new DataGridViewCellEventArgs(1, selectRowIdMonitors), advancedDataGridViewMonitors);
-                    _updateMonitors.Show();
                     UploadData();
                 }
             }
-            catch (Exception)
+            else if (advancedDataGridViewNotebooks.SelectedRows.Count == 1)
             {
-               
+                try
+                {
+                    switch (dialogResult)
+                    {
+                        case DialogResult.Yes:
+                            {
+                                int selectRowIdNotebooks = Convert.ToInt32(advancedDataGridViewNotebooks.CurrentCell.RowIndex);
+
+                                var _updateNotebooks = new UpdateNotebooksForms(_notebooksLogic);
+                                _updateNotebooks.EditDataLoad(new DataGridViewCellEventArgs(1, selectRowIdNotebooks), advancedDataGridViewNotebooks);
+                                _updateNotebooks.Show();
+                                break;
+                            }
+                        case DialogResult.No:
+                            {
+                                break;
+                            }
+                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    UploadData();
+                }
+            }
+            else if (advancedDataGridViewMonitors.SelectedRows.Count == 1)
+            {
+                try
+                {
+                    switch (dialogResult)
+                    {
+                        case DialogResult.Yes:
+                            {
+                                int selectRowIdMonitors = Convert.ToInt32(advancedDataGridViewMonitors.CurrentCell.RowIndex);
+
+                                var _updateMonitors = new UpdateMonitorsForms(_monitorsLogic);
+                                _updateMonitors.EditDataLoad(new DataGridViewCellEventArgs(1, selectRowIdMonitors), advancedDataGridViewMonitors);
+                                _updateMonitors.Show();
+                                break;
+                            }
+                        case DialogResult.No:
+                            {
+                                break;
+                            }
+                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    UploadData();
+                }
             }
         }
 
@@ -182,92 +242,14 @@ namespace GUI.Forms
         {
             UploadData();
         }
-        private void buttonFullScrean_MouseMove(object sender, MouseEventArgs e)
+        private void ButtonClearFilter_Click(object sender, EventArgs e)
         {
-            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonFullScrean);
-        }
-
-        private void buttonFullScrean_MouseLeave(object sender, EventArgs e)
-        {
-            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonFullScrean, "FullScrean");
-        }
-
-        private void buttonExel_MouseMove(object sender, MouseEventArgs e)
-        {
-            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonExel);
-        }
-
-        private void buttonExel_MouseLeave(object sender, EventArgs e)
-        {
-            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonExel, "Exel");
-        }
-
-        private void buttonRefresh_MouseMove(object sender, MouseEventArgs e)
-        {
-            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonRefresh);
-        }
-
-        private void buttonRefresh_MouseLeave(object sender, EventArgs e)
-        {
-            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonRefresh, "Refresh");
-        }
-
-        private void buttonDelete_MouseMove(object sender, MouseEventArgs e)
-        {
-            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonDelete);
-        }
-
-        private void buttonDelete_MouseLeave(object sender, EventArgs e)
-        {
-            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonDelete, "Delete");
-        }
-
-        private void buttonEdit_MouseMove(object sender, MouseEventArgs e)
-        {
-            CustomButtonStyle.ButtonShowDataChangeStyleOn(buttonEdit);
-        }
-
-        private void buttonEdit_MouseLeave(object sender, EventArgs e)
-        {
-            CustomButtonStyle.ButtonShowDataChangeStyleOff(buttonEdit, "Edit");
-        }
-
-        private void buttonFullScrean_Paint(object sender, PaintEventArgs e)
-        {
-            CustomBorder.PaintBorderButtons(sender, e);
-        }
-
-        private void buttonExel_Paint(object sender, PaintEventArgs e)
-        {
-            CustomBorder.PaintBorderButtons(sender, e);
-        }
-
-        private void buttonRefresh_Paint(object sender, PaintEventArgs e)
-        {
-            CustomBorder.PaintBorderButtons(sender, e);
-        }
-
-        private void buttonDelete_Paint(object sender, PaintEventArgs e)
-        {
-            CustomBorder.PaintBorderButtons(sender, e);
-        }
-
-        private void buttonEdit_Paint(object sender, PaintEventArgs e)
-        {
-            CustomBorder.PaintBorderButtons(sender, e);
-        }
-        private void buttonCloseDataGrind_Paint(object sender, PaintEventArgs e)
-        {
-            CustomBorder.PaintBorderButtons(sender, e);
-        }
-        private void buttonCloseDataGrind_MouseMove(object sender, MouseEventArgs e)
-        {
-            buttonCloseDataGrind.BackColor = Color.DarkRed;
-        }
-
-        private void buttonCloseDataGrind_MouseLeave(object sender, EventArgs e)
-        {
-            buttonCloseDataGrind.BackColor = Color.Black;
+            this.vwAllComputersBindingSource.Filter = null;
+            this.vwAllComputersBindingSource.Sort = null;
+            this.vwAllMonitorsBindingSource.Filter = null;
+            this.vwAllMonitorsBindingSource.Sort = null;
+            this.vwAllNotebooksBindingSource.Filter = null;
+            this.vwAllNotebooksBindingSource.Sort = null;
         }
         #endregion
 
@@ -343,11 +325,19 @@ namespace GUI.Forms
                 }
             }
         }
-
-
+        private void radioButtonColorFilterOFF_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonColorFilterOFF.Checked)
+            {
+                UploadData();
+            }
+        }
+        private void panelDAtaGrindView_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(panelDAtaGrindView, e, System.Drawing.Drawing2D.LinearGradientMode.Vertical);
+        }
 
         #endregion
-
-      
+     
     }
 }

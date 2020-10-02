@@ -29,7 +29,7 @@ namespace HelpDesk_DB
             //}
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard(new DataAcces(new CustomInfoMessageBox()), new CustomInfoMessageBox()));
+            Application.Run(new NewDashboard(new DataAcces(new CustomInfoMessageBox()), new CustomInfoMessageBox()));
         }
     }
 }

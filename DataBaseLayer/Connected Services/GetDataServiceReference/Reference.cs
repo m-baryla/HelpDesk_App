@@ -23,7 +23,7 @@ namespace DataBaseLayer.GetDataServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BarcodeField;
+        private byte[] BarcodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CPUVersionField;
@@ -38,16 +38,28 @@ namespace DataBaseLayer.GetDataServiceReference {
         private string CompterNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EquipmentStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FirstNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string HardDriveVersionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDEquipmentStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string IPField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JobField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LocationNameField;
@@ -63,6 +75,9 @@ namespace DataBaseLayer.GetDataServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime PurchaseDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] QRCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string RAMVersionField;
@@ -84,7 +99,7 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Barcode {
+        public byte[] Barcode {
             get {
                 return this.BarcodeField;
             }
@@ -149,6 +164,19 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EquipmentStatus {
+            get {
+                return this.EquipmentStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EquipmentStatusField, value) != true)) {
+                    this.EquipmentStatusField = value;
+                    this.RaisePropertyChanged("EquipmentStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string FirstName {
             get {
                 return this.FirstNameField;
@@ -175,6 +203,19 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDEquipmentStatus {
+            get {
+                return this.IDEquipmentStatusField;
+            }
+            set {
+                if ((this.IDEquipmentStatusField.Equals(value) != true)) {
+                    this.IDEquipmentStatusField = value;
+                    this.RaisePropertyChanged("IDEquipmentStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string IP {
             get {
                 return this.IPField;
@@ -196,6 +237,32 @@ namespace DataBaseLayer.GetDataServiceReference {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Job {
+            get {
+                return this.JobField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JobField, value) != true)) {
+                    this.JobField = value;
+                    this.RaisePropertyChanged("Job");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
                 }
             }
         }
@@ -266,6 +333,19 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] QRCode {
+            get {
+                return this.QRCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QRCodeField, value) != true)) {
+                    this.QRCodeField = value;
+                    this.RaisePropertyChanged("QRCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string RAMVersion {
             get {
                 return this.RAMVersionField;
@@ -324,7 +404,7 @@ namespace DataBaseLayer.GetDataServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BarcodeField;
+        private byte[] BarcodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CPUVersionField;
@@ -336,16 +416,28 @@ namespace DataBaseLayer.GetDataServiceReference {
         private string CompanyFixedAssetField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EquipmentStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FirstNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string HardDriveVersionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDEquipmentStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string IPField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JobField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LocationNameField;
@@ -364,6 +456,9 @@ namespace DataBaseLayer.GetDataServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime PurchaseDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] QRCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string RAMVersionField;
@@ -385,7 +480,7 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Barcode {
+        public byte[] Barcode {
             get {
                 return this.BarcodeField;
             }
@@ -437,6 +532,19 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EquipmentStatus {
+            get {
+                return this.EquipmentStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EquipmentStatusField, value) != true)) {
+                    this.EquipmentStatusField = value;
+                    this.RaisePropertyChanged("EquipmentStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string FirstName {
             get {
                 return this.FirstNameField;
@@ -463,6 +571,19 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDEquipmentStatus {
+            get {
+                return this.IDEquipmentStatusField;
+            }
+            set {
+                if ((this.IDEquipmentStatusField.Equals(value) != true)) {
+                    this.IDEquipmentStatusField = value;
+                    this.RaisePropertyChanged("IDEquipmentStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string IP {
             get {
                 return this.IPField;
@@ -484,6 +605,32 @@ namespace DataBaseLayer.GetDataServiceReference {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Job {
+            get {
+                return this.JobField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JobField, value) != true)) {
+                    this.JobField = value;
+                    this.RaisePropertyChanged("Job");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
                 }
             }
         }
@@ -567,6 +714,19 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] QRCode {
+            get {
+                return this.QRCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QRCodeField, value) != true)) {
+                    this.QRCodeField = value;
+                    this.RaisePropertyChanged("QRCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string RAMVersion {
             get {
                 return this.RAMVersionField;
@@ -634,10 +794,22 @@ namespace DataBaseLayer.GetDataServiceReference {
         private string CompanyFixedAssetField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EquipmentStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FirstNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDEquipmentStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JobField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LocationNameField;
@@ -704,6 +876,19 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EquipmentStatus {
+            get {
+                return this.EquipmentStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EquipmentStatusField, value) != true)) {
+                    this.EquipmentStatusField = value;
+                    this.RaisePropertyChanged("EquipmentStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string FirstName {
             get {
                 return this.FirstNameField;
@@ -717,6 +902,19 @@ namespace DataBaseLayer.GetDataServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int IDEquipmentStatus {
+            get {
+                return this.IDEquipmentStatusField;
+            }
+            set {
+                if ((this.IDEquipmentStatusField.Equals(value) != true)) {
+                    this.IDEquipmentStatusField = value;
+                    this.RaisePropertyChanged("IDEquipmentStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Id {
             get {
                 return this.IdField;
@@ -725,6 +923,32 @@ namespace DataBaseLayer.GetDataServiceReference {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Job {
+            get {
+                return this.JobField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JobField, value) != true)) {
+                    this.JobField = value;
+                    this.RaisePropertyChanged("Job");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
                 }
             }
         }

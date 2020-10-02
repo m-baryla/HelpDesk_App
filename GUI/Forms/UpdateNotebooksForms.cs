@@ -62,48 +62,30 @@ namespace GUI.Forms
         #region ComboBox Data from DataGrindView
         public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
-            
-            var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            try
-            {
-                switch (dialogResult)
-                {
-                    case DialogResult.Yes:
-                    {
-                        DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
+          
+            DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
 
-                        // [UpdateNotebooksDataViev] must be like the view as [vwAll_Notebooks]
-                        comboBoxEquState.Text = dgViewRow.Cells[1].Value.ToString();
-                        textBoxIDNotebooks.Text = dgViewRow.Cells[2].Value.ToString();
-                        textBoxNameNotebook.Text = dgViewRow.Cells[3].Value.ToString();
-                        textBoxTagServiceNotebook.Text = dgViewRow.Cells[4].Value.ToString();
-                        textBoxIPNotebook.Text = dgViewRow.Cells[5].Value.ToString();
-                        dateTimePickerWarrantyDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[6].Value);
-                        dateTimePickerPurchaseDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[7].Value);
-                        richTextBoxComentsNotebook.Text = dgViewRow.Cells[8].Value.ToString();
-                        textBoxCompanyFixedAssetNotebook.Text = dgViewRow.Cells[9].Value.ToString();
-                        textBoxFirstName.Text = dgViewRow.Cells[10].Value.ToString();
-                        textBoxLastName.Text = dgViewRow.Cells[11].Value.ToString();
-                        textBoxJob.Text = dgViewRow.Cells[12].Value.ToString();
-                        comboBoxCPUNotebook.Text = dgViewRow.Cells[13].Value.ToString();
-                        comboBoxHardDriveNotebook.Text = dgViewRow.Cells[14].Value.ToString();
-                        comboBoxLocationNotebook.Text = dgViewRow.Cells[15].Value.ToString();
-                        comboBoxOfficeNotebook.Text = dgViewRow.Cells[16].Value.ToString();
-                        comboBoxModelNotebook.Text = dgViewRow.Cells[17].Value.ToString();
-                        comboBoxOperatigSystemNotebook.Text = dgViewRow.Cells[18].Value.ToString();
-                        comboBoxRAMNotebook.Text = dgViewRow.Cells[19].Value.ToString();
-                        break;
-                    }
-                    case DialogResult.No:
-                    {
-                        break;
-                    }
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            // [UpdateNotebooksDataViev] must be like the view as [vwAll_Notebooks]
+            comboBoxEquState.Text = dgViewRow.Cells[1].Value.ToString();
+            textBoxIDNotebooks.Text = dgViewRow.Cells[2].Value.ToString();
+            textBoxNameNotebook.Text = dgViewRow.Cells[3].Value.ToString();
+            textBoxTagServiceNotebook.Text = dgViewRow.Cells[4].Value.ToString();
+            textBoxIPNotebook.Text = dgViewRow.Cells[5].Value.ToString();
+            dateTimePickerWarrantyDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[6].Value);
+            dateTimePickerPurchaseDateNotebook.Value = Convert.ToDateTime(dgViewRow.Cells[7].Value);
+            richTextBoxComentsNotebook.Text = dgViewRow.Cells[8].Value.ToString();
+            textBoxCompanyFixedAssetNotebook.Text = dgViewRow.Cells[9].Value.ToString();
+            textBoxFirstName.Text = dgViewRow.Cells[10].Value.ToString();
+            textBoxLastName.Text = dgViewRow.Cells[11].Value.ToString();
+            textBoxJob.Text = dgViewRow.Cells[12].Value.ToString();
+            comboBoxCPUNotebook.Text = dgViewRow.Cells[13].Value.ToString();
+            comboBoxHardDriveNotebook.Text = dgViewRow.Cells[14].Value.ToString();
+            comboBoxLocationNotebook.Text = dgViewRow.Cells[15].Value.ToString();
+            comboBoxOfficeNotebook.Text = dgViewRow.Cells[16].Value.ToString();
+            comboBoxModelNotebook.Text = dgViewRow.Cells[17].Value.ToString();
+            comboBoxOperatigSystemNotebook.Text = dgViewRow.Cells[18].Value.ToString();
+            comboBoxRAMNotebook.Text = dgViewRow.Cells[19].Value.ToString();
+      
         }
         #endregion
 
@@ -239,5 +221,28 @@ namespace GUI.Forms
             comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
         #endregion
+
+        #region Paint
+        private void tabPageEquipmentNotebooks_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageEquipmentNotebooks, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void tabPageComentsNotebooks_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageComentsNotebooks, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void tabPageBarcodeNotebooks_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageBarcodeNotebooks, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void panelUpdateNotebooks_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(panelUpdateNotebooks, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+        #endregion
+
     }
 }

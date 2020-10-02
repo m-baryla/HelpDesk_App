@@ -204,6 +204,30 @@ namespace GUI.Forms
             comboBox.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
+
         #endregion
+
+        #region Paint
+        private void tabPageInsertForm_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageInsertForm, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void tabPageComentsComputer_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageComentsComputer, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void tabPageBarcodeComputer_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageBarcodeComputer, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void panelAddNewComputer_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(panelAddNewComputer, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+        #endregion
+
     }
 }

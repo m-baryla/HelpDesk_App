@@ -51,7 +51,7 @@ namespace LogicApp
                     case DialogResult.Yes:
                         {
                             DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
-                            var id = Convert.ToInt32(dgViewRow.Cells[0].Value.ToString());
+                            var id = Convert.ToInt32(dgViewRow.Cells[2].Value.ToString());
                             _data.DeleteMonitor(id);
                             break;
                         }

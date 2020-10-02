@@ -4,7 +4,7 @@ namespace GUI.CustomClass
 {
     public static class CustomShowSubMenu
     {
-        public static void showSubMenu(Panel submenuPanel)
+        public static void ShowSubMenu(Panel submenuPanel)
         {
             submenuPanel.Visible = submenuPanel.Visible == false;
             //if (submenuPanel.Visible == false)

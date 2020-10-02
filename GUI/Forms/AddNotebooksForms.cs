@@ -194,6 +194,30 @@ namespace GUI.Forms
             comboBox.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
+
         #endregion
+
+        #region Paint
+        private void tabPageEquipmentNotebooks_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageEquipmentNotebooks, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void tabPageComentsNotebooks_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageComentsNotebooks, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void tabPageBarcodeNotebooks_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageBarcodeNotebooks, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void panelAddNewNotebooks_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(panelAddNewNotebooks, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+        #endregion
+
     }
 }

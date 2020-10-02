@@ -1,0 +1,797 @@
+﻿namespace GUI.Forms
+{
+    partial class NewDashboard
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewDashboard));
+            this.panelMenuList = new System.Windows.Forms.Panel();
+            this.splitterMenuList5 = new System.Windows.Forms.Splitter();
+            this.buttonHelp = new GUI.CustomControls.BitmapButton();
+            this.splitterMenuList4 = new System.Windows.Forms.Splitter();
+            this.buttonSettings = new GUI.CustomControls.BitmapButton();
+            this.splitterMenuList3 = new System.Windows.Forms.Splitter();
+            this.buttonMenuList = new GUI.CustomControls.BitmapButton();
+            this.splitterMenuList2 = new System.Windows.Forms.Splitter();
+            this.buttonHome = new GUI.CustomControls.BitmapButton();
+            this.splitterMenuList1 = new System.Windows.Forms.Splitter();
+            this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.splitter11 = new System.Windows.Forms.Splitter();
+            this.buttonShowData = new GUI.CustomControls.BitmapButton();
+            this.panelReportsSubMenu = new System.Windows.Forms.Panel();
+            this.splitter10 = new System.Windows.Forms.Splitter();
+            this.bitmapButton3 = new GUI.CustomControls.BitmapButton();
+            this.splitter9 = new System.Windows.Forms.Splitter();
+            this.bitmapButton2 = new GUI.CustomControls.BitmapButton();
+            this.splitter8 = new System.Windows.Forms.Splitter();
+            this.bitmapButton1 = new GUI.CustomControls.BitmapButton();
+            this.splitter7 = new System.Windows.Forms.Splitter();
+            this.buttonReports = new GUI.CustomControls.BitmapButton();
+            this.panelAddNewSubMenu = new System.Windows.Forms.Panel();
+            this.splitter6 = new System.Windows.Forms.Splitter();
+            this.buttonAddNewMonitors = new GUI.CustomControls.BitmapButton();
+            this.splitter5 = new System.Windows.Forms.Splitter();
+            this.buttonAddNewNotebooks = new GUI.CustomControls.BitmapButton();
+            this.splitter4 = new System.Windows.Forms.Splitter();
+            this.buttonAddNewComputers = new GUI.CustomControls.BitmapButton();
+            this.splitter3 = new System.Windows.Forms.Splitter();
+            this.buttonAddNew = new GUI.CustomControls.BitmapButton();
+            this.splitter2 = new System.Windows.Forms.Splitter();
+            this.buttonLogo = new GUI.CustomControls.BitmapButton();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panelMenuList.SuspendLayout();
+            this.panelSideMenu.SuspendLayout();
+            this.panelReportsSubMenu.SuspendLayout();
+            this.panelAddNewSubMenu.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panelMenuList
+            // 
+            this.panelMenuList.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panelMenuList.Controls.Add(this.splitterMenuList5);
+            this.panelMenuList.Controls.Add(this.buttonHelp);
+            this.panelMenuList.Controls.Add(this.splitterMenuList4);
+            this.panelMenuList.Controls.Add(this.buttonSettings);
+            this.panelMenuList.Controls.Add(this.splitterMenuList3);
+            this.panelMenuList.Controls.Add(this.buttonMenuList);
+            this.panelMenuList.Controls.Add(this.splitterMenuList2);
+            this.panelMenuList.Controls.Add(this.buttonHome);
+            this.panelMenuList.Controls.Add(this.splitterMenuList1);
+            this.panelMenuList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenuList.Location = new System.Drawing.Point(0, 0);
+            this.panelMenuList.Name = "panelMenuList";
+            this.panelMenuList.Size = new System.Drawing.Size(50, 611);
+            this.panelMenuList.TabIndex = 0;
+            this.panelMenuList.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenuList_Paint);
+            // 
+            // splitterMenuList5
+            // 
+            this.splitterMenuList5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterMenuList5.Location = new System.Drawing.Point(0, 212);
+            this.splitterMenuList5.Name = "splitterMenuList5";
+            this.splitterMenuList5.Size = new System.Drawing.Size(50, 3);
+            this.splitterMenuList5.TabIndex = 25;
+            this.splitterMenuList5.TabStop = false;
+            // 
+            // buttonHelp
+            // 
+            this.buttonHelp.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonHelp.BorderColor = System.Drawing.Color.Black;
+            this.buttonHelp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHelp.FocusRectangleEnabled = true;
+            this.buttonHelp.ForeColor = System.Drawing.Color.Black;
+            this.buttonHelp.Image = null;
+            this.buttonHelp.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonHelp.ImageBorderEnabled = true;
+            this.buttonHelp.ImageDropShadow = true;
+            this.buttonHelp.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonHelp.ImageFocused")));
+            this.buttonHelp.ImageInactive = null;
+            this.buttonHelp.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonHelp.ImageMouseOver")));
+            this.buttonHelp.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonHelp.ImageNormal")));
+            this.buttonHelp.ImagePressed = null;
+            this.buttonHelp.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonHelp.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonHelp.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonHelp.Location = new System.Drawing.Point(0, 162);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.OffsetPressedContent = true;
+            this.buttonHelp.Size = new System.Drawing.Size(50, 50);
+            this.buttonHelp.StretchImage = false;
+            this.buttonHelp.TabIndex = 24;
+            this.buttonHelp.TextDropShadow = true;
+            this.buttonHelp.UseVisualStyleBackColor = false;
+            // 
+            // splitterMenuList4
+            // 
+            this.splitterMenuList4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterMenuList4.Location = new System.Drawing.Point(0, 159);
+            this.splitterMenuList4.Name = "splitterMenuList4";
+            this.splitterMenuList4.Size = new System.Drawing.Size(50, 3);
+            this.splitterMenuList4.TabIndex = 23;
+            this.splitterMenuList4.TabStop = false;
+            // 
+            // buttonSettings
+            // 
+            this.buttonSettings.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonSettings.BorderColor = System.Drawing.Color.Black;
+            this.buttonSettings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSettings.FocusRectangleEnabled = true;
+            this.buttonSettings.ForeColor = System.Drawing.Color.Black;
+            this.buttonSettings.Image = null;
+            this.buttonSettings.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonSettings.ImageBorderEnabled = true;
+            this.buttonSettings.ImageDropShadow = true;
+            this.buttonSettings.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonSettings.ImageFocused")));
+            this.buttonSettings.ImageInactive = null;
+            this.buttonSettings.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonSettings.ImageMouseOver")));
+            this.buttonSettings.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonSettings.ImageNormal")));
+            this.buttonSettings.ImagePressed = null;
+            this.buttonSettings.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonSettings.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonSettings.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonSettings.Location = new System.Drawing.Point(0, 109);
+            this.buttonSettings.Name = "buttonSettings";
+            this.buttonSettings.OffsetPressedContent = true;
+            this.buttonSettings.Size = new System.Drawing.Size(50, 50);
+            this.buttonSettings.StretchImage = false;
+            this.buttonSettings.TabIndex = 22;
+            this.buttonSettings.TextDropShadow = true;
+            this.buttonSettings.UseVisualStyleBackColor = false;
+            // 
+            // splitterMenuList3
+            // 
+            this.splitterMenuList3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterMenuList3.Location = new System.Drawing.Point(0, 106);
+            this.splitterMenuList3.Name = "splitterMenuList3";
+            this.splitterMenuList3.Size = new System.Drawing.Size(50, 3);
+            this.splitterMenuList3.TabIndex = 21;
+            this.splitterMenuList3.TabStop = false;
+            // 
+            // buttonMenuList
+            // 
+            this.buttonMenuList.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonMenuList.BorderColor = System.Drawing.Color.Black;
+            this.buttonMenuList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonMenuList.FocusRectangleEnabled = true;
+            this.buttonMenuList.ForeColor = System.Drawing.Color.Black;
+            this.buttonMenuList.Image = null;
+            this.buttonMenuList.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonMenuList.ImageBorderEnabled = true;
+            this.buttonMenuList.ImageDropShadow = true;
+            this.buttonMenuList.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonMenuList.ImageFocused")));
+            this.buttonMenuList.ImageInactive = null;
+            this.buttonMenuList.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonMenuList.ImageMouseOver")));
+            this.buttonMenuList.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonMenuList.ImageNormal")));
+            this.buttonMenuList.ImagePressed = null;
+            this.buttonMenuList.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonMenuList.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonMenuList.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonMenuList.Location = new System.Drawing.Point(0, 56);
+            this.buttonMenuList.Name = "buttonMenuList";
+            this.buttonMenuList.OffsetPressedContent = true;
+            this.buttonMenuList.Size = new System.Drawing.Size(50, 50);
+            this.buttonMenuList.StretchImage = false;
+            this.buttonMenuList.TabIndex = 20;
+            this.buttonMenuList.TextDropShadow = true;
+            this.buttonMenuList.UseVisualStyleBackColor = false;
+            this.buttonMenuList.Click += new System.EventHandler(this.buttonMenuList_Click);
+            // 
+            // splitterMenuList2
+            // 
+            this.splitterMenuList2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterMenuList2.Location = new System.Drawing.Point(0, 53);
+            this.splitterMenuList2.Name = "splitterMenuList2";
+            this.splitterMenuList2.Size = new System.Drawing.Size(50, 3);
+            this.splitterMenuList2.TabIndex = 19;
+            this.splitterMenuList2.TabStop = false;
+            // 
+            // buttonHome
+            // 
+            this.buttonHome.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonHome.BorderColor = System.Drawing.Color.Black;
+            this.buttonHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHome.FocusRectangleEnabled = true;
+            this.buttonHome.ForeColor = System.Drawing.Color.Black;
+            this.buttonHome.Image = null;
+            this.buttonHome.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonHome.ImageBorderEnabled = true;
+            this.buttonHome.ImageDropShadow = true;
+            this.buttonHome.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonHome.ImageFocused")));
+            this.buttonHome.ImageInactive = null;
+            this.buttonHome.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonHome.ImageMouseOver")));
+            this.buttonHome.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonHome.ImageNormal")));
+            this.buttonHome.ImagePressed = null;
+            this.buttonHome.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonHome.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonHome.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonHome.Location = new System.Drawing.Point(0, 3);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.OffsetPressedContent = true;
+            this.buttonHome.Size = new System.Drawing.Size(50, 50);
+            this.buttonHome.StretchImage = false;
+            this.buttonHome.TabIndex = 18;
+            this.buttonHome.TextDropShadow = true;
+            this.buttonHome.UseVisualStyleBackColor = false;
+            // 
+            // splitterMenuList1
+            // 
+            this.splitterMenuList1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitterMenuList1.Location = new System.Drawing.Point(0, 0);
+            this.splitterMenuList1.Name = "splitterMenuList1";
+            this.splitterMenuList1.Size = new System.Drawing.Size(50, 3);
+            this.splitterMenuList1.TabIndex = 17;
+            this.splitterMenuList1.TabStop = false;
+            // 
+            // panelSideMenu
+            // 
+            this.panelSideMenu.AutoScroll = true;
+            this.panelSideMenu.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panelSideMenu.Controls.Add(this.splitter11);
+            this.panelSideMenu.Controls.Add(this.buttonShowData);
+            this.panelSideMenu.Controls.Add(this.panelReportsSubMenu);
+            this.panelSideMenu.Controls.Add(this.splitter7);
+            this.panelSideMenu.Controls.Add(this.buttonReports);
+            this.panelSideMenu.Controls.Add(this.panelAddNewSubMenu);
+            this.panelSideMenu.Controls.Add(this.splitter3);
+            this.panelSideMenu.Controls.Add(this.buttonAddNew);
+            this.panelSideMenu.Controls.Add(this.splitter2);
+            this.panelSideMenu.Controls.Add(this.buttonLogo);
+            this.panelSideMenu.Controls.Add(this.splitter1);
+            this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSideMenu.Location = new System.Drawing.Point(50, 0);
+            this.panelSideMenu.Name = "panelSideMenu";
+            this.panelSideMenu.Size = new System.Drawing.Size(200, 611);
+            this.panelSideMenu.TabIndex = 1;
+            this.panelSideMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSideMenu_Paint);
+            // 
+            // splitter11
+            // 
+            this.splitter11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter11.Location = new System.Drawing.Point(0, 556);
+            this.splitter11.Name = "splitter11";
+            this.splitter11.Size = new System.Drawing.Size(200, 3);
+            this.splitter11.TabIndex = 28;
+            this.splitter11.TabStop = false;
+            // 
+            // buttonShowData
+            // 
+            this.buttonShowData.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonShowData.BorderColor = System.Drawing.Color.Black;
+            this.buttonShowData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonShowData.FocusRectangleEnabled = true;
+            this.buttonShowData.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.buttonShowData.ForeColor = System.Drawing.Color.Black;
+            this.buttonShowData.Image = null;
+            this.buttonShowData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonShowData.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonShowData.ImageBorderEnabled = true;
+            this.buttonShowData.ImageDropShadow = true;
+            this.buttonShowData.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonShowData.ImageFocused")));
+            this.buttonShowData.ImageInactive = null;
+            this.buttonShowData.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonShowData.ImageMouseOver")));
+            this.buttonShowData.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonShowData.ImageNormal")));
+            this.buttonShowData.ImagePressed = null;
+            this.buttonShowData.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonShowData.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonShowData.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonShowData.Location = new System.Drawing.Point(0, 496);
+            this.buttonShowData.Name = "buttonShowData";
+            this.buttonShowData.OffsetPressedContent = true;
+            this.buttonShowData.Size = new System.Drawing.Size(200, 60);
+            this.buttonShowData.StretchImage = false;
+            this.buttonShowData.TabIndex = 27;
+            this.buttonShowData.Text = "Show Data";
+            this.buttonShowData.TextDropShadow = true;
+            this.buttonShowData.UseVisualStyleBackColor = false;
+            this.buttonShowData.Click += new System.EventHandler(this.buttonShowData_Click);
+            // 
+            // panelReportsSubMenu
+            // 
+            this.panelReportsSubMenu.Controls.Add(this.splitter10);
+            this.panelReportsSubMenu.Controls.Add(this.bitmapButton3);
+            this.panelReportsSubMenu.Controls.Add(this.splitter9);
+            this.panelReportsSubMenu.Controls.Add(this.bitmapButton2);
+            this.panelReportsSubMenu.Controls.Add(this.splitter8);
+            this.panelReportsSubMenu.Controls.Add(this.bitmapButton1);
+            this.panelReportsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelReportsSubMenu.Location = new System.Drawing.Point(0, 365);
+            this.panelReportsSubMenu.Name = "panelReportsSubMenu";
+            this.panelReportsSubMenu.Size = new System.Drawing.Size(200, 131);
+            this.panelReportsSubMenu.TabIndex = 26;
+            // 
+            // splitter10
+            // 
+            this.splitter10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter10.Location = new System.Drawing.Point(0, 126);
+            this.splitter10.Name = "splitter10";
+            this.splitter10.Size = new System.Drawing.Size(200, 3);
+            this.splitter10.TabIndex = 28;
+            this.splitter10.TabStop = false;
+            // 
+            // bitmapButton3
+            // 
+            this.bitmapButton3.BackColor = System.Drawing.Color.Transparent;
+            this.bitmapButton3.BorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bitmapButton3.FocusRectangleEnabled = true;
+            this.bitmapButton3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.bitmapButton3.ForeColor = System.Drawing.Color.Black;
+            this.bitmapButton3.Image = null;
+            this.bitmapButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bitmapButton3.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton3.ImageBorderEnabled = true;
+            this.bitmapButton3.ImageDropShadow = true;
+            this.bitmapButton3.ImageFocused = null;
+            this.bitmapButton3.ImageInactive = null;
+            this.bitmapButton3.ImageMouseOver = null;
+            this.bitmapButton3.ImageNormal = null;
+            this.bitmapButton3.ImagePressed = null;
+            this.bitmapButton3.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton3.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.bitmapButton3.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.bitmapButton3.Location = new System.Drawing.Point(0, 86);
+            this.bitmapButton3.Name = "bitmapButton3";
+            this.bitmapButton3.OffsetPressedContent = true;
+            this.bitmapButton3.Size = new System.Drawing.Size(200, 40);
+            this.bitmapButton3.StretchImage = false;
+            this.bitmapButton3.TabIndex = 27;
+            this.bitmapButton3.Text = "     raport 3";
+            this.bitmapButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bitmapButton3.TextDropShadow = true;
+            this.bitmapButton3.UseVisualStyleBackColor = false;
+            // 
+            // splitter9
+            // 
+            this.splitter9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter9.Location = new System.Drawing.Point(0, 83);
+            this.splitter9.Name = "splitter9";
+            this.splitter9.Size = new System.Drawing.Size(200, 3);
+            this.splitter9.TabIndex = 26;
+            this.splitter9.TabStop = false;
+            // 
+            // bitmapButton2
+            // 
+            this.bitmapButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bitmapButton2.BorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bitmapButton2.FocusRectangleEnabled = true;
+            this.bitmapButton2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.bitmapButton2.ForeColor = System.Drawing.Color.Black;
+            this.bitmapButton2.Image = null;
+            this.bitmapButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bitmapButton2.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton2.ImageBorderEnabled = true;
+            this.bitmapButton2.ImageDropShadow = true;
+            this.bitmapButton2.ImageFocused = null;
+            this.bitmapButton2.ImageInactive = null;
+            this.bitmapButton2.ImageMouseOver = null;
+            this.bitmapButton2.ImageNormal = null;
+            this.bitmapButton2.ImagePressed = null;
+            this.bitmapButton2.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton2.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.bitmapButton2.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.bitmapButton2.Location = new System.Drawing.Point(0, 43);
+            this.bitmapButton2.Name = "bitmapButton2";
+            this.bitmapButton2.OffsetPressedContent = true;
+            this.bitmapButton2.Size = new System.Drawing.Size(200, 40);
+            this.bitmapButton2.StretchImage = false;
+            this.bitmapButton2.TabIndex = 25;
+            this.bitmapButton2.Text = "     raport 2";
+            this.bitmapButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bitmapButton2.TextDropShadow = true;
+            this.bitmapButton2.UseVisualStyleBackColor = false;
+            // 
+            // splitter8
+            // 
+            this.splitter8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter8.Location = new System.Drawing.Point(0, 40);
+            this.splitter8.Name = "splitter8";
+            this.splitter8.Size = new System.Drawing.Size(200, 3);
+            this.splitter8.TabIndex = 24;
+            this.splitter8.TabStop = false;
+            // 
+            // bitmapButton1
+            // 
+            this.bitmapButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bitmapButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bitmapButton1.FocusRectangleEnabled = true;
+            this.bitmapButton1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.bitmapButton1.ForeColor = System.Drawing.Color.Black;
+            this.bitmapButton1.Image = null;
+            this.bitmapButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bitmapButton1.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton1.ImageBorderEnabled = true;
+            this.bitmapButton1.ImageDropShadow = true;
+            this.bitmapButton1.ImageFocused = null;
+            this.bitmapButton1.ImageInactive = null;
+            this.bitmapButton1.ImageMouseOver = null;
+            this.bitmapButton1.ImageNormal = null;
+            this.bitmapButton1.ImagePressed = null;
+            this.bitmapButton1.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.bitmapButton1.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.bitmapButton1.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.bitmapButton1.Location = new System.Drawing.Point(0, 0);
+            this.bitmapButton1.Name = "bitmapButton1";
+            this.bitmapButton1.OffsetPressedContent = true;
+            this.bitmapButton1.Size = new System.Drawing.Size(200, 40);
+            this.bitmapButton1.StretchImage = false;
+            this.bitmapButton1.TabIndex = 23;
+            this.bitmapButton1.Text = "     raport 1";
+            this.bitmapButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bitmapButton1.TextDropShadow = true;
+            this.bitmapButton1.UseVisualStyleBackColor = false;
+            // 
+            // splitter7
+            // 
+            this.splitter7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter7.Location = new System.Drawing.Point(0, 362);
+            this.splitter7.Name = "splitter7";
+            this.splitter7.Size = new System.Drawing.Size(200, 3);
+            this.splitter7.TabIndex = 25;
+            this.splitter7.TabStop = false;
+            // 
+            // buttonReports
+            // 
+            this.buttonReports.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonReports.BorderColor = System.Drawing.Color.Black;
+            this.buttonReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonReports.FocusRectangleEnabled = true;
+            this.buttonReports.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
+            this.buttonReports.ForeColor = System.Drawing.Color.Black;
+            this.buttonReports.Image = null;
+            this.buttonReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonReports.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonReports.ImageBorderEnabled = true;
+            this.buttonReports.ImageDropShadow = true;
+            this.buttonReports.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonReports.ImageFocused")));
+            this.buttonReports.ImageInactive = null;
+            this.buttonReports.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonReports.ImageMouseOver")));
+            this.buttonReports.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonReports.ImageNormal")));
+            this.buttonReports.ImagePressed = null;
+            this.buttonReports.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonReports.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonReports.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonReports.Location = new System.Drawing.Point(0, 302);
+            this.buttonReports.Name = "buttonReports";
+            this.buttonReports.OffsetPressedContent = true;
+            this.buttonReports.Size = new System.Drawing.Size(200, 60);
+            this.buttonReports.StretchImage = false;
+            this.buttonReports.TabIndex = 24;
+            this.buttonReports.Text = "Create New Reports";
+            this.buttonReports.TextDropShadow = true;
+            this.buttonReports.UseVisualStyleBackColor = false;
+            this.buttonReports.Click += new System.EventHandler(this.buttonReports_Click);
+            // 
+            // panelAddNewSubMenu
+            // 
+            this.panelAddNewSubMenu.Controls.Add(this.splitter6);
+            this.panelAddNewSubMenu.Controls.Add(this.buttonAddNewMonitors);
+            this.panelAddNewSubMenu.Controls.Add(this.splitter5);
+            this.panelAddNewSubMenu.Controls.Add(this.buttonAddNewNotebooks);
+            this.panelAddNewSubMenu.Controls.Add(this.splitter4);
+            this.panelAddNewSubMenu.Controls.Add(this.buttonAddNewComputers);
+            this.panelAddNewSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAddNewSubMenu.Location = new System.Drawing.Point(0, 172);
+            this.panelAddNewSubMenu.Name = "panelAddNewSubMenu";
+            this.panelAddNewSubMenu.Size = new System.Drawing.Size(200, 130);
+            this.panelAddNewSubMenu.TabIndex = 23;
+            // 
+            // splitter6
+            // 
+            this.splitter6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter6.Location = new System.Drawing.Point(0, 126);
+            this.splitter6.Name = "splitter6";
+            this.splitter6.Size = new System.Drawing.Size(200, 3);
+            this.splitter6.TabIndex = 27;
+            this.splitter6.TabStop = false;
+            // 
+            // buttonAddNewMonitors
+            // 
+            this.buttonAddNewMonitors.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewMonitors.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewMonitors.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAddNewMonitors.FocusRectangleEnabled = true;
+            this.buttonAddNewMonitors.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.buttonAddNewMonitors.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddNewMonitors.Image = null;
+            this.buttonAddNewMonitors.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAddNewMonitors.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewMonitors.ImageBorderEnabled = true;
+            this.buttonAddNewMonitors.ImageDropShadow = true;
+            this.buttonAddNewMonitors.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonAddNewMonitors.ImageFocused")));
+            this.buttonAddNewMonitors.ImageInactive = null;
+            this.buttonAddNewMonitors.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonAddNewMonitors.ImageMouseOver")));
+            this.buttonAddNewMonitors.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonAddNewMonitors.ImageNormal")));
+            this.buttonAddNewMonitors.ImagePressed = null;
+            this.buttonAddNewMonitors.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewMonitors.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonAddNewMonitors.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonAddNewMonitors.Location = new System.Drawing.Point(0, 86);
+            this.buttonAddNewMonitors.Name = "buttonAddNewMonitors";
+            this.buttonAddNewMonitors.OffsetPressedContent = true;
+            this.buttonAddNewMonitors.Size = new System.Drawing.Size(200, 40);
+            this.buttonAddNewMonitors.StretchImage = false;
+            this.buttonAddNewMonitors.TabIndex = 26;
+            this.buttonAddNewMonitors.Text = "     Monitors";
+            this.buttonAddNewMonitors.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddNewMonitors.TextDropShadow = true;
+            this.buttonAddNewMonitors.UseVisualStyleBackColor = false;
+            this.buttonAddNewMonitors.Click += new System.EventHandler(this.buttonAddNewMonitors_Click);
+            // 
+            // splitter5
+            // 
+            this.splitter5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter5.Location = new System.Drawing.Point(0, 83);
+            this.splitter5.Name = "splitter5";
+            this.splitter5.Size = new System.Drawing.Size(200, 3);
+            this.splitter5.TabIndex = 25;
+            this.splitter5.TabStop = false;
+            // 
+            // buttonAddNewNotebooks
+            // 
+            this.buttonAddNewNotebooks.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewNotebooks.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewNotebooks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAddNewNotebooks.FocusRectangleEnabled = true;
+            this.buttonAddNewNotebooks.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.buttonAddNewNotebooks.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddNewNotebooks.Image = null;
+            this.buttonAddNewNotebooks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAddNewNotebooks.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewNotebooks.ImageBorderEnabled = true;
+            this.buttonAddNewNotebooks.ImageDropShadow = true;
+            this.buttonAddNewNotebooks.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonAddNewNotebooks.ImageFocused")));
+            this.buttonAddNewNotebooks.ImageInactive = null;
+            this.buttonAddNewNotebooks.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonAddNewNotebooks.ImageMouseOver")));
+            this.buttonAddNewNotebooks.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonAddNewNotebooks.ImageNormal")));
+            this.buttonAddNewNotebooks.ImagePressed = null;
+            this.buttonAddNewNotebooks.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewNotebooks.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonAddNewNotebooks.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonAddNewNotebooks.Location = new System.Drawing.Point(0, 43);
+            this.buttonAddNewNotebooks.Name = "buttonAddNewNotebooks";
+            this.buttonAddNewNotebooks.OffsetPressedContent = true;
+            this.buttonAddNewNotebooks.Size = new System.Drawing.Size(200, 40);
+            this.buttonAddNewNotebooks.StretchImage = false;
+            this.buttonAddNewNotebooks.TabIndex = 24;
+            this.buttonAddNewNotebooks.Text = "     Notebooks";
+            this.buttonAddNewNotebooks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddNewNotebooks.TextDropShadow = true;
+            this.buttonAddNewNotebooks.UseVisualStyleBackColor = false;
+            this.buttonAddNewNotebooks.Click += new System.EventHandler(this.buttonAddNewNotebooks_Click);
+            // 
+            // splitter4
+            // 
+            this.splitter4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter4.Location = new System.Drawing.Point(0, 40);
+            this.splitter4.Name = "splitter4";
+            this.splitter4.Size = new System.Drawing.Size(200, 3);
+            this.splitter4.TabIndex = 23;
+            this.splitter4.TabStop = false;
+            // 
+            // buttonAddNewComputers
+            // 
+            this.buttonAddNewComputers.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewComputers.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewComputers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAddNewComputers.FocusRectangleEnabled = true;
+            this.buttonAddNewComputers.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.buttonAddNewComputers.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddNewComputers.Image = null;
+            this.buttonAddNewComputers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonAddNewComputers.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewComputers.ImageBorderEnabled = true;
+            this.buttonAddNewComputers.ImageDropShadow = true;
+            this.buttonAddNewComputers.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonAddNewComputers.ImageFocused")));
+            this.buttonAddNewComputers.ImageInactive = null;
+            this.buttonAddNewComputers.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonAddNewComputers.ImageMouseOver")));
+            this.buttonAddNewComputers.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonAddNewComputers.ImageNormal")));
+            this.buttonAddNewComputers.ImagePressed = null;
+            this.buttonAddNewComputers.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNewComputers.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonAddNewComputers.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonAddNewComputers.Location = new System.Drawing.Point(0, 0);
+            this.buttonAddNewComputers.Name = "buttonAddNewComputers";
+            this.buttonAddNewComputers.OffsetPressedContent = true;
+            this.buttonAddNewComputers.Size = new System.Drawing.Size(200, 40);
+            this.buttonAddNewComputers.StretchImage = false;
+            this.buttonAddNewComputers.TabIndex = 22;
+            this.buttonAddNewComputers.Text = "     Computers";
+            this.buttonAddNewComputers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddNewComputers.TextDropShadow = true;
+            this.buttonAddNewComputers.UseVisualStyleBackColor = false;
+            this.buttonAddNewComputers.Click += new System.EventHandler(this.buttonAddNewComputers_Click);
+            // 
+            // splitter3
+            // 
+            this.splitter3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter3.Location = new System.Drawing.Point(0, 169);
+            this.splitter3.Name = "splitter3";
+            this.splitter3.Size = new System.Drawing.Size(200, 3);
+            this.splitter3.TabIndex = 22;
+            this.splitter3.TabStop = false;
+            // 
+            // buttonAddNew
+            // 
+            this.buttonAddNew.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonAddNew.BorderColor = System.Drawing.Color.Black;
+            this.buttonAddNew.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAddNew.FocusRectangleEnabled = true;
+            this.buttonAddNew.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddNew.Image = null;
+            this.buttonAddNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAddNew.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNew.ImageBorderEnabled = true;
+            this.buttonAddNew.ImageDropShadow = true;
+            this.buttonAddNew.ImageFocused = ((System.Drawing.Image)(resources.GetObject("buttonAddNew.ImageFocused")));
+            this.buttonAddNew.ImageInactive = null;
+            this.buttonAddNew.ImageMouseOver = ((System.Drawing.Image)(resources.GetObject("buttonAddNew.ImageMouseOver")));
+            this.buttonAddNew.ImageNormal = ((System.Drawing.Image)(resources.GetObject("buttonAddNew.ImageNormal")));
+            this.buttonAddNew.ImagePressed = null;
+            this.buttonAddNew.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonAddNew.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonAddNew.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonAddNew.Location = new System.Drawing.Point(0, 109);
+            this.buttonAddNew.Name = "buttonAddNew";
+            this.buttonAddNew.OffsetPressedContent = true;
+            this.buttonAddNew.Size = new System.Drawing.Size(200, 60);
+            this.buttonAddNew.StretchImage = false;
+            this.buttonAddNew.TabIndex = 21;
+            this.buttonAddNew.Text = "Add New";
+            this.buttonAddNew.TextDropShadow = true;
+            this.buttonAddNew.UseVisualStyleBackColor = false;
+            this.buttonAddNew.Click += new System.EventHandler(this.buttonAddNew_Click);
+            // 
+            // splitter2
+            // 
+            this.splitter2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter2.Location = new System.Drawing.Point(0, 106);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(200, 3);
+            this.splitter2.TabIndex = 20;
+            this.splitter2.TabStop = false;
+            // 
+            // buttonLogo
+            // 
+            this.buttonLogo.BackColor = System.Drawing.Color.LightSlateGray;
+            this.buttonLogo.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonLogo.FocusRectangleEnabled = true;
+            this.buttonLogo.ForeColor = System.Drawing.Color.Black;
+            this.buttonLogo.Image = null;
+            this.buttonLogo.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonLogo.ImageBorderEnabled = true;
+            this.buttonLogo.ImageDropShadow = true;
+            this.buttonLogo.ImageFocused = null;
+            this.buttonLogo.ImageInactive = null;
+            this.buttonLogo.ImageMouseOver = null;
+            this.buttonLogo.ImageNormal = null;
+            this.buttonLogo.ImagePressed = null;
+            this.buttonLogo.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonLogo.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonLogo.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonLogo.Location = new System.Drawing.Point(0, 3);
+            this.buttonLogo.Name = "buttonLogo";
+            this.buttonLogo.OffsetPressedContent = true;
+            this.buttonLogo.Size = new System.Drawing.Size(200, 103);
+            this.buttonLogo.StretchImage = false;
+            this.buttonLogo.TabIndex = 19;
+            this.buttonLogo.TextDropShadow = true;
+            this.buttonLogo.UseVisualStyleBackColor = false;
+            // 
+            // splitter1
+            // 
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(200, 3);
+            this.splitter1.TabIndex = 0;
+            this.splitter1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(884, 611);
+            this.panelChildForm.TabIndex = 4;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint_1);
+            // 
+            // NewDashboard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(1134, 611);
+            this.Controls.Add(this.panelChildForm);
+            this.Controls.Add(this.panelSideMenu);
+            this.Controls.Add(this.panelMenuList);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1150, 650);
+            this.MinimumSize = new System.Drawing.Size(1150, 650);
+            this.Name = "NewDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form1";
+            this.panelMenuList.ResumeLayout(false);
+            this.panelSideMenu.ResumeLayout(false);
+            this.panelReportsSubMenu.ResumeLayout(false);
+            this.panelAddNewSubMenu.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panelMenuList;
+        private System.Windows.Forms.Splitter splitterMenuList5;
+        private CustomControls.BitmapButton buttonHelp;
+        private System.Windows.Forms.Splitter splitterMenuList4;
+        private CustomControls.BitmapButton buttonSettings;
+        private System.Windows.Forms.Splitter splitterMenuList3;
+        private CustomControls.BitmapButton buttonMenuList;
+        private System.Windows.Forms.Splitter splitterMenuList2;
+        private CustomControls.BitmapButton buttonHome;
+        private System.Windows.Forms.Splitter splitterMenuList1;
+        private System.Windows.Forms.Panel panelSideMenu;
+        private System.Windows.Forms.Panel panelAddNewSubMenu;
+        private System.Windows.Forms.Splitter splitter3;
+        private CustomControls.BitmapButton buttonAddNew;
+        private System.Windows.Forms.Splitter splitter2;
+        private CustomControls.BitmapButton buttonLogo;
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Splitter splitter6;
+        private CustomControls.BitmapButton buttonAddNewMonitors;
+        private System.Windows.Forms.Splitter splitter5;
+        private CustomControls.BitmapButton buttonAddNewNotebooks;
+        private System.Windows.Forms.Splitter splitter4;
+        private CustomControls.BitmapButton buttonAddNewComputers;
+        private System.Windows.Forms.Timer timer1;
+        private CustomControls.BitmapButton buttonReports;
+        private System.Windows.Forms.Panel panelReportsSubMenu;
+        private System.Windows.Forms.Splitter splitter7;
+        private System.Windows.Forms.Splitter splitter10;
+        private CustomControls.BitmapButton bitmapButton3;
+        private System.Windows.Forms.Splitter splitter9;
+        private CustomControls.BitmapButton bitmapButton2;
+        private System.Windows.Forms.Splitter splitter8;
+        private CustomControls.BitmapButton bitmapButton1;
+        private System.Windows.Forms.Splitter splitter11;
+        private CustomControls.BitmapButton buttonShowData;
+        private System.Windows.Forms.Panel panelChildForm;
+    }
+}

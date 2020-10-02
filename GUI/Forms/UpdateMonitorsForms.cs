@@ -47,40 +47,23 @@ namespace GUI.Forms
         #region ComboBox Data from DataGrindView
         public void EditDataLoad(DataGridViewCellEventArgs e, AdvancedDataGridView advancedDataGridView)
         {
-            var dialogResult = MessageBox.Show("Do you want to edit", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            try
-            {
-                switch (dialogResult)
-                {
-                    case DialogResult.Yes:
-                    {
-                        DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
+           
+            DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
 
-                        // [UpdateMonitorsDataViev] must be like the view as [vwAll_Monitors]
-                        comboBoxEquState.Text = dgViewRow.Cells[1].Value.ToString();
-                        textBoxIDMonitor.Text = dgViewRow.Cells[2].Value.ToString();
-                        textBoxTagServiceMonitors.Text = dgViewRow.Cells[3].Value.ToString();
-                        dateTimePickerWarrantyDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
-                        dateTimePickerPurchaseDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
-                        richTextBoxComentsMonitors.Text = dgViewRow.Cells[6].Value.ToString();
-                        textBoxCompanyFixedAssetMonitors.Text = dgViewRow.Cells[7].Value.ToString();
-                        textBoxFirstName.Text = dgViewRow.Cells[8].Value.ToString();
-                        textBoxLastName.Text = dgViewRow.Cells[9].Value.ToString();
-                        textBoxJob.Text = dgViewRow.Cells[10].Value.ToString();
-                        comboBoxLocationMonitors.Text = dgViewRow.Cells[11].Value.ToString();
-                        comboBoxModelMonitors.Text = dgViewRow.Cells[12].Value.ToString();
-                        break;
-                    }
-                    case DialogResult.No:
-                    {
-                        break;
-                    }
-                }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            // [UpdateMonitorsDataViev] must be like the view as [vwAll_Monitors]
+            comboBoxEquState.Text = dgViewRow.Cells[1].Value.ToString();
+            textBoxIDMonitor.Text = dgViewRow.Cells[2].Value.ToString();
+            textBoxTagServiceMonitors.Text = dgViewRow.Cells[3].Value.ToString();
+            dateTimePickerWarrantyDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[4].Value);
+            dateTimePickerPurchaseDateMonitors.Value = Convert.ToDateTime(dgViewRow.Cells[5].Value);
+            richTextBoxComentsMonitors.Text = dgViewRow.Cells[6].Value.ToString();
+            textBoxCompanyFixedAssetMonitors.Text = dgViewRow.Cells[7].Value.ToString();
+            textBoxFirstName.Text = dgViewRow.Cells[8].Value.ToString();
+            textBoxLastName.Text = dgViewRow.Cells[9].Value.ToString();
+            textBoxJob.Text = dgViewRow.Cells[10].Value.ToString();
+            comboBoxLocationMonitors.Text = dgViewRow.Cells[11].Value.ToString();
+            comboBoxModelMonitors.Text = dgViewRow.Cells[12].Value.ToString();
+                   
         }
         #endregion
 
@@ -94,6 +77,9 @@ namespace GUI.Forms
                 textBoxTagServiceMonitors.Text,comboBoxLocationMonitors.Text, comboBoxUsers.Text, comboBoxModelMonitors.Text, 
                 richTextBoxComentsMonitors.Text, dateTimePickerWarrantyDateMonitors.Value.Date,
                 dateTimePickerPurchaseDateMonitors.Value.Date, bitmapDataBarcode, bitmapDataQRCode, comboBoxEquState.Text);
+
+            buttonUpdateDataMonitor.Enabled = true;
+
         }
         #endregion
 
@@ -186,5 +172,28 @@ namespace GUI.Forms
             comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
         #endregion
+
+        #region Paint
+        private void tabPageBarcodeMonitors_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageBarcodeMonitors, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void tabPageComentsMonitors_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageComentsMonitors, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void tabPageUpdateForm_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(tabPageUpdateForm, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+
+        private void panelUpdateMonitors_Paint(object sender, PaintEventArgs e)
+        {
+            CustomPaintBackgound.PanelBackgruondPanit(panelUpdateMonitors, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
+        }
+        #endregion
+
     }
 }

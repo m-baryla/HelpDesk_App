@@ -64,7 +64,7 @@ namespace GUI.Forms
         #region Submenu Add New
         private void buttonAddNew_Click(object sender, EventArgs e)
         {
-            CustomShowSubMenu.showSubMenu(panelAddNewSubMenu);
+            CustomShowSubMenu.ShowSubMenu(panelAddNewSubMenu);
         }
         private void buttonAddNewComputers_Click(object sender, EventArgs e)
         {
@@ -83,7 +83,7 @@ namespace GUI.Forms
         #region Submenu Reports
         private void buttonReports_Click(object sender, EventArgs e)
         {
-            CustomShowSubMenu.showSubMenu(panelReportsSubMenu);
+            CustomShowSubMenu.ShowSubMenu(panelReportsSubMenu);
         }
         #endregion
 
@@ -237,8 +237,8 @@ namespace GUI.Forms
             timer1.Start();
         }
 
+
         #endregion
 
-       
     }
 }

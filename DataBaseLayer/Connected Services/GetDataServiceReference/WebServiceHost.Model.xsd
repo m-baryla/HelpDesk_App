@@ -8,20 +8,25 @@
   <xs:element name="ArrayOfComputersDataView" nillable="true" type="tns:ArrayOfComputersDataView" />
   <xs:complexType name="ComputersDataView">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="CPUVersion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Coments" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CompanyFixedAsset" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CompterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentStatus" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="HardDriveVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDEquipmentStatus" type="xs:int" />
       <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MicrosoftOfficeVersion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ModelVersionComputer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OperatingSystemVersion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PurchaseDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QRCode" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="RAMVersion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TagService" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="WarrantyDate" type="xs:dateTime" />
@@ -36,20 +41,25 @@
   <xs:element name="ArrayOfNotebooksDataView" nillable="true" type="tns:ArrayOfNotebooksDataView" />
   <xs:complexType name="NotebooksDataView">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="CPUVersion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Coments" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CompanyFixedAsset" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentStatus" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="HardDriveVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDEquipmentStatus" type="xs:int" />
       <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MicrosoftOfficeVersion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ModelVersionNotebooks" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="NotebooksName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OperatingSystemVersion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PurchaseDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="QRCode" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="RAMVersion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TagService" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="WarrantyDate" type="xs:dateTime" />
@@ -67,8 +77,12 @@
       <xs:element minOccurs="0" name="Barcode" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Coments" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CompanyFixedAsset" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipmentStatus" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDEquipmentStatus" type="xs:int" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ModelVersionMonitors" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PurchaseDate" type="xs:dateTime" />

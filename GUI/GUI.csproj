@@ -61,7 +61,14 @@
     <Compile Include="CustomClass\CustomBorder.cs" />
     <Compile Include="CustomClass\CustomConvertToBinary.cs" />
     <Compile Include="CustomClass\CustomCreateCode.cs" />
+    <Compile Include="CustomClass\CustomPaintBackgound.cs" />
     <Compile Include="CustomClass\CustomSaveFileDialog.cs" />
+    <Compile Include="CustomControls\BitmapButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CustomSubmenuButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\AboutForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +105,12 @@
     <Compile Include="Forms\DataGrindViewForms.Designer.cs">
       <DependentUpon>DataGrindViewForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NewDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewDashboard.Designer.cs">
+      <DependentUpon>NewDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UpdateComputersForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,12 +129,12 @@
     <Compile Include="Forms\UpdateNotebooksForms.Designer.cs">
       <DependentUpon>UpdateNotebooksForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomClass\CustomInfoMessageBox.cs" />
     <Compile Include="HelpDeskDB_TESTDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HelpDeskDB_TESTDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CustomClass\CustomInfoMessageBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -153,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DataGrindViewForms.resx">
       <DependentUpon>DataGrindViewForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewDashboard.resx">
+      <DependentUpon>NewDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UpdateComputersForms.resx">
       <DependentUpon>UpdateComputersForms.cs</DependentUpon>
@@ -196,9 +212,6 @@
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CustomControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

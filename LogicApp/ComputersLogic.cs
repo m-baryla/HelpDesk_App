@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -53,7 +54,8 @@ namespace LogicApp
                     case DialogResult.Yes:
                         {
                             DataGridViewRow dgViewRow = advancedDataGridView.Rows[e.RowIndex];
-                            var id = Convert.ToInt32(dgViewRow.Cells[0].Value.ToString());
+                            // Celss[2] = id item
+                            var id = Convert.ToInt32(dgViewRow.Cells[2].Value.ToString());
                             _data.DeleteComputer(id);
                             break;
                         }
@@ -103,6 +105,7 @@ namespace LogicApp
         {
             for (int i = 0; i < advancedDataGridView.Rows.Count - 1; i++)
             {
+                // Celss[0] = id eq state
                 int value = Int32.Parse(advancedDataGridView.Rows[i].Cells[0].Value.ToString());
 
                 if (value == 1)
