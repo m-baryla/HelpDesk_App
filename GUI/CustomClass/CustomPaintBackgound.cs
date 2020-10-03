@@ -61,7 +61,9 @@ namespace GUI.CustomClass
 			//
 			brush.Dispose();
 		}
-		//public static void PictureBoxBackgruondPanit(PictureBox panel, PaintEventArgs e)
+
+
+		//public static void ButtonBackgruondPanit(Button buttton, PaintEventArgs e, System.Drawing.Drawing2D.LinearGradientMode linearGradientMode)
 		//{
 		//	if (e == null)
 		//		return;
@@ -69,11 +71,11 @@ namespace GUI.CustomClass
 		//		return;
 
 		//	Graphics g = e.Graphics;
-		//	System.Drawing.Rectangle rect = new Rectangle(0, 0, panel.Size.Width, panel.Size.Height);
+		//	System.Drawing.Rectangle rect = new Rectangle(0, 0, buttton.Size.Width, buttton.Size.Height);
 		//	//
 		//	// get color of background
 		//	//			
-		//	System.Drawing.Color color = panel.BackColor; ;
+		//	System.Drawing.Color color = buttton.BackColor; ;
 		//	//
 		//	// intialize ColorArray and Positions Array
 		//	//
@@ -83,12 +85,12 @@ namespace GUI.CustomClass
 		//	// initialize color array for a button that is pushed
 		//	//			
 		//	ColorArray = new Color[]{
-		//							 Blend(panel.BackColor,System.Drawing.Color.White,80),
-		//							 Blend(panel.BackColor,System.Drawing.Color.White,40),
-		//							 Blend(panel.BackColor,System.Drawing.Color.Black,0),
-		//							 Blend(panel.BackColor,System.Drawing.Color.Black,0),
-		//							 Blend(panel.BackColor,System.Drawing.Color.White,40),
-		//							 Blend(panel.BackColor,System.Drawing.Color.White,80),
+		//							 Blend(buttton.BackColor,System.Drawing.Color.White,80),
+		//							 Blend(buttton.BackColor,System.Drawing.Color.White,40),
+		//							 Blend(buttton.BackColor,System.Drawing.Color.Black,0),
+		//							 Blend(buttton.BackColor,System.Drawing.Color.Black,0),
+		//							 Blend(buttton.BackColor,System.Drawing.Color.White,40),
+		//							 Blend(buttton.BackColor,System.Drawing.Color.White,80),
 		//		};
 		//	PositionArray = new float[] { 0.0f, .05f, .40f, .60f, .95f, 1.0f };
 		//	//
@@ -101,8 +103,8 @@ namespace GUI.CustomClass
 		//	//
 		//	// create vertical gradient brush
 		//	//
-		//	System.Drawing.Drawing2D.LinearGradientBrush brush = new System.Drawing.Drawing2D.LinearGradientBrush(rect, panel.BackColor, Blend(panel.BackColor, panel.BackColor, 10),
-		//																											System.Drawing.Drawing2D.LinearGradientMode.Vertical);
+		//	System.Drawing.Drawing2D.LinearGradientBrush brush = new System.Drawing.Drawing2D.LinearGradientBrush(rect, buttton.BackColor, Blend(buttton.BackColor, buttton.BackColor, 10), linearGradientMode);
+
 		//	brush.InterpolationColors = blend;
 		//	//
 		//	// fill the rectangle

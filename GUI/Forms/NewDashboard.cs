@@ -30,6 +30,7 @@ namespace GUI.Forms
             this._infoMessageBox = infoMessageBox;
             InitializeComponent();
             customizeDesing();
+            timerClock.Start();
         }
 
 
@@ -70,7 +71,7 @@ namespace GUI.Forms
                                                                 new NotebooksLogic(_dataAcces, _infoMessageBox),
                                                                 new MonitorsLogic(_dataAcces, _infoMessageBox)), panelChildForm);
         }
-       
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (_hidden)
@@ -78,6 +79,7 @@ namespace GUI.Forms
                 panelSideMenu.Width += 10;
                 if (panelSideMenu.Width >= _panelWidthSideMenu)
                 {
+                    DoubleBuffered = true;
                     timer1.Stop();
                     _hidden = false;
                     this.Refresh();
@@ -88,11 +90,26 @@ namespace GUI.Forms
                 panelSideMenu.Width -= 10;
                 if (panelSideMenu.Width <= 0)
                 {
+                    DoubleBuffered = true;
                     timer1.Stop();
                     _hidden = true;
                     this.Refresh();
                 }
             }
+        }
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            this.InitializeComponent();
+            customizeDesing();
+            timerClock.Start();
+        }
+        private void timerClock_Tick(object sender, EventArgs e)
+        {
+            labelHourMin.Text = DateTime.Now.ToString("HH:mm");
+            labelMMDDRRRR.Text = DateTime.Now.ToString("dd / MM / yyyy");
+            labelDay.Text = DateTime.Now.ToString("dddd");
+            labelSec.Text = DateTime.Now.ToString("ss");
         }
         #endregion
 
@@ -104,6 +121,7 @@ namespace GUI.Forms
 
             _panelWidthSideMenu = panelSideMenu.Width;
             _hidden = false;
+            
         }
         #endregion
 
@@ -122,6 +140,9 @@ namespace GUI.Forms
         {
             CustomPaintBackgound.PanelBackgruondPanit(panelChildForm, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
         }
+
+
         #endregion
+
     }
 }

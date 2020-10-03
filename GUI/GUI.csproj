@@ -63,12 +63,8 @@
     <Compile Include="CustomClass\CustomCreateCode.cs" />
     <Compile Include="CustomClass\CustomPaintBackgound.cs" />
     <Compile Include="CustomClass\CustomSaveFileDialog.cs" />
-    <Compile Include="CustomControls\BitmapButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomControls\CustomSubmenuButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="CustomControls\BitmapButton.cs" />
+    <Compile Include="CustomControls\CustomSubmenuButton.cs" />
     <Compile Include="Forms\AboutForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,8 +101,8 @@
     <Compile Include="Forms\DataGrindViewForms.Designer.cs">
       <DependentUpon>DataGrindViewForms.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\NewDashboard.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Forms\NewDashboard.cs" >
+  	<SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\NewDashboard.Designer.cs">
       <DependentUpon>NewDashboard.cs</DependentUpon>
