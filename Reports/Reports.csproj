@@ -77,6 +77,12 @@
     <Compile Include="Forms\CompleteReportComputers.Designer.cs">
       <DependentUpon>CompleteReportComputers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CompleteReportMonitors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CompleteReportMonitors.Designer.cs">
+      <DependentUpon>CompleteReportMonitors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CompleteReportNotebooks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,10 +100,14 @@
     <EmbeddedResource Include="Forms\CompleteReportComputers.resx">
       <DependentUpon>CompleteReportComputers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CompleteReportMonitors.resx">
+      <DependentUpon>CompleteReportMonitors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CompleteReportNotebooks.resx">
       <DependentUpon>CompleteReportNotebooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\CompleteReportComputers.rdlc" />
+    <EmbeddedResource Include="Reports\CompleteReportMonitors.rdlc" />
     <EmbeddedResource Include="Reports\CompleteReportNotebooks.rdlc" />
   </ItemGroup>
   <ItemGroup>

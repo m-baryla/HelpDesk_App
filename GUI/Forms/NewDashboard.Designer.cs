@@ -382,6 +382,7 @@
             this.buttonCompleMonitorsReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCompleMonitorsReport.TextDropShadow = true;
             this.buttonCompleMonitorsReport.UseVisualStyleBackColor = false;
+            this.buttonCompleMonitorsReport.Click += new System.EventHandler(this.buttonCompleMonitorsReport_Click);
             // 
             // splitter9
             // 
