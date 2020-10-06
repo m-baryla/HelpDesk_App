@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,30 @@ namespace Reports.Forms
 {
     public partial class CompleteReportMonitors : Form
     {
-        public CompleteReportMonitors()
+        IDataAcces _data;
+        public CompleteReportMonitors(IDataAcces data)
         {
+            this._data = data;
             InitializeComponent();
-        }
+            comboBoxStatus.DataSource = _data.FillComboBoxEquipmentStatus().ToList();
 
-        private void CompleteReportMonitors_Load(object sender, EventArgs e)
+        }
+   
+        private void buttonLoadData_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'reportsDataSet.vwAll_Monitors' table. You can move, or remove it, as needed.
-            this.vwAll_MonitorsTableAdapter.Fill(this.reportsDataSet.vwAll_Monitors);
+            //// TODO: This line of code loads data into the 'reportsDataSet.sp_Show_All_Monitors_FromDate_ToDate' table. You can move, or remove it, as needed.
+            this.sp_Show_All_Monitors_FromDate_ToDateTableAdapter.Fill(this.reportsDataSet.sp_Show_All_Monitors_FromDate_ToDate,dateTimePickerFromDate.Value,dateTimePickerToDate.Value, comboBoxStatus.Text);
 
-            this.reportViewer1.RefreshReport();
+            Microsoft.Reporting.WinForms.ReportParameter[] reportParameters = new Microsoft.Reporting.WinForms.ReportParameter[]
+               {
+                    new Microsoft.Reporting.WinForms.ReportParameter("fromDate",dateTimePickerFromDate.Value.Date.ToShortDateString()),
+                    new Microsoft.Reporting.WinForms.ReportParameter("toDate",dateTimePickerToDate.Value.Date.ToShortDateString())
+               };
+
+            this.reportViewerReportsMonitors.LocalReport.SetParameters(reportParameters);
+            this.reportViewerReportsMonitors.RefreshReport();
         }
+
+      
     }
 }

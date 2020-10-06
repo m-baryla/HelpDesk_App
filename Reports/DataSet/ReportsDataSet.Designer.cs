@@ -30,6 +30,12 @@ namespace Reports.DataSet {
         
         private vwAll_NotebooksDataTable tablevwAll_Notebooks;
         
+        private sp_Show_All_Computers_FromDate_ToDateDataTable tablesp_Show_All_Computers_FromDate_ToDate;
+        
+        private sp_Show_All_Monitors_FromDate_ToDateDataTable tablesp_Show_All_Monitors_FromDate_ToDate;
+        
+        private sp_Show_All_Notebooks_FromDate_ToDateDataTable tablesp_Show_All_Notebooks_FromDate_ToDate;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -66,6 +72,15 @@ namespace Reports.DataSet {
                 }
                 if ((ds.Tables["vwAll_Notebooks"] != null)) {
                     base.Tables.Add(new vwAll_NotebooksDataTable(ds.Tables["vwAll_Notebooks"]));
+                }
+                if ((ds.Tables["sp_Show_All_Computers_FromDate_ToDate"] != null)) {
+                    base.Tables.Add(new sp_Show_All_Computers_FromDate_ToDateDataTable(ds.Tables["sp_Show_All_Computers_FromDate_ToDate"]));
+                }
+                if ((ds.Tables["sp_Show_All_Monitors_FromDate_ToDate"] != null)) {
+                    base.Tables.Add(new sp_Show_All_Monitors_FromDate_ToDateDataTable(ds.Tables["sp_Show_All_Monitors_FromDate_ToDate"]));
+                }
+                if ((ds.Tables["sp_Show_All_Notebooks_FromDate_ToDate"] != null)) {
+                    base.Tables.Add(new sp_Show_All_Notebooks_FromDate_ToDateDataTable(ds.Tables["sp_Show_All_Notebooks_FromDate_ToDate"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -112,6 +127,36 @@ namespace Reports.DataSet {
         public vwAll_NotebooksDataTable vwAll_Notebooks {
             get {
                 return this.tablevwAll_Notebooks;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_Show_All_Computers_FromDate_ToDateDataTable sp_Show_All_Computers_FromDate_ToDate {
+            get {
+                return this.tablesp_Show_All_Computers_FromDate_ToDate;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_Show_All_Monitors_FromDate_ToDateDataTable sp_Show_All_Monitors_FromDate_ToDate {
+            get {
+                return this.tablesp_Show_All_Monitors_FromDate_ToDate;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public sp_Show_All_Notebooks_FromDate_ToDateDataTable sp_Show_All_Notebooks_FromDate_ToDate {
+            get {
+                return this.tablesp_Show_All_Notebooks_FromDate_ToDate;
             }
         }
         
@@ -191,6 +236,15 @@ namespace Reports.DataSet {
                 if ((ds.Tables["vwAll_Notebooks"] != null)) {
                     base.Tables.Add(new vwAll_NotebooksDataTable(ds.Tables["vwAll_Notebooks"]));
                 }
+                if ((ds.Tables["sp_Show_All_Computers_FromDate_ToDate"] != null)) {
+                    base.Tables.Add(new sp_Show_All_Computers_FromDate_ToDateDataTable(ds.Tables["sp_Show_All_Computers_FromDate_ToDate"]));
+                }
+                if ((ds.Tables["sp_Show_All_Monitors_FromDate_ToDate"] != null)) {
+                    base.Tables.Add(new sp_Show_All_Monitors_FromDate_ToDateDataTable(ds.Tables["sp_Show_All_Monitors_FromDate_ToDate"]));
+                }
+                if ((ds.Tables["sp_Show_All_Notebooks_FromDate_ToDate"] != null)) {
+                    base.Tables.Add(new sp_Show_All_Notebooks_FromDate_ToDateDataTable(ds.Tables["sp_Show_All_Notebooks_FromDate_ToDate"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -242,6 +296,24 @@ namespace Reports.DataSet {
                     this.tablevwAll_Notebooks.InitVars();
                 }
             }
+            this.tablesp_Show_All_Computers_FromDate_ToDate = ((sp_Show_All_Computers_FromDate_ToDateDataTable)(base.Tables["sp_Show_All_Computers_FromDate_ToDate"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_Show_All_Computers_FromDate_ToDate != null)) {
+                    this.tablesp_Show_All_Computers_FromDate_ToDate.InitVars();
+                }
+            }
+            this.tablesp_Show_All_Monitors_FromDate_ToDate = ((sp_Show_All_Monitors_FromDate_ToDateDataTable)(base.Tables["sp_Show_All_Monitors_FromDate_ToDate"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_Show_All_Monitors_FromDate_ToDate != null)) {
+                    this.tablesp_Show_All_Monitors_FromDate_ToDate.InitVars();
+                }
+            }
+            this.tablesp_Show_All_Notebooks_FromDate_ToDate = ((sp_Show_All_Notebooks_FromDate_ToDateDataTable)(base.Tables["sp_Show_All_Notebooks_FromDate_ToDate"]));
+            if ((initTable == true)) {
+                if ((this.tablesp_Show_All_Notebooks_FromDate_ToDate != null)) {
+                    this.tablesp_Show_All_Notebooks_FromDate_ToDate.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -258,6 +330,12 @@ namespace Reports.DataSet {
             base.Tables.Add(this.tablevwAll_Monitors);
             this.tablevwAll_Notebooks = new vwAll_NotebooksDataTable();
             base.Tables.Add(this.tablevwAll_Notebooks);
+            this.tablesp_Show_All_Computers_FromDate_ToDate = new sp_Show_All_Computers_FromDate_ToDateDataTable();
+            base.Tables.Add(this.tablesp_Show_All_Computers_FromDate_ToDate);
+            this.tablesp_Show_All_Monitors_FromDate_ToDate = new sp_Show_All_Monitors_FromDate_ToDateDataTable();
+            base.Tables.Add(this.tablesp_Show_All_Monitors_FromDate_ToDate);
+            this.tablesp_Show_All_Notebooks_FromDate_ToDate = new sp_Show_All_Notebooks_FromDate_ToDateDataTable();
+            base.Tables.Add(this.tablesp_Show_All_Notebooks_FromDate_ToDate);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -275,6 +353,24 @@ namespace Reports.DataSet {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializevwAll_Notebooks() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializesp_Show_All_Computers_FromDate_ToDate() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializesp_Show_All_Monitors_FromDate_ToDate() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializesp_Show_All_Notebooks_FromDate_ToDate() {
             return false;
         }
         
@@ -341,6 +437,15 @@ namespace Reports.DataSet {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void vwAll_NotebooksRowChangeEventHandler(object sender, vwAll_NotebooksRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void sp_Show_All_Computers_FromDate_ToDateRowChangeEventHandler(object sender, sp_Show_All_Computers_FromDate_ToDateRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void sp_Show_All_Monitors_FromDate_ToDateRowChangeEventHandler(object sender, sp_Show_All_Monitors_FromDate_ToDateRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void sp_Show_All_Notebooks_FromDate_ToDateRowChangeEventHandler(object sender, sp_Show_All_Notebooks_FromDate_ToDateRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1989,6 +2094,1662 @@ namespace Reports.DataSet {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_Show_All_Computers_FromDate_ToDateDataTable : global::System.Data.TypedTableBase<sp_Show_All_Computers_FromDate_ToDateRow> {
+            
+            private global::System.Data.DataColumn columnIDEquipmentStatus;
+            
+            private global::System.Data.DataColumn columnStatus;
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnCompterName;
+            
+            private global::System.Data.DataColumn columnTagService;
+            
+            private global::System.Data.DataColumn columnIP;
+            
+            private global::System.Data.DataColumn columnWarrantyDate;
+            
+            private global::System.Data.DataColumn columnPurchaseDate;
+            
+            private global::System.Data.DataColumn columnBarcode;
+            
+            private global::System.Data.DataColumn columnQRCode;
+            
+            private global::System.Data.DataColumn columnComents;
+            
+            private global::System.Data.DataColumn columnCompanyFixedAsset;
+            
+            private global::System.Data.DataColumn columnFirstName;
+            
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnJob;
+            
+            private global::System.Data.DataColumn columnCPUVersion;
+            
+            private global::System.Data.DataColumn columnHardDriveVersion;
+            
+            private global::System.Data.DataColumn columnLocationName;
+            
+            private global::System.Data.DataColumn columnMicrosoftOfficeVersion;
+            
+            private global::System.Data.DataColumn columnModelVersionComputer;
+            
+            private global::System.Data.DataColumn columnOperatingSystemVersion;
+            
+            private global::System.Data.DataColumn columnRAMVersion;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Computers_FromDate_ToDateDataTable() {
+                this.TableName = "sp_Show_All_Computers_FromDate_ToDate";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal sp_Show_All_Computers_FromDate_ToDateDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected sp_Show_All_Computers_FromDate_ToDateDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IDEquipmentStatusColumn {
+                get {
+                    return this.columnIDEquipmentStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StatusColumn {
+                get {
+                    return this.columnStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CompterNameColumn {
+                get {
+                    return this.columnCompterName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TagServiceColumn {
+                get {
+                    return this.columnTagService;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IPColumn {
+                get {
+                    return this.columnIP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn WarrantyDateColumn {
+                get {
+                    return this.columnWarrantyDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PurchaseDateColumn {
+                get {
+                    return this.columnPurchaseDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BarcodeColumn {
+                get {
+                    return this.columnBarcode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn QRCodeColumn {
+                get {
+                    return this.columnQRCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ComentsColumn {
+                get {
+                    return this.columnComents;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CompanyFixedAssetColumn {
+                get {
+                    return this.columnCompanyFixedAsset;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FirstNameColumn {
+                get {
+                    return this.columnFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobColumn {
+                get {
+                    return this.columnJob;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CPUVersionColumn {
+                get {
+                    return this.columnCPUVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HardDriveVersionColumn {
+                get {
+                    return this.columnHardDriveVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LocationNameColumn {
+                get {
+                    return this.columnLocationName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MicrosoftOfficeVersionColumn {
+                get {
+                    return this.columnMicrosoftOfficeVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ModelVersionComputerColumn {
+                get {
+                    return this.columnModelVersionComputer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OperatingSystemVersionColumn {
+                get {
+                    return this.columnOperatingSystemVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn RAMVersionColumn {
+                get {
+                    return this.columnRAMVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Computers_FromDate_ToDateRow this[int index] {
+                get {
+                    return ((sp_Show_All_Computers_FromDate_ToDateRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Computers_FromDate_ToDateRowChangeEventHandler sp_Show_All_Computers_FromDate_ToDateRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Computers_FromDate_ToDateRowChangeEventHandler sp_Show_All_Computers_FromDate_ToDateRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Computers_FromDate_ToDateRowChangeEventHandler sp_Show_All_Computers_FromDate_ToDateRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Computers_FromDate_ToDateRowChangeEventHandler sp_Show_All_Computers_FromDate_ToDateRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Addsp_Show_All_Computers_FromDate_ToDateRow(sp_Show_All_Computers_FromDate_ToDateRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Computers_FromDate_ToDateRow Addsp_Show_All_Computers_FromDate_ToDateRow(
+                        int IDEquipmentStatus, 
+                        string Status, 
+                        string CompterName, 
+                        string TagService, 
+                        string IP, 
+                        System.DateTime WarrantyDate, 
+                        System.DateTime PurchaseDate, 
+                        byte[] Barcode, 
+                        byte[] QRCode, 
+                        string Coments, 
+                        string CompanyFixedAsset, 
+                        string FirstName, 
+                        string LastName, 
+                        string Job, 
+                        string CPUVersion, 
+                        string HardDriveVersion, 
+                        string LocationName, 
+                        string MicrosoftOfficeVersion, 
+                        string ModelVersionComputer, 
+                        string OperatingSystemVersion, 
+                        string RAMVersion) {
+                sp_Show_All_Computers_FromDate_ToDateRow rowsp_Show_All_Computers_FromDate_ToDateRow = ((sp_Show_All_Computers_FromDate_ToDateRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        IDEquipmentStatus,
+                        Status,
+                        null,
+                        CompterName,
+                        TagService,
+                        IP,
+                        WarrantyDate,
+                        PurchaseDate,
+                        Barcode,
+                        QRCode,
+                        Coments,
+                        CompanyFixedAsset,
+                        FirstName,
+                        LastName,
+                        Job,
+                        CPUVersion,
+                        HardDriveVersion,
+                        LocationName,
+                        MicrosoftOfficeVersion,
+                        ModelVersionComputer,
+                        OperatingSystemVersion,
+                        RAMVersion};
+                rowsp_Show_All_Computers_FromDate_ToDateRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_Show_All_Computers_FromDate_ToDateRow);
+                return rowsp_Show_All_Computers_FromDate_ToDateRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Computers_FromDate_ToDateRow FindById(int Id) {
+                return ((sp_Show_All_Computers_FromDate_ToDateRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_Show_All_Computers_FromDate_ToDateDataTable cln = ((sp_Show_All_Computers_FromDate_ToDateDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_Show_All_Computers_FromDate_ToDateDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnIDEquipmentStatus = base.Columns["IDEquipmentStatus"];
+                this.columnStatus = base.Columns["Status"];
+                this.columnId = base.Columns["Id"];
+                this.columnCompterName = base.Columns["CompterName"];
+                this.columnTagService = base.Columns["TagService"];
+                this.columnIP = base.Columns["IP"];
+                this.columnWarrantyDate = base.Columns["WarrantyDate"];
+                this.columnPurchaseDate = base.Columns["PurchaseDate"];
+                this.columnBarcode = base.Columns["Barcode"];
+                this.columnQRCode = base.Columns["QRCode"];
+                this.columnComents = base.Columns["Coments"];
+                this.columnCompanyFixedAsset = base.Columns["CompanyFixedAsset"];
+                this.columnFirstName = base.Columns["FirstName"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnJob = base.Columns["Job"];
+                this.columnCPUVersion = base.Columns["CPUVersion"];
+                this.columnHardDriveVersion = base.Columns["HardDriveVersion"];
+                this.columnLocationName = base.Columns["LocationName"];
+                this.columnMicrosoftOfficeVersion = base.Columns["MicrosoftOfficeVersion"];
+                this.columnModelVersionComputer = base.Columns["ModelVersionComputer"];
+                this.columnOperatingSystemVersion = base.Columns["OperatingSystemVersion"];
+                this.columnRAMVersion = base.Columns["RAMVersion"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnIDEquipmentStatus = new global::System.Data.DataColumn("IDEquipmentStatus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDEquipmentStatus);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnCompterName = new global::System.Data.DataColumn("CompterName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCompterName);
+                this.columnTagService = new global::System.Data.DataColumn("TagService", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTagService);
+                this.columnIP = new global::System.Data.DataColumn("IP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIP);
+                this.columnWarrantyDate = new global::System.Data.DataColumn("WarrantyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWarrantyDate);
+                this.columnPurchaseDate = new global::System.Data.DataColumn("PurchaseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchaseDate);
+                this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcode);
+                this.columnQRCode = new global::System.Data.DataColumn("QRCode", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQRCode);
+                this.columnComents = new global::System.Data.DataColumn("Coments", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComents);
+                this.columnCompanyFixedAsset = new global::System.Data.DataColumn("CompanyFixedAsset", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCompanyFixedAsset);
+                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirstName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnJob = new global::System.Data.DataColumn("Job", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJob);
+                this.columnCPUVersion = new global::System.Data.DataColumn("CPUVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCPUVersion);
+                this.columnHardDriveVersion = new global::System.Data.DataColumn("HardDriveVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHardDriveVersion);
+                this.columnLocationName = new global::System.Data.DataColumn("LocationName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocationName);
+                this.columnMicrosoftOfficeVersion = new global::System.Data.DataColumn("MicrosoftOfficeVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMicrosoftOfficeVersion);
+                this.columnModelVersionComputer = new global::System.Data.DataColumn("ModelVersionComputer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnModelVersionComputer);
+                this.columnOperatingSystemVersion = new global::System.Data.DataColumn("OperatingSystemVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOperatingSystemVersion);
+                this.columnRAMVersion = new global::System.Data.DataColumn("RAMVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRAMVersion);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnIDEquipmentStatus.AllowDBNull = false;
+                this.columnStatus.MaxLength = 50;
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnCompterName.MaxLength = 50;
+                this.columnTagService.MaxLength = 50;
+                this.columnIP.MaxLength = 50;
+                this.columnComents.MaxLength = 2147483647;
+                this.columnCompanyFixedAsset.MaxLength = 50;
+                this.columnFirstName.MaxLength = 50;
+                this.columnLastName.MaxLength = 50;
+                this.columnJob.MaxLength = 50;
+                this.columnCPUVersion.MaxLength = 50;
+                this.columnHardDriveVersion.MaxLength = 50;
+                this.columnLocationName.MaxLength = 50;
+                this.columnMicrosoftOfficeVersion.MaxLength = 50;
+                this.columnModelVersionComputer.MaxLength = 50;
+                this.columnOperatingSystemVersion.MaxLength = 50;
+                this.columnRAMVersion.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Computers_FromDate_ToDateRow Newsp_Show_All_Computers_FromDate_ToDateRow() {
+                return ((sp_Show_All_Computers_FromDate_ToDateRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_Show_All_Computers_FromDate_ToDateRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_Show_All_Computers_FromDate_ToDateRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_Show_All_Computers_FromDate_ToDateRowChanged != null)) {
+                    this.sp_Show_All_Computers_FromDate_ToDateRowChanged(this, new sp_Show_All_Computers_FromDate_ToDateRowChangeEvent(((sp_Show_All_Computers_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_Show_All_Computers_FromDate_ToDateRowChanging != null)) {
+                    this.sp_Show_All_Computers_FromDate_ToDateRowChanging(this, new sp_Show_All_Computers_FromDate_ToDateRowChangeEvent(((sp_Show_All_Computers_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_Show_All_Computers_FromDate_ToDateRowDeleted != null)) {
+                    this.sp_Show_All_Computers_FromDate_ToDateRowDeleted(this, new sp_Show_All_Computers_FromDate_ToDateRowChangeEvent(((sp_Show_All_Computers_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_Show_All_Computers_FromDate_ToDateRowDeleting != null)) {
+                    this.sp_Show_All_Computers_FromDate_ToDateRowDeleting(this, new sp_Show_All_Computers_FromDate_ToDateRowChangeEvent(((sp_Show_All_Computers_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removesp_Show_All_Computers_FromDate_ToDateRow(sp_Show_All_Computers_FromDate_ToDateRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ReportsDataSet ds = new ReportsDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_Show_All_Computers_FromDate_ToDateDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_Show_All_Monitors_FromDate_ToDateDataTable : global::System.Data.TypedTableBase<sp_Show_All_Monitors_FromDate_ToDateRow> {
+            
+            private global::System.Data.DataColumn columnIDEquipmentStatus;
+            
+            private global::System.Data.DataColumn columnStatus;
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnTagService;
+            
+            private global::System.Data.DataColumn columnWarrantyDate;
+            
+            private global::System.Data.DataColumn columnPurchaseDate;
+            
+            private global::System.Data.DataColumn columnBarcode;
+            
+            private global::System.Data.DataColumn columnQRCode;
+            
+            private global::System.Data.DataColumn columnComents;
+            
+            private global::System.Data.DataColumn columnCompanyFixedAsset;
+            
+            private global::System.Data.DataColumn columnFirstName;
+            
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnJob;
+            
+            private global::System.Data.DataColumn columnLocationName;
+            
+            private global::System.Data.DataColumn columnModelVersionMonitors;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Monitors_FromDate_ToDateDataTable() {
+                this.TableName = "sp_Show_All_Monitors_FromDate_ToDate";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal sp_Show_All_Monitors_FromDate_ToDateDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected sp_Show_All_Monitors_FromDate_ToDateDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IDEquipmentStatusColumn {
+                get {
+                    return this.columnIDEquipmentStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StatusColumn {
+                get {
+                    return this.columnStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TagServiceColumn {
+                get {
+                    return this.columnTagService;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn WarrantyDateColumn {
+                get {
+                    return this.columnWarrantyDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PurchaseDateColumn {
+                get {
+                    return this.columnPurchaseDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BarcodeColumn {
+                get {
+                    return this.columnBarcode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn QRCodeColumn {
+                get {
+                    return this.columnQRCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ComentsColumn {
+                get {
+                    return this.columnComents;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CompanyFixedAssetColumn {
+                get {
+                    return this.columnCompanyFixedAsset;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FirstNameColumn {
+                get {
+                    return this.columnFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobColumn {
+                get {
+                    return this.columnJob;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LocationNameColumn {
+                get {
+                    return this.columnLocationName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ModelVersionMonitorsColumn {
+                get {
+                    return this.columnModelVersionMonitors;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Monitors_FromDate_ToDateRow this[int index] {
+                get {
+                    return ((sp_Show_All_Monitors_FromDate_ToDateRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Monitors_FromDate_ToDateRowChangeEventHandler sp_Show_All_Monitors_FromDate_ToDateRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Monitors_FromDate_ToDateRowChangeEventHandler sp_Show_All_Monitors_FromDate_ToDateRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Monitors_FromDate_ToDateRowChangeEventHandler sp_Show_All_Monitors_FromDate_ToDateRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Monitors_FromDate_ToDateRowChangeEventHandler sp_Show_All_Monitors_FromDate_ToDateRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Addsp_Show_All_Monitors_FromDate_ToDateRow(sp_Show_All_Monitors_FromDate_ToDateRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Monitors_FromDate_ToDateRow Addsp_Show_All_Monitors_FromDate_ToDateRow(int IDEquipmentStatus, string Status, string TagService, System.DateTime WarrantyDate, System.DateTime PurchaseDate, byte[] Barcode, byte[] QRCode, string Coments, string CompanyFixedAsset, string FirstName, string LastName, string Job, string LocationName, string ModelVersionMonitors) {
+                sp_Show_All_Monitors_FromDate_ToDateRow rowsp_Show_All_Monitors_FromDate_ToDateRow = ((sp_Show_All_Monitors_FromDate_ToDateRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        IDEquipmentStatus,
+                        Status,
+                        null,
+                        TagService,
+                        WarrantyDate,
+                        PurchaseDate,
+                        Barcode,
+                        QRCode,
+                        Coments,
+                        CompanyFixedAsset,
+                        FirstName,
+                        LastName,
+                        Job,
+                        LocationName,
+                        ModelVersionMonitors};
+                rowsp_Show_All_Monitors_FromDate_ToDateRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_Show_All_Monitors_FromDate_ToDateRow);
+                return rowsp_Show_All_Monitors_FromDate_ToDateRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Monitors_FromDate_ToDateRow FindById(int Id) {
+                return ((sp_Show_All_Monitors_FromDate_ToDateRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_Show_All_Monitors_FromDate_ToDateDataTable cln = ((sp_Show_All_Monitors_FromDate_ToDateDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_Show_All_Monitors_FromDate_ToDateDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnIDEquipmentStatus = base.Columns["IDEquipmentStatus"];
+                this.columnStatus = base.Columns["Status"];
+                this.columnId = base.Columns["Id"];
+                this.columnTagService = base.Columns["TagService"];
+                this.columnWarrantyDate = base.Columns["WarrantyDate"];
+                this.columnPurchaseDate = base.Columns["PurchaseDate"];
+                this.columnBarcode = base.Columns["Barcode"];
+                this.columnQRCode = base.Columns["QRCode"];
+                this.columnComents = base.Columns["Coments"];
+                this.columnCompanyFixedAsset = base.Columns["CompanyFixedAsset"];
+                this.columnFirstName = base.Columns["FirstName"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnJob = base.Columns["Job"];
+                this.columnLocationName = base.Columns["LocationName"];
+                this.columnModelVersionMonitors = base.Columns["ModelVersionMonitors"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnIDEquipmentStatus = new global::System.Data.DataColumn("IDEquipmentStatus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDEquipmentStatus);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnTagService = new global::System.Data.DataColumn("TagService", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTagService);
+                this.columnWarrantyDate = new global::System.Data.DataColumn("WarrantyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWarrantyDate);
+                this.columnPurchaseDate = new global::System.Data.DataColumn("PurchaseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchaseDate);
+                this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcode);
+                this.columnQRCode = new global::System.Data.DataColumn("QRCode", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQRCode);
+                this.columnComents = new global::System.Data.DataColumn("Coments", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComents);
+                this.columnCompanyFixedAsset = new global::System.Data.DataColumn("CompanyFixedAsset", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCompanyFixedAsset);
+                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirstName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnJob = new global::System.Data.DataColumn("Job", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJob);
+                this.columnLocationName = new global::System.Data.DataColumn("LocationName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocationName);
+                this.columnModelVersionMonitors = new global::System.Data.DataColumn("ModelVersionMonitors", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnModelVersionMonitors);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnIDEquipmentStatus.AllowDBNull = false;
+                this.columnStatus.MaxLength = 50;
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnTagService.MaxLength = 50;
+                this.columnComents.MaxLength = 2147483647;
+                this.columnCompanyFixedAsset.MaxLength = 50;
+                this.columnFirstName.MaxLength = 50;
+                this.columnLastName.MaxLength = 50;
+                this.columnJob.MaxLength = 50;
+                this.columnLocationName.MaxLength = 50;
+                this.columnModelVersionMonitors.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Monitors_FromDate_ToDateRow Newsp_Show_All_Monitors_FromDate_ToDateRow() {
+                return ((sp_Show_All_Monitors_FromDate_ToDateRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_Show_All_Monitors_FromDate_ToDateRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_Show_All_Monitors_FromDate_ToDateRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_Show_All_Monitors_FromDate_ToDateRowChanged != null)) {
+                    this.sp_Show_All_Monitors_FromDate_ToDateRowChanged(this, new sp_Show_All_Monitors_FromDate_ToDateRowChangeEvent(((sp_Show_All_Monitors_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_Show_All_Monitors_FromDate_ToDateRowChanging != null)) {
+                    this.sp_Show_All_Monitors_FromDate_ToDateRowChanging(this, new sp_Show_All_Monitors_FromDate_ToDateRowChangeEvent(((sp_Show_All_Monitors_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_Show_All_Monitors_FromDate_ToDateRowDeleted != null)) {
+                    this.sp_Show_All_Monitors_FromDate_ToDateRowDeleted(this, new sp_Show_All_Monitors_FromDate_ToDateRowChangeEvent(((sp_Show_All_Monitors_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_Show_All_Monitors_FromDate_ToDateRowDeleting != null)) {
+                    this.sp_Show_All_Monitors_FromDate_ToDateRowDeleting(this, new sp_Show_All_Monitors_FromDate_ToDateRowChangeEvent(((sp_Show_All_Monitors_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removesp_Show_All_Monitors_FromDate_ToDateRow(sp_Show_All_Monitors_FromDate_ToDateRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ReportsDataSet ds = new ReportsDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_Show_All_Monitors_FromDate_ToDateDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class sp_Show_All_Notebooks_FromDate_ToDateDataTable : global::System.Data.TypedTableBase<sp_Show_All_Notebooks_FromDate_ToDateRow> {
+            
+            private global::System.Data.DataColumn columnIDEquipmentStatus;
+            
+            private global::System.Data.DataColumn columnStatus;
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnNotebooksName;
+            
+            private global::System.Data.DataColumn columnTagService;
+            
+            private global::System.Data.DataColumn columnIP;
+            
+            private global::System.Data.DataColumn columnWarrantyDate;
+            
+            private global::System.Data.DataColumn columnPurchaseDate;
+            
+            private global::System.Data.DataColumn columnBarcode;
+            
+            private global::System.Data.DataColumn columnQRCode;
+            
+            private global::System.Data.DataColumn columnComents;
+            
+            private global::System.Data.DataColumn columnCompanyFixedAsset;
+            
+            private global::System.Data.DataColumn columnFirstName;
+            
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnJob;
+            
+            private global::System.Data.DataColumn columnCPUVersion;
+            
+            private global::System.Data.DataColumn columnHardDriveVersion;
+            
+            private global::System.Data.DataColumn columnLocationName;
+            
+            private global::System.Data.DataColumn columnMicrosoftOfficeVersion;
+            
+            private global::System.Data.DataColumn columnModelVersionNotebooks;
+            
+            private global::System.Data.DataColumn columnOperatingSystemVersion;
+            
+            private global::System.Data.DataColumn columnRAMVersion;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Notebooks_FromDate_ToDateDataTable() {
+                this.TableName = "sp_Show_All_Notebooks_FromDate_ToDate";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal sp_Show_All_Notebooks_FromDate_ToDateDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected sp_Show_All_Notebooks_FromDate_ToDateDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IDEquipmentStatusColumn {
+                get {
+                    return this.columnIDEquipmentStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StatusColumn {
+                get {
+                    return this.columnStatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NotebooksNameColumn {
+                get {
+                    return this.columnNotebooksName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TagServiceColumn {
+                get {
+                    return this.columnTagService;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IPColumn {
+                get {
+                    return this.columnIP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn WarrantyDateColumn {
+                get {
+                    return this.columnWarrantyDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PurchaseDateColumn {
+                get {
+                    return this.columnPurchaseDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BarcodeColumn {
+                get {
+                    return this.columnBarcode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn QRCodeColumn {
+                get {
+                    return this.columnQRCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ComentsColumn {
+                get {
+                    return this.columnComents;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CompanyFixedAssetColumn {
+                get {
+                    return this.columnCompanyFixedAsset;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FirstNameColumn {
+                get {
+                    return this.columnFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobColumn {
+                get {
+                    return this.columnJob;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CPUVersionColumn {
+                get {
+                    return this.columnCPUVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HardDriveVersionColumn {
+                get {
+                    return this.columnHardDriveVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LocationNameColumn {
+                get {
+                    return this.columnLocationName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MicrosoftOfficeVersionColumn {
+                get {
+                    return this.columnMicrosoftOfficeVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ModelVersionNotebooksColumn {
+                get {
+                    return this.columnModelVersionNotebooks;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OperatingSystemVersionColumn {
+                get {
+                    return this.columnOperatingSystemVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn RAMVersionColumn {
+                get {
+                    return this.columnRAMVersion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Notebooks_FromDate_ToDateRow this[int index] {
+                get {
+                    return ((sp_Show_All_Notebooks_FromDate_ToDateRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Notebooks_FromDate_ToDateRowChangeEventHandler sp_Show_All_Notebooks_FromDate_ToDateRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Notebooks_FromDate_ToDateRowChangeEventHandler sp_Show_All_Notebooks_FromDate_ToDateRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Notebooks_FromDate_ToDateRowChangeEventHandler sp_Show_All_Notebooks_FromDate_ToDateRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event sp_Show_All_Notebooks_FromDate_ToDateRowChangeEventHandler sp_Show_All_Notebooks_FromDate_ToDateRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Addsp_Show_All_Notebooks_FromDate_ToDateRow(sp_Show_All_Notebooks_FromDate_ToDateRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Notebooks_FromDate_ToDateRow Addsp_Show_All_Notebooks_FromDate_ToDateRow(
+                        int IDEquipmentStatus, 
+                        string Status, 
+                        string NotebooksName, 
+                        string TagService, 
+                        string IP, 
+                        System.DateTime WarrantyDate, 
+                        System.DateTime PurchaseDate, 
+                        byte[] Barcode, 
+                        byte[] QRCode, 
+                        string Coments, 
+                        string CompanyFixedAsset, 
+                        string FirstName, 
+                        string LastName, 
+                        string Job, 
+                        string CPUVersion, 
+                        string HardDriveVersion, 
+                        string LocationName, 
+                        string MicrosoftOfficeVersion, 
+                        string ModelVersionNotebooks, 
+                        string OperatingSystemVersion, 
+                        string RAMVersion) {
+                sp_Show_All_Notebooks_FromDate_ToDateRow rowsp_Show_All_Notebooks_FromDate_ToDateRow = ((sp_Show_All_Notebooks_FromDate_ToDateRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        IDEquipmentStatus,
+                        Status,
+                        null,
+                        NotebooksName,
+                        TagService,
+                        IP,
+                        WarrantyDate,
+                        PurchaseDate,
+                        Barcode,
+                        QRCode,
+                        Coments,
+                        CompanyFixedAsset,
+                        FirstName,
+                        LastName,
+                        Job,
+                        CPUVersion,
+                        HardDriveVersion,
+                        LocationName,
+                        MicrosoftOfficeVersion,
+                        ModelVersionNotebooks,
+                        OperatingSystemVersion,
+                        RAMVersion};
+                rowsp_Show_All_Notebooks_FromDate_ToDateRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowsp_Show_All_Notebooks_FromDate_ToDateRow);
+                return rowsp_Show_All_Notebooks_FromDate_ToDateRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Notebooks_FromDate_ToDateRow FindById(int Id) {
+                return ((sp_Show_All_Notebooks_FromDate_ToDateRow)(this.Rows.Find(new object[] {
+                            Id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                sp_Show_All_Notebooks_FromDate_ToDateDataTable cln = ((sp_Show_All_Notebooks_FromDate_ToDateDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new sp_Show_All_Notebooks_FromDate_ToDateDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnIDEquipmentStatus = base.Columns["IDEquipmentStatus"];
+                this.columnStatus = base.Columns["Status"];
+                this.columnId = base.Columns["Id"];
+                this.columnNotebooksName = base.Columns["NotebooksName"];
+                this.columnTagService = base.Columns["TagService"];
+                this.columnIP = base.Columns["IP"];
+                this.columnWarrantyDate = base.Columns["WarrantyDate"];
+                this.columnPurchaseDate = base.Columns["PurchaseDate"];
+                this.columnBarcode = base.Columns["Barcode"];
+                this.columnQRCode = base.Columns["QRCode"];
+                this.columnComents = base.Columns["Coments"];
+                this.columnCompanyFixedAsset = base.Columns["CompanyFixedAsset"];
+                this.columnFirstName = base.Columns["FirstName"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnJob = base.Columns["Job"];
+                this.columnCPUVersion = base.Columns["CPUVersion"];
+                this.columnHardDriveVersion = base.Columns["HardDriveVersion"];
+                this.columnLocationName = base.Columns["LocationName"];
+                this.columnMicrosoftOfficeVersion = base.Columns["MicrosoftOfficeVersion"];
+                this.columnModelVersionNotebooks = base.Columns["ModelVersionNotebooks"];
+                this.columnOperatingSystemVersion = base.Columns["OperatingSystemVersion"];
+                this.columnRAMVersion = base.Columns["RAMVersion"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnIDEquipmentStatus = new global::System.Data.DataColumn("IDEquipmentStatus", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDEquipmentStatus);
+                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStatus);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnNotebooksName = new global::System.Data.DataColumn("NotebooksName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNotebooksName);
+                this.columnTagService = new global::System.Data.DataColumn("TagService", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTagService);
+                this.columnIP = new global::System.Data.DataColumn("IP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIP);
+                this.columnWarrantyDate = new global::System.Data.DataColumn("WarrantyDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWarrantyDate);
+                this.columnPurchaseDate = new global::System.Data.DataColumn("PurchaseDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPurchaseDate);
+                this.columnBarcode = new global::System.Data.DataColumn("Barcode", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBarcode);
+                this.columnQRCode = new global::System.Data.DataColumn("QRCode", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQRCode);
+                this.columnComents = new global::System.Data.DataColumn("Coments", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComents);
+                this.columnCompanyFixedAsset = new global::System.Data.DataColumn("CompanyFixedAsset", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCompanyFixedAsset);
+                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirstName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnJob = new global::System.Data.DataColumn("Job", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJob);
+                this.columnCPUVersion = new global::System.Data.DataColumn("CPUVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCPUVersion);
+                this.columnHardDriveVersion = new global::System.Data.DataColumn("HardDriveVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHardDriveVersion);
+                this.columnLocationName = new global::System.Data.DataColumn("LocationName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocationName);
+                this.columnMicrosoftOfficeVersion = new global::System.Data.DataColumn("MicrosoftOfficeVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMicrosoftOfficeVersion);
+                this.columnModelVersionNotebooks = new global::System.Data.DataColumn("ModelVersionNotebooks", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnModelVersionNotebooks);
+                this.columnOperatingSystemVersion = new global::System.Data.DataColumn("OperatingSystemVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOperatingSystemVersion);
+                this.columnRAMVersion = new global::System.Data.DataColumn("RAMVersion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRAMVersion);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnId}, true));
+                this.columnIDEquipmentStatus.AllowDBNull = false;
+                this.columnStatus.MaxLength = 50;
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
+                this.columnNotebooksName.MaxLength = 50;
+                this.columnTagService.MaxLength = 50;
+                this.columnIP.MaxLength = 50;
+                this.columnComents.MaxLength = 2147483647;
+                this.columnCompanyFixedAsset.MaxLength = 50;
+                this.columnFirstName.MaxLength = 50;
+                this.columnLastName.MaxLength = 50;
+                this.columnJob.MaxLength = 50;
+                this.columnCPUVersion.MaxLength = 50;
+                this.columnHardDriveVersion.MaxLength = 50;
+                this.columnLocationName.MaxLength = 50;
+                this.columnMicrosoftOfficeVersion.MaxLength = 50;
+                this.columnModelVersionNotebooks.MaxLength = 50;
+                this.columnOperatingSystemVersion.MaxLength = 50;
+                this.columnRAMVersion.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Notebooks_FromDate_ToDateRow Newsp_Show_All_Notebooks_FromDate_ToDateRow() {
+                return ((sp_Show_All_Notebooks_FromDate_ToDateRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new sp_Show_All_Notebooks_FromDate_ToDateRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(sp_Show_All_Notebooks_FromDate_ToDateRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.sp_Show_All_Notebooks_FromDate_ToDateRowChanged != null)) {
+                    this.sp_Show_All_Notebooks_FromDate_ToDateRowChanged(this, new sp_Show_All_Notebooks_FromDate_ToDateRowChangeEvent(((sp_Show_All_Notebooks_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.sp_Show_All_Notebooks_FromDate_ToDateRowChanging != null)) {
+                    this.sp_Show_All_Notebooks_FromDate_ToDateRowChanging(this, new sp_Show_All_Notebooks_FromDate_ToDateRowChangeEvent(((sp_Show_All_Notebooks_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.sp_Show_All_Notebooks_FromDate_ToDateRowDeleted != null)) {
+                    this.sp_Show_All_Notebooks_FromDate_ToDateRowDeleted(this, new sp_Show_All_Notebooks_FromDate_ToDateRowChangeEvent(((sp_Show_All_Notebooks_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.sp_Show_All_Notebooks_FromDate_ToDateRowDeleting != null)) {
+                    this.sp_Show_All_Notebooks_FromDate_ToDateRowDeleting(this, new sp_Show_All_Notebooks_FromDate_ToDateRowChangeEvent(((sp_Show_All_Notebooks_FromDate_ToDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Removesp_Show_All_Notebooks_FromDate_ToDateRow(sp_Show_All_Notebooks_FromDate_ToDateRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ReportsDataSet ds = new ReportsDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "sp_Show_All_Notebooks_FromDate_ToDateDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class vwAll_ComputersRow : global::System.Data.DataRow {
@@ -3590,6 +5351,1654 @@ namespace Reports.DataSet {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_Show_All_Computers_FromDate_ToDateRow : global::System.Data.DataRow {
+            
+            private sp_Show_All_Computers_FromDate_ToDateDataTable tablesp_Show_All_Computers_FromDate_ToDate;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal sp_Show_All_Computers_FromDate_ToDateRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_Show_All_Computers_FromDate_ToDate = ((sp_Show_All_Computers_FromDate_ToDateDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IDEquipmentStatus {
+                get {
+                    return ((int)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.IDEquipmentStatusColumn]));
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.IDEquipmentStatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Status {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'sp_Show_All_Computers_FromDate_ToDate\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.IdColumn]));
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CompterName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.CompterNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CompterName\' in table \'sp_Show_All_Computers_FromDate_ToDat" +
+                                "e\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.CompterNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TagService {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.TagServiceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TagService\' in table \'sp_Show_All_Computers_FromDate_ToDate" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.TagServiceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string IP {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.IPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IP\' in table \'sp_Show_All_Computers_FromDate_ToDate\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.IPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime WarrantyDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.WarrantyDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WarrantyDate\' in table \'sp_Show_All_Computers_FromDate_ToDa" +
+                                "te\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.WarrantyDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime PurchaseDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.PurchaseDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PurchaseDate\' in table \'sp_Show_All_Computers_FromDate_ToDa" +
+                                "te\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.PurchaseDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] Barcode {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablesp_Show_All_Computers_FromDate_ToDate.BarcodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Barcode\' in table \'sp_Show_All_Computers_FromDate_ToDate\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.BarcodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] QRCode {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablesp_Show_All_Computers_FromDate_ToDate.QRCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QRCode\' in table \'sp_Show_All_Computers_FromDate_ToDate\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.QRCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Coments {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.ComentsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Coments\' in table \'sp_Show_All_Computers_FromDate_ToDate\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.ComentsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CompanyFixedAsset {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.CompanyFixedAssetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyFixedAsset\' in table \'sp_Show_All_Computers_FromDate" +
+                                "_ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.CompanyFixedAssetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FirstName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.FirstNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FirstName\' in table \'sp_Show_All_Computers_FromDate_ToDate\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.LastNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'sp_Show_All_Computers_FromDate_ToDate\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Job {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.JobColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Job\' in table \'sp_Show_All_Computers_FromDate_ToDate\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.JobColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CPUVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.CPUVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CPUVersion\' in table \'sp_Show_All_Computers_FromDate_ToDate" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.CPUVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string HardDriveVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.HardDriveVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HardDriveVersion\' in table \'sp_Show_All_Computers_FromDate_" +
+                                "ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.HardDriveVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LocationName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.LocationNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LocationName\' in table \'sp_Show_All_Computers_FromDate_ToDa" +
+                                "te\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.LocationNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MicrosoftOfficeVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.MicrosoftOfficeVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MicrosoftOfficeVersion\' in table \'sp_Show_All_Computers_Fro" +
+                                "mDate_ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.MicrosoftOfficeVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ModelVersionComputer {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.ModelVersionComputerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ModelVersionComputer\' in table \'sp_Show_All_Computers_FromD" +
+                                "ate_ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.ModelVersionComputerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string OperatingSystemVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.OperatingSystemVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OperatingSystemVersion\' in table \'sp_Show_All_Computers_Fro" +
+                                "mDate_ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.OperatingSystemVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string RAMVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Computers_FromDate_ToDate.RAMVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RAMVersion\' in table \'sp_Show_All_Computers_FromDate_ToDate" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Computers_FromDate_ToDate.RAMVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCompterNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.CompterNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCompterNameNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.CompterNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTagServiceNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.TagServiceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTagServiceNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.TagServiceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsIPNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.IPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetIPNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.IPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsWarrantyDateNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.WarrantyDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetWarrantyDateNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.WarrantyDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPurchaseDateNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.PurchaseDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPurchaseDateNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.PurchaseDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBarcodeNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.BarcodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBarcodeNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.BarcodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQRCodeNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.QRCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQRCodeNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.QRCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsComentsNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.ComentsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetComentsNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.ComentsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCompanyFixedAssetNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.CompanyFixedAssetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCompanyFixedAssetNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.CompanyFixedAssetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFirstNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.FirstNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFirstNameNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.FirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLastNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.LastNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLastNameNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.LastNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsJobNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.JobColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetJobNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.JobColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCPUVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.CPUVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCPUVersionNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.CPUVersionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHardDriveVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.HardDriveVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHardDriveVersionNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.HardDriveVersionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLocationNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.LocationNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLocationNameNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.LocationNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMicrosoftOfficeVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.MicrosoftOfficeVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMicrosoftOfficeVersionNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.MicrosoftOfficeVersionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsModelVersionComputerNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.ModelVersionComputerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetModelVersionComputerNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.ModelVersionComputerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOperatingSystemVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.OperatingSystemVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOperatingSystemVersionNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.OperatingSystemVersionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRAMVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Computers_FromDate_ToDate.RAMVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRAMVersionNull() {
+                this[this.tablesp_Show_All_Computers_FromDate_ToDate.RAMVersionColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_Show_All_Monitors_FromDate_ToDateRow : global::System.Data.DataRow {
+            
+            private sp_Show_All_Monitors_FromDate_ToDateDataTable tablesp_Show_All_Monitors_FromDate_ToDate;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal sp_Show_All_Monitors_FromDate_ToDateRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_Show_All_Monitors_FromDate_ToDate = ((sp_Show_All_Monitors_FromDate_ToDateDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IDEquipmentStatus {
+                get {
+                    return ((int)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.IDEquipmentStatusColumn]));
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.IDEquipmentStatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Status {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'sp_Show_All_Monitors_FromDate_ToDate\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.IdColumn]));
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TagService {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.TagServiceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TagService\' in table \'sp_Show_All_Monitors_FromDate_ToDate\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.TagServiceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime WarrantyDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.WarrantyDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WarrantyDate\' in table \'sp_Show_All_Monitors_FromDate_ToDat" +
+                                "e\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.WarrantyDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime PurchaseDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.PurchaseDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PurchaseDate\' in table \'sp_Show_All_Monitors_FromDate_ToDat" +
+                                "e\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.PurchaseDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] Barcode {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.BarcodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Barcode\' in table \'sp_Show_All_Monitors_FromDate_ToDate\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.BarcodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] QRCode {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.QRCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QRCode\' in table \'sp_Show_All_Monitors_FromDate_ToDate\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.QRCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Coments {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.ComentsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Coments\' in table \'sp_Show_All_Monitors_FromDate_ToDate\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.ComentsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CompanyFixedAsset {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.CompanyFixedAssetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyFixedAsset\' in table \'sp_Show_All_Monitors_FromDate_" +
+                                "ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.CompanyFixedAssetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FirstName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.FirstNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FirstName\' in table \'sp_Show_All_Monitors_FromDate_ToDate\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.LastNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'sp_Show_All_Monitors_FromDate_ToDate\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Job {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.JobColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Job\' in table \'sp_Show_All_Monitors_FromDate_ToDate\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.JobColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LocationName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.LocationNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LocationName\' in table \'sp_Show_All_Monitors_FromDate_ToDat" +
+                                "e\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.LocationNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ModelVersionMonitors {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Monitors_FromDate_ToDate.ModelVersionMonitorsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ModelVersionMonitors\' in table \'sp_Show_All_Monitors_FromDa" +
+                                "te_ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Monitors_FromDate_ToDate.ModelVersionMonitorsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTagServiceNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.TagServiceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTagServiceNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.TagServiceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsWarrantyDateNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.WarrantyDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetWarrantyDateNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.WarrantyDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPurchaseDateNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.PurchaseDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPurchaseDateNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.PurchaseDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBarcodeNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.BarcodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBarcodeNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.BarcodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQRCodeNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.QRCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQRCodeNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.QRCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsComentsNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.ComentsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetComentsNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.ComentsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCompanyFixedAssetNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.CompanyFixedAssetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCompanyFixedAssetNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.CompanyFixedAssetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFirstNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.FirstNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFirstNameNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.FirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLastNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.LastNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLastNameNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.LastNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsJobNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.JobColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetJobNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.JobColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLocationNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.LocationNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLocationNameNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.LocationNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsModelVersionMonitorsNull() {
+                return this.IsNull(this.tablesp_Show_All_Monitors_FromDate_ToDate.ModelVersionMonitorsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetModelVersionMonitorsNull() {
+                this[this.tablesp_Show_All_Monitors_FromDate_ToDate.ModelVersionMonitorsColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class sp_Show_All_Notebooks_FromDate_ToDateRow : global::System.Data.DataRow {
+            
+            private sp_Show_All_Notebooks_FromDate_ToDateDataTable tablesp_Show_All_Notebooks_FromDate_ToDate;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal sp_Show_All_Notebooks_FromDate_ToDateRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablesp_Show_All_Notebooks_FromDate_ToDate = ((sp_Show_All_Notebooks_FromDate_ToDateDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IDEquipmentStatus {
+                get {
+                    return ((int)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.IDEquipmentStatusColumn]));
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.IDEquipmentStatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Status {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.StatusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Status\' in table \'sp_Show_All_Notebooks_FromDate_ToDate\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.StatusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.IdColumn]));
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NotebooksName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.NotebooksNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NotebooksName\' in table \'sp_Show_All_Notebooks_FromDate_ToD" +
+                                "ate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.NotebooksNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TagService {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.TagServiceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TagService\' in table \'sp_Show_All_Notebooks_FromDate_ToDate" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.TagServiceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string IP {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.IPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IP\' in table \'sp_Show_All_Notebooks_FromDate_ToDate\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.IPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime WarrantyDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.WarrantyDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'WarrantyDate\' in table \'sp_Show_All_Notebooks_FromDate_ToDa" +
+                                "te\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.WarrantyDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime PurchaseDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.PurchaseDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PurchaseDate\' in table \'sp_Show_All_Notebooks_FromDate_ToDa" +
+                                "te\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.PurchaseDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] Barcode {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.BarcodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Barcode\' in table \'sp_Show_All_Notebooks_FromDate_ToDate\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.BarcodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] QRCode {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.QRCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QRCode\' in table \'sp_Show_All_Notebooks_FromDate_ToDate\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.QRCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Coments {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.ComentsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Coments\' in table \'sp_Show_All_Notebooks_FromDate_ToDate\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.ComentsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CompanyFixedAsset {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.CompanyFixedAssetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CompanyFixedAsset\' in table \'sp_Show_All_Notebooks_FromDate" +
+                                "_ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.CompanyFixedAssetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FirstName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.FirstNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FirstName\' in table \'sp_Show_All_Notebooks_FromDate_ToDate\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LastName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.LastNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'sp_Show_All_Notebooks_FromDate_ToDate\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Job {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.JobColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Job\' in table \'sp_Show_All_Notebooks_FromDate_ToDate\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.JobColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CPUVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.CPUVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CPUVersion\' in table \'sp_Show_All_Notebooks_FromDate_ToDate" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.CPUVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string HardDriveVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.HardDriveVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HardDriveVersion\' in table \'sp_Show_All_Notebooks_FromDate_" +
+                                "ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.HardDriveVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LocationName {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.LocationNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LocationName\' in table \'sp_Show_All_Notebooks_FromDate_ToDa" +
+                                "te\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.LocationNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MicrosoftOfficeVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.MicrosoftOfficeVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MicrosoftOfficeVersion\' in table \'sp_Show_All_Notebooks_Fro" +
+                                "mDate_ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.MicrosoftOfficeVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ModelVersionNotebooks {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.ModelVersionNotebooksColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ModelVersionNotebooks\' in table \'sp_Show_All_Notebooks_From" +
+                                "Date_ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.ModelVersionNotebooksColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string OperatingSystemVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.OperatingSystemVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OperatingSystemVersion\' in table \'sp_Show_All_Notebooks_Fro" +
+                                "mDate_ToDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.OperatingSystemVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string RAMVersion {
+                get {
+                    try {
+                        return ((string)(this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.RAMVersionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RAMVersion\' in table \'sp_Show_All_Notebooks_FromDate_ToDate" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.RAMVersionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStatusNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.StatusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStatusNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNotebooksNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.NotebooksNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNotebooksNameNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.NotebooksNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTagServiceNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.TagServiceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTagServiceNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.TagServiceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsIPNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.IPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetIPNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.IPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsWarrantyDateNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.WarrantyDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetWarrantyDateNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.WarrantyDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPurchaseDateNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.PurchaseDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPurchaseDateNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.PurchaseDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBarcodeNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.BarcodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBarcodeNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.BarcodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQRCodeNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.QRCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQRCodeNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.QRCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsComentsNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.ComentsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetComentsNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.ComentsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCompanyFixedAssetNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.CompanyFixedAssetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCompanyFixedAssetNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.CompanyFixedAssetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFirstNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.FirstNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFirstNameNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.FirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLastNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.LastNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLastNameNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.LastNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsJobNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.JobColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetJobNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.JobColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCPUVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.CPUVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCPUVersionNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.CPUVersionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHardDriveVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.HardDriveVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHardDriveVersionNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.HardDriveVersionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLocationNameNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.LocationNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLocationNameNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.LocationNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMicrosoftOfficeVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.MicrosoftOfficeVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMicrosoftOfficeVersionNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.MicrosoftOfficeVersionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsModelVersionNotebooksNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.ModelVersionNotebooksColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetModelVersionNotebooksNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.ModelVersionNotebooksColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOperatingSystemVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.OperatingSystemVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOperatingSystemVersionNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.OperatingSystemVersionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRAMVersionNull() {
+                return this.IsNull(this.tablesp_Show_All_Notebooks_FromDate_ToDate.RAMVersionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRAMVersionNull() {
+                this[this.tablesp_Show_All_Notebooks_FromDate_ToDate.RAMVersionColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -3677,6 +7086,108 @@ namespace Reports.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public vwAll_NotebooksRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class sp_Show_All_Computers_FromDate_ToDateRowChangeEvent : global::System.EventArgs {
+            
+            private sp_Show_All_Computers_FromDate_ToDateRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Computers_FromDate_ToDateRowChangeEvent(sp_Show_All_Computers_FromDate_ToDateRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Computers_FromDate_ToDateRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class sp_Show_All_Monitors_FromDate_ToDateRowChangeEvent : global::System.EventArgs {
+            
+            private sp_Show_All_Monitors_FromDate_ToDateRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Monitors_FromDate_ToDateRowChangeEvent(sp_Show_All_Monitors_FromDate_ToDateRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Monitors_FromDate_ToDateRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class sp_Show_All_Notebooks_FromDate_ToDateRowChangeEvent : global::System.EventArgs {
+            
+            private sp_Show_All_Notebooks_FromDate_ToDateRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Notebooks_FromDate_ToDateRowChangeEvent(sp_Show_All_Notebooks_FromDate_ToDateRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public sp_Show_All_Notebooks_FromDate_ToDateRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4247,6 +7758,683 @@ namespace Reports.DataSet.ReportsDataSetTableAdapters {
         public virtual ReportsDataSet.vwAll_NotebooksDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             ReportsDataSet.vwAll_NotebooksDataTable dataTable = new ReportsDataSet.vwAll_NotebooksDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_Show_All_Computers_FromDate_ToDateTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public sp_Show_All_Computers_FromDate_ToDateTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_Show_All_Computers_FromDate_ToDate";
+            tableMapping.ColumnMappings.Add("IDEquipmentStatus", "IDEquipmentStatus");
+            tableMapping.ColumnMappings.Add("Status", "Status");
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("CompterName", "CompterName");
+            tableMapping.ColumnMappings.Add("TagService", "TagService");
+            tableMapping.ColumnMappings.Add("IP", "IP");
+            tableMapping.ColumnMappings.Add("WarrantyDate", "WarrantyDate");
+            tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
+            tableMapping.ColumnMappings.Add("Barcode", "Barcode");
+            tableMapping.ColumnMappings.Add("QRCode", "QRCode");
+            tableMapping.ColumnMappings.Add("Coments", "Coments");
+            tableMapping.ColumnMappings.Add("CompanyFixedAsset", "CompanyFixedAsset");
+            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("Job", "Job");
+            tableMapping.ColumnMappings.Add("CPUVersion", "CPUVersion");
+            tableMapping.ColumnMappings.Add("HardDriveVersion", "HardDriveVersion");
+            tableMapping.ColumnMappings.Add("LocationName", "LocationName");
+            tableMapping.ColumnMappings.Add("MicrosoftOfficeVersion", "MicrosoftOfficeVersion");
+            tableMapping.ColumnMappings.Add("ModelVersionComputer", "ModelVersionComputer");
+            tableMapping.ColumnMappings.Add("OperatingSystemVersion", "OperatingSystemVersion");
+            tableMapping.ColumnMappings.Add("RAMVersion", "RAMVersion");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Reports.Properties.Settings.Default.HelpDeskDB_TESTConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_Show_All_Computers_FromDate_ToDate";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ReportsDataSet.sp_Show_All_Computers_FromDate_ToDateDataTable dataTable, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Status) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FromDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FromDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ToDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(ToDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Status == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Status));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ReportsDataSet.sp_Show_All_Computers_FromDate_ToDateDataTable GetData(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Status) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FromDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FromDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ToDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(ToDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Status == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Status));
+            }
+            ReportsDataSet.sp_Show_All_Computers_FromDate_ToDateDataTable dataTable = new ReportsDataSet.sp_Show_All_Computers_FromDate_ToDateDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_Show_All_Monitors_FromDate_ToDateTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public sp_Show_All_Monitors_FromDate_ToDateTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_Show_All_Monitors_FromDate_ToDate";
+            tableMapping.ColumnMappings.Add("IDEquipmentStatus", "IDEquipmentStatus");
+            tableMapping.ColumnMappings.Add("Status", "Status");
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("TagService", "TagService");
+            tableMapping.ColumnMappings.Add("WarrantyDate", "WarrantyDate");
+            tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
+            tableMapping.ColumnMappings.Add("Barcode", "Barcode");
+            tableMapping.ColumnMappings.Add("QRCode", "QRCode");
+            tableMapping.ColumnMappings.Add("Coments", "Coments");
+            tableMapping.ColumnMappings.Add("CompanyFixedAsset", "CompanyFixedAsset");
+            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("Job", "Job");
+            tableMapping.ColumnMappings.Add("LocationName", "LocationName");
+            tableMapping.ColumnMappings.Add("ModelVersionMonitors", "ModelVersionMonitors");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Reports.Properties.Settings.Default.HelpDeskDB_TESTConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_Show_All_Monitors_FromDate_ToDate";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ReportsDataSet.sp_Show_All_Monitors_FromDate_ToDateDataTable dataTable, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Status) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FromDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FromDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ToDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(ToDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Status == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Status));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ReportsDataSet.sp_Show_All_Monitors_FromDate_ToDateDataTable GetData(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Status) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FromDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FromDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ToDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(ToDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Status == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Status));
+            }
+            ReportsDataSet.sp_Show_All_Monitors_FromDate_ToDateDataTable dataTable = new ReportsDataSet.sp_Show_All_Monitors_FromDate_ToDateDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class sp_Show_All_Notebooks_FromDate_ToDateTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public sp_Show_All_Notebooks_FromDate_ToDateTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "sp_Show_All_Notebooks_FromDate_ToDate";
+            tableMapping.ColumnMappings.Add("IDEquipmentStatus", "IDEquipmentStatus");
+            tableMapping.ColumnMappings.Add("Status", "Status");
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("NotebooksName", "NotebooksName");
+            tableMapping.ColumnMappings.Add("TagService", "TagService");
+            tableMapping.ColumnMappings.Add("IP", "IP");
+            tableMapping.ColumnMappings.Add("WarrantyDate", "WarrantyDate");
+            tableMapping.ColumnMappings.Add("PurchaseDate", "PurchaseDate");
+            tableMapping.ColumnMappings.Add("Barcode", "Barcode");
+            tableMapping.ColumnMappings.Add("QRCode", "QRCode");
+            tableMapping.ColumnMappings.Add("Coments", "Coments");
+            tableMapping.ColumnMappings.Add("CompanyFixedAsset", "CompanyFixedAsset");
+            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
+            tableMapping.ColumnMappings.Add("LastName", "LastName");
+            tableMapping.ColumnMappings.Add("Job", "Job");
+            tableMapping.ColumnMappings.Add("CPUVersion", "CPUVersion");
+            tableMapping.ColumnMappings.Add("HardDriveVersion", "HardDriveVersion");
+            tableMapping.ColumnMappings.Add("LocationName", "LocationName");
+            tableMapping.ColumnMappings.Add("MicrosoftOfficeVersion", "MicrosoftOfficeVersion");
+            tableMapping.ColumnMappings.Add("ModelVersionNotebooks", "ModelVersionNotebooks");
+            tableMapping.ColumnMappings.Add("OperatingSystemVersion", "OperatingSystemVersion");
+            tableMapping.ColumnMappings.Add("RAMVersion", "RAMVersion");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Reports.Properties.Settings.Default.HelpDeskDB_TESTConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.sp_Show_All_Notebooks_FromDate_ToDate";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FromDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ToDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ReportsDataSet.sp_Show_All_Notebooks_FromDate_ToDateDataTable dataTable, global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Status) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FromDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FromDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ToDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(ToDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Status == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Status));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ReportsDataSet.sp_Show_All_Notebooks_FromDate_ToDateDataTable GetData(global::System.Nullable<global::System.DateTime> FromDate, global::System.Nullable<global::System.DateTime> ToDate, string Status) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((FromDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(FromDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((ToDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(ToDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Status == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Status));
+            }
+            ReportsDataSet.sp_Show_All_Notebooks_FromDate_ToDateDataTable dataTable = new ReportsDataSet.sp_Show_All_Notebooks_FromDate_ToDateDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

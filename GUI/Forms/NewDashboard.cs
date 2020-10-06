@@ -32,6 +32,7 @@ namespace GUI.Forms
             this._infoMessageBox = infoMessageBox;
             InitializeComponent();
             customizeDesing();
+            emptyButtonTextShow();
             timerClock.Start();
         }
 
@@ -45,6 +46,7 @@ namespace GUI.Forms
         private void buttonMenuList_Click(object sender, EventArgs e)
         {
             timer1.Start();
+            emptyButtonTextShow();
         }
 
         private void buttonReports_Click(object sender, EventArgs e)
@@ -85,6 +87,15 @@ namespace GUI.Forms
                     timer1.Stop();
                     _hidden = false;
                     this.Refresh();
+                    buttonAddNewComputers.Text = "  Computers";
+                    buttonAddNewMonitors.Text = "   Monitors";
+                    buttonAddNewNotebooks.Text = "  Notebooks";
+                    buttonAddNew.Text = "Add New";
+                    buttonReports.Text = "Create New Reports";
+                    buttonShowData.Text = "Show Data";
+                    buttonCompleComputersReport.Text = "Complete Computers Report";
+                    buttonCompleNotebooksReport.Text = "Complete Notebooks Report";
+                    buttonCompleMonitorReport.Text = "Complete Monitors Report";
                 }
             }
             else
@@ -123,7 +134,7 @@ namespace GUI.Forms
                 {
                     case DialogResult.Yes:
                         {
-                            CompleteReportComputers reportComputers = new CompleteReportComputers();
+                            CompleteReportComputers reportComputers = new CompleteReportComputers(_dataAcces);
                             reportComputers.Show();
                             reportComputers.WindowState = FormWindowState.Normal;
 
@@ -131,7 +142,7 @@ namespace GUI.Forms
                         }
                     case DialogResult.No:
                         {
-                            CustomChildForm.openChildForm(new CompleteReportComputers(), panelChildForm);
+                            CustomChildForm.openChildForm(new CompleteReportComputers(_dataAcces), panelChildForm);
 
                             break;
                         }
@@ -143,38 +154,7 @@ namespace GUI.Forms
                 throw;
             }
         }
-        private void buttonCompleNotebooksReport_Click(object sender, EventArgs e)
-        {
-            
-            try
-            {
-                var dialogResult = MessageBox.Show("Do you want to open the file in full screen?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-                switch (dialogResult)
-                {
-                    case DialogResult.Yes:
-                        {
-                            CompleteReportNotebooks reportNotebooks = new CompleteReportNotebooks();
-                            reportNotebooks.Show();
-                            reportNotebooks.WindowState = FormWindowState.Normal;
-
-                            break;
-                        }
-                    case DialogResult.No:
-                        {
-                           CustomChildForm.openChildForm(new CompleteReportNotebooks(), panelChildForm);
-
-                            break;
-                        }
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-        private void buttonCompleMonitorsReport_Click(object sender, EventArgs e)
+        private void buttonCompleMonitorReport_Click(object sender, EventArgs e)
         {
             try
             {
@@ -184,7 +164,7 @@ namespace GUI.Forms
                 {
                     case DialogResult.Yes:
                         {
-                            CompleteReportMonitors reportsMonitors = new CompleteReportMonitors();
+                            CompleteReportMonitors reportsMonitors = new CompleteReportMonitors(_dataAcces);
                             reportsMonitors.Show();
                             reportsMonitors.WindowState = FormWindowState.Normal;
 
@@ -192,7 +172,38 @@ namespace GUI.Forms
                         }
                     case DialogResult.No:
                         {
-                            CustomChildForm.openChildForm(new CompleteReportMonitors(), panelChildForm);
+                            CustomChildForm.openChildForm(new CompleteReportMonitors(_dataAcces), panelChildForm); ;
+
+                            break;
+                        }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void buttonCompleNotebooksReport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var dialogResult = MessageBox.Show("Do you want to open the file in full screen?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dialogResult)
+                {
+                    case DialogResult.Yes:
+                        {
+                            CompleteReportNotebooks reportNotebooks = new CompleteReportNotebooks(_dataAcces);
+                            reportNotebooks.Show();
+                            reportNotebooks.WindowState = FormWindowState.Normal;
+
+                            break;
+                        }
+                    case DialogResult.No:
+                        {
+                            CustomChildForm.openChildForm(new CompleteReportNotebooks(_dataAcces), panelChildForm);
 
                             break;
                         }
@@ -216,6 +227,18 @@ namespace GUI.Forms
             _hidden = false;
             
         }
+        private void emptyButtonTextShow()
+        {
+            buttonAddNewComputers.Text = "";
+            buttonAddNewMonitors.Text = "";
+            buttonAddNewNotebooks.Text = "";
+            buttonAddNew.Text = "";
+            buttonReports.Text = "";
+            buttonShowData.Text = "";
+            buttonCompleComputersReport.Text = "";
+            buttonCompleNotebooksReport.Text = "";
+            buttonCompleMonitorReport.Text = "";
+        }
         #endregion
 
         #region Paint
@@ -233,6 +256,8 @@ namespace GUI.Forms
         {
             CustomPaintBackgound.PanelBackgruondPanit(panelChildForm, e, System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal);
         }
+
+
 
 
 
