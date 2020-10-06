@@ -77,6 +77,12 @@
     <Compile Include="Forms\CompleteReportComputers.Designer.cs">
       <DependentUpon>CompleteReportComputers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CompleteReportNotebooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CompleteReportNotebooks.Designer.cs">
+      <DependentUpon>CompleteReportNotebooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -88,7 +94,11 @@
     <EmbeddedResource Include="Forms\CompleteReportComputers.resx">
       <DependentUpon>CompleteReportComputers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CompleteReportNotebooks.resx">
+      <DependentUpon>CompleteReportNotebooks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CompleteReportComputers.rdlc" />
+    <EmbeddedResource Include="Reports\CompleteReportNotebooks.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

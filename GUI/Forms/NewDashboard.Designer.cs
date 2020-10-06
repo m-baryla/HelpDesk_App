@@ -45,9 +45,9 @@
             this.buttonShowData = new GUI.CustomControls.BitmapButton();
             this.panelReportsSubMenu = new System.Windows.Forms.Panel();
             this.splitter10 = new System.Windows.Forms.Splitter();
-            this.bitmapButton3 = new GUI.CustomControls.BitmapButton();
+            this.buttonCompleMonitorsReport = new GUI.CustomControls.BitmapButton();
             this.splitter9 = new System.Windows.Forms.Splitter();
-            this.bitmapButton2 = new GUI.CustomControls.BitmapButton();
+            this.buttonCompleNotebooksReport = new GUI.CustomControls.BitmapButton();
             this.splitter8 = new System.Windows.Forms.Splitter();
             this.buttonCompleComputersReport = new GUI.CustomControls.BitmapButton();
             this.splitter7 = new System.Windows.Forms.Splitter();
@@ -330,9 +330,9 @@
             // panelReportsSubMenu
             // 
             this.panelReportsSubMenu.Controls.Add(this.splitter10);
-            this.panelReportsSubMenu.Controls.Add(this.bitmapButton3);
+            this.panelReportsSubMenu.Controls.Add(this.buttonCompleMonitorsReport);
             this.panelReportsSubMenu.Controls.Add(this.splitter9);
-            this.panelReportsSubMenu.Controls.Add(this.bitmapButton2);
+            this.panelReportsSubMenu.Controls.Add(this.buttonCompleNotebooksReport);
             this.panelReportsSubMenu.Controls.Add(this.splitter8);
             this.panelReportsSubMenu.Controls.Add(this.buttonCompleComputersReport);
             this.panelReportsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -351,37 +351,37 @@
             this.splitter10.TabStop = false;
             this.splitter10.Visible = false;
             // 
-            // bitmapButton3
+            // buttonCompleMonitorsReport
             // 
-            this.bitmapButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bitmapButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.bitmapButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bitmapButton3.FocusRectangleEnabled = true;
-            this.bitmapButton3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
-            this.bitmapButton3.ForeColor = System.Drawing.Color.Black;
-            this.bitmapButton3.Image = null;
-            this.bitmapButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bitmapButton3.ImageBorderColor = System.Drawing.Color.Transparent;
-            this.bitmapButton3.ImageBorderEnabled = true;
-            this.bitmapButton3.ImageDropShadow = true;
-            this.bitmapButton3.ImageFocused = null;
-            this.bitmapButton3.ImageInactive = null;
-            this.bitmapButton3.ImageMouseOver = null;
-            this.bitmapButton3.ImageNormal = null;
-            this.bitmapButton3.ImagePressed = null;
-            this.bitmapButton3.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.bitmapButton3.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
-            this.bitmapButton3.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
-            this.bitmapButton3.Location = new System.Drawing.Point(0, 86);
-            this.bitmapButton3.Name = "bitmapButton3";
-            this.bitmapButton3.OffsetPressedContent = true;
-            this.bitmapButton3.Size = new System.Drawing.Size(200, 40);
-            this.bitmapButton3.StretchImage = false;
-            this.bitmapButton3.TabIndex = 27;
-            this.bitmapButton3.Text = "     raport 3";
-            this.bitmapButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bitmapButton3.TextDropShadow = true;
-            this.bitmapButton3.UseVisualStyleBackColor = false;
+            this.buttonCompleMonitorsReport.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCompleMonitorsReport.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonCompleMonitorsReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCompleMonitorsReport.FocusRectangleEnabled = true;
+            this.buttonCompleMonitorsReport.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.buttonCompleMonitorsReport.ForeColor = System.Drawing.Color.Black;
+            this.buttonCompleMonitorsReport.Image = null;
+            this.buttonCompleMonitorsReport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCompleMonitorsReport.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonCompleMonitorsReport.ImageBorderEnabled = true;
+            this.buttonCompleMonitorsReport.ImageDropShadow = true;
+            this.buttonCompleMonitorsReport.ImageFocused = null;
+            this.buttonCompleMonitorsReport.ImageInactive = null;
+            this.buttonCompleMonitorsReport.ImageMouseOver = null;
+            this.buttonCompleMonitorsReport.ImageNormal = null;
+            this.buttonCompleMonitorsReport.ImagePressed = null;
+            this.buttonCompleMonitorsReport.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonCompleMonitorsReport.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonCompleMonitorsReport.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonCompleMonitorsReport.Location = new System.Drawing.Point(0, 86);
+            this.buttonCompleMonitorsReport.Name = "buttonCompleMonitorsReport";
+            this.buttonCompleMonitorsReport.OffsetPressedContent = true;
+            this.buttonCompleMonitorsReport.Size = new System.Drawing.Size(200, 40);
+            this.buttonCompleMonitorsReport.StretchImage = false;
+            this.buttonCompleMonitorsReport.TabIndex = 27;
+            this.buttonCompleMonitorsReport.Text = "Complete Monitors Report";
+            this.buttonCompleMonitorsReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCompleMonitorsReport.TextDropShadow = true;
+            this.buttonCompleMonitorsReport.UseVisualStyleBackColor = false;
             // 
             // splitter9
             // 
@@ -393,37 +393,38 @@
             this.splitter9.TabStop = false;
             this.splitter9.Visible = false;
             // 
-            // bitmapButton2
+            // buttonCompleNotebooksReport
             // 
-            this.bitmapButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bitmapButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.bitmapButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bitmapButton2.FocusRectangleEnabled = true;
-            this.bitmapButton2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
-            this.bitmapButton2.ForeColor = System.Drawing.Color.Black;
-            this.bitmapButton2.Image = null;
-            this.bitmapButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bitmapButton2.ImageBorderColor = System.Drawing.Color.Transparent;
-            this.bitmapButton2.ImageBorderEnabled = true;
-            this.bitmapButton2.ImageDropShadow = true;
-            this.bitmapButton2.ImageFocused = null;
-            this.bitmapButton2.ImageInactive = null;
-            this.bitmapButton2.ImageMouseOver = null;
-            this.bitmapButton2.ImageNormal = null;
-            this.bitmapButton2.ImagePressed = null;
-            this.bitmapButton2.InnerBorderColor = System.Drawing.Color.Transparent;
-            this.bitmapButton2.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
-            this.bitmapButton2.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
-            this.bitmapButton2.Location = new System.Drawing.Point(0, 43);
-            this.bitmapButton2.Name = "bitmapButton2";
-            this.bitmapButton2.OffsetPressedContent = true;
-            this.bitmapButton2.Size = new System.Drawing.Size(200, 40);
-            this.bitmapButton2.StretchImage = false;
-            this.bitmapButton2.TabIndex = 25;
-            this.bitmapButton2.Text = "     raport 2";
-            this.bitmapButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bitmapButton2.TextDropShadow = true;
-            this.bitmapButton2.UseVisualStyleBackColor = false;
+            this.buttonCompleNotebooksReport.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCompleNotebooksReport.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonCompleNotebooksReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCompleNotebooksReport.FocusRectangleEnabled = true;
+            this.buttonCompleNotebooksReport.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.buttonCompleNotebooksReport.ForeColor = System.Drawing.Color.Black;
+            this.buttonCompleNotebooksReport.Image = null;
+            this.buttonCompleNotebooksReport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCompleNotebooksReport.ImageBorderColor = System.Drawing.Color.Transparent;
+            this.buttonCompleNotebooksReport.ImageBorderEnabled = true;
+            this.buttonCompleNotebooksReport.ImageDropShadow = true;
+            this.buttonCompleNotebooksReport.ImageFocused = null;
+            this.buttonCompleNotebooksReport.ImageInactive = null;
+            this.buttonCompleNotebooksReport.ImageMouseOver = null;
+            this.buttonCompleNotebooksReport.ImageNormal = null;
+            this.buttonCompleNotebooksReport.ImagePressed = null;
+            this.buttonCompleNotebooksReport.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.buttonCompleNotebooksReport.InnerBorderColor_Focus = System.Drawing.Color.Transparent;
+            this.buttonCompleNotebooksReport.InnerBorderColor_MouseOver = System.Drawing.Color.Transparent;
+            this.buttonCompleNotebooksReport.Location = new System.Drawing.Point(0, 43);
+            this.buttonCompleNotebooksReport.Name = "buttonCompleNotebooksReport";
+            this.buttonCompleNotebooksReport.OffsetPressedContent = true;
+            this.buttonCompleNotebooksReport.Size = new System.Drawing.Size(200, 40);
+            this.buttonCompleNotebooksReport.StretchImage = false;
+            this.buttonCompleNotebooksReport.TabIndex = 25;
+            this.buttonCompleNotebooksReport.Text = "Complete Notebooks Report";
+            this.buttonCompleNotebooksReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCompleNotebooksReport.TextDropShadow = true;
+            this.buttonCompleNotebooksReport.UseVisualStyleBackColor = false;
+            this.buttonCompleNotebooksReport.Click += new System.EventHandler(this.buttonCompleNotebooksReport_Click);
             // 
             // splitter8
             // 
@@ -891,9 +892,9 @@
         private System.Windows.Forms.Panel panelReportsSubMenu;
         private System.Windows.Forms.Splitter splitter7;
         private System.Windows.Forms.Splitter splitter10;
-        private CustomControls.BitmapButton bitmapButton3;
+        private CustomControls.BitmapButton buttonCompleMonitorsReport;
         private System.Windows.Forms.Splitter splitter9;
-        private CustomControls.BitmapButton bitmapButton2;
+        private CustomControls.BitmapButton buttonCompleNotebooksReport;
         private System.Windows.Forms.Splitter splitter8;
         private CustomControls.BitmapButton buttonCompleComputersReport;
         private System.Windows.Forms.Splitter splitter11;

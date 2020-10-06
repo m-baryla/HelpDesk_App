@@ -143,6 +143,37 @@ namespace GUI.Forms
                 throw;
             }
         }
+        private void buttonCompleNotebooksReport_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                var dialogResult = MessageBox.Show("Do you want to open the file in full screen?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dialogResult)
+                {
+                    case DialogResult.Yes:
+                        {
+                            CompleteReportNotebooks reportNotebooks = new CompleteReportNotebooks();
+                            reportNotebooks.Show();
+                            reportNotebooks.WindowState = FormWindowState.Normal;
+
+                            break;
+                        }
+                    case DialogResult.No:
+                        {
+                           CustomChildForm.openChildForm(new CompleteReportNotebooks(), panelChildForm);
+
+                            break;
+                        }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         #endregion
 
         #region Helper Methods
@@ -174,8 +205,9 @@ namespace GUI.Forms
         }
 
 
+
         #endregion
 
-        
+       
     }
 }
