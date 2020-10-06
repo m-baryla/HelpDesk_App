@@ -1,6 +1,8 @@
 ﻿using GUI.CustomClass;
 using Interfaces;
 using LogicApp;
+using Reports;
+using Reports.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -111,6 +113,36 @@ namespace GUI.Forms
             labelDay.Text = DateTime.Now.ToString("dddd");
             labelSec.Text = DateTime.Now.ToString("ss");
         }
+        private void buttonCompleComputersReport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var dialogResult = MessageBox.Show("Do you want to open the file in full screen?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                switch (dialogResult)
+                {
+                    case DialogResult.Yes:
+                        {
+                            CompleteReportComputers reportComputers = new CompleteReportComputers();
+                            reportComputers.Show();
+                            reportComputers.WindowState = FormWindowState.Normal;
+
+                            break;
+                        }
+                    case DialogResult.No:
+                        {
+                            CustomChildForm.openChildForm(new CompleteReportComputers(), panelChildForm);
+
+                            break;
+                        }
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         #endregion
 
         #region Helper Methods
@@ -144,5 +176,6 @@ namespace GUI.Forms
 
         #endregion
 
+        
     }
 }

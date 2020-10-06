@@ -101,8 +101,8 @@
     <Compile Include="Forms\DataGrindViewForms.Designer.cs">
       <DependentUpon>DataGrindViewForms.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\NewDashboard.cs" >
-  	<SubType>Form</SubType>
+    <Compile Include="Forms\NewDashboard.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\NewDashboard.Designer.cs">
       <DependentUpon>NewDashboard.cs</DependentUpon>
@@ -188,6 +188,10 @@
     <ProjectReference Include="..\LogicApp\LogicApp.csproj">
       <Project>{9EB1011C-026E-48FE-979F-E3CAFB6A27C3}</Project>
       <Name>LogicApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reports\Reports.csproj">
+      <Project>{82745C50-6B4E-4E95-9BC1-752DD712B519}</Project>
+      <Name>Reports</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

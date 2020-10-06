@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportsDataSet" targetNamespace="http://tempuri.org/ReportsDataSet.xsd" xmlns:mstns="http://tempuri.org/ReportsDataSet.xsd" xmlns="http://tempuri.org/ReportsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HelpDeskDB_TESTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HelpDeskDB_TESTConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Reports.Properties.Settings.GlobalReference.Default.HelpDeskDB_TESTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwAll_ComputersTableAdapter" GeneratorDataComponentClassName="vwAll_ComputersTableAdapter" Name="vwAll_Computers" UserDataComponentName="vwAll_ComputersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Computers" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        vwAll_Computers.*
+FROM            vwAll_Computers</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDEquipmentStatus" DataSetColumn="IDEquipmentStatus" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="CompterName" DataSetColumn="CompterName" />
+              <Mapping SourceColumn="TagService" DataSetColumn="TagService" />
+              <Mapping SourceColumn="IP" DataSetColumn="IP" />
+              <Mapping SourceColumn="WarrantyDate" DataSetColumn="WarrantyDate" />
+              <Mapping SourceColumn="PurchaseDate" DataSetColumn="PurchaseDate" />
+              <Mapping SourceColumn="Barcode" DataSetColumn="Barcode" />
+              <Mapping SourceColumn="QRCode" DataSetColumn="QRCode" />
+              <Mapping SourceColumn="Coments" DataSetColumn="Coments" />
+              <Mapping SourceColumn="CompanyFixedAsset" DataSetColumn="CompanyFixedAsset" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="Job" DataSetColumn="Job" />
+              <Mapping SourceColumn="CPUVersion" DataSetColumn="CPUVersion" />
+              <Mapping SourceColumn="HardDriveVersion" DataSetColumn="HardDriveVersion" />
+              <Mapping SourceColumn="LocationName" DataSetColumn="LocationName" />
+              <Mapping SourceColumn="MicrosoftOfficeVersion" DataSetColumn="MicrosoftOfficeVersion" />
+              <Mapping SourceColumn="ModelVersionComputer" DataSetColumn="ModelVersionComputer" />
+              <Mapping SourceColumn="OperatingSystemVersion" DataSetColumn="OperatingSystemVersion" />
+              <Mapping SourceColumn="RAMVersion" DataSetColumn="RAMVersion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwAll_MonitorsTableAdapter" GeneratorDataComponentClassName="vwAll_MonitorsTableAdapter" Name="vwAll_Monitors" UserDataComponentName="vwAll_MonitorsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Monitors" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        vwAll_Monitors.*
+FROM            vwAll_Monitors</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDEquipmentStatus" DataSetColumn="IDEquipmentStatus" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="TagService" DataSetColumn="TagService" />
+              <Mapping SourceColumn="WarrantyDate" DataSetColumn="WarrantyDate" />
+              <Mapping SourceColumn="PurchaseDate" DataSetColumn="PurchaseDate" />
+              <Mapping SourceColumn="Barcode" DataSetColumn="Barcode" />
+              <Mapping SourceColumn="QRCode" DataSetColumn="QRCode" />
+              <Mapping SourceColumn="Coments" DataSetColumn="Coments" />
+              <Mapping SourceColumn="CompanyFixedAsset" DataSetColumn="CompanyFixedAsset" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="Job" DataSetColumn="Job" />
+              <Mapping SourceColumn="LocationName" DataSetColumn="LocationName" />
+              <Mapping SourceColumn="ModelVersionMonitors" DataSetColumn="ModelVersionMonitors" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwAll_NotebooksTableAdapter" GeneratorDataComponentClassName="vwAll_NotebooksTableAdapter" Name="vwAll_Notebooks" UserDataComponentName="vwAll_NotebooksTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="HelpDeskDB_TESTConnectionString (Settings)" DbObjectName="HelpDeskDB_TEST.dbo.vwAll_Notebooks" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        vwAll_Notebooks.*
+FROM            vwAll_Notebooks</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDEquipmentStatus" DataSetColumn="IDEquipmentStatus" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="NotebooksName" DataSetColumn="NotebooksName" />
+              <Mapping SourceColumn="TagService" DataSetColumn="TagService" />
+              <Mapping SourceColumn="IP" DataSetColumn="IP" />
+              <Mapping SourceColumn="WarrantyDate" DataSetColumn="WarrantyDate" />
+              <Mapping SourceColumn="PurchaseDate" DataSetColumn="PurchaseDate" />
+              <Mapping SourceColumn="Barcode" DataSetColumn="Barcode" />
+              <Mapping SourceColumn="QRCode" DataSetColumn="QRCode" />
+              <Mapping SourceColumn="Coments" DataSetColumn="Coments" />
+              <Mapping SourceColumn="CompanyFixedAsset" DataSetColumn="CompanyFixedAsset" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="Job" DataSetColumn="Job" />
+              <Mapping SourceColumn="CPUVersion" DataSetColumn="CPUVersion" />
+              <Mapping SourceColumn="HardDriveVersion" DataSetColumn="HardDriveVersion" />
+              <Mapping SourceColumn="LocationName" DataSetColumn="LocationName" />
+              <Mapping SourceColumn="MicrosoftOfficeVersion" DataSetColumn="MicrosoftOfficeVersion" />
+              <Mapping SourceColumn="ModelVersionNotebooks" DataSetColumn="ModelVersionNotebooks" />
+              <Mapping SourceColumn="OperatingSystemVersion" DataSetColumn="OperatingSystemVersion" />
+              <Mapping SourceColumn="RAMVersion" DataSetColumn="RAMVersion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportsDataSet" msprop:Generator_UserDSName="ReportsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwAll_Computers" msprop:Generator_TableClassName="vwAll_ComputersDataTable" msprop:Generator_TableVarName="tablevwAll_Computers" msprop:Generator_TablePropName="vwAll_Computers" msprop:Generator_RowDeletingName="vwAll_ComputersRowDeleting" msprop:Generator_RowChangingName="vwAll_ComputersRowChanging" msprop:Generator_RowEvHandlerName="vwAll_ComputersRowChangeEventHandler" msprop:Generator_RowDeletedName="vwAll_ComputersRowDeleted" msprop:Generator_UserTableName="vwAll_Computers" msprop:Generator_RowChangedName="vwAll_ComputersRowChanged" msprop:Generator_RowEvArgName="vwAll_ComputersRowChangeEvent" msprop:Generator_RowClassName="vwAll_ComputersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDEquipmentStatus" msprop:Generator_ColumnVarNameInTable="columnIDEquipmentStatus" msprop:Generator_ColumnPropNameInRow="IDEquipmentStatus" msprop:Generator_ColumnPropNameInTable="IDEquipmentStatusColumn" msprop:Generator_UserColumnName="IDEquipmentStatus" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="CompterName" msprop:Generator_ColumnVarNameInTable="columnCompterName" msprop:Generator_ColumnPropNameInRow="CompterName" msprop:Generator_ColumnPropNameInTable="CompterNameColumn" msprop:Generator_UserColumnName="CompterName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TagService" msprop:Generator_ColumnVarNameInTable="columnTagService" msprop:Generator_ColumnPropNameInRow="TagService" msprop:Generator_ColumnPropNameInTable="TagServiceColumn" msprop:Generator_UserColumnName="TagService" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IP" msprop:Generator_ColumnVarNameInTable="columnIP" msprop:Generator_ColumnPropNameInRow="IP" msprop:Generator_ColumnPropNameInTable="IPColumn" msprop:Generator_UserColumnName="IP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WarrantyDate" msprop:Generator_ColumnVarNameInTable="columnWarrantyDate" msprop:Generator_ColumnPropNameInRow="WarrantyDate" msprop:Generator_ColumnPropNameInTable="WarrantyDateColumn" msprop:Generator_UserColumnName="WarrantyDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PurchaseDate" msprop:Generator_ColumnVarNameInTable="columnPurchaseDate" msprop:Generator_ColumnPropNameInRow="PurchaseDate" msprop:Generator_ColumnPropNameInTable="PurchaseDateColumn" msprop:Generator_UserColumnName="PurchaseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="QRCode" msprop:Generator_ColumnVarNameInTable="columnQRCode" msprop:Generator_ColumnPropNameInRow="QRCode" msprop:Generator_ColumnPropNameInTable="QRCodeColumn" msprop:Generator_UserColumnName="QRCode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Coments" msprop:Generator_ColumnVarNameInTable="columnComents" msprop:Generator_ColumnPropNameInRow="Coments" msprop:Generator_ColumnPropNameInTable="ComentsColumn" msprop:Generator_UserColumnName="Coments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompanyFixedAsset" msprop:Generator_ColumnVarNameInTable="columnCompanyFixedAsset" msprop:Generator_ColumnPropNameInRow="CompanyFixedAsset" msprop:Generator_ColumnPropNameInTable="CompanyFixedAssetColumn" msprop:Generator_UserColumnName="CompanyFixedAsset" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Job" msprop:Generator_ColumnVarNameInTable="columnJob" msprop:Generator_ColumnPropNameInRow="Job" msprop:Generator_ColumnPropNameInTable="JobColumn" msprop:Generator_UserColumnName="Job" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPUVersion" msprop:Generator_ColumnVarNameInTable="columnCPUVersion" msprop:Generator_ColumnPropNameInRow="CPUVersion" msprop:Generator_ColumnPropNameInTable="CPUVersionColumn" msprop:Generator_UserColumnName="CPUVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HardDriveVersion" msprop:Generator_ColumnVarNameInTable="columnHardDriveVersion" msprop:Generator_ColumnPropNameInRow="HardDriveVersion" msprop:Generator_ColumnPropNameInTable="HardDriveVersionColumn" msprop:Generator_UserColumnName="HardDriveVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocationName" msprop:Generator_ColumnVarNameInTable="columnLocationName" msprop:Generator_ColumnPropNameInRow="LocationName" msprop:Generator_ColumnPropNameInTable="LocationNameColumn" msprop:Generator_UserColumnName="LocationName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MicrosoftOfficeVersion" msprop:Generator_ColumnVarNameInTable="columnMicrosoftOfficeVersion" msprop:Generator_ColumnPropNameInRow="MicrosoftOfficeVersion" msprop:Generator_ColumnPropNameInTable="MicrosoftOfficeVersionColumn" msprop:Generator_UserColumnName="MicrosoftOfficeVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModelVersionComputer" msprop:Generator_ColumnVarNameInTable="columnModelVersionComputer" msprop:Generator_ColumnPropNameInRow="ModelVersionComputer" msprop:Generator_ColumnPropNameInTable="ModelVersionComputerColumn" msprop:Generator_UserColumnName="ModelVersionComputer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OperatingSystemVersion" msprop:Generator_ColumnVarNameInTable="columnOperatingSystemVersion" msprop:Generator_ColumnPropNameInRow="OperatingSystemVersion" msprop:Generator_ColumnPropNameInTable="OperatingSystemVersionColumn" msprop:Generator_UserColumnName="OperatingSystemVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RAMVersion" msprop:Generator_ColumnVarNameInTable="columnRAMVersion" msprop:Generator_ColumnPropNameInRow="RAMVersion" msprop:Generator_ColumnPropNameInTable="RAMVersionColumn" msprop:Generator_UserColumnName="RAMVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vwAll_Monitors" msprop:Generator_TableClassName="vwAll_MonitorsDataTable" msprop:Generator_TableVarName="tablevwAll_Monitors" msprop:Generator_TablePropName="vwAll_Monitors" msprop:Generator_RowDeletingName="vwAll_MonitorsRowDeleting" msprop:Generator_RowChangingName="vwAll_MonitorsRowChanging" msprop:Generator_RowEvHandlerName="vwAll_MonitorsRowChangeEventHandler" msprop:Generator_RowDeletedName="vwAll_MonitorsRowDeleted" msprop:Generator_UserTableName="vwAll_Monitors" msprop:Generator_RowChangedName="vwAll_MonitorsRowChanged" msprop:Generator_RowEvArgName="vwAll_MonitorsRowChangeEvent" msprop:Generator_RowClassName="vwAll_MonitorsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDEquipmentStatus" msprop:Generator_ColumnVarNameInTable="columnIDEquipmentStatus" msprop:Generator_ColumnPropNameInRow="IDEquipmentStatus" msprop:Generator_ColumnPropNameInTable="IDEquipmentStatusColumn" msprop:Generator_UserColumnName="IDEquipmentStatus" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="TagService" msprop:Generator_ColumnVarNameInTable="columnTagService" msprop:Generator_ColumnPropNameInRow="TagService" msprop:Generator_ColumnPropNameInTable="TagServiceColumn" msprop:Generator_UserColumnName="TagService" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WarrantyDate" msprop:Generator_ColumnVarNameInTable="columnWarrantyDate" msprop:Generator_ColumnPropNameInRow="WarrantyDate" msprop:Generator_ColumnPropNameInTable="WarrantyDateColumn" msprop:Generator_UserColumnName="WarrantyDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PurchaseDate" msprop:Generator_ColumnVarNameInTable="columnPurchaseDate" msprop:Generator_ColumnPropNameInRow="PurchaseDate" msprop:Generator_ColumnPropNameInTable="PurchaseDateColumn" msprop:Generator_UserColumnName="PurchaseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="QRCode" msprop:Generator_ColumnVarNameInTable="columnQRCode" msprop:Generator_ColumnPropNameInRow="QRCode" msprop:Generator_ColumnPropNameInTable="QRCodeColumn" msprop:Generator_UserColumnName="QRCode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Coments" msprop:Generator_ColumnVarNameInTable="columnComents" msprop:Generator_ColumnPropNameInRow="Coments" msprop:Generator_ColumnPropNameInTable="ComentsColumn" msprop:Generator_UserColumnName="Coments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompanyFixedAsset" msprop:Generator_ColumnVarNameInTable="columnCompanyFixedAsset" msprop:Generator_ColumnPropNameInRow="CompanyFixedAsset" msprop:Generator_ColumnPropNameInTable="CompanyFixedAssetColumn" msprop:Generator_UserColumnName="CompanyFixedAsset" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Job" msprop:Generator_ColumnVarNameInTable="columnJob" msprop:Generator_ColumnPropNameInRow="Job" msprop:Generator_ColumnPropNameInTable="JobColumn" msprop:Generator_UserColumnName="Job" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocationName" msprop:Generator_ColumnVarNameInTable="columnLocationName" msprop:Generator_ColumnPropNameInRow="LocationName" msprop:Generator_ColumnPropNameInTable="LocationNameColumn" msprop:Generator_UserColumnName="LocationName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModelVersionMonitors" msprop:Generator_ColumnVarNameInTable="columnModelVersionMonitors" msprop:Generator_ColumnPropNameInRow="ModelVersionMonitors" msprop:Generator_ColumnPropNameInTable="ModelVersionMonitorsColumn" msprop:Generator_UserColumnName="ModelVersionMonitors" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vwAll_Notebooks" msprop:Generator_TableClassName="vwAll_NotebooksDataTable" msprop:Generator_TableVarName="tablevwAll_Notebooks" msprop:Generator_TablePropName="vwAll_Notebooks" msprop:Generator_RowDeletingName="vwAll_NotebooksRowDeleting" msprop:Generator_RowChangingName="vwAll_NotebooksRowChanging" msprop:Generator_RowEvHandlerName="vwAll_NotebooksRowChangeEventHandler" msprop:Generator_RowDeletedName="vwAll_NotebooksRowDeleted" msprop:Generator_UserTableName="vwAll_Notebooks" msprop:Generator_RowChangedName="vwAll_NotebooksRowChanged" msprop:Generator_RowEvArgName="vwAll_NotebooksRowChangeEvent" msprop:Generator_RowClassName="vwAll_NotebooksRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDEquipmentStatus" msprop:Generator_ColumnVarNameInTable="columnIDEquipmentStatus" msprop:Generator_ColumnPropNameInRow="IDEquipmentStatus" msprop:Generator_ColumnPropNameInTable="IDEquipmentStatusColumn" msprop:Generator_UserColumnName="IDEquipmentStatus" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="NotebooksName" msprop:Generator_ColumnVarNameInTable="columnNotebooksName" msprop:Generator_ColumnPropNameInRow="NotebooksName" msprop:Generator_ColumnPropNameInTable="NotebooksNameColumn" msprop:Generator_UserColumnName="NotebooksName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TagService" msprop:Generator_ColumnVarNameInTable="columnTagService" msprop:Generator_ColumnPropNameInRow="TagService" msprop:Generator_ColumnPropNameInTable="TagServiceColumn" msprop:Generator_UserColumnName="TagService" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IP" msprop:Generator_ColumnVarNameInTable="columnIP" msprop:Generator_ColumnPropNameInRow="IP" msprop:Generator_ColumnPropNameInTable="IPColumn" msprop:Generator_UserColumnName="IP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WarrantyDate" msprop:Generator_ColumnVarNameInTable="columnWarrantyDate" msprop:Generator_ColumnPropNameInRow="WarrantyDate" msprop:Generator_ColumnPropNameInTable="WarrantyDateColumn" msprop:Generator_UserColumnName="WarrantyDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PurchaseDate" msprop:Generator_ColumnVarNameInTable="columnPurchaseDate" msprop:Generator_ColumnPropNameInRow="PurchaseDate" msprop:Generator_ColumnPropNameInTable="PurchaseDateColumn" msprop:Generator_UserColumnName="PurchaseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Barcode" msprop:Generator_ColumnVarNameInTable="columnBarcode" msprop:Generator_ColumnPropNameInRow="Barcode" msprop:Generator_ColumnPropNameInTable="BarcodeColumn" msprop:Generator_UserColumnName="Barcode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="QRCode" msprop:Generator_ColumnVarNameInTable="columnQRCode" msprop:Generator_ColumnPropNameInRow="QRCode" msprop:Generator_ColumnPropNameInTable="QRCodeColumn" msprop:Generator_UserColumnName="QRCode" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Coments" msprop:Generator_ColumnVarNameInTable="columnComents" msprop:Generator_ColumnPropNameInRow="Coments" msprop:Generator_ColumnPropNameInTable="ComentsColumn" msprop:Generator_UserColumnName="Coments" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompanyFixedAsset" msprop:Generator_ColumnVarNameInTable="columnCompanyFixedAsset" msprop:Generator_ColumnPropNameInRow="CompanyFixedAsset" msprop:Generator_ColumnPropNameInTable="CompanyFixedAssetColumn" msprop:Generator_UserColumnName="CompanyFixedAsset" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Job" msprop:Generator_ColumnVarNameInTable="columnJob" msprop:Generator_ColumnPropNameInRow="Job" msprop:Generator_ColumnPropNameInTable="JobColumn" msprop:Generator_UserColumnName="Job" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CPUVersion" msprop:Generator_ColumnVarNameInTable="columnCPUVersion" msprop:Generator_ColumnPropNameInRow="CPUVersion" msprop:Generator_ColumnPropNameInTable="CPUVersionColumn" msprop:Generator_UserColumnName="CPUVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HardDriveVersion" msprop:Generator_ColumnVarNameInTable="columnHardDriveVersion" msprop:Generator_ColumnPropNameInRow="HardDriveVersion" msprop:Generator_ColumnPropNameInTable="HardDriveVersionColumn" msprop:Generator_UserColumnName="HardDriveVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocationName" msprop:Generator_ColumnVarNameInTable="columnLocationName" msprop:Generator_ColumnPropNameInRow="LocationName" msprop:Generator_ColumnPropNameInTable="LocationNameColumn" msprop:Generator_UserColumnName="LocationName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MicrosoftOfficeVersion" msprop:Generator_ColumnVarNameInTable="columnMicrosoftOfficeVersion" msprop:Generator_ColumnPropNameInRow="MicrosoftOfficeVersion" msprop:Generator_ColumnPropNameInTable="MicrosoftOfficeVersionColumn" msprop:Generator_UserColumnName="MicrosoftOfficeVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModelVersionNotebooks" msprop:Generator_ColumnVarNameInTable="columnModelVersionNotebooks" msprop:Generator_ColumnPropNameInRow="ModelVersionNotebooks" msprop:Generator_ColumnPropNameInTable="ModelVersionNotebooksColumn" msprop:Generator_UserColumnName="ModelVersionNotebooks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OperatingSystemVersion" msprop:Generator_ColumnVarNameInTable="columnOperatingSystemVersion" msprop:Generator_ColumnPropNameInRow="OperatingSystemVersion" msprop:Generator_ColumnPropNameInTable="OperatingSystemVersionColumn" msprop:Generator_UserColumnName="OperatingSystemVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RAMVersion" msprop:Generator_ColumnVarNameInTable="columnRAMVersion" msprop:Generator_ColumnPropNameInRow="RAMVersion" msprop:Generator_ColumnPropNameInTable="RAMVersionColumn" msprop:Generator_UserColumnName="RAMVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwAll_Computers" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="vwAll_Monitors_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwAll_Monitors" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="vwAll_Notebooks_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwAll_Notebooks" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
