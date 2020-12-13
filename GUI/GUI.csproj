@@ -195,7 +195,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="HelpDeskDB_TESTDataSet.xsc">
       <DependentUpon>HelpDeskDB_TESTDataSet.xsd</DependentUpon>
     </None>

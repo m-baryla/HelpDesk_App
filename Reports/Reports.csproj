@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82745C50-6B4E-4E95-9BC1-752DD712B519}</ProjectGuid>
+    <ProjectGuid>{60469165-6295-4B5A-8DD3-0386D9FB4DC5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Reports</RootNamespace>
@@ -111,7 +111,6 @@
     <EmbeddedResource Include="Reports\CompleteReportNotebooks.rdlc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="DataSet\ReportsDataSet.xsc">
       <DependentUpon>ReportsDataSet.xsd</DependentUpon>
     </None>
